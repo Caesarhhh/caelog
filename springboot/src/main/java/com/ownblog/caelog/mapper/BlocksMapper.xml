@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.BlocksDao">
+    <insert id="insertBlocks" parameterType="Blocks">
+       insert into Blocks(id,userid,imgsrc,name_,remark) values(#{id},#{userid},#{imgsrc},#{name_},#{remark})
+    </insert>
+    <delete id="deleteBlocks" parameterType="map">
+       delete from Blocks where userid=#{userid} and id=#{id}
+    </delete>
+    <update id="updateBlocks" parameterType="map">
+        update Blocks set userid=#{userid},id=#{id},name_=#{name_},remark=#{remark} where userid=#{userid} and id=#{id}
+    </update>
+    <select id="getBlockslist" resultType="Blocks" parameterType="map">
+        select * from Blocks where userid=#{userid}
+    </select>
+</mapper>

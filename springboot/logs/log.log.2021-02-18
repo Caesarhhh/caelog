@@ -1,0 +1,41 @@
+2021-02-18 23:04:04  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:04:05  [ main:389 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:06:50  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:06:51  [ main:482 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:06:51  [ main:837 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:06:51  [ main:840 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:06:51  [ main:840 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:06:51  [ main:842 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:08:36  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:08:37  [ main:471 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:08:37  [ main:782 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:08:37  [ main:783 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:08:37  [ main:785 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:08:37  [ main:786 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:11:05  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:11:06  [ main:437 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:11:06  [ main:706 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:11:06  [ main:708 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:11:06  [ main:709 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:11:06  [ main:710 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:11:59  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:12:00  [ main:417 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:12:00  [ main:735 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:12:00  [ main:736 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:12:00  [ main:737 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:12:00  [ main:739 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:15:44  [ main:0 ] - [ DEBUG ]  debug
+2021-02-18 23:15:44  [ main:439 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-18 23:15:44  [ main:696 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:15:44  [ main:698 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:15:44  [ main:699 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:15:44  [ main:700 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-18 23:15:44  [ main:833 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-18 23:15:46  [ main:2115 ] - [ DEBUG ]  Created connection 460702435.
+2021-02-18 23:15:46  [ main:2116 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 3d70a221-e7a7-4cb4-b83d-ab335ae92edf]
+2021-02-18 23:15:46  [ main:2125 ] - [ DEBUG ]  ==>  Preparing: select * from Users; 
+2021-02-18 23:15:46  [ main:2206 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-18 23:15:46  [ main:2370 ] - [ DEBUG ]  <==      Total: 4
+2021-02-18 23:15:46  [ main:2411 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 3d70a221-e7a7-4cb4-b83d-ab335ae92edf]
+2021-02-18 23:15:46  [ main:2417 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 3d70a221-e7a7-4cb4-b83d-ab335ae92edf]
+2021-02-18 23:15:46  [ main:2419 ] - [ DEBUG ]  Returned connection 460702435 to pool.

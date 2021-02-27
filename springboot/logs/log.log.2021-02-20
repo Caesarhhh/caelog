@@ -1,0 +1,148 @@
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:54 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:55 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:55 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:100 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:260 ] - [ DEBUG ]  Created connection 523184049.
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:263 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:268 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:290 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:336 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:340 ] - [ DEBUG ]  ==>  Preparing: insert into Users (id,nickname,password_,introduction,backimgsrc,securityQuestion,securityAnswer,securityEmail) values(?,?,?,?,?,?,?,?); 
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:344 ] - [ DEBUG ]  ==> Parameters: 4(Integer), Caesar(String), 164375fox(String), none(String), 455465456(String),  (String),  (String),  (String)
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:349 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:350 ] - [ DEBUG ]  Rolling back JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:351 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:352 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:17  [ http-nio-8080-exec-1:353 ] - [ DEBUG ]  Returned connection 523184049 to pool.
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2192 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2195 ] - [ DEBUG ]  Checked out connection 523184049 from pool.
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2197 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2200 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2202 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2204 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2204 ] - [ DEBUG ]  ==>  Preparing: insert into Users (id,nickname,password_,introduction,backimgsrc,securityQuestion,securityAnswer,securityEmail) values(?,?,?,?,?,?,?,?); 
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2205 ] - [ DEBUG ]  ==> Parameters: 4(Integer), Caesar(String), 164375fox(String), none(String), 455465456(String),  (String),  (String),  (String)
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2206 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2207 ] - [ DEBUG ]  Rolling back JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2208 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2210 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: f939d453-a966-475f-8d61-f18421073a17]
+2021-02-20 00:03:19  [ http-nio-8080-exec-2:2210 ] - [ DEBUG ]  Returned connection 523184049 to pool.
+2021-02-20 00:04:17  [ main:0 ] - [ DEBUG ]  debug
+2021-02-20 00:04:18  [ main:698 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 00:04:18  [ main:874 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:04:18  [ main:876 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:04:18  [ main:877 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:04:18  [ main:878 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:04:18  [ main:983 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 00:04:19  [ main:1945 ] - [ DEBUG ]  Created connection 1413886135.
+2021-02-20 00:04:19  [ main:1945 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 57facff3-119e-4a2f-8abf-20c4b0bccfcf]
+2021-02-20 00:04:19  [ main:1963 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-20 00:04:19  [ main:2029 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-20 00:04:19  [ main:2094 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 00:04:19  [ main:2113 ] - [ DEBUG ]  ==>  Preparing: insert into Users (id,nickname,password_,introduction,backimgsrc,securityQuestion,securityAnswer,securityEmail) values(?,?,?,?,?,?,?,?); 
+2021-02-20 00:04:19  [ main:2118 ] - [ DEBUG ]  ==> Parameters: 4(Integer), Caesar(String), 164375fox(String), none(String), 455465456(String),  (String),  (String),  (String)
+2021-02-20 00:04:19  [ main:2123 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-20 00:04:19  [ main:2124 ] - [ DEBUG ]  Rolling back JDBC Connection [ConnectionID:1 ClientConnectionId: 57facff3-119e-4a2f-8abf-20c4b0bccfcf]
+2021-02-20 00:04:19  [ main:2126 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 57facff3-119e-4a2f-8abf-20c4b0bccfcf]
+2021-02-20 00:04:19  [ main:2128 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 57facff3-119e-4a2f-8abf-20c4b0bccfcf]
+2021-02-20 00:04:19  [ main:2130 ] - [ DEBUG ]  Returned connection 1413886135 to pool.
+2021-02-20 00:15:05  [ http-nio-8080-exec-5:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 00:15:05  [ http-nio-8080-exec-5:43 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:15:05  [ http-nio-8080-exec-5:44 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:15:05  [ http-nio-8080-exec-5:45 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:15:05  [ http-nio-8080-exec-5:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:98 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:306 ] - [ DEBUG ]  Created connection 470075575.
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:308 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 1f9e2c12-887f-4452-8d64-7990c04fd137]
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:315 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:339 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:384 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:388 ] - [ DEBUG ]  ==>  Preparing: insert into Users (id,nickname,password_,introduction,backimgsrc,securityQuestion,securityAnswer,securityEmail) values(?,?,?,?,?,?,?,?); 
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:393 ] - [ DEBUG ]  ==> Parameters: 4(Integer), Caesar(String), 164375fox(String), none(String), 455465456(String),  (String),  (String),  (String)
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:398 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:399 ] - [ DEBUG ]  Rolling back JDBC Connection [ConnectionID:1 ClientConnectionId: 1f9e2c12-887f-4452-8d64-7990c04fd137]
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:401 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 1f9e2c12-887f-4452-8d64-7990c04fd137]
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:402 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 1f9e2c12-887f-4452-8d64-7990c04fd137]
+2021-02-20 00:15:06  [ http-nio-8080-exec-5:403 ] - [ DEBUG ]  Returned connection 470075575 to pool.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:69 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:70 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:70 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:70 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:130 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:344 ] - [ DEBUG ]  Created connection 1173053375.
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:345 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 0410412b-3486-421b-b4d5-43a9ec1d733c]
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:348 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:368 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:409 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:413 ] - [ DEBUG ]  ==>  Preparing: insert into Users (id,nickname,password_,introduction,backimgsrc,securityQuestion,securityAnswer,securityEmail) values(?,?,?,?,?,?,?,?); 
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:416 ] - [ DEBUG ]  ==> Parameters: 4(Integer), Caesar(String), 164375fox(String), none(String), 455465456(String),  (String),  (String),  (String)
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:422 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:423 ] - [ DEBUG ]  Rolling back JDBC Connection [ConnectionID:1 ClientConnectionId: 0410412b-3486-421b-b4d5-43a9ec1d733c]
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:425 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 0410412b-3486-421b-b4d5-43a9ec1d733c]
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:427 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 0410412b-3486-421b-b4d5-43a9ec1d733c]
+2021-02-20 02:28:52  [ http-nio-8080-exec-2:427 ] - [ DEBUG ]  Returned connection 1173053375 to pool.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:49 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:50 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:50 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:50 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:104 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:387 ] - [ DEBUG ]  Created connection 830379136.
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:388 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: a8a6c0ed-e9d6-4411-85a5-1bef8a024cc8]
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:392 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:424 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:50:22  [ http-nio-8081-exec-5:465 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28833 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28866 ] - [ DEBUG ]  Created connection 563203837.
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28867 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:2 ClientConnectionId: 65564b11-19f4-4ab8-ba83-83d05e9fbcc7]
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28869 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28870 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:50:51  [ http-nio-8081-exec-3:28872 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190167 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190198 ] - [ DEBUG ]  Created connection 706469018.
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190198 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: 6fd6d4d8-8aa5-4a80-b911-e6914a7bebf0]
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190200 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190200 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:53:32  [ http-nio-8081-exec-7:190203 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237338 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237376 ] - [ DEBUG ]  Created connection 161697686.
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237379 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: ccac848e-61b7-432b-a824-b88b6008a928]
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237380 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237381 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:54:19  [ http-nio-8081-exec-8:237384 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:49 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:49 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:50 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:50 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:115 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:348 ] - [ DEBUG ]  Created connection 376096351.
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:348 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 9e88ec54-6ce6-401c-a29c-97495cfbaf77]
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:364 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:397 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:56:21  [ http-nio-8081-exec-1:428 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:39 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:39 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:55 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:55 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:104 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:284 ] - [ DEBUG ]  Created connection 542256892.
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:284 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 2512bada-41eb-4e09-b06b-1b3576416b0d]
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:289 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:325 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:56:57  [ http-nio-8081-exec-1:369 ] - [ DEBUG ]  <==      Total: 1
+2021-02-20 23:59:47  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-20 23:59:47  [ http-nio-8081-exec-1:59 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:59:47  [ http-nio-8081-exec-1:59 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:59:47  [ http-nio-8081-exec-1:60 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:59:47  [ http-nio-8081-exec-1:60 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:113 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:397 ] - [ DEBUG ]  Created connection 542256892.
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:398 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: f880e37b-1ec2-4d80-b9d2-05f41835e1ff]
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:402 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:442 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-20 23:59:48  [ http-nio-8081-exec-1:483 ] - [ DEBUG ]  <==      Total: 1

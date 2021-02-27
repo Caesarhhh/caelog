@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="caelog@localhost">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.19">
+    <root id="1">
+      <ServerVersion>15.0.2000</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="Doremi">
+      <ObjectId>5</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="3" parent="1" name="caelog">
+      <ObjectId>8</ObjectId>
+      <Current>1</Current>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+      <Fingerprint>8.44213/0BFD90A0-0CF8-4929-926B-3EC9CED4435D@DESKTOP-FGSITC4</Fingerprint>
+    </database>
+    <database id="4" parent="1" name="hellobatis">
+      <ObjectId>7</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="6" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="7" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="8" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <database id="9" parent="1" name="university">
+      <ObjectId>6</ObjectId>
+      <Collation>Chinese_PRC_CI_AS</Collation>
+    </database>
+    <schema id="10" parent="3" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="11" parent="3" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="12" parent="3" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="13" parent="3" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="14" parent="3" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="15" parent="3" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="16" parent="3" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="17" parent="3" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="18" parent="3" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="19" parent="3" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="20" parent="3" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2021-02-20.08:05:38.400</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="21" parent="3" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="22" parent="3" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="23" parent="20" name="Actions">
+      <ObjectId>1429580131</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.987</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.987</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="20" name="Addcomment">
+      <ObjectId>1365579903</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="20" name="Announcement">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="20" name="Article">
+      <ObjectId>1141579105</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.977</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="20" name="ArticleLabel">
+      <ObjectId>1205579333</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="20" name="Blocks">
+      <ObjectId>1077578877</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.973</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="20" name="Change">
+      <ObjectId>917578307</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.967</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.967</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="20" name="Chat">
+      <ObjectId>1045578763</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.973</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="20" name="Comment">
+      <ObjectId>1317579732</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.987</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="20" name="Labels">
+      <ObjectId>1109578991</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.977</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="33" parent="20" name="Letter">
+      <ObjectId>1253579504</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="20" name="Socialhref">
+      <ObjectId>1013578649</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+    </table>
+    <table id="35" parent="20" name="Users">
+      <ObjectId>885578193</ObjectId>
+      <CreatedTimestamp>2021-01-20.19:32:20.963</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.990</ModifiedTimestamp>
+    </table>
+    <column id="36" parent="23" name="type_">
+      <Position>1</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="37" parent="23" name="actorid">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="38" parent="23" name="targetid">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="39" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="commentid">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="41" parent="24" name="actorid">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="42" parent="24" name="content">
+      <Position>4</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="43" parent="24" name="goodnum">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="44" parent="24" name="time_">
+      <Position>6</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <index id="45" parent="24" name="PK__Addcomme__3213E83FB562EEEB">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="24" name="PK__Addcomme__3213E83FB562EEEB">
+      <ObjectId>1381579960</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Addcomme__3213E83FB562EEEB</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="24" name="FK__Addcommen__comme__534D60F1">
+      <ObjectId>1397580017</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+      <ColNames>commentid</ColNames>
+      <RefTableId>1317579732</RefTableId>
+      <RefTableName>Comment</RefTableName>
+      <RefKeyName>PK__Comment__3213E83FD919587F</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="24" name="FK__Addcommen__actor__5441852A">
+      <ObjectId>1413580074</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+      <ColNames>actorid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="49" parent="25" name="userid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="50" parent="25" name="id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="25" name="times">
+      <Position>3</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="52" parent="25" name="content">
+      <Position>4</Position>
+      <DataType>varchar(200 char)|0s</DataType>
+    </column>
+    <column id="53" parent="25" name="title">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="54" parent="25" name="index_">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="55" parent="25" name="PK__Announce__3213E83F71E14365">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="25" name="PK__Announce__3213E83F71E14365">
+      <ObjectId>981578535</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Announce__3213E83F71E14365</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="57" parent="25" name="FK__Announcem__useri__3B75D760">
+      <ObjectId>997578592</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+      <ColNames>userid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="58" parent="26" name="userid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="59" parent="26" name="id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="26" name="title">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <column id="61" parent="26" name="content">
+      <Position>4</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="62" parent="26" name="blockid">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="63" parent="26" name="time_">
+      <Position>6</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="64" parent="26" name="goodnum">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="65" parent="26" name="viewnum">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="66" parent="26" name="PK__Article__3213E83FB09BA19A">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="26" name="PK__Article__3213E83FB09BA19A">
+      <ObjectId>1157579162</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Article__3213E83FB09BA19A</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="26" name="FK__Article__userid__45F365D3">
+      <ObjectId>1173579219</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>userid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="26" name="FK__Article__blockid__46E78A0C">
+      <ObjectId>1189579276</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>blockid</ColNames>
+      <RefTableId>1077578877</RefTableId>
+      <RefTableName>Blocks</RefTableName>
+      <RefKeyName>PK__Blocks__3213E83F38A9E31E</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="70" parent="27" name="articleid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="71" parent="27" name="labelid">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <foreign-key id="72" parent="27" name="FK__ArticleLa__artic__48CFD27E">
+      <ObjectId>1221579390</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>articleid</ColNames>
+      <RefTableId>1141579105</RefTableId>
+      <RefTableName>Article</RefTableName>
+      <RefKeyName>PK__Article__3213E83FB09BA19A</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="73" parent="27" name="FK__ArticleLa__label__49C3F6B7">
+      <ObjectId>1237579447</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>labelid</ColNames>
+      <RefTableId>1109578991</RefTableId>
+      <RefTableName>Labels</RefTableName>
+      <RefKeyName>PK__Labels__3213E83F71B63C39</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="74" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="28" name="name_">
+      <Position>2</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <index id="76" parent="28" name="PK__Blocks__3213E83F38A9E31E">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="28" name="PK__Blocks__3213E83F38A9E31E">
+      <ObjectId>1093578934</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.973</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.973</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Blocks__3213E83F38A9E31E</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="78" parent="29" name="userid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="79" parent="29" name="id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="29" name="time_">
+      <Position>3</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="81" parent="29" name="content">
+      <Position>4</Position>
+      <DataType>varchar(200 char)|0s</DataType>
+    </column>
+    <index id="82" parent="29" name="PK__Change__3213E83F1A260B08">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="83" parent="29" name="PK__Change__3213E83F1A260B08">
+      <ObjectId>933578364</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Change__3213E83F1A260B08</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="84" parent="29" name="FK__Change__userid__38996AB5">
+      <ObjectId>949578421</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+      <ColNames>userid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="85" parent="30" name="person1id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="86" parent="30" name="person2id">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="87" parent="30" name="id">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="30" name="ifview">
+      <Position>4</Position>
+      <DataType>varchar(10 char)|0s</DataType>
+    </column>
+    <index id="89" parent="30" name="PK__Chat__3213E83FA28F711F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="30" name="PK__Chat__3213E83FA28F711F">
+      <ObjectId>1061578820</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.973</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.973</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Chat__3213E83FA28F711F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="91" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="31" name="articleid">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="93" parent="31" name="actorid">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="94" parent="31" name="content">
+      <Position>4</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="95" parent="31" name="goodnum">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="96" parent="31" name="time_">
+      <Position>6</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <index id="97" parent="31" name="PK__Comment__3213E83FD919587F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="98" parent="31" name="PK__Comment__3213E83FD919587F">
+      <ObjectId>1333579789</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Comment__3213E83FD919587F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="99" parent="31" name="FK__Comment__actorid__5070F446">
+      <ObjectId>1349579846</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.983</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.983</ModifiedTimestamp>
+      <ColNames>actorid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="100" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="32" name="name_">
+      <Position>2</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <index id="102" parent="32" name="PK__Labels__3213E83F71B63C39">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="103" parent="32" name="PK__Labels__3213E83F71B63C39">
+      <ObjectId>1125579048</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.977</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.977</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Labels__3213E83F71B63C39</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="33" name="chatid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="105" parent="33" name="time_">
+      <Position>2</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="106" parent="33" name="actorid">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="107" parent="33" name="targetid">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="108" parent="33" name="content">
+      <Position>5</Position>
+      <DataType>varchar(200 char)|0s</DataType>
+    </column>
+    <foreign-key id="109" parent="33" name="FK__Letter__chatid__4BAC3F29">
+      <ObjectId>1269579561</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>chatid</ColNames>
+      <RefTableId>1045578763</RefTableId>
+      <RefTableName>Chat</RefTableName>
+      <RefKeyName>PK__Chat__3213E83FA28F711F</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="110" parent="33" name="FK__Letter__actorid__4CA06362">
+      <ObjectId>1285579618</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>actorid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="111" parent="33" name="FK__Letter__targetid__4D94879B">
+      <ObjectId>1301579675</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.980</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.980</ModifiedTimestamp>
+      <ColNames>targetid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="112" parent="34" name="userid">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="113" parent="34" name="imgsrc">
+      <Position>2</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="114" parent="34" name="href">
+      <Position>3</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="115" parent="34" name="comment">
+      <Position>4</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="116" parent="34" name="ifuse">
+      <Position>5</Position>
+      <DataType>varchar(10 char)|0s</DataType>
+    </column>
+    <foreign-key id="117" parent="34" name="FK__Socialhre__useri__3D5E1FD2">
+      <ObjectId>1029578706</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.970</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.970</ModifiedTimestamp>
+      <ColNames>userid</ColNames>
+      <RefTableId>885578193</RefTableId>
+      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK__Users__3213E83FE2D55C5D</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="118" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="35" name="nickname">
+      <Position>2</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="120" parent="35" name="password_">
+      <Position>3</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </column>
+    <column id="121" parent="35" name="introduction">
+      <Position>4</Position>
+      <DataType>varchar(150 char)|0s</DataType>
+    </column>
+    <column id="122" parent="35" name="backimgsrc">
+      <Position>5</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="123" parent="35" name="securityQuestion">
+      <Position>6</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="124" parent="35" name="securityAnswer">
+      <Position>7</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="125" parent="35" name="securityEmail">
+      <Position>8</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <index id="126" parent="35" name="PK__Users__3213E83FE2D55C5D">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="127" parent="35" name="PK__Users__3213E83FE2D55C5D">
+      <ObjectId>901578250</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-01-20.19:32:20.967</CreatedTimestamp>
+      <ModifiedTimestamp>2021-01-20.19:32:20.967</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__Users__3213E83FE2D55C5D</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

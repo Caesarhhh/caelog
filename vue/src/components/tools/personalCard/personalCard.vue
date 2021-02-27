@@ -1,0 +1,205 @@
+<template>
+  <div class="empty_pc">
+    <hsw :class="{hrefwin:datas.pos=='left',hrefwin_:datas.pos=='right'}" :datas.sync="hrefwininfo" v-if="hrefwininfo.ifwin"></hsw>
+    <div :class="{box:datas.pos=='left',box_:datas.pos=='right'}">
+      <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
+      <div id="pic">
+        <img v-bind:src="this.common.userinfo.backimgsrc" alt="error">
+      </div>
+      <div id="name">
+        {{this.common.userinfo.nickname}}
+      </div>
+      <div id="introduction">
+        <p>{{this.common.userinfo.introduction}}</p>
+      </div>
+      <div id="buttonbox">
+        <div v-for="(item,index) in hrefdatas" class="hrefbox" @click="openhrefwin(index)">
+          <img :src="item.hrefimgsrc" alt="error">
+        </div>
+        <div id="chatbox" @click="openchat">
+          <img v-bind:src="chatpicsrc" alt="error">
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import chatwin from "../../wins/chatwin/chatwin";
+  import hrefshowwin from "../../wins/hrefshowwin/hrefshowwin";
+  var chatinfo={
+    ifwin:false
+  }
+  var hrefwininfo={
+    ifwin:false,
+    href:"www.github.com/Caesarhhh",
+    comments:"github网址",
+  }
+  var hrefdatas=[
+    {
+      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/github.png",
+      href:"www.github.com/Caesarhhh",
+      comments:"github网址",
+    },
+    {
+      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/wechat.png",
+      href:"Caesar216",
+      comments:"微信号",
+    },
+    {
+      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/qq.png",
+      href:"1545099176",
+      comments:"qq号",
+    },
+    {
+      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/知乎.png",
+      href:"林零",
+      comments:"知乎昵称",
+    }
+  ]
+  export default {
+    name: "personalCard",
+    props:['datas'],
+    data(){
+      return{
+        headpicsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
+        personalIntroduction: "帅气的人",
+        chatpicsrc:"http://caesar216.usa3v.net/caelog/images/personalchat.png",
+        hrefdatas:hrefdatas,
+        name:"Caesar",
+        chatinfo:chatinfo,
+        hrefwininfo:hrefwininfo
+      }
+    },
+    components:{
+      cw:chatwin,
+      hsw:hrefshowwin
+    },
+    methods:{
+      openchat:function (){
+        if(!this.hrefwininfo.ifwin){
+        this.chatinfo.ifwin=true;
+        };
+      },
+      openhrefwin:function (id){
+        if(!this.chatinfo.ifwin&&!this.hrefwininfo.ifwin) {
+          this.hrefwininfo.href=this.hrefdatas[id].href;
+          this.hrefwininfo.comments=this.hrefdatas[id].comments;
+          this.hrefwininfo.ifwin = true;
+        }
+      }
+    },
+    mounted() {
+      this.hrefdatas=[]
+      this.$axios.get(
+        this.common.serveraddress+"/socialhref/get?userid="+this.common.userinfo.id).then(
+        res=>{
+          for(var i=0;i<res.data.data.length;i++){
+            var temp={
+              hrefid:res.data.data[i].hrefid,
+              imgsrc:res.data.data[i].imgsrc,
+              href:res.data.data[i].href,
+              comment:res.data.data[i].comment,
+              ifuse:res.data.data[i].ifuse
+            }
+            this.$set(this.announceInfo.title,temp.index-1,temp.title)
+            this.$set(this.announceInfo.time,temp.index-1,temp.time.substr(2,9))
+            this.$set(this.announceInfo.text,temp.index-1,temp.text)
+            this.announceInfo.count++
+          }
+          console.log(this.announceInfo)
+        })
+    }
+  }
+</script>
+
+<style scoped>
+  .box{
+    border-style: ridge;
+    width: 250px;
+    height: 279px;
+    position: relative;
+  }
+  .box_{
+    border-style: ridge;
+    width: 250px;
+    height: 279px;
+    position: absolute;
+    right: 0px;
+  }
+  .empty_pc{
+    width:1000px;
+    height: auto;
+  }
+  #pic{
+    width:81px;
+    height: 81px;
+    border-radius: 50%;
+    border-style: ridge;
+    position: absolute;
+    top:7px;
+    left:85px;
+  }
+  #pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  #name{
+    width:150px;
+    height: 26px;
+    position: absolute;
+    top:100px;
+    left:50px;
+  }
+  #introduction{
+    width: 232px;
+    height: 97px;
+    border-style: ridge;
+    position: absolute;
+    top:127px;
+    left:9px;
+  }
+  #buttonbox{
+    width:244px;
+    height: 45px;
+    position: absolute;
+    top:228px;
+    left:2px;
+  }
+  .hrefbox{
+    width: 30px;
+    height:30px;
+    margin-top:8px;
+    margin-left: 12px;
+    float:left;
+  }
+  .hrefbox img{
+    width:100%;
+    height: 100%;
+  }
+  #chatbox{
+    width:38px;
+    height:38px;
+    border-radius: 50%;
+    float:right;
+    margin-right: 5px;
+    margin-top: 8px;
+  }
+  #chatbox img{
+    width: 100%;
+    height: 100%;
+  }
+  .hrefwin{
+    position: absolute;
+    bottom:4px;+
+    left:2px;
+    z-index: 999;
+  }
+  .hrefwin_{
+    position: absolute;
+    bottom:-277px;
+    right:2px;，
+    z-index: 999;
+  }
+</style>

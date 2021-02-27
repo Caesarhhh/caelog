@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.AnnouncementDao">
+    <insert id="insertAnnouncement" parameterType="Announcement">
+       insert into Announcement(userid,id,times,content,title,index_) values(#{userid},#{id},#{times},#{content},#{title},#{index_})
+    </insert>
+    <delete id="deleteAnnouncement" parameterType="map">
+       delete from Announcement where userid=#{userid} and id=#{id}
+    </delete>
+    <update id="updateAnnouncement" parameterType="map">
+        update Announcement set userid=#{userid},id=#{id},times=#{times},content=#{content},title=#{title},index_=#{index_} where userid=#{userid} and id=#{id}
+    </update>
+    <select id="getAnnouncementlist" resultType="Announcement" parameterType="map">
+        select * from Announcement where userid=#{userid}
+    </select>
+    <select id="getAnnouncementlistbyindex" resultType="Announcement" parameterType="map">
+        select * from Announcement where index_=#{index_} and userid=#{userid}
+    </select>
+    <select id="getAnnouncementlistbyid" resultType="Announcement" parameterType="map">
+        select * from Announcement where id=#{id} and userid=#{userid}
+    </select>
+</mapper>

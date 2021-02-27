@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.SocialhrefDao">
+    <insert id="insertSocialhref" parameterType="Socialhref">
+       insert into Socialhref(userid,hrefid,imgsrc,href,comment,ifuse) values(#{userid},#{hrefid},#{imgsrc},#{href},#{comment},#{ifuse})
+    </insert>
+    <delete id="deleteSocialhref" parameterType="map">
+       delete from Socialhref where userid=#{userid} and hrefid=#{hrefid}
+    </delete>
+    <update id="updateSocialhref" parameterType="map">
+        update Socialhref set userid=#{userid},hrefid=#{hrefid},imgsrc=#{imgsrc},href=#{href},comment=#{comment},ifuse=#{ifuse} where userid=#{userid} and hrefid=#{hrefid}
+    </update>
+    <select id="getSocialhreflist" resultType="Socialhref" parameterType="map">
+        select * from Socialhref where userid=#{userid}
+    </select>
+</mapper>

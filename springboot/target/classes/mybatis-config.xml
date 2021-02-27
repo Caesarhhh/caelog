@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.ownblog.caelog.pojo.User" alias="User"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Socialhref" alias="Socialhref"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Announcement" alias="Announcement"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Blocks" alias="Blocks"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+                <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=caelog;characterEncoding=UTF-8" />
+                <property name="username" value="caesar"/>
+                <property name="password" value="164375fox"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/ownblog/caelog/mapper/UserMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/SocialhrefMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/AnnouncementMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/BlocksMapper.xml"/>
+    </mappers>
+</configuration>

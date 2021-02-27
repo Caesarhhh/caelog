@@ -1,0 +1,707 @@
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116642 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116645 ] - [ DEBUG ]  Checked out connection 1408540952 from pool.
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116645 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116646 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116648 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116654 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116654 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116656 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:01:26  [ http-nio-8081-exec-3:1116656 ] - [ DEBUG ]  Returned connection 1408540952 to pool.
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184676 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184677 ] - [ DEBUG ]  Checked out connection 1408540952 from pool.
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184678 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184680 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184681 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184684 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184685 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184686 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:02:34  [ http-nio-8081-exec-6:1184686 ] - [ DEBUG ]  Returned connection 1408540952 to pool.
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419554 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419554 ] - [ DEBUG ]  Checked out connection 1408540952 from pool.
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419555 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419556 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419556 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419560 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419560 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419561 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:3 ClientConnectionId: e3f00f85-ce30-4b87-bbcb-6ed6d3a3771c]
+2021-02-26 00:06:28  [ http-nio-8081-exec-9:1419562 ] - [ DEBUG ]  Returned connection 1408540952 to pool.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:72 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:72 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:73 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:74 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:165 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:360 ] - [ DEBUG ]  Created connection 1515887995.
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:360 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:364 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:396 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:433 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:438 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:439 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:45  [ http-nio-8081-exec-1:439 ] - [ DEBUG ]  Returned connection 1515887995 to pool.
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5365 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5369 ] - [ DEBUG ]  Checked out connection 1515887995 from pool.
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5370 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5372 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5373 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5376 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5378 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5379 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:12:50  [ http-nio-8081-exec-3:5379 ] - [ DEBUG ]  Returned connection 1515887995 to pool.
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87950 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87951 ] - [ DEBUG ]  Checked out connection 1515887995 from pool.
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87952 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87959 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87960 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87963 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87964 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87998 ] - [ DEBUG ]  Created connection 1895590401.
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:2 ClientConnectionId: da6582c2-665c-4940-8b7e-1c2cc93fc3f1]
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  ==> Parameters: Ben(String), 164375fox(String), student(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269618344145.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:2 ClientConnectionId: da6582c2-665c-4940-8b7e-1c2cc93fc3f1]
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:2 ClientConnectionId: da6582c2-665c-4940-8b7e-1c2cc93fc3f1]
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:2 ClientConnectionId: da6582c2-665c-4940-8b7e-1c2cc93fc3f1]
+2021-02-26 00:14:13  [ http-nio-8081-exec-8:87999 ] - [ DEBUG ]  Returned connection 1895590401 to pool.
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95489 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95491 ] - [ DEBUG ]  Checked out connection 1895590401 from pool.
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95492 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:2 ClientConnectionId: da6582c2-665c-4940-8b7e-1c2cc93fc3f1]
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95494 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95495 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95497 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95498 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95518 ] - [ DEBUG ]  Created connection 1953491676.
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95519 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95520 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95520 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95523 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95523 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95524 ] - [ DEBUG ]  ==> Parameters: Ben(String), 164375fox(String), student(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269618344145.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95525 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95525 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95532 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95532 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:20  [ http-nio-8081-exec-9:95532 ] - [ DEBUG ]  Returned connection 1953491676 to pool.
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100138 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100138 ] - [ DEBUG ]  Checked out connection 1953491676 from pool.
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100139 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100141 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100142 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100146 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100147 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100149 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:25  [ http-nio-8081-exec-10:100149 ] - [ DEBUG ]  Returned connection 1953491676 to pool.
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129528 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129529 ] - [ DEBUG ]  Checked out connection 1953491676 from pool.
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129529 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:3 ClientConnectionId: 53cf359b-9409-4201-8f03-eed8b47bea4b]
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129532 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129533 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129536 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129536 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  Created connection 1122443079.
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  ==> Parameters: Ben(String), 164375fox(String), student(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269683477538.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129554 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129566 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129566 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:14:54  [ http-nio-8081-exec-4:129566 ] - [ DEBUG ]  Returned connection 1122443079 to pool.
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169176 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169176 ] - [ DEBUG ]  Checked out connection 1122443079 from pool.
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169177 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169178 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169178 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169182 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169183 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169184 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:34  [ http-nio-8081-exec-2:169184 ] - [ DEBUG ]  Returned connection 1122443079 to pool.
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171782 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171782 ] - [ DEBUG ]  Checked out connection 1122443079 from pool.
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171782 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171783 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171784 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171786 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171787 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171788 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:15:36  [ http-nio-8081-exec-5:171788 ] - [ DEBUG ]  Returned connection 1122443079 to pool.
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229938 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229939 ] - [ DEBUG ]  Checked out connection 1122443079 from pool.
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229939 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229940 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229941 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229944 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229945 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229946 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:16:35  [ http-nio-8081-exec-7:229947 ] - [ DEBUG ]  Returned connection 1122443079 to pool.
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250044 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250044 ] - [ DEBUG ]  Checked out connection 1122443079 from pool.
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250045 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:4 ClientConnectionId: 7663afe5-7a3f-49ef-b29d-25126fe61f63]
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250046 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250051 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250054 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250055 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250075 ] - [ DEBUG ]  Created connection 129568182.
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250075 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250076 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250076 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250077 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250078 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250078 ] - [ DEBUG ]  ==> Parameters: Caesar(String), 164375fox(String), SE studentbir:2000-2-16(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269683477538.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250082 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250082 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250085 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250085 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:55  [ http-nio-8081-exec-8:250085 ] - [ DEBUG ]  Returned connection 129568182 to pool.
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254821 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254821 ] - [ DEBUG ]  Checked out connection 129568182 from pool.
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254822 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254823 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254823 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254825 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254825 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254826 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:16:59  [ http-nio-8081-exec-9:254826 ] - [ DEBUG ]  Returned connection 129568182 to pool.
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256237 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256237 ] - [ DEBUG ]  Checked out connection 129568182 from pool.
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256237 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256238 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256239 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256244 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256246 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256247 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:01  [ http-nio-8081-exec-10:256247 ] - [ DEBUG ]  Returned connection 129568182 to pool.
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262386 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262387 ] - [ DEBUG ]  Checked out connection 129568182 from pool.
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262387 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262388 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262389 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262391 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262392 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262393 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:07  [ http-nio-8081-exec-1:262394 ] - [ DEBUG ]  Returned connection 129568182 to pool.
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279682 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279682 ] - [ DEBUG ]  Checked out connection 129568182 from pool.
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279682 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:5 ClientConnectionId: 19257ffa-e188-432e-8926-2ead4109128c]
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279685 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279685 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279688 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279688 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279707 ] - [ DEBUG ]  Created connection 1724736982.
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279707 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279708 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279708 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279709 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279709 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279709 ] - [ DEBUG ]  ==> Parameters: Caesar(String), 164375fox(String), SE studentbir:2000-2-16(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269683477538.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279710 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279710 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279713 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279713 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:24  [ http-nio-8081-exec-4:279713 ] - [ DEBUG ]  Returned connection 1724736982 to pool.
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287120 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287120 ] - [ DEBUG ]  Checked out connection 1724736982 from pool.
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287121 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287122 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287123 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287125 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287125 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287127 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:32  [ http-nio-8081-exec-2:287128 ] - [ DEBUG ]  Returned connection 1724736982 to pool.
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294818 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294818 ] - [ DEBUG ]  Checked out connection 1724736982 from pool.
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294818 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:6 ClientConnectionId: 32bfd967-85dd-431e-8389-57340ea4cfa4]
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294820 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294821 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294826 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294826 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294851 ] - [ DEBUG ]  Created connection 412696635.
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294851 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294852 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294852 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294854 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294855 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294855 ] - [ DEBUG ]  ==> Parameters: Caesar(String), 164375fox(String), SE student bir:2000-2-16(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269683477538.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294855 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294855 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294862 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294862 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:39  [ http-nio-8081-exec-5:294862 ] - [ DEBUG ]  Returned connection 412696635 to pool.
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302170 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302170 ] - [ DEBUG ]  Checked out connection 412696635 from pool.
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302170 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302173 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302173 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302178 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302179 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302181 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:47  [ http-nio-8081-exec-6:302182 ] - [ DEBUG ]  Returned connection 412696635 to pool.
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306084 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306084 ] - [ DEBUG ]  Checked out connection 412696635 from pool.
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306085 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:7 ClientConnectionId: af76a376-a327-4564-9d24-d6be4ce79fff]
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306088 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306088 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306092 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306092 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306111 ] - [ DEBUG ]  Created connection 1015859151.
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306111 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:8 ClientConnectionId: 873a46a7-3639-41e3-b624-6edf0129fb9e]
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306112 ] - [ DEBUG ]  ==>  Preparing: select max(id) from Users 
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306113 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306114 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306115 ] - [ DEBUG ]  ==>  Preparing: update Users set nickname=?,password_=?,introduction=?,backimgsrc=?,securityQuestion=?,securityAnswer=?,securityEmail=? where id=?; 
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306115 ] - [ DEBUG ]  ==> Parameters: Caesar(String), 164375fox(String), SE student    bir:2000-2-16(String), http://caesar216.usa3v.net/caelog/userdata/0/1614269683477538.jpg(String), 政治面貌?(String), 预备党员(String), yujkl5487@qq.com(String), 0(Integer)
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306117 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306117 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:8 ClientConnectionId: 873a46a7-3639-41e3-b624-6edf0129fb9e]
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306122 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:8 ClientConnectionId: 873a46a7-3639-41e3-b624-6edf0129fb9e]
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306122 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:8 ClientConnectionId: 873a46a7-3639-41e3-b624-6edf0129fb9e]
+2021-02-26 00:17:51  [ http-nio-8081-exec-7:306122 ] - [ DEBUG ]  Returned connection 1015859151 to pool.
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312000 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312000 ] - [ DEBUG ]  Checked out connection 1015859151 from pool.
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312000 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:8 ClientConnectionId: 873a46a7-3639-41e3-b624-6edf0129fb9e]
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312002 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312002 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-26 00:17:57  [ http-nio-8081-exec-8:312005 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316438 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316458 ] - [ DEBUG ]  Created connection 1996431186.
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316458 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:9 ClientConnectionId: f14d6b7a-4b43-44f1-beea-d39266deacac]
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316459 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316459 ] - [ DEBUG ]  ==> Parameters: Ben(String)
+2021-02-26 00:18:01  [ http-nio-8081-exec-9:316460 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326312 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326333 ] - [ DEBUG ]  Created connection 1836929553.
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326333 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326334 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326334 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326336 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326336 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326337 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:18:11  [ http-nio-8081-exec-10:326337 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444229 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444229 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444230 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444231 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444232 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444236 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444236 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444238 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:09  [ http-nio-8081-exec-3:444238 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465232 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465233 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465233 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465234 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465235 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465237 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465237 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465239 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:20:30  [ http-nio-8081-exec-4:465239 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348286 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348286 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348286 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348287 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348288 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348291 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348292 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348293 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:51:53  [ http-nio-8081-exec-5:2348294 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371829 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371830 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371830 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371831 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371832 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371835 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371836 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371837 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:52:16  [ http-nio-8081-exec-6:2371838 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600146 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600146 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600147 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600148 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600148 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600151 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600151 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600152 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:05  [ http-nio-8081-exec-9:2600152 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600928 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600928 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600929 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600930 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600931 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600934 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600934 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600937 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 00:56:06  [ http-nio-8081-exec-10:2600937 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896934 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896934 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896934 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896936 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896937 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896944 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896946 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896950 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:02  [ http-nio-8081-exec-3:2896950 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915541 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915541 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915542 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915543 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915543 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915545 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915546 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915547 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:01:20  [ http-nio-8081-exec-4:2915547 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994783 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994784 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994784 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994786 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994786 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994790 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994790 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994792 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:39  [ http-nio-8081-exec-5:2994792 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995622 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995623 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995623 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995624 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995625 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995629 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995629 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995631 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:40  [ http-nio-8081-exec-6:2995631 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001259 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001259 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001259 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001260 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001261 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001265 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001266 ] - [ DEBUG ]  ==>  Preparing: insert into Announcement(userid,id,times,content,title,index_) values(?,?,?,?,?,?) 
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001266 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 0(Integer), 2021-02-26 01:02:46(String), 323456(String), 5652(String), 1(Integer)
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001271 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001272 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001292 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001294 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-8:3001294 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001608 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001609 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001609 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001611 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001611 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001615 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001615 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001617 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:02:46  [ http-nio-8081-exec-9:3001618 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022870 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022871 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022871 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022872 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022873 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022877 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022877 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022879 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:07  [ http-nio-8081-exec-10:3022880 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024660 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024661 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024661 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024663 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024663 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024665 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024666 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024667 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:03:09  [ http-nio-8081-exec-1:3024667 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091657 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091657 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091658 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091659 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091659 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091662 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091663 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091664 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:04:16  [ http-nio-8081-exec-2:3091665 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186278 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186278 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186278 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186280 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186280 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186282 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186283 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186284 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:05:51  [ http-nio-8081-exec-6:3186285 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228641 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228642 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228642 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228643 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228643 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228646 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228647 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228648 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:33  [ http-nio-8081-exec-7:3228649 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236672 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236672 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236673 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236674 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236674 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236675 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236676 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236677 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:41  [ http-nio-8081-exec-8:3236677 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241081 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241081 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241081 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241082 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241083 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241084 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241084 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241086 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:46  [ http-nio-8081-exec-9:3241086 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247298 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247298 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247299 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247300 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247300 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247301 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247302 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247303 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:06:52  [ http-nio-8081-exec-10:3247303 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265215 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265216 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265216 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265217 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265217 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265220 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265220 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265222 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:10  [ http-nio-8081-exec-1:3265222 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266841 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266841 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266841 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266843 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266843 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266847 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266848 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266851 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:11  [ http-nio-8081-exec-3:3266852 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292434 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292434 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292435 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292436 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292436 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292437 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292437 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where id=? and userid=? 
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292438 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 0(Integer)
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292439 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292439 ] - [ DEBUG ]  ==>  Preparing: delete from Announcement where userid=? and id=? 
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292440 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 0(Integer)
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292442 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292442 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292442 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292442 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-2:3292442 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292724 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292724 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292724 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292726 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292726 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292728 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292728 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292729 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:37  [ http-nio-8081-exec-5:3292729 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293603 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293603 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293603 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293604 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293605 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293606 ] - [ DEBUG ]  <==      Total: 0
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293606 ] - [ DEBUG ]  ==>  Preparing: insert into Announcement(userid,id,times,content,title,index_) values(?,?,?,?,?,?) 
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293607 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 0(Integer), 2021-02-26 01:07:38(String), 如果天空总是黑暗，那就摸黑生存；如果发出声音是危险的，那就保持沉默；如果自觉无力发光，那就蜷伏于墙角。但不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意；不要嘲讽那些比自己更勇敢热情的人们。(String), 季业(String), 1(Integer)
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293609 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293610 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293613 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293614 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:38  [ http-nio-8081-exec-6:3293614 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293929 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293929 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293929 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293930 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293930 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293931 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293932 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293932 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:39  [ http-nio-8081-exec-7:3293932 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310710 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310711 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310712 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310714 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310714 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310715 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310716 ] - [ DEBUG ]  ==>  Preparing: insert into Announcement(userid,id,times,content,title,index_) values(?,?,?,?,?,?) 
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310717 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 1(Integer), 2021-02-26 01:07:55(String), 楼下一个男人病得要死，那间隔壁的一家唱着留声机，对面是弄孩子。楼上有两人狂笑，还有打牌声。河中的船上有女人哭着她死去的母亲。人类的悲欢并不相通，我只觉得他们吵闹。(String), 鲁迅(String), 2(Integer)
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310718 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310718 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310721 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310722 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:55  [ http-nio-8081-exec-8:3310722 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311037 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311038 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311038 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311039 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311040 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311043 ] - [ DEBUG ]  <==      Total: 2
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311043 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311044 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:07:56  [ http-nio-8081-exec-9:3311044 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329371 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329371 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329372 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329374 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329374 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329376 ] - [ DEBUG ]  <==      Total: 2
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329376 ] - [ DEBUG ]  ==>  Preparing: insert into Announcement(userid,id,times,content,title,index_) values(?,?,?,?,?,?) 
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329376 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 2(Integer), 2021-02-26 01:08:14(String), 我们如此目睹的光景，不过是现实世界极小极小一部分。我们习惯上认为这便是世界的世界，其实并不是的。真正的世界位于更深更暗的地方。(String), 树上村树(String), 3(Integer)
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329377 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329378 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329381 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329382 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-10:3329382 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329692 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329692 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329692 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329693 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329694 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329696 ] - [ DEBUG ]  <==      Total: 3
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329696 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329697 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:14  [ http-nio-8081-exec-1:3329697 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353291 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353291 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353292 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353293 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353293 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353296 ] - [ DEBUG ]  <==      Total: 3
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353296 ] - [ DEBUG ]  ==>  Preparing: insert into Announcement(userid,id,times,content,title,index_) values(?,?,?,?,?,?) 
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353297 ] - [ DEBUG ]  ==> Parameters: 0(Integer), 3(Integer), 2021-02-26 01:08:38(String), 如果一个人的激情，无论在快乐还是苦恼中，都保持不忘理智所教给的关于什么应当恐惧，什么不应当惧怕的信条，那么我们就因他的激情部分而称每个这样的人为勇敢的人。(String), 柏拉图(String), 4(Integer)
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353299 ] - [ DEBUG ]  <==    Updates: 1
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353300 ] - [ DEBUG ]  Committing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353302 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353303 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-3:3353303 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353614 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353614 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353614 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353614 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353615 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353617 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353619 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353619 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:38  [ http-nio-8081-exec-4:3353619 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360928 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360929 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360929 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360930 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360931 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360934 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360934 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360935 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:08:46  [ http-nio-8081-exec-2:3360936 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520590 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520590 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520590 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520594 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520595 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520599 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520600 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520601 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:11:25  [ http-nio-8081-exec-7:3520602 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:12:29  [ http-nio-8081-exec-9:3584901 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:12:29  [ http-nio-8081-exec-9:3584901 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:12:29  [ http-nio-8081-exec-9:3584901 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584903 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584903 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584907 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584907 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584909 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:12:30  [ http-nio-8081-exec-9:3584909 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944979 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944979 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944979 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944980 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944981 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944984 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944984 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944986 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:30  [ http-nio-8081-exec-1:3944986 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947993 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947993 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947993 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947995 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947995 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947997 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947997 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947999 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 01:18:33  [ http-nio-8081-exec-3:3947999 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060440 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060441 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060441 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060443 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060444 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060450 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060450 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060454 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 02:10:25  [ http-nio-8081-exec-2:7060454 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237261 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237267 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237269 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237274 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237279 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237290 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237291 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237293 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:02  [ http-nio-8081-exec-6:68237293 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238373 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238374 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238375 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238377 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238378 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238378 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238381 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238381 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238383 ] - [ DEBUG ]  Claimed overdue connection 1515887995.
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238383 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:03  [ http-nio-8081-exec-7:68238384 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238385 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238386 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238394 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238395 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238396 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 19:10:03  [ http-nio-8081-exec-8:68238396 ] - [ DEBUG ]  Returned connection 1515887995 to pool.
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244029 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244030 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244029 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244030 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244031 ] - [ DEBUG ]  Checked out connection 1515887995 from pool.
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244031 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244033 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244033 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244033 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244034 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244037 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244037 ] - [ DEBUG ]  <==      Total: 4
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244037 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244037 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244039 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 19:10:09  [ http-nio-8081-exec-9:68244039 ] - [ DEBUG ]  Returned connection 1836929553 to pool.
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244039 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:1 ClientConnectionId: 0a93fc3c-7100-4d70-a120-b75c0c3c43cd]
+2021-02-26 19:10:09  [ http-nio-8081-exec-10:68244040 ] - [ DEBUG ]  Returned connection 1515887995 to pool.
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056625 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056625 ] - [ DEBUG ]  Checked out connection 1836929553 from pool.
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056625 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056627 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056628 ] - [ DEBUG ]  ==> Parameters: 0(Integer)
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056631 ] - [ DEBUG ]  <==      Total: 1
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056632 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056633 ] - [ DEBUG ]  Closing JDBC Connection [ConnectionID:10 ClientConnectionId: 57541bde-4ea6-4f56-81ee-5438681e71ec]
+2021-02-26 20:30:21  [ http-nio-8081-exec-4:73056634 ] - [ DEBUG ]  Returned connection 1836929553 to pool.

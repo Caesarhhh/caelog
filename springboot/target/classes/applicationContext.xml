@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+<context:component-scan base-package="com.proc.bean" />
+    <bean id="userController" class="com.ownblog.caelog.controller.UserController"/>
+    <bean id="socialhrefController" class="com.ownblog.caelog.controller.SocialhrefController"/>
+    <bean id="announcementController" class="com.ownblog.caelog.controller.AnnouncementController"/>
+    <bean id="BlocksController" class="com.ownblog.caelog.controller.BlocksController"/>
+</beans>
