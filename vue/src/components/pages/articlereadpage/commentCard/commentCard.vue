@@ -15,9 +15,9 @@
     <div class="addedcontent"><div>{{datas.addednicknames[index]}} : {{datas.addedcontent[index]}}</div></div>
     <div class="buttonbox" v-if="datas.count>-2">
       <div class="goodnums">{{datas.goodnums[index]}}</div>
-      <img @click="toglegood(index)" :src="datas.ifgood[index]==-1?nogoodimgsrc:goodimgsrc" alt="error" class="good">
+      <img @click="toglegood(index)" :src="ifgood[index]==-1?nogoodimgsrc:goodimgsrc" alt="error" class="good">
       <div class="reply" @click="reply(index)"><img :src="relpyimgsrc" alt="error"></div>
-      <div class="delete" @click="deletecard(index)" v-if="replyinfo.name==getname(datas.addednicknames[index])"><img :src="deleteimgsrc" alt="error"></div>
+      <div class="delete" @click="deletecard(index)" v-if="replyinfo.id==datas.actorid"><img :src="deleteimgsrc" alt="error"></div>
     </div>
   </div>
 </div>
@@ -32,7 +32,8 @@
         goodimgsrc:"http://caesar216.usa3v.net/caelog/images/good.png",
         nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
         relpyimgsrc:"http://caesar216.usa3v.net/caelog/images/reply.png",
-        deleteimgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png"
+        deleteimgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png",
+        ifgood:[]
       }
     },
     methods:{
@@ -45,47 +46,146 @@
           return s.substr(0,pos);
         }
       },
+      uploadFile:function (url, data) {
+        let config = {
+          url: url,
+          baseURL: this.common.serveraddress,
+          transformResponse: [function (data1) {
+            var data = data1;
+            if (typeof data1 == "string") {
+              data = JSON.parse(data1);
+            }
+            if (data.message && (data.data === 'login.invalid.token')) {
+              window.localStorage.removeItem("access-user");
+              alert("超时请重新登陆");
+              window.location.href = '/';
+            }
+            return data;
+          }],
+          headers: {'Content-Type': "multipart/form-data"},
+          withCredentials: true,
+          responseType: 'json',
+        };
+        return this.$axios.post(url, data, config);
+      },
       toglegood:function (num){
+        var temp=this.datas;
         if(num==-1){
-          var temp=this.datas;
-          temp.ifmaingood*=-1;
-          temp.maingoodnums+=temp.ifmaingood;
-          this.$emit("update:datas",temp);
+          if(temp.ifmaingood==-1){
+            this.$axios.get(
+              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=commentgood"+"&objectid="+this.datas.id).then(
+              res=>{
+                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=1"+"&articleid="+this.$route.params.articleid).then(
+                  res=>{
+                    temp.ifmaingood*=-1;
+                    temp.maingoodnums+=temp.ifmaingood;
+                    this.$emit("update:datas",temp);
+                  }
+                )
+              })
+          }
+          else{
+            this.$axios.get(
+              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=commentgood"+"&objectid="+this.datas.id).then(
+              res=>{
+                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
+                  res=>{
+                    temp.ifmaingood*=-1;
+                    temp.maingoodnums+=temp.ifmaingood;
+                    this.$emit("update:datas",temp);
+                  }
+                )
+              })
+          }
         }
         else{
-          var temp=this.datas;
-          temp.ifgood[num]*=-1;
-          temp.goodnums[num]+=temp.ifgood[num];
-          temp.count*=-1;
-          this.$emit("update:datas",temp);
+          if(temp.ifgood[num]==-1){
+            this.$axios.get(
+              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
+              res=>{
+                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.common.userinfo.id+"&id="+this.datas.addid[num]+"&count=1"+"&articleid="+this.$route.params.articleid).then(
+                  res=>{
+                    temp.ifgood[num]*=-1;
+                    temp.goodnums[num]+=temp.ifgood[num];
+                    temp.count*=-1;
+                    this.ifgood=temp.ifgood
+                    this.ifgood.push(0)
+                    this.ifgood.pop()
+                    this.$emit("update:datas",temp);
+                  }
+                )
+              })
+          }
+          else{
+            this.$axios.get(
+              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
+              res=>{
+                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.common.userinfo.id+"&id="+this.datas.addid[num]+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
+                  res=>{
+                    temp.ifgood[num]*=-1;
+                    temp.goodnums[num]+=temp.ifgood[num];
+                    temp.count*=-1;
+                    this.ifgood=temp.ifgood
+                    this.ifgood.push(0)
+                    this.ifgood.pop()
+                    this.$emit("update:datas",temp);
+                  }
+                )
+              })
+          }
         }
       },
       reply:function (target){
         if(target==-1){
+          console.log("in")
           var temp=this.replyinfo;
           temp.ifreply=true;
           temp.nickname=temp.name;
           temp.ccindex=this.datas.index;
+          temp.commentid=this.datas.id
+          temp.targetid=this.datas.actorid
           this.$emit("update:replyinfo",temp);
         }
         else{
+
           var temp=this.replyinfo;
           temp.ifreply=true;
           temp.nickname=temp.name;
           temp.nickname+="@";
           temp.ccindex=this.datas.index;
+          temp.commentid=this.datas.id
+          temp.targetid=this.datas.actorid
           temp.nickname+=this.getname(this.datas.addednicknames[target]);
           this.$emit("update:replyinfo",temp);
         }
       },
       deletecard:function (num){
+        if(!confirm("确定删除吗")){
+          return
+        }
         if(num==-1){
-        this.$parent.deletecard(this.datas.index);
+          console.log(this.datas.commmentid)
+          let param = new FormData()
+          param.append('userid',this.common.userinfo.id)
+          param.append('id',this.datas.id)
+          param.append('articleid',this.$route.params.articleid)
+          this.uploadFile("/comment/delete",param).then(async res=>{
+            await this.$parent.refreshcomment()
+          })
         }
         else{
-          this.$parent.deletecomment(this.datas.index,num);
+          let param = new FormData()
+          param.append('userid',this.common.userinfo.id)
+          param.append('id',this.datas.addid[num])
+          param.append('articleid',this.$route.params.articleid)
+          this.uploadFile("/addcomment/delete",param).then(async res=>{
+            await this.$parent.refreshcomment()
+          })
         }
       }
+    },
+    mounted() {
+      this.ifgood=this.datas.ifgood
     }
   }
 </script>

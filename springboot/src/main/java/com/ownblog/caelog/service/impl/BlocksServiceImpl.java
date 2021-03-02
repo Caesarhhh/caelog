@@ -18,11 +18,11 @@ public class BlocksServiceImpl implements BlocksService {
         BlocksDao blocksDao=sqlSession.getMapper(BlocksDao.class);
         HashMap hashMap=new HashMap();
         hashMap.put("userid",userid);
-        List<Blocks> socialhrefs=blocksDao.getBlockslist(hashMap);
+        List<Blocks> blockss=blocksDao.getBlockslist(hashMap);
         int id_=-1;
-        for(int i=0;i<socialhrefs.size();i++){
-            if(socialhrefs.get(i).getId()>id_){
-                id_=socialhrefs.get(i).getId();
+        for(int i=0;i<blockss.size();i++){
+            if(blockss.get(i).getId()>id_){
+                id_=blockss.get(i).getId();
             }
         }
         Blocks blocks=new Blocks(id_+1,userid,imgsrc,name_,remark);

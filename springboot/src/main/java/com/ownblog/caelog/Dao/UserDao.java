@@ -15,4 +15,6 @@ public interface UserDao {
     List<User> getUserbyid(HashMap map);
     String getpasswordbyid(HashMap map);
     List<User>getUserbyname(HashMap map);
+    List<String>getimgsrc(int userid);
+    List<String>getnickname(int userid);
 }

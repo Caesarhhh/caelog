@@ -8,8 +8,8 @@
     <div id="body">
       <div id="content">{{datas.content}}</div>
       <div id="buttonbox">
-        <div class="button"><img :src="modifysrc" alt="error"></div>
-        <div class="button"><img :src="delsrc" alt="error"></div>
+        <div class="button" @click="tomodify(datas.articleid)"><img :src="modifysrc" alt="error"></div>
+        <div class="button" @click="deleteac(datas.articleid)"><img :src="delsrc" alt="error"></div>
       </div>
     </div>
   </div>
@@ -27,6 +27,12 @@
     },
     props:["datas"],
     methods:{
+      deleteac:function (aid){
+        this.$parent.deleteac(aid)
+      },
+      tomodify(s){
+        this.$router.push({path:"/articleedit/"+s})
+      }
     }
   }
 </script>
@@ -98,6 +104,7 @@
     text-align: left;
     line-height: 100%;
     text-indent: 2em;
+    overflow: hidden;
   }
   #buttonbox{
     width:36px;

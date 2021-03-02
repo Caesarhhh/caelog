@@ -24,6 +24,12 @@
     <select id="findbiggestid" resultType="int">
         select max(id) from Users
     </select>
+    <select id="getimgsrc" parameterType="int" resultType="String">
+        select backimgsrc from Users where id=#{userid}
+    </select>
+    <select id="getnickname" parameterType="int" resultType="String">
+        select nickname from Users where id=#{userid}
+    </select>
     <select id="getUserListforeach" parameterType="map" resultType="User">
         select * from Users
         <where>

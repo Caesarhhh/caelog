@@ -8,11 +8,11 @@ public class Article {
     private String title;
     private String content;
     private int blockid;
-    private Time time_;
+    private String time_;
     private int goodnum;
     private int viewnum;
 
-    public Article(int userid, int id, String title, String content, int blockid, Time time_, int goodnum, int viewnum) {
+    public Article(int userid, int id, String title, String content, int blockid, String time_, int goodnum, int viewnum) {
         this.userid = userid;
         this.id = id;
         this.title = title;
@@ -66,11 +66,11 @@ public class Article {
         this.blockid = blockid;
     }
 
-    public Time getTime_() {
+    public String getTime_() {
         return time_;
     }
 
-    public void setTime_(Time time_) {
+    public void setTime_(String time_) {
         this.time_ = time_;
     }
 

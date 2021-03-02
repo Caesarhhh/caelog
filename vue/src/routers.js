@@ -21,6 +21,9 @@ const routers=[
     path:'/articleedit',name:'articleedit',component: articleedit
   },
   {
+    path:'/articleedit/:articleid',name:'articleedit',component: articleedit
+  },
+  {
     path:'/articleshow/search/:searchdata',name:'articleshow',component: articleshowpage
   },
   {

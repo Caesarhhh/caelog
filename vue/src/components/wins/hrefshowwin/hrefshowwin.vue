@@ -1,5 +1,5 @@
 <template>
-<div class="boxhwin">
+<div class="boxhhwin">
   <div id="close_hwin" @click="closewin">
     <img :src="closeimg" alt="error">
   </div>
@@ -28,11 +28,12 @@
 </script>
 
 <style scoped>
-.boxhwin{
+.boxhhwin{
   width:auto;
   height: 40px;
   border-style: ridge;
   background-color: white;
+  z-index: 10;
 }
 #close_hwin{
   width:32px;

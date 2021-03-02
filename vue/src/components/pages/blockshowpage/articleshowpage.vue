@@ -90,6 +90,17 @@
         var temp=this.searchdata;
         this.$router.push("/articleshow/search/"+temp);
       },
+    },
+    mounted() {
+      this.blocks=[]
+      this.$axios.get(
+        this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+        res=>{
+          for(var i=0;i<res.data.data.length&&i<15;i++){
+            var temp=res.data.data[i]
+            this.$set(this.blocks,i,{index:i,name:temp.name_})
+          }
+        })
     }
   }
 </script>

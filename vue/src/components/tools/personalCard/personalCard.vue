@@ -35,28 +35,7 @@
     href:"www.github.com/Caesarhhh",
     comments:"github网址",
   }
-  var hrefdatas=[
-    {
-      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/github.png",
-      href:"www.github.com/Caesarhhh",
-      comments:"github网址",
-    },
-    {
-      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/wechat.png",
-      href:"Caesar216",
-      comments:"微信号",
-    },
-    {
-      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/qq.png",
-      href:"1545099176",
-      comments:"qq号",
-    },
-    {
-      hrefimgsrc:"http://caesar216.usa3v.net/caelog/images/知乎.png",
-      href:"林零",
-      comments:"知乎昵称",
-    }
-  ]
+  var hrefdatas=[]
   export default {
     name: "personalCard",
     props:['datas'],
@@ -95,19 +74,16 @@
         this.common.serveraddress+"/socialhref/get?userid="+this.common.userinfo.id).then(
         res=>{
           for(var i=0;i<res.data.data.length;i++){
+            if(res.data.data[i].ifuse==1){
             var temp={
-              hrefid:res.data.data[i].hrefid,
-              imgsrc:res.data.data[i].imgsrc,
+              hrefimgsrc:res.data.data[i].imgsrc,
               href:res.data.data[i].href,
-              comment:res.data.data[i].comment,
+              comments:res.data.data[i].comment,
               ifuse:res.data.data[i].ifuse
             }
-            this.$set(this.announceInfo.title,temp.index-1,temp.title)
-            this.$set(this.announceInfo.time,temp.index-1,temp.time.substr(2,9))
-            this.$set(this.announceInfo.text,temp.index-1,temp.text)
-            this.announceInfo.count++
+            this.$set(this.hrefdatas,i,temp)
+            }
           }
-          console.log(this.announceInfo)
         })
     }
   }

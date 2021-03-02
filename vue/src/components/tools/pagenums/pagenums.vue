@@ -1,5 +1,5 @@
 <template>
-<div class="box1 clearfix">
+<div class="box_pn clearfix">
   <div id="bigbox">
     <div id="first" @click="postostart">首页</div>
     <div id="backbutton" v-if="datas.pos>1" @click="redpos"><img :src="backsrc" alt="error"></div>
@@ -75,7 +75,7 @@
 </script>
 
 <style scoped>
-.box1{
+.box_pn{
   width:584px;
   height:50px;
   border-style: ridge;

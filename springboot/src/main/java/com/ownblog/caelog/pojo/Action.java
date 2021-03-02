@@ -1,24 +1,26 @@
 package com.ownblog.caelog.pojo;
 
 public class Action {
-    private String type;
+    private String type_;
     private int actorid;
     private int targetid;
+    private int objectid;
     public Action(){
     }
 
-    public Action(String type, int actorid, int targetid) {
-        this.type = type;
+    public Action(String type, int actorid, int targetid, int objectid) {
+        this.type_ = type;
         this.actorid = actorid;
         this.targetid = targetid;
+        this.objectid = objectid;
     }
 
-    public String getType() {
-        return type;
+    public String getType_() {
+        return type_;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setType_(String type) {
+        this.type_ = type;
     }
 
     public int getActorid() {
@@ -37,12 +39,23 @@ public class Action {
         this.targetid = targetid;
     }
 
+    public int getObjectid() {
+        return objectid;
+    }
+
+    public void setObjectid(int objectid) {
+        this.objectid = objectid;
+    }
+
+
+
     @Override
     public String toString() {
         return "Action{" +
-                "type='" + type + '\'' +
+                "type_='" + type_ + '\'' +
                 ", actorid=" + actorid +
                 ", targetid=" + targetid +
+                ", objectid=" + objectid +
                 '}';
     }
 }

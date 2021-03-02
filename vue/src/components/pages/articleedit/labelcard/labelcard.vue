@@ -2,7 +2,7 @@
 <div class="box1">
   <div id="empty">
     <div id="value">{{datas.label}}</div>
-    <div id="close">
+    <div id="close" @click="close">
       <img :src="closeimgsrc" alt="error">
     </div>
   </div>
@@ -13,6 +13,11 @@
   export default {
     name: "labelcard",
     props:["datas"],
+    methods:{
+      close:function (){
+        this.$parent.closelb(this.datas.index)
+      }
+    },
     data(){
       return{
         closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close.png"

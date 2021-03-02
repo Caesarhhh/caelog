@@ -12,4 +12,6 @@ public interface UserService {
     public Result getUserbyid(int userid);
     public Result changeSafetyset(int userid,String safetyq,String safetya,String safetye);
     public Result changeBasedata(int userid,String headimgsrc,String nickname,String introduction);
+    public Result getuserimgsrc(int userid);
+    public Result getnickname(int userid);
 }

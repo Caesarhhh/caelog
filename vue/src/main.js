@@ -23,3 +23,7 @@ new Vue({
   router,
   template: '<app></app>'
 })
+const s = document.createElement('script');
+s.type = 'text/javascript';
+s.src = 'https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js';
+document.body.appendChild(s);

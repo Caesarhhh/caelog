@@ -30,25 +30,19 @@
     },
     methods:{
       submitForm(){
-        var valid=true
-          if(valid){
-            this.$axios.get(
-              this.common.serveraddress+"/user/login?nickname="+this.inputmsg.textinput+'&password='+this.inputmsg.passwordinput).then(
-                res=>{
-                  console.log(res.data.data)
-                  if(res.data.code==200){
-                    alert("login successfully!");
-                    this.$router.push("/mainpage");
-                    this.common.userinfo=res.data.data;
-                  }
-                  else{
-                    alert(res.data.msg)
-                  }
-                })
-          }
-          else{
-
-          }
+         this.$axios.get(
+           this.common.serveraddress+"/user/login?nickname="+this.inputmsg.textinput+'&password='+this.inputmsg.passwordinput).then(
+             res=>{
+               if(res.data.code==200){
+                 alert("login successfully!");
+                 this.$router.push("/mainpage");
+                 this.common.userinfo=res.data.data;
+                 this.common.loginuserinfo=res.data.data;
+               }
+               else{
+                 alert(res.data.msg)
+               }
+             })
       }
     }
   }

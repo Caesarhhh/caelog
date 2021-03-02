@@ -70,6 +70,13 @@
           console.log(res.data)
           setTimeout(this.refresh,300)
       })
+        let params = new FormData()
+        let change_content=this.common.loginuserinfo.nickname+"增加了公告《"+this.title+"》"
+        params.append('content_',change_content )
+        params.append('userid',this.common.loginuserinfo.id)
+        this.uploadFile("/change/add",params).then(res=>{
+          if(res.data.code==200){
+          }})
     },
       refresh:function (){
         this.sum=0

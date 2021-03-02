@@ -11,4 +11,10 @@
     <bean id="socialhrefController" class="com.ownblog.caelog.controller.SocialhrefController"/>
     <bean id="announcementController" class="com.ownblog.caelog.controller.AnnouncementController"/>
     <bean id="BlocksController" class="com.ownblog.caelog.controller.BlocksController"/>
+    <bean id="LabelsController" class="com.ownblog.caelog.controller.LabelsController"/>
+    <bean id="ChangeController" class="com.ownblog.caelog.controller.ChangeController"/>
+    <bean id="ArticleController" class="com.ownblog.caelog.controller.ArticleController"/>
+    <bean id="CommentController" class="com.ownblog.caelog.controller.CommentController"/>
+    <bean id="ActionController" class="com.ownblog.caelog.controller.ActionController"/>
+    <bean id="AddcommentController" class="com.ownblog.caelog.controller.AddcommentController"/>
 </beans>

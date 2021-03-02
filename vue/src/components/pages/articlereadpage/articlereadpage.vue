@@ -5,7 +5,13 @@
     <div class="pagebutton" @click="topage('/backstage')">后台</div>
   </div>
   <div id="title">{{title}}</div>
-  <div id="content"></div>
+  <div id="showarea">
+     <GeminiScrollbar>
+       <div id="gsd">
+         <div id="content"></div>
+       </div>
+     </GeminiScrollbar>
+  </div>
   <pc id="personalcard" :datas="pcpos"></pc>
   <st id="searchtool_ar"></st>
   <div id="blockbox_ar">
@@ -38,8 +44,11 @@
   import commentCard from "./commentCard/commentCard";
   import pagenums from "../../tools/pagenums/pagenums";
   import replytool from "../../wins/replytool/replytool";
+  import GeminiScrollbar from 'vue-gemini-scrollbar';
+  import Vue from "vue";
+  Vue.use(GeminiScrollbar);
   var blocklabels={
-    labels:["随笔","java","c++","linux","windows"],
+    labels:{},
     title:"板块",
     type:'block'
   }
@@ -48,105 +57,16 @@
     title:"标签",
     type:'label'
   }
-  var commentCardinfo=[{
-    maincontent:"革命是痛苦，其中也必然混有污秽和血，决不是如诗人所想象的那般有趣，那般完美；革命尤其是现实的故事，需要各种卑贱的，麻烦的工作，决不如诗人想象的那般浪漫；革命当然有破坏，然而更需要建设，破坏是痛快的，但建设却是麻烦的事。所以对于革命抱着浪漫谛克的幻想的人，一和革命接近，一到革命进行，便容易失望。",
-    mainsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    index:0,
-    nickname:"Caesar",
-    addednicknames:["Ben","Janet","Jhon"],
-    ifmaingood:-1,
-    maingoodnums:5,
-    ifgood:[-1,-1,1],
-    goodnums:[5,7,9],
-    addedsrc:[
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg"
-    ],
-    addedcontent:[
-      "只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-      "愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光。就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。",
-      "人有生存的权力，同样也应该拥有死的权力。我这种想法并无什么新意，只是人们不敢直截了当地把如此平常且起码的事情说出来而已。"
-    ],
-    addednum:3,
-    count:1
-  },{
-    maincontent:"革命是痛苦，其中也必然混有污秽和血，决不是如诗人所想象的那般有趣，那般完美；革命尤其是现实的故事，需要各种卑贱的，麻烦的工作，决不如诗人想象的那般浪漫；革命当然有破坏，然而更需要建设，破坏是痛快的，但建设却是麻烦的事。所以对于革命抱着浪漫谛克的幻想的人，一和革命接近，一到革命进行，便容易失望。",
-    mainsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    index:1,
-    nickname:"Caesar",
-    addednicknames:["Ben","Janet","Jhon"],
-    ifmaingood:-1,
-    maingoodnums:5,
-    ifgood:[-1,-1,1],
-    goodnums:[5,7,9],
-    addedsrc:[
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg"
-    ],
-    addedcontent:[
-      "只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-      "愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光。就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。",
-      "人有生存的权力，同样也应该拥有死的权力。我这种想法并无什么新意，只是人们不敢直截了当地把如此平常且起码的事情说出来而已。"
-    ],
-    addednum:3,
-    count:1
-  },{
-    maincontent:"革命是痛苦，其中也必然混有污秽和血，决不是如诗人所想象的那般有趣，那般完美；革命尤其是现实的故事，需要各种卑贱的，麻烦的工作，决不如诗人想象的那般浪漫；革命当然有破坏，然而更需要建设，破坏是痛快的，但建设却是麻烦的事。所以对于革命抱着浪漫谛克的幻想的人，一和革命接近，一到革命进行，便容易失望。",
-    mainsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    index:2,
-    nickname:"Caesar",
-    addednicknames:["Ben","Janet","Jhon"],
-    ifmaingood:-1,
-    maingoodnums:5,
-    ifgood:[-1,-1,1],
-    goodnums:[5,7,9],
-    addedsrc:[
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg"
-    ],
-    addedcontent:[
-      "只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-      "愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光。就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。",
-      "人有生存的权力，同样也应该拥有死的权力。我这种想法并无什么新意，只是人们不敢直截了当地把如此平常且起码的事情说出来而已。"
-    ],
-    addednum:3,
-    count:1
-  },{
-    maincontent:"革命是痛苦，其中也必然混有污秽和血，决不是如诗人所想象的那般有趣，那般完美；革命尤其是现实的故事，需要各种卑贱的，麻烦的工作，决不如诗人想象的那般浪漫；革命当然有破坏，然而更需要建设，破坏是痛快的，但建设却是麻烦的事。所以对于革命抱着浪漫谛克的幻想的人，一和革命接近，一到革命进行，便容易失望。",
-      mainsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-      index:3,
-      nickname:"Caesar",
-      addednicknames:["Ben","Janet","Jhon"],
-      ifmaingood:-1,
-      maingoodnums:5,
-      ifgood:[-1,-1,1],
-      goodnums:[5,7,9],
-      addedsrc:[
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg",
-      "http://caesar216.usa3v.net/caelog/images/head.jpg"
-    ],
-      addedcontent:[
-      "只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-      "愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光。就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。",
-      "人有生存的权力，同样也应该拥有死的权力。我这种想法并无什么新意，只是人们不敢直截了当地把如此平常且起码的事情说出来而已。"
-    ],
-      addednum:3,
-      count:1
-  }]
-  var pagenumsinfo={
-    sum:2,
-    pos:1
-  }
+  var commentCardinfo=[]
   var replyinfo={
+    id:0,
     headimgsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
     nickname:"Luffy",
     name:"Luffy",
     ifreply:false,
-    ccindex:0
+    ccindex:0,
+    commentid:0,
+    targetid:0
   }
   export default {
     name: "articlereadpage",
@@ -158,12 +78,14 @@
         transmitimgsrc:"http://caesar216.usa3v.net/caelog/images/transmit.png",
         goodimgsrc:"http://caesar216.usa3v.net/caelog/images/good.png",
         nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
-        title:"狂人日记杂谈",
+        title:"",
         good:-1,
         headimgsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
         commentCardinfo:commentCardinfo,
-        pagenumsinfo:pagenumsinfo,
-        commentnum:4,
+        commentCardinfo_:[],
+        pagenumsinfo:{sum:1,pos:1},
+        commentnum:0,
+        commentnum_:0,
         replyinfo:replyinfo,
         nickname: "Caesar",
         inputtext:"",
@@ -179,30 +101,57 @@
         this.$router.push(s);
       },
       toglegood:function (){
-        this.good*=-1;
+        if(this.good==-1){
+          this.$axios.get(
+            this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
+            res=>{
+              this.$axios.get(this.common.serveraddress+"/article/changegood?userid="+this.common.userinfo.id+"&id="+this.$route.params.articleid+"&count=1").then(
+                res=>{
+                  this.good=1
+                }
+              )
+            })
+        }
+        else{
+          this.$axios.get(
+            this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
+            res=>{
+              this.$axios.get(this.common.serveraddress+"/article/changegood?userid="+this.common.userinfo.id+"&id="+this.$route.params.articleid+"&count=-1").then(
+                res=>{
+                  this.good=-1
+                }
+              )
+            })
+        }
+      },
+      refresh_replyinfo:function (){
+        this.replyinfo.id=this.common.loginuserinfo.id
+        this.replyinfo.headimgsrc=this.common.loginuserinfo.backimgsrc
+        this.replyinfo.nickname=this.common.loginuserinfo.nickname
+        this.replyinfo.name=this.common.loginuserinfo.nickname
+        this.replyinfo.freply=false
+        this.replyinfo.ccindex=0
+        this.replyinfo.commentid=0
+
       },
       addcard:function (){
-        var temp={
-          maincontent:this.inputtext,
-          mainsrc:this.headimgsrc,
-          index:this.bigsum,
-          nickname:replyinfo.name,
-          addednicknames:[],
-          ifmaingood:-1,
-          maingoodnums:0,
-          ifgood:[],
-          goodnums:[],
-          addedsrc:[],
-          addedcontent:[],
-          addednum:3,
-          count:1
-        };
-        this.commentCardinfo.push(temp);
-        this.bigsum+=1;
-        this.commentnum+=1;
-        if((this.commentnum-1)%3==0){
-          this.pagenumsinfo.sum+=1;
-        }
+        let param = new FormData()
+        param.append('userid',this.common.userinfo.id)
+        param.append('content_',this.inputtext)
+        param.append('articleid',this.$route.params.articleid)
+        param.append('actorid',this.common.loginuserinfo.id)
+        this.uploadFile("/comment/add",param).then(async res=>{
+          await this.getcomments()
+          this.commentCardinfo=this.commentCardinfo_
+          this.commentnum=this.commentnum_
+        })
+      },
+      showtexthtml: function (x) {
+        var mdValue=x;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(mdValue);
+        document.getElementById("content").innerHTML = html;
+        this.count*=-1;
       },
       deletecard:function (pos){
         var temp=confirm("确定删除吗？");
@@ -234,7 +183,177 @@
           commentCardinfo[indexx].goodnums.splice(pos,1);
           commentCardinfo[indexx].addednum-=1;
         }
-      }
+      },
+      getbls(){
+        this.labellabels.labels=[]
+        this.$axios.get(
+          this.common.serveraddress+"/labels/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp=res.data.data[i]
+              this.$set(this.labellabels.labels,i,temp.name_)
+            }
+          })
+        this.blocklabels.labels=[]
+        this.$axios.get(
+          this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp=res.data.data[i]
+              this.$set(this.blocklabels.labels,temp.id,temp.name_)
+            }
+          })
+      },
+      getarticle(){
+        this.$axios.get(
+          this.common.serveraddress+"/article/getone?userid="+this.common.userinfo.id+"&id="+this.$route.params.articleid).then(
+          res=>{
+            for(var i =0;i<res.data.data.length;i++){
+              var temp={
+                title:res.data.data[i].title,
+                time:res.data.data[i].time_.substring(2,10),
+                content:res.data.data[i].content,
+                block:blocklabels[res.data.data[i].blockid],
+                id:res.data.data[i].id
+              }
+              this.title=temp.title
+              this.showtexthtml(temp.content)
+              this.articlenum++
+            }
+          })
+      },
+      refreshcomment:async function (){
+        await this.getcomments()
+        this.commentCardinfo=this.commentCardinfo_
+        this.commentnum=this.commentnum_
+      },
+      uploadFile:function (url, data) {
+        let config = {
+          url: url,
+          baseURL: this.common.serveraddress,
+          transformResponse: [function (data1) {
+            var data = data1;
+            if (typeof data1 == "string") {
+              data = JSON.parse(data1);
+            }
+            if (data.message && (data.data === 'login.invalid.token')) {
+              window.localStorage.removeItem("access-user");
+              alert("超时请重新登陆");
+              window.location.href = '/';
+            }
+            return data;
+          }],
+          headers: {'Content-Type': "multipart/form-data"},
+          withCredentials: true,
+          responseType: 'json',
+        };
+        return this.$axios.post(url, data, config);
+      },
+      ifgood:function (actorid,targetid,objectid){
+        let param = new FormData()
+        param.append('targetid',targetid)
+        param.append('actorid',actorid)
+        param.append('type_',"666")
+        param.append('objectid',objectid)
+        var result=1
+        this.uploadFile("/action/ifin",param).then(res=>{
+          if(res.data.code==400){
+            result=-1
+            return result
+          }
+          else{
+            result=1
+            return result
+          }
+        })
+      },
+      getcomments: function (){
+        this.commentCardinfo_=[]
+        this.commentnum_=0
+        this.$axios.get(
+          this.common.serveraddress+"/comment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid).then(
+          async res=> {
+            for(var i =0;i<res.data.data.length;i++){
+              var temp={
+                id:res.data.data[i].id,
+                actorid:res.data.data[i].actorid,
+                maincontent:res.data.data[i].content,
+                mainsrc:"",
+                index:this.commentCardinfo.length,
+                nickname:"",
+                addednicknames:[],
+                ifmaingood:1,
+                maingoodnums:res.data.data[i].goodnum,
+                time:res.data.data[i].time_,
+                ifgood:[],
+                goodnums:[],
+                addedsrc:[],
+                addedcontent:[],
+                addednum:0,
+                count:0,
+                addid:[]
+              }
+              await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+temp.actorid).then(
+                ress=>{
+                  temp.mainsrc=ress.data.data
+                }
+              )
+              await this.$axios.get(this.common.serveraddress+"/user/getnickname?userid="+temp.actorid).then(
+                ress=>{
+                  temp.nickname=ress.data.data
+                }
+              )
+              let param = new FormData()
+              param.append('targetid',temp.actorid)
+              param.append('actorid',this.common.loginuserinfo.id)
+              param.append('type_',"commentgood")
+              param.append('objectid',temp.id)
+              await this.uploadFile("/action/ifin",param).then(ress=>{
+                if(ress.data.code==400){
+                  temp.ifmaingood=-1
+                }
+                else{
+                  temp.ifmaingood=1
+                }
+              })
+              await this.$axios.get(
+                this.common.serveraddress+"/addcomment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid+"&commentid="+temp.id).then(
+                async ress=>{
+                  for(var u=0;u<ress.data.data.length;u++){
+                    temp.addedcontent.push(ress.data.data[u].content)
+                    temp.addednicknames.push(ress.data.data[u].name_)
+                    temp.goodnums.push(ress.data.data[u].goodnum)
+                    temp.addid.push(ress.data.data[u].id)
+                    await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+ress.data.data[u].actorid).then(
+                      resss=>{
+                        temp.addedsrc.push(resss.data.data)
+                      }
+                    )
+                    let param = new FormData()
+                    param.append('targetid',ress.data.data[u].actorid)
+                    param.append('actorid',this.common.loginuserinfo.id)
+                    param.append('type_',"addcommentgood")
+                    param.append('objectid',temp.addid[u])
+                    await this.uploadFile("/action/ifin",param).then(resss=>{
+                      if(resss.data.code==400){
+                        temp.ifgood.push(-1)
+                      }
+                      else{
+                        temp.ifgood.push(1)
+                      }
+                    })
+                    temp.addednum++
+                  }
+                })
+              this.commentCardinfo_.push(temp)
+              this.commentnum_++
+              if(i==res.data.data.length-1){
+                this.commentnum=this.commentnum_
+              }
+              this.pagenumsinfo.sum=Math.ceil(this.commentnum/3)
+            }
+          })
+      },
     },
     components:{
       pc:personalCard,
@@ -243,6 +362,24 @@
       cc:commentCard,
       pn:pagenums,
       rtl:replytool
+    },
+    async mounted() {
+      this.$axios.get(
+        this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
+        res=>{
+          if(res.data.code==400){
+            this.good=-1
+          }
+          else{
+            this.good=1
+          }
+        })
+      this.headimgsrc=this.common.loginuserinfo.backimgsrc
+      this.getbls()
+      this.getarticle()
+      await this.getcomments()
+      this.commentCardinfo=this.commentCardinfo_
+      this.refresh_replyinfo()
     }
   }
 </script>
@@ -331,13 +468,22 @@
     line-height: 61px;
     text-align: left;
   }
-  #content{
+  #showarea{
     width: 682px;
     height: 880px;
-    border-style: ridge;
     position: absolute;
     left:21px;
     top:196px;
+  }
+  #gsd{
+    width: 682px;
+    height: 880px;
+  }
+  #content{
+    width: 682px;
+    height: 880px;
+    position: absolute;
+    left:21px;
   }
   #commentarea{
     width: 976px;

@@ -11,6 +11,12 @@
         <typeAlias type="com.ownblog.caelog.pojo.Socialhref" alias="Socialhref"/>
         <typeAlias type="com.ownblog.caelog.pojo.Announcement" alias="Announcement"/>
         <typeAlias type="com.ownblog.caelog.pojo.Blocks" alias="Blocks"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Labels" alias="Labels"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Change" alias="Change"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Article" alias="Article"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Comment" alias="Comment"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Action" alias="Action"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Addcomment" alias="Addcomment"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -28,5 +34,11 @@
         <mapper resource="com/ownblog/caelog/mapper/SocialhrefMapper.xml"/>
         <mapper resource="com/ownblog/caelog/mapper/AnnouncementMapper.xml"/>
         <mapper resource="com/ownblog/caelog/mapper/BlocksMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/LabelsMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/ChangeMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/ArticleMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/CommentMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/ActionMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/AddcommentMapper.xml"/>
     </mappers>
 </configuration>

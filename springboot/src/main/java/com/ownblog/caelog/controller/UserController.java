@@ -31,6 +31,16 @@ public class UserController {
         UserServiceImpl userserviceimpl=new UserServiceImpl();
         return userserviceimpl.getUserbyid(userid);
     }
+    @GetMapping("/getimgsrc")
+    public Object getimgsrc(@RequestParam("userid")int userid){
+        UserServiceImpl userserviceimpl=new UserServiceImpl();
+        return userserviceimpl.getuserimgsrc(userid);
+    }
+    @GetMapping("/getnickname")
+    public Object getnickname(@RequestParam("userid")int userid){
+        UserServiceImpl userserviceimpl=new UserServiceImpl();
+        return userserviceimpl.getnickname(userid);
+    }
     @GetMapping("/changesafetyset")
     public Object changesecret(@RequestParam("userid")int userid,@RequestParam("safetyquestion")String safetyquestion,@RequestParam("safetyanswer")String safetyanswer,@RequestParam("safetyemail")String safetyemail){
         UserServiceImpl userserviceimpl=new UserServiceImpl();

@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    "axios": "^0.21.1",
+    "vue": "^2.5.2",
+    "vue-gemini-scrollbar": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

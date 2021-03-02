@@ -82,10 +82,9 @@ public class UserServiceImpl implements UserService {
     public Result getUserbyid(int userid) {
         SqlSession sqlSession= BatisUtils.getSqlSession();
         UserDao userDao=sqlSession.getMapper(UserDao.class);
-        User user=new User();
         HashMap map=new HashMap();
         map.put("userid",userid);
-        user=userDao.getUserbyid(map).get(0);
+        User user=userDao.getUserbyid(map).get(0);
         sqlSession.close();
         return Result.succ(user);
     }
@@ -110,5 +109,23 @@ public class UserServiceImpl implements UserService {
         map.put("userid",user.getId());
         user=userDao.getUserbyid(map).get(0);
         return changePersonlData(userid, nickname, user.getPassword(), introduction, headimgsrc, user.getSecurityQuestion(),user.getSecurityAnswer(),user.getSecurityEmail());
+    }
+
+    @Override
+    public Result getuserimgsrc(int userid) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        String imgsrc=userDao.getimgsrc(userid).get(0);
+        sqlSession.close();
+        return Result.succ(imgsrc);
+    }
+
+    @Override
+    public Result getnickname(int userid) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        String nickname=userDao.getnickname(userid).get(0);
+        sqlSession.close();
+        return Result.succ(nickname);
     }
 }

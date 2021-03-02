@@ -6,20 +6,15 @@
     <rs id="recommendsong" :datas="songInfo"></rs>
     <sorttool id="sorttool" :datas="sortinfo"></sorttool>
     <div id="articlebox">
-      <ac class="articlecard" :datas="articleCardInfo"></ac>
-      <ac class="articlecard" :datas="articleCardInfo"></ac>
-      <ac class="articlecard" :datas="articleCardInfo"></ac>
-      <ac class="articlecard" :datas="articleCardInfo"></ac>
+      <ac class="articlecard" :datas="articleCardInfo[0]" v-if="articlenum>0"></ac>
+      <ac class="articlecard" :datas="articleCardInfo[1]" v-if="articlenum>1"></ac>
+      <ac class="articlecard" :datas="articleCardInfo[2]" v-if="articlenum>2"></ac>
+      <ac class="articlecard" :datas="articleCardInfo[3]" v-if="articlenum>3"></ac>
     </div>
     <div id="modibox">
       <div id="modititle">近期动态</div>
       <div id="modibody">
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
-        <mc class="modicard" :datas="modificationcardInfo"></mc>
+        <mc class="modicard" v-for="i in modificationcardInfo" :datas="i"></mc>
       </div>
     </div>
     <div id="blockbox">
@@ -60,23 +55,17 @@
   var sortinfo={
     timeslot:[{id:1,st:2015,et:2016},{id:2,st:2017,et:2018},{id:3,st:2019,et:2020}]
   }
-  var articleCardInfo={
-    title:"心灵日记",
-    block:"随笔",
-    time:"20-12-13",
-    content:"愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一份热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。 此后如竟没有炬火：我便是唯一的光。倘若有了炬火，出了太阳，我们自然心悦诚服的消失。不但毫无不平，而且还要随喜赞美这炬火或太阳；因为他照了人类，连我都在内。 我又愿中国青年都只是向上走，不必理会这冷笑和暗箭。",
-  }
-  var modificationcardInfo={
+  var modificationcardInfo=[{
     content:"修改了一些内容",
     time:"20-12-13"
-  }
+  }]
   var blocksInfo={
-    labels:["随笔","java","c++","linux","windows"],
+    labels:{},
     title:"板块",
     type:'block'
   }
   var labelsInfo={
-    labels:["机器学习","前端","后端","心情"],
+    labels:[],
     title:"标签",
     type:'label'
   }
@@ -87,11 +76,12 @@
         announceInfo:announceInfo,
         songInfo:songInfo,
         sortinfo:sortinfo,
-        articleCardInfo:articleCardInfo,
+        articleCardInfo:[],
         modificationcardInfo:modificationcardInfo,
         blocksInfo:blocksInfo,
         labelsInfo:labelsInfo,
-        pcpos:{pos:'left'}
+        pcpos:{pos:'left'},
+        articlenum:0
       }
     },
     components: {
@@ -105,30 +95,89 @@
       lb:labelbox
     },
     mounted() {
-      this.announceInfo.title=[]
-      this.announceInfo.time=[]
-      this.announceInfo.text=[]
-      this.announceInfo.count=0
-      var randomcode=parseInt(new Date().getTime())%100000
-      this.$axios.get(
-        this.common.serveraddress+"/announcement/get?userid="+this.common.userinfo.id+"&randomcode="+randomcode).then(
-        res=>{
-          for(var i=0;i<res.data.data.length;i++){
-            var temp={
-              title:res.data.data[i].title,
-              text:res.data.data[i].content,
-              index:res.data.data[i].index_,
-              id:res.data.data[i].id,
-              time:res.data.data[i].times
+      this.refresh_announce()
+      this.getbls()
+      this.addChange()
+      this.getarticles()
+      },
+    methods:{
+      addChange(){
+        this.modificationcardInfo=[]
+        this.$axios.get(
+          this.common.serveraddress+"/change/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp={
+                content:res.data.data[i].content,
+                time:res.data.data[i].time_.substring(2,10)
+              }
+              this.$set(this.modificationcardInfo,i,temp)
             }
-            this.$set(this.announceInfo.title,temp.index-1,temp.title)
-            this.$set(this.announceInfo.time,temp.index-1,temp.time.substr(2,9))
-            this.$set(this.announceInfo.text,temp.index-1,temp.text)
-            this.announceInfo.count++
-          }
-          console.log(this.announceInfo)
-        })
+          })
+      },
+      getbls(){
+        this.labelsInfo.labels=[]
+        this.$axios.get(
+          this.common.serveraddress+"/labels/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp=res.data.data[i]
+              this.$set(this.labelsInfo.labels,i,temp.name_)
+            }
+          })
+        this.blocksInfo.labels=[]
+        this.$axios.get(
+          this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp=res.data.data[i]
+              this.$set(this.blocksInfo.labels,temp.id,temp.name_)
+            }
+          })
+      },
+      refresh_announce(){
+        this.announceInfo.title=[]
+        this.announceInfo.time=[]
+        this.announceInfo.text=[]
+        this.announceInfo.count=0
+        var randomcode=parseInt(new Date().getTime())%100000
+        this.$axios.get(
+          this.common.serveraddress+"/announcement/get?userid="+this.common.userinfo.id+"&randomcode="+randomcode).then(
+          res=>{
+            for(var i=0;i<res.data.data.length;i++){
+              var temp={
+                title:res.data.data[i].title,
+                text:res.data.data[i].content,
+                index:res.data.data[i].index_,
+                id:res.data.data[i].id,
+                time:res.data.data[i].times
+              }
+              this.$set(this.announceInfo.title,temp.index-1,temp.title)
+              this.$set(this.announceInfo.time,temp.index-1,temp.time.substr(2,9))
+              this.$set(this.announceInfo.text,temp.index-1,temp.text)
+              this.announceInfo.count++
+            }
+          })
+      },
+      getarticles(){
+        this.articleCardInfo=[]
+        this.$axios.get(
+          this.common.serveraddress+"/article/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i =0;i<res.data.data.length;i++){
+              var temp={
+                title:res.data.data[i].title,
+                time:res.data.data[i].time_.substring(2,10),
+                content:res.data.data[i].content,
+                block:blocksInfo[res.data.data[i].blockid],
+                id:res.data.data[i].id
+              }
+              this.articleCardInfo.push(temp)
+              this.articlenum++
+            }
+          })
       }
+    }
   }
 </script>
 

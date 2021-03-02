@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.CommentDao">
+    <insert id="insertComment" parameterType="Comment">
+       insert into Comment(userid,id,time_,content,articleid,actorid,goodnum) values(#{userid},#{id},#{time_},#{content},#{articleid},#{actorid},#{goodnum})
+    </insert>
+    <delete id="deleteComment" parameterType="map">
+       delete from Comment where userid=#{userid} and id=#{id} and articleid=#{articleid}
+    </delete>
+    <select id="getCommentlist" resultType="Comment" parameterType="map">
+        select * from Comment where userid=#{userid} and articleid=#{articleid}
+    </select>
+    <select id="getCommentlistbyuserid" resultType="Comment" parameterType="map">
+        select * from Comment where userid=#{userid}
+    </select>
+    <update id="addonegood" parameterType="map">
+        update Comment set goodnum=(select goodnum from Comment where userid=#{userid} and id=#{id} and articleid=#{articleid})+#{count} where userid=#{userid} and id=#{id} and articleid=#{articleid}
+    </update>
+</mapper>

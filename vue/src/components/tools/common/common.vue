@@ -10,7 +10,8 @@
     userinfo:{},
     hrefinfo:[],
     blocksinfo:[],
-    announceinfo:[]
+    announceinfo:[],
+    loginuserinfo:{}
   }
 </script>
 

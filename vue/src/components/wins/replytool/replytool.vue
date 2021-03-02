@@ -32,20 +32,42 @@
         temp.ifreply=state;
         this.$emit("update:datas",temp);
       },
+      uploadFile:function (url, data) {
+        let config = {
+          url: url,
+          baseURL: this.common.serveraddress,
+          transformResponse: [function (data1) {
+            var data = data1;
+            if (typeof data1 == "string") {
+              data = JSON.parse(data1);
+            }
+            if (data.message && (data.data === 'login.invalid.token')) {
+              window.localStorage.removeItem("access-user");
+              alert("超时请重新登陆");
+              window.location.href = '/';
+            }
+            return data;
+          }],
+          headers: {'Content-Type': "multipart/form-data"},
+          withCredentials: true,
+          responseType: 'json',
+        };
+        return this.$axios.post(url, data, config);
+      },
       submit:function (){
-        var temp=this.commentinfo;
-        var pos=this.datas.ccindex;
-        temp[pos].addednum+=1;
-        temp[pos].goodnums.push(0);
-        temp[pos].ifgood.push(-1);
-        temp[pos].count*=-1;
-        temp[pos].addedsrc.push(this.datas.headimgsrc);
-        temp[pos].addedcontent.push(this.inputtext);
-        temp[pos].addednicknames.push(this.datas.nickname);
-        this.$emit("update:commentinfo",temp);
-        var tt=this.datas;
-        tt.ifreply=false;
-        this.$emit("update:datas",tt);
+        let param = new FormData()
+        param.append('userid',this.common.loginuserinfo.id)
+        param.append('content_',this.inputtext)
+        param.append('articleid',this.$route.params.articleid)
+        param.append('actorid',this.datas.targetid)
+        param.append('commentid',this.datas.commentid)
+        param.append('name_',this.datas.nickname)
+        this.uploadFile("/addcomment/add",param).then(async res=>{
+          var temp=this.datas;
+          temp.ifreply=false;
+          this.$emit("update:datas",temp);
+          await this.$parent.refreshcomment()
+        })
       }
     }
   }

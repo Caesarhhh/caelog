@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.ActionDao">
+    <insert id="insertAction" parameterType="Action">
+       insert into Actions(actorid,targetid,type_,objectid) values(#{actorid},#{targetid},#{type_},#{objectid})
+    </insert>
+    <delete id="deleteAction" parameterType="map">
+       delete from Actions where actorid=#{actorid} and targetid=#{targetid} and type_=#{type_} and objectid=#{objectid}
+    </delete>
+    <select id="getActionlistbyactor" resultType="Action" parameterType="map">
+        select * from Actions where actorid=#{actorid}
+    </select>
+    <select id="ifin" resultType="Action" parameterType="map">
+        select * from Actions where actorid=#{actorid} and targetid=#{targetid} and type_=#{type_} and objectid=#{objectid}
+    </select>
+</mapper>
