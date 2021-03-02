@@ -50,6 +50,11 @@
       shs:socialhrefset,
       as:announcementset,
       bs:blockset
+    },
+    mounted() {
+      this.selectboxinfo.headsrc=this.common.loginuserinfo.backimgsrc
+      this.selectboxinfo.introduction=this.common.loginuserinfo.introduction
+      this.selectboxinfo.nickname=this.common.loginuserinfo.nickname
     }
   }
 </script>

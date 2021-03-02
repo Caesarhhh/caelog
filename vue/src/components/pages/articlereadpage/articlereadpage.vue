@@ -484,6 +484,7 @@
     height: 880px;
     position: absolute;
     left:21px;
+    text-align: left;
   }
   #commentarea{
     width: 976px;
