@@ -2,7 +2,7 @@
 <div class="box2">
   <div id="pagehrefbox">
     <div class="pagebutton" @click="topage('/mainpage')">首页</div>
-    <div class="pagebutton" @click="topage('/backstage')">后台</div>
+    <div class="pagebutton" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
   </div>
   <div id="title">{{title}}</div>
   <div id="showarea">
@@ -24,7 +24,7 @@
   </div>
   <div id="commentarea">
     <div id="editcomment">
-      <div id="editImgsrc"><img :src="headimgsrc" alt="error"></div>
+      <div id="editImgsrc"><img :src="headimgsrc" alt="未登录"></div>
       <input id="editinput" v-model="inputtext"></input>
       <button id="editbutton" @click="addcard">发表</button>
     </div>
@@ -73,6 +73,7 @@
     props:["datas"],
     data(){
       return{
+        iflog:false,
         blocklabels:blocklabels,
         labellabels:labellabels,
         transmitimgsrc:"http://caesar216.usa3v.net/caelog/images/transmit.png",
@@ -90,7 +91,8 @@
         nickname: "Caesar",
         inputtext:"",
         bigsum:4,
-        pcpos:{pos:'right'}
+        pcpos:{pos:'right'},
+        ifloginsame:false
       }
     },
     created() {
@@ -98,9 +100,13 @@
     },
     methods:{
       topage:function (s){
-        this.$router.push(s);
+        this.$router.push("/"+this.$route.params.userid+s);
       },
       toglegood:function (){
+        if(!this.iflog){
+          alert("请先登录")
+          return
+        }
         if(this.good==-1){
           this.$axios.get(
             this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
@@ -135,6 +141,10 @@
 
       },
       addcard:function (){
+        if(!this.iflog){
+          alert("请先登录")
+          return
+        }
         let param = new FormData()
         param.append('userid',this.common.userinfo.id)
         param.append('content_',this.inputtext)
@@ -308,6 +318,7 @@
               param.append('actorid',this.common.loginuserinfo.id)
               param.append('type_',"commentgood")
               param.append('objectid',temp.id)
+              if(this.iflog){
               await this.uploadFile("/action/ifin",param).then(ress=>{
                 if(ress.data.code==400){
                   temp.ifmaingood=-1
@@ -316,6 +327,10 @@
                   temp.ifmaingood=1
                 }
               })
+              }
+            else{
+              temp.ifmaingood=-1
+              }
               await this.$axios.get(
                 this.common.serveraddress+"/addcomment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid+"&commentid="+temp.id).then(
                 async ress=>{
@@ -334,6 +349,7 @@
                     param.append('actorid',this.common.loginuserinfo.id)
                     param.append('type_',"addcommentgood")
                     param.append('objectid',temp.addid[u])
+                    if(this.iflog){
                     await this.uploadFile("/action/ifin",param).then(resss=>{
                       if(resss.data.code==400){
                         temp.ifgood.push(-1)
@@ -341,7 +357,10 @@
                       else{
                         temp.ifgood.push(1)
                       }
-                    })
+                    })}
+                  else{
+                    temp.ifgood.push(-1)
+                    }
                     temp.addednum++
                   }
                 })
@@ -354,6 +373,37 @@
             }
           })
       },
+      getifgood:function (){
+          this.$axios.get(
+            this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
+            res=>{
+              if(res.data.code==400){
+                this.good=-1
+              }
+              else{
+                this.good=1
+              }
+            })
+      },
+      inituserinfo(userid){
+        this.$axios({
+          url:this.common.serveraddress+"/user/get?userid="+userid,
+          method:"get"
+        }).then(
+          async res=>{
+            this.common.userinfo=res.data.data
+            if(this.iflog){
+              this.getifgood()
+            }
+            this.headimgsrc=this.common.loginuserinfo.backimgsrc
+            this.getbls()
+            this.getarticle()
+            await this.getcomments()
+            this.commentCardinfo=this.commentCardinfo_
+            this.refresh_replyinfo()
+          }
+        )
+      }
     },
     components:{
       pc:personalCard,
@@ -364,22 +414,13 @@
       rtl:replytool
     },
     async mounted() {
-      this.$axios.get(
-        this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.$route.params.articleid).then(
-        res=>{
-          if(res.data.code==400){
-            this.good=-1
-          }
-          else{
-            this.good=1
-          }
-        })
-      this.headimgsrc=this.common.loginuserinfo.backimgsrc
-      this.getbls()
-      this.getarticle()
-      await this.getcomments()
-      this.commentCardinfo=this.commentCardinfo_
-      this.refresh_replyinfo()
+      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+        this.iflog=true
+        if(this.common.loginuserinfo.id==this.$route.params.userid){
+          this.ifloginsame=true
+        }
+      }
+      await this.inituserinfo(this.$route.params.userid)
     }
   }
 </script>

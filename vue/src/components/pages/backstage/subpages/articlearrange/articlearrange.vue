@@ -85,7 +85,7 @@
       getblocks:function (){
         this.blocks={}
         this.$axios.get(
-          this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+          this.common.serveraddress+"/blocks/get?userid="+this.common.loginuserinfo.id).then(
           res=>{
             for(var i=0;i<res.data.data.length&&i<15;i++){
               var label=res.data.data[i].name_
@@ -99,7 +99,7 @@
         this.acinfo=[]
         this.articlenum=0
         let param = new FormData()
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/article/get",param).then(res=>{
           if(res.data.code==200){
             for(var i =0;i<res.data.data.length;i++){
@@ -114,12 +114,11 @@
             }
           }
           this.pginfo.sum=Math.floor(this.articlenum/4)
-          console.log(this.acinfo)
         })
       },
       deleteac:function (arid){
         this.$axios.get(
-          this.common.serveraddress+"/article/delete?userid="+this.common.userinfo.id+"&id="+arid).then(
+          this.common.serveraddress+"/article/delete?userid="+this.common.loginuserinfo.id+"&id="+arid).then(
           res=>{
             if(res.data.code==200){
               alert("删除成功！")

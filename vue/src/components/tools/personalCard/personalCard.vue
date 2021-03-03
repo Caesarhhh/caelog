@@ -66,25 +66,40 @@
           this.hrefwininfo.comments=this.hrefdatas[id].comments;
           this.hrefwininfo.ifwin = true;
         }
+      },
+      inithrefinfo(){
+        this.hrefdatas=[]
+        this.$axios.get(
+          this.common.serveraddress+"/socialhref/get?userid="+this.common.userinfo.id).then(
+          res=>{
+            for(var i=0;i<res.data.data.length;i++){
+              if(res.data.data[i].ifuse==1){
+                var temp={
+                  hrefimgsrc:res.data.data[i].imgsrc,
+                  href:res.data.data[i].href,
+                  comments:res.data.data[i].comment,
+                  ifuse:res.data.data[i].ifuse
+                }
+                this.$set(this.hrefdatas,i,temp)
+              }
+            }
+          })
+      },
+      inituserinfo(userid){
+        this.$axios({
+          url:this.common.serveraddress+"/user/get?userid="+userid,
+          method:"get"
+        }).then(
+          res=>{
+            this.common.userinfo=res.data.data
+            this.inithrefinfo()
+          }
+        )
       }
     },
     mounted() {
-      this.hrefdatas=[]
-      this.$axios.get(
-        this.common.serveraddress+"/socialhref/get?userid="+this.common.userinfo.id).then(
-        res=>{
-          for(var i=0;i<res.data.data.length;i++){
-            if(res.data.data[i].ifuse==1){
-            var temp={
-              hrefimgsrc:res.data.data[i].imgsrc,
-              href:res.data.data[i].href,
-              comments:res.data.data[i].comment,
-              ifuse:res.data.data[i].ifuse
-            }
-            this.$set(this.hrefdatas,i,temp)
-            }
-          }
-        })
+      this.inituserinfo(this.$route.params.userid)
+
     }
   }
 </script>

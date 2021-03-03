@@ -61,7 +61,7 @@
     },
     methods:{
       entersecret:function (){
-        if(this.safetyinput==this.common.userinfo.password){
+        if(this.safetyinput==this.common.loginuserinfo.password){
           this.safetyenter=1;
         }
         else{
@@ -69,7 +69,7 @@
         }
       },
       changepassword:function (){
-        if(this.originalpassword!=this.common.userinfo.password){
+        if(this.originalpassword!=this.common.loginuserinfo.password){
           alert("原始密码错误")
           return
         }
@@ -77,7 +77,7 @@
           alert("新密码和确认密码不一致！")
           return
         }
-        if(this.safetyanswerinput!=this.common.userinfo.securityAnswer){
+        if(this.safetyanswerinput!=this.common.loginuserinfo.securityAnswer){
           alert("密保问题回答错误")
           return
         }
@@ -86,7 +86,7 @@
           return
         }
         this.$axios.get(
-          this.common.serveraddress+"/user/changepassword?userid="+this.common.userinfo.id+"&password="+this.newinputpassword).then(
+          this.common.serveraddress+"/user/changepassword?userid="+this.common.loginuserinfo.id+"&password="+this.newinputpassword).then(
           res=>{
             if(res.data.code==200){
               console.log(res.data.msg)
@@ -98,7 +98,7 @@
       },
       getrandomcode:function (){
         this.$axios.get(
-          this.common.serveraddress+"/email/send?address="+this.common.userinfo.securityEmail).then(
+          this.common.serveraddress+"/email/send?address="+this.common.loginuserinfo.securityEmail).then(
           res=>{
             if(res.data.code==200){
               this.ifcode=true
@@ -117,7 +117,7 @@
       },
       changesafetyset:function (){
         this.$axios.get(
-          this.common.serveraddress+"/user/changesafetyset?userid="+this.common.userinfo.id+"&safetyquestion="+this.safetyquestion+"&safetyanswer="+this.safetyanswer+"&safetyemail="+this.safetyemail
+          this.common.serveraddress+"/user/changesafetyset?userid="+this.common.loginuserinfo.id+"&safetyquestion="+this.safetyquestion+"&safetyanswer="+this.safetyanswer+"&safetyemail="+this.safetyemail
         ).then(
           res=>{
             console.log(res.data.data)
@@ -129,19 +129,19 @@
       var valid=true
       if(valid){
         this.$axios.get(
-          this.common.serveraddress+"/user/get?userid="+this.common.userinfo.id).then(
+          this.common.serveraddress+"/user/get?userid="+this.common.loginuserinfo.id).then(
           res=>{
             if(res.data.code==200){
-              this.common.userinfo=res.data.data;
+              this.common.loginuserinfo=res.data.data;
             }
             else{
               alert(res.data.msg)
             }
           })
       }
-      this.safetyquestion=this.common.userinfo.securityQuestion
-      this.safetyanswer=this.common.userinfo.securityAnswer
-      this.safetyemail=this.common.userinfo.securityEmail
+      this.safetyquestion=this.common.loginuserinfo.securityQuestion
+      this.safetyanswer=this.common.loginuserinfo.securityAnswer
+      this.safetyemail=this.common.loginuserinfo.securityEmail
     }
   }
 </script>

@@ -54,14 +54,14 @@
       ls:letterset
     },
     mounted() {
-      this.headimgsrc=this.common.userinfo.backimgsrc
-      this.nickname=this.common.userinfo.nickname
-      this.introduction=this.common.userinfo.introduction
+      this.headimgsrc=this.common.loginuserinfo.backimgsrc
+      this.nickname=this.common.loginuserinfo.nickname
+      this.introduction=this.common.loginuserinfo.introduction
     },
     methods:{
       submit:function (){
         this.$axios.get(
-          this.common.serveraddress+"/user/changebasedata?userid="+this.common.userinfo.id+"&headimgsrc="+this.headimgsrc+"&nickname="+this.nickname+"&introduction="+this.introduction
+          this.common.serveraddress+"/user/changebasedata?userid="+this.common.loginuserinfo.id+"&headimgsrc="+this.headimgsrc+"&nickname="+this.nickname+"&introduction="+this.introduction
         ).then(
           res=>{
             console.log(res.data.data)
@@ -94,7 +94,7 @@
         let file = e.target.files[0]
         let param = new FormData()  // 创建form对象
         param.append('file', file)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
           console.log(res.data)
           var uploadurl=this.common.getserveraddress+res.data.data;

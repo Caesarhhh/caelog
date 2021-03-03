@@ -31,10 +31,49 @@
     props:["datas"],
     methods:{
       toglegood:function (){
-        this.good*=-1;
+        if((JSON.stringify(this.common.loginuserinfo)==='{}')==true){
+          alert("请先登录")
+          return
+        }
+        if(this.good==-1){
+          this.$axios.get(
+            this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
+            res=>{
+              this.$axios.get(this.common.serveraddress+"/article/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=1").then(
+                res=>{
+                  this.good=1
+                }
+              )
+            })
+        }
+        else{
+          this.$axios.get(
+            this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
+            res=>{
+              this.$axios.get(this.common.serveraddress+"/article/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=-1").then(
+                res=>{
+                  this.good=-1
+                }
+              )
+            })
+        }
       },
       readto:function (){
-        this.$router.push("/articleread/"+this.datas.title);
+        this.$router.push("/"+this.$route.params.userid+"/articleread/"+this.datas.id);
+      },
+      mounted() {
+        if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+          this.$axios.get(
+            this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
+            res=>{
+              if(res.data.code==400){
+                this.good=-1
+              }
+              else{
+                this.good=1
+              }
+            })
+        }
       }
     }
   }
@@ -107,6 +146,7 @@
     text-align: left;
     line-height: 100%;
     text-indent: 2em;
+    overflow: hidden;
   }
   #buttonbox{
     width:36px;

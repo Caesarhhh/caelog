@@ -33,7 +33,8 @@
         nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
         relpyimgsrc:"http://caesar216.usa3v.net/caelog/images/reply.png",
         deleteimgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png",
-        ifgood:[]
+        ifgood:[],
+        iflog:false
       }
     },
     methods:{
@@ -69,6 +70,10 @@
         return this.$axios.post(url, data, config);
       },
       toglegood:function (num){
+        if(!this.iflog){
+          alert("请先登录")
+          return
+        }
         var temp=this.datas;
         if(num==-1){
           if(temp.ifmaingood==-1){
@@ -136,6 +141,10 @@
         }
       },
       reply:function (target){
+        if(!this.iflog){
+          alert("请先登录")
+          return
+        }
         if(target==-1){
           console.log("in")
           var temp=this.replyinfo;
@@ -186,6 +195,9 @@
     },
     mounted() {
       this.ifgood=this.datas.ifgood
+      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+        this.iflog=true
+      }
     }
   }
 </script>

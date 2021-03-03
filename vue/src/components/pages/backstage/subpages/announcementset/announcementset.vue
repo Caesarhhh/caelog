@@ -64,7 +64,7 @@
         }
         let param = new FormData()
         param.append('title', this.title)
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('content',this.content)
         this.uploadFile("/announcement/add",param).then(res=>{
           console.log(res.data)
@@ -85,7 +85,7 @@
         if(valid){
           var randomcode=parseInt(new Date().getTime())%100000
           this.$axios.get(
-            this.common.serveraddress+"/announcement/get?userid="+this.common.userinfo.id+"&randomcode="+randomcode).then(
+            this.common.serveraddress+"/announcement/get?userid="+this.common.loginuserinfo.id+"&randomcode="+randomcode).then(
             res=>{
               for(var i=0;i<res.data.data.length;i++){
                 var temp={
@@ -106,7 +106,7 @@
       },
       deletean:function (id){
         let param = new FormData()
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('id',id)
         this.uploadFile("/announcement/delete",param).then(res=>{
           console.log(res.data)
@@ -118,7 +118,7 @@
           return
         }
         let param = new FormData()
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('index1',index)
         param.append('index2',index-1)
         this.uploadFile("/announcement/changeindex",param).then(res=>{

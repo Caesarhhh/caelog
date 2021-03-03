@@ -31,6 +31,10 @@
     props:["datas"],
     methods:{
       toglegood:function (){
+        if((JSON.stringify(this.common.loginuserinfo)==='{}')==true){
+          alert("请先登录")
+          return
+        }
         if(this.good==-1){
           this.$axios.get(
             this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
@@ -55,10 +59,11 @@
         }
       },
       readto:function (){
-        this.$router.push("/articleread/"+this.datas.id);
+        this.$router.push("/"+this.$route.params.userid+"/articleread/"+this.datas.id);
       }
     },
     mounted() {
+      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
       this.$axios.get(
         this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
         res=>{
@@ -69,6 +74,7 @@
             this.good=1
           }
         })
+      }
     }
   }
 </script>

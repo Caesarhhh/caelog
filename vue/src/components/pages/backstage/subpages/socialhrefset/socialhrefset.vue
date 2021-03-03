@@ -53,7 +53,7 @@
         var valid=true
         if(valid){
           this.$axios.get(
-            this.common.serveraddress+"/socialhref/get?userid="+this.common.userinfo.id).then(
+            this.common.serveraddress+"/socialhref/get?userid="+this.common.loginuserinfo.id).then(
             res=>{
               if(res.data.code==200){
                 this.common.hrefinfo=res.data.data;
@@ -89,14 +89,12 @@
         }
       },
       deletehr:function (id){
-        console.log(id)
         var valid=true
         if(valid){
           this.$axios.get(
-            this.common.serveraddress+"/socialhref/delete?userid="+this.common.userinfo.id+"&hrefid="+id).then(
+            this.common.serveraddress+"/socialhref/delete?userid="+this.common.loginuserinfo.id+"&hrefid="+id).then(
             res=>{
               if(res.data.code==200){
-                console.log(res.data.msg)
                 this.refresh();
               }
               else{
@@ -108,14 +106,12 @@
         }
       },
       changevisable:function (id,ifuse){
-        console.log(id)
         var valid=true
         if(valid){
           this.$axios.get(
             this.common.serveraddress+"/socialhref/changevisable?userid="+this.common.userinfo.id+"&hrefid="+id+"&ifuse="+ifuse).then(
             res=>{
               if(res.data.code==200){
-                console.log(res.data.msg)
                 this.refresh();
               }
               else{
@@ -152,9 +148,8 @@
         let file = e.target.files[0]
         let param = new FormData()  // 创建form对象
         param.append('file', file)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
-          console.log(res.data)
           this.uploadurl=this.common.getserveraddress+res.data.data;
           this.picsrc=this.uploadurl;})
       },
@@ -172,11 +167,10 @@
       submit:function (e){
         let param = new FormData()  // 创建form对象
         param.append('imgsrc', this.uploadurl)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append("href",this.hrefcontent)
         param.append("comment",this.commentcontent)
         this.uploadFile("/socialhref/add",param).then(res=>{
-          console.log(res.data)
           this.refresh()}
       )
       }

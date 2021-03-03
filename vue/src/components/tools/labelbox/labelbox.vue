@@ -13,9 +13,13 @@
   export default {
     name: "labelbox",
     props:["datas"],
+    data(){
+      return{
+      }
+    },
     methods:{
       showto:function (s){
-        this.$router.push("/articleshow/"+this.datas.type+"/"+s);
+        this.$router.push("/"+this.$route.params.userid+"/articleshow/"+this.datas.type+"/"+s);
       }
     }
   }

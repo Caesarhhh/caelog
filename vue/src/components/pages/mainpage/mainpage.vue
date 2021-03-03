@@ -95,11 +95,8 @@
       lb:labelbox
     },
     mounted() {
-      this.refresh_announce()
-      this.getbls()
-      this.addChange()
-      this.getarticles()
-      },
+      this.inituserinfo(this.$route.params.userid)
+    },
     methods:{
       addChange(){
         this.modificationcardInfo=[]
@@ -176,6 +173,20 @@
               this.articlenum++
             }
           })
+      },
+      inituserinfo(userid){
+        this.$axios({
+          url:this.common.serveraddress+"/user/get?userid="+userid,
+          method:"get"
+        }).then(
+          res=>{
+            this.common.userinfo=res.data.data
+            this.refresh_announce()
+            this.getbls()
+            this.addChange()
+            this.getarticles()
+          }
+        )
       }
     }
   }

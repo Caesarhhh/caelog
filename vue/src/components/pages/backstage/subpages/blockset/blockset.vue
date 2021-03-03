@@ -64,7 +64,7 @@
         var valid=true
         if(valid){
           this.$axios.get(
-            this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+            this.common.serveraddress+"/blocks/get?userid="+this.common.loginuserinfo.id).then(
             res=>{
               if(res.data.code==200){
                 this.common.blocksinfo=res.data.data;
@@ -116,7 +116,7 @@
         let file = e.target.files[0]
         let param = new FormData()  // 创建form对象
         param.append('file', file)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
           console.log(res.data)
           this.uploadurl=this.common.getserveraddress+res.data.data;
@@ -125,7 +125,7 @@
       submit:function (e){
         let param = new FormData()  // 创建form对象
         param.append('imgsrc', this.uploadurl)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append("name_",this.inputname)
         param.append("remark",this.inputremark)
         this.uploadFile("/blocks/add",param).then(res=>{
@@ -137,7 +137,7 @@
         var valid=true
         if(valid){
           this.$axios.get(
-            this.common.serveraddress+"/blocks/delete?userid="+this.common.userinfo.id+"&id="+id).then(
+            this.common.serveraddress+"/blocks/delete?userid="+this.common.loginuserinfo.id+"&id="+id).then(
             res=>{
               this.refresh();
               if(res.data.code==200){

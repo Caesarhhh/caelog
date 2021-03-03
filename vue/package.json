@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "vue": "^2.5.2",
-    "vue-gemini-scrollbar": "^2.0.1"
+    "vue-gemini-scrollbar": "^2.0.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  import {mapMutations} from "vuex";
   export default {
     name: "loginpage",
     props:["datas"],
@@ -25,24 +26,38 @@
         inputmsg:{
           textinput:"",
           passwordinput:""
-        }
+        },
+        userToken:'',
       }
     },
     methods:{
+      ...mapMutations(['changeLogin']),
       submitForm(){
-         this.$axios.get(
-           this.common.serveraddress+"/user/login?nickname="+this.inputmsg.textinput+'&password='+this.inputmsg.passwordinput).then(
-             res=>{
-               if(res.data.code==200){
-                 alert("login successfully!");
-                 this.$router.push("/mainpage");
-                 this.common.userinfo=res.data.data;
-                 this.common.loginuserinfo=res.data.data;
-               }
-               else{
-                 alert(res.data.msg)
-               }
-             })
+        let v=this
+        let param = new FormData()
+        param.append('nickname',this.inputmsg.textinput)
+        param.append('password',this.inputmsg.passwordinput)
+        this.$axios(
+          {
+            method:'post',
+            url:this.common.serveraddress+"/user/login",
+            data:{
+              nickname:this.inputmsg.textinput,
+              password:this.inputmsg.passwordinput
+            }
+          }
+        ).then(res=>{
+          console.log(res.data);
+          this.common.userinfo=res.data.userinfo.data
+          this.common.loginuserinfo=res.data.userinfo.data
+          v.userToken = res.data.token;
+          v.changeLogin({ Authorization:v.userToken });
+          v.$router.push('/'+this.common.loginuserinfo.id+'/mainpage');
+          alert('登录成功');
+        }).catch(function(err){
+          console.log("err",err);
+          alert('密码或用户名错误');
+        })
       }
     }
   }

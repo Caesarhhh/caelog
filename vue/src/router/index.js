@@ -4,7 +4,7 @@ import mainpage from "../components/pages/mainpage/mainpage";
 import backstage from "../components/pages/backstage/backstage";
 import loginpage from "../components/pages/loginpage/loginpage";
 import articleedit from "../components/pages/articleedit/articleedit";
-import articleshowpage from "../components/pages/blockshowpage/articleshowpage";
+import articleshowpage from "../components/pages/blockshowpage/blockshowpage";
 Vue.use(VueRouter);
 const routes=[
   {
