@@ -31,7 +31,7 @@
         this.$parent.deleteac(aid)
       },
       tomodify(s){
-        this.$router.push({path:"/articleedit/"+s})
+        this.$router.push({path:"/"+this.common.loginuserinfo.id+"/articleedit/"+s})
       }
     }
   }

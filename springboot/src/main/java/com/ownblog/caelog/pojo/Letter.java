@@ -2,9 +2,9 @@ package com.ownblog.caelog.pojo;
 
 import com.ownblog.caelog.pojo.tools.Time;
 
-public class Letter {
+public class Letter implements Comparable<Letter>{
     private int chatid;
-    private Time time_;
+    private String time_;
     private int actorid;
     private int targetid;
     private String content;
@@ -12,7 +12,7 @@ public class Letter {
     public Letter() {
     }
 
-    public Letter(int chatid, Time time_, int actorid, int targetid, String content) {
+    public Letter(int chatid, String time_, int actorid, int targetid, String content) {
         this.chatid = chatid;
         this.time_ = time_;
         this.actorid = actorid;
@@ -28,11 +28,11 @@ public class Letter {
         this.chatid = chatid;
     }
 
-    public Time getTime_() {
+    public String getTime_() {
         return time_;
     }
 
-    public void setTime_(Time time_) {
+    public void setTime_(String time_) {
         this.time_ = time_;
     }
 
@@ -69,5 +69,37 @@ public class Letter {
                 ", targetid=" + targetid +
                 ", content='" + content + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Letter o) {
+        Time t2=new Time(this.time_);
+        Time t1=new Time(o.time_);
+        if(t1.year-t2.year!=0){
+            return t1.year-t2.year;
+        }
+        else{
+            if(t1.month-t2.month!=0){
+                return t1.month-t2.month;
+            }
+            else{
+                if(t1.day-t2.day!=0){
+                    return t1.day-t2.day;
+                }
+                else{
+                    if(t1.hour-t2.hour!=0){
+                        return t1.hour-t2.hour;
+                    }
+                    else{
+                        if(t1.min-t2.min!=0){
+                            return t1.min-t2.min;
+                        }
+                        else{
+                            return t1.sec-t2.sec;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

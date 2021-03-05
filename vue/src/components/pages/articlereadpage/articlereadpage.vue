@@ -68,6 +68,7 @@
     commentid:0,
     targetid:0
   }
+  const s = document.createElement('script');
   export default {
     name: "articlereadpage",
     props:["datas"],
@@ -81,7 +82,7 @@
         nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
         title:"",
         good:-1,
-        headimgsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
+        headimgsrc:"",
         commentCardinfo:commentCardinfo,
         commentCardinfo_:[],
         pagenumsinfo:{sum:1,pos:1},
@@ -145,6 +146,10 @@
           alert("请先登录")
           return
         }
+        if (this.inputtext.match(/^[ ]*$/)||this.inputtext==null||this.inputtext==undefined) {
+          alert("评论内容不能为空")
+          return
+        }
         let param = new FormData()
         param.append('userid',this.common.userinfo.id)
         param.append('content_',this.inputtext)
@@ -197,7 +202,7 @@
       getbls(){
         this.labellabels.labels=[]
         this.$axios.get(
-          this.common.serveraddress+"/labels/get?userid="+this.common.userinfo.id).then(
+          this.common.serveraddress+"/labels/get?userid="+this.$route.params.userid).then(
           res=>{
             for(var i=0;i<res.data.data.length&&i<15;i++){
               var temp=res.data.data[i]
@@ -206,7 +211,7 @@
           })
         this.blocklabels.labels=[]
         this.$axios.get(
-          this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+          this.common.serveraddress+"/blocks/get?userid="+this.$route.params.userid).then(
           res=>{
             for(var i=0;i<res.data.data.length&&i<15;i++){
               var temp=res.data.data[i]
@@ -216,7 +221,7 @@
       },
       getarticle(){
         this.$axios.get(
-          this.common.serveraddress+"/article/getone?userid="+this.common.userinfo.id+"&id="+this.$route.params.articleid).then(
+          this.common.serveraddress+"/article/getone?userid="+this.$route.params.userid+"&id="+this.$route.params.articleid).then(
           res=>{
             for(var i =0;i<res.data.data.length;i++){
               var temp={
@@ -228,7 +233,6 @@
               }
               this.title=temp.title
               this.showtexthtml(temp.content)
-              this.articlenum++
             }
           })
       },
@@ -313,12 +317,12 @@
                   temp.nickname=ress.data.data
                 }
               )
-              let param = new FormData()
-              param.append('targetid',temp.actorid)
-              param.append('actorid',this.common.loginuserinfo.id)
-              param.append('type_',"commentgood")
-              param.append('objectid',temp.id)
               if(this.iflog){
+                let param = new FormData()
+                param.append('targetid',temp.actorid)
+                param.append('actorid',this.common.loginuserinfo.id)
+                param.append('type_',"commentgood")
+                param.append('objectid',temp.id)
               await this.uploadFile("/action/ifin",param).then(ress=>{
                 if(ress.data.code==400){
                   temp.ifmaingood=-1
@@ -395,12 +399,14 @@
             if(this.iflog){
               this.getifgood()
             }
-            this.headimgsrc=this.common.loginuserinfo.backimgsrc
             this.getbls()
             this.getarticle()
             await this.getcomments()
             this.commentCardinfo=this.commentCardinfo_
-            this.refresh_replyinfo()
+            if(!(JSON.stringify(this.common.loginuserinfo)==='{}'||this.common.loginuserinfo==null)) {
+              this.headimgsrc = this.common.loginuserinfo.backimgsrc
+              this.refresh_replyinfo()
+            }
           }
         )
       }
@@ -414,7 +420,7 @@
       rtl:replytool
     },
     async mounted() {
-      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false&&this.common.loginuserinfo!=null){
         this.iflog=true
         if(this.common.loginuserinfo.id==this.$route.params.userid){
           this.ifloginsame=true

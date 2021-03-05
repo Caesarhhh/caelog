@@ -47,15 +47,19 @@
             }
           }
         ).then(res=>{
-          console.log(res.data);
+          if(res.data.code==400){
+            alert('密码或用户名错误');
+            return
+          }
           this.common.userinfo=res.data.userinfo.data
           this.common.loginuserinfo=res.data.userinfo.data
           v.userToken = res.data.token;
           v.changeLogin({ Authorization:v.userToken });
+          localStorage.setItem("userinfo",JSON.stringify(res.data.userinfo.data))
           v.$router.push('/'+this.common.loginuserinfo.id+'/mainpage');
           alert('登录成功');
+          location.reload()
         }).catch(function(err){
-          console.log("err",err);
           alert('密码或用户名错误');
         })
       }

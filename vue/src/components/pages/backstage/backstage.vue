@@ -52,6 +52,14 @@
       bs:blockset
     },
     mounted() {
+      if(((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null)){
+        this.$router.push("/login")
+      }
+      if(this.common.loginuserinfo.id!=this.$route.params.userid){
+        alert("您无权访问该用户后台！")
+        location.go(-1)
+      }
+      this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
       this.selectboxinfo.headsrc=this.common.loginuserinfo.backimgsrc
       this.selectboxinfo.introduction=this.common.loginuserinfo.introduction
       this.selectboxinfo.nickname=this.common.loginuserinfo.nickname

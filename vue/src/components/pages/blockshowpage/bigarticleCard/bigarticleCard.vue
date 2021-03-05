@@ -31,7 +31,7 @@
     props:["datas"],
     methods:{
       toglegood:function (){
-        if((JSON.stringify(this.common.loginuserinfo)==='{}')==true){
+        if((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null){
           alert("请先登录")
           return
         }
@@ -62,7 +62,7 @@
         this.$router.push("/"+this.$route.params.userid+"/articleread/"+this.datas.id);
       },
       mounted() {
-        if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+        if((JSON.stringify(this.common.loginuserinfo)==='{}')==false&&this.common.loginuserinfo!=null){
           this.$axios.get(
             this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
             res=>{

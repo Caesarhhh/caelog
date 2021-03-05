@@ -16,7 +16,7 @@
         <div v-for="(item,index) in hrefdatas" class="hrefbox" @click="openhrefwin(index)">
           <img :src="item.hrefimgsrc" alt="error">
         </div>
-        <div id="chatbox" @click="openchat">
+        <div id="chatbox" @click="openchat" v-if="!ifsame">
           <img v-bind:src="chatpicsrc" alt="error">
         </div>
       </div>
@@ -28,7 +28,8 @@
   import chatwin from "../../wins/chatwin/chatwin";
   import hrefshowwin from "../../wins/hrefshowwin/hrefshowwin";
   var chatinfo={
-    ifwin:false
+    ifwin:false,
+    targetid:0
   }
   var hrefwininfo={
     ifwin:false,
@@ -47,7 +48,8 @@
         hrefdatas:hrefdatas,
         name:"Caesar",
         chatinfo:chatinfo,
-        hrefwininfo:hrefwininfo
+        hrefwininfo:hrefwininfo,
+        ifsame:false
       }
     },
     components:{
@@ -98,8 +100,16 @@
       }
     },
     mounted() {
+      this.chatinfo.targetid=this.$route.params.userid
       this.inituserinfo(this.$route.params.userid)
-
+      if(((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null)){
+        this.ifsame=true
+      }
+      else{
+        if(this.common.loginuserinfo.id==this.$route.params.userid){
+          this.ifsame=true
+        }
+      }
     }
   }
 </script>

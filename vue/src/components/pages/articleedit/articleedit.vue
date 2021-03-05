@@ -87,7 +87,7 @@
     },
     methods: {
       topage(s){
-        this.$router.push({path:s})
+        this.$router.push({path:"/"+this.common.loginuserinfo.id+s})
       },
       addlabel: function () {
         var temp = {
@@ -107,7 +107,7 @@
       refresh_blocks:function (){
         this.blocks=[{label:"",id:""}]
         this.$axios.get(
-          this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
+          this.common.serveraddress+"/blocks/get?userid="+this.common.loginuserinfo.id).then(
           res=>{
             for(var i=0;i<res.data.data.length&&i<15;i++){
                 var label=res.data.data[i].name_
@@ -201,7 +201,7 @@
       submit:function (){
         let param = new FormData()
         param.append('content', this.innerhtmlinput)
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('title',this.titleinput)
         param.append('blockid',this.id[this.selected])
         this.uploadFile("/article/add",param).then(res=>{
@@ -257,7 +257,7 @@
         if(!this.isEmptyObject(this.$route.params)){
           this.ifnew=false
           this.$axios.get(
-            this.common.serveraddress+"/article/getone?userid="+this.common.userinfo.id+"&id="+this.$route.params.articleid).then(
+            this.common.serveraddress+"/article/getone?userid="+this.common.loginuserinfo.id+"&id="+this.$route.params.articleid).then(
             res=>{
               var temp=res.data.data[0]
               this.innerhtmlinput=temp.content
@@ -266,7 +266,7 @@
               this.mdSwitch()
             })
           this.$axios.get(
-            this.common.serveraddress+"/labels/getar?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid).then(
+            this.common.serveraddress+"/labels/getar?userid="+this.common.loginuserinfo.id+"&articleid="+this.$route.params.articleid).then(
             res=>{
               for(var i =0;i<res.data.data.length;i++){
                 var temp={
@@ -282,6 +282,13 @@
       }
     },
     mounted() {
+      if(((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null)){
+        this.$router.push("/login")
+      }
+      if(this.common.loginuserinfo.id!=this.$route.params.userid){
+        alert("您无权访问该用户编辑文章页！")
+        location.go(-1)
+      }
       this.refresh_blocks()
       this.getlabels()
     }

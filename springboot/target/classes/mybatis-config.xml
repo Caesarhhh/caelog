@@ -17,6 +17,8 @@
         <typeAlias type="com.ownblog.caelog.pojo.Comment" alias="Comment"/>
         <typeAlias type="com.ownblog.caelog.pojo.Action" alias="Action"/>
         <typeAlias type="com.ownblog.caelog.pojo.Addcomment" alias="Addcomment"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Letter" alias="Letter"/>
+        <typeAlias type="com.ownblog.caelog.pojo.Chat" alias="Chat"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -40,5 +42,7 @@
         <mapper resource="com/ownblog/caelog/mapper/CommentMapper.xml"/>
         <mapper resource="com/ownblog/caelog/mapper/ActionMapper.xml"/>
         <mapper resource="com/ownblog/caelog/mapper/AddcommentMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/LetterMapper.xml"/>
+        <mapper resource="com/ownblog/caelog/mapper/ChatMapper.xml"/>
     </mappers>
 </configuration>

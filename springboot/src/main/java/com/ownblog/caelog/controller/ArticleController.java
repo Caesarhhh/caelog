@@ -42,4 +42,19 @@ public class ArticleController {
         ArticleServiceImpl articleService=new ArticleServiceImpl();
         return articleService.addonegood(userid,id,count);
     }
+    @GetMapping("/getbylabel")
+    public Object getarticlebylabel(@RequestParam("userid")int userid,@RequestParam("labelname")String labelname){
+        ArticleServiceImpl articleService=new ArticleServiceImpl();
+        return articleService.getarticlebylabel(userid,labelname);
+    }
+    @GetMapping("/getbyblock")
+    public Object getarticlebyblock(@RequestParam("userid")int userid,@RequestParam("blockname")String blockname){
+        ArticleServiceImpl articleService=new ArticleServiceImpl();
+        return articleService.getarticlebyblock(userid,blockname);
+    }
+    @GetMapping("/getbysearch")
+    public Object getarticle(@RequestParam("userid")int userid,@RequestParam("searchcontent")String searchcontent){
+        ArticleServiceImpl articleService=new ArticleServiceImpl();
+        return articleService.getarticlebysearch(userid,searchcontent);
+    }
 }

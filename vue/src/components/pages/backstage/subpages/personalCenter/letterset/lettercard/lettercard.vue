@@ -15,7 +15,8 @@
 <script>
   import chatwin from "../../../../../../wins/chatwin/chatwin";
   var chatinfo={
-    ifwin:false
+    ifwin:false,
+    targetid:0
   }
   export default {
     name: "letterCard",
@@ -32,7 +33,12 @@
     methods:{
       openchat:function (){
         this.chatinfo.ifwin=true;
+      },
+      getletterinfo:function (){
       }
+    },
+    mounted() {
+      this.chatinfo.targetid=this.datas.targetid
     }
   }
 </script>
@@ -82,13 +88,14 @@
 }
 #time{
   width: 110px;
-  height: 30px;
+  height: 20px;
   position: absolute;
-  top:16px;
+  top:22px;
   left:85px;
-  line-height: 30px;
+  line-height: 20px;
   font-size: 16px;
   font-family: 华光楷体_CNKI;
+  background-color: unset;
 }
 #close{
   width: 25px;

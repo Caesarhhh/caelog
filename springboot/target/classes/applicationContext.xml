@@ -17,4 +17,7 @@
     <bean id="CommentController" class="com.ownblog.caelog.controller.CommentController"/>
     <bean id="ActionController" class="com.ownblog.caelog.controller.ActionController"/>
     <bean id="AddcommentController" class="com.ownblog.caelog.controller.AddcommentController"/>
+    <bean id="TokenInterceptor" class="com.ownblog.caelog.utils.TokenInterceptor"/>
+    <bean id="TokenInterceptor" class="com.ownblog.caelog.controller.LetterController"/>
+    <bean id="TokenInterceptor" class="com.ownblog.caelog.controller.ChatController"/>
 </beans>

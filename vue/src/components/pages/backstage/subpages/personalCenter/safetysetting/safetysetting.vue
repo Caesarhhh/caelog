@@ -19,13 +19,18 @@
   </div>
   <div id="safety">
     <div id="safesettitle">密保安全</div>
+    <div id="safetysetenter" v-if="safetyenter==0">
+      <div id="qusetiontitle_"><div id="questiontitle_div">密保问题</div></div>
+      <div class="input" id="questioncontent_">{{safetyquestion}}</div>
+      <input class="input" v-model="safetyanswerinputright" id="questironanswer_"></input>
+    </div>
     <div id="secretenter" v-if="safetyenter==0">
       <div id="secrettitle"><div>输入密码</div></div>
       <input id="secretinput" type="password" v-model="safetyinput"></input>
       <button id="secretbutton" @click="entersecret">确认</button>
     </div>
     <div id="questionset" v-if="safetyenter==1">
-    <div id="questiontitle"><div>密保问题</div></div>
+    <div id="questiontitle">密保问题</div>
     <input id="question" v-model="safetyquestion"></input>
     <input id="answer" v-model="safetyanswer"></input>
     </div>
@@ -52,6 +57,7 @@
         newinputpassword:"",
         confirmpassword:"",
         safetyanswerinput:"",
+        safetyanswerinputright:"",
         codeinput:"",
         ifcode:false,
         safetyquestion: "",
@@ -61,48 +67,57 @@
     },
     methods:{
       entersecret:function (){
-        if(this.safetyinput==this.common.loginuserinfo.password){
-          this.safetyenter=1;
+        let temp={
+          userid:this.common.loginuserinfo.id,
+          oldpassword: this.safetyinput,
+          safetyanswerinput:this.safetyanswerinputright
         }
-        else{
-          alert("密码错误");
-        }
+        console.log(temp)
+        this.$axios({
+          method:'post',
+          url:this.common.serveraddress+"/user/safetysetinput",
+          data:temp
+        }).then(
+          res=>{
+            console.log(res)
+            if(res.data.code==200){
+              this.safetyenter=1
+            }
+            else{
+              alert(res.data.msg)
+            }
+          }
+        )
       },
       changepassword:function (){
-        if(this.originalpassword!=this.common.loginuserinfo.password){
-          alert("原始密码错误")
+        var codedata=JSON.parse(localStorage.getItem("token_emailcode"))
+        console.log(codedata.time)
+        console.log(Date.parse(new Date()))
+        if(codedata.time<Date.parse(new Date())){
+          alert("验证码时效已过，请重新发送")
+          this.ifcode=false
           return
         }
         if(this.newinputpassword!=this.confirmpassword){
           alert("新密码和确认密码不一致！")
           return
         }
-        if(this.safetyanswerinput!=this.common.loginuserinfo.securityAnswer){
-          alert("密保问题回答错误")
-          return
+        let temp_data={
+          userid:this.common.loginuserinfo.id,
+          oldpassword:this.originalpassword,
+          newpassword:this.newinputpassword,
+          safetyanswerinput:this.safetyanswerinput,
+          codeinput:this.codeinput,
+          emailcode:codedata.code
         }
-        if(this.codeinput!=this.code){
-          alert("验证码错误")
-          return
-        }
-        this.$axios.get(
-          this.common.serveraddress+"/user/changepassword?userid="+this.common.loginuserinfo.id+"&password="+this.newinputpassword).then(
+        this.$axios(
+          {
+            url:this.common.serveraddress+"/user/changepassword",
+            data:temp_data,
+            method:'post'
+          }).then(
           res=>{
             if(res.data.code==200){
-              console.log(res.data.msg)
-            }
-            else{
-              alert(res.data.msg)
-            }
-          })
-      },
-      getrandomcode:function (){
-        this.$axios.get(
-          this.common.serveraddress+"/email/send?address="+this.common.loginuserinfo.securityEmail).then(
-          res=>{
-            if(res.data.code==200){
-              this.ifcode=true
-              this.code=res.data.data
               alert("修改成功!")
               this.originalpassword=""
               this.newinputpassword=""
@@ -115,12 +130,28 @@
             }
           })
       },
+      getrandomcode:function (){
+        this.$axios.get(
+          this.common.serveraddress+"/email/send?userid="+this.common.loginuserinfo.id).then(
+          res=>{
+            if(res.data.code==200){
+              this.ifcode=true
+              let temp={
+                code:res.data.data,
+                time:Date.parse(new Date())+300000
+              }
+              localStorage.setItem("token_emailcode",JSON.stringify(temp))
+            }
+            else{
+              alert(res.data.msg)
+            }
+          })
+      },
       changesafetyset:function (){
         this.$axios.get(
           this.common.serveraddress+"/user/changesafetyset?userid="+this.common.loginuserinfo.id+"&safetyquestion="+this.safetyquestion+"&safetyanswer="+this.safetyanswer+"&safetyemail="+this.safetyemail
         ).then(
           res=>{
-            console.log(res.data.data)
           }
         )
       }
@@ -292,6 +323,7 @@
   font-size: 20px;
   font-family: 华光楷体_CNKI;
   position: absolute;
+  cursor: pointer;
 }
 #confirmbutton{
   width: 45px;
@@ -320,6 +352,14 @@
   top:57px;
 }
 #secretenter{
+  width: 236px;
+  height: 63px;
+  border-style: ridge;
+  position: absolute;
+  left:15px;
+  top:125px;
+}
+#safetysetenter{
   width: 236px;
   height: 63px;
   border-style: ridge;
@@ -374,6 +414,36 @@
   left:55px;
   font-family: 华光楷体_CNKI;
   font-size: 15px;
+}
+#qusetiontitle_{
+  width:42px;
+  height: 55px;
+  border-style: ridge;
+  position: absolute;
+  top:2px;
+  left:5px;
+  font-family: 华光楷体_CNKI;
+  font-size: 16px;
+}
+#questiontitle_div{
+  position: absolute;
+  top:8px;
+}
+#questioncontent_{
+  width:174px;
+  height:22px;
+  position: absolute;
+  border-style: ridge;
+  top:2px;
+  left:55px;
+  border-style: ridge;
+  line-height: 22px;
+}
+#questironanswer_{
+  width: 174px;
+  height: 25px;
+  top:30px;
+  left:55px;
 }
 #answer{
   width: 174px;

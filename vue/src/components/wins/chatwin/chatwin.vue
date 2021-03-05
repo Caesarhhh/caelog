@@ -31,10 +31,6 @@
     headimgsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
     content:"只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
     ifleft:false
-  },{
-    headimgsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
-    content:"只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-    ifleft:true
   }]
   export default {
     name: "chatwin",
@@ -50,24 +46,79 @@
         inputtext:"",
         currentId:1,
         ifunselect:false,
-        timer:""
+        timer:"",
+        chatid:0
       }
     },
     mounted() {
-      if(this.getscrollheight()>0){
-        this.setscrollheight(this.getscrollheight());
-        var top=420-this.getscrollheight();
-        this.setscrollpos(top);
-        this.setchatspos(-1*top*(this.chatsheight()-424)/(420-this.getscrollheight()));
-        this.shpos=top;
-      }
-      window.addEventListener('mousewheel', this.debounce(this.handleScroll,100), true)||window.addEventListener("DOMMouseScroll",this.debounce(this.handleScroll,100),false)
+      this.init()
+      this.getChatinfo(this.datas.targetid)
     },
     methods:{
       close:function (){
         var temp=this.datas;
         temp.ifwin=false;
         this.$emit("update:datas",temp);
+      },
+      getChatinfo:function (targetid){
+        var that=this
+        this.chatinfo=[]
+        this.$axios({
+          method:"get",
+          url:that.common.serveraddress+"/chat/get?person1id="+that.common.loginuserinfo.id+"&person2id="+targetid
+        }).then(
+          res=>{
+            if(res.data.code==400){
+              this.$axios({
+                method:"get",
+                url:that.common.serveraddress+"/chat/add?person1id="+that.common.loginuserinfo.id+"&person2id="+targetid
+              }).then(ress=>{
+                this.chatid=ress.data.data.id
+              })
+            }
+            else{
+              this.chatid=res.data.data.id
+              this.$axios({
+                method:'get',
+                url:that.common.serveraddress+"/letter/get?chatid="+this.chatid}).then(async function (ress){
+                var temp=ress.data.data
+                for(var i=temp.length-1;i>-1;i--){
+                  var temp_chatinfo={
+                    headimgsrc: that.common.loginuserinfo.backimgsrc,
+                    content:temp[i].content,
+                    ifleft:false,
+                    time:temp[i].time_
+                  }
+                  if(temp[i].actorid!=that.common.loginuserinfo.id){
+                   await that.$axios({
+                      url:that.common.serveraddress+"/user/getimgsrc?userid="+targetid,
+                      method:"get"
+                    }).then(
+                      resss=>{
+                        temp_chatinfo.ifleft=true
+                        temp_chatinfo.headimgsrc=resss.data.data
+                        that.chatinfo.push(temp_chatinfo)
+                      }
+                    )
+                  }
+                  else{
+                    that.chatinfo.push(temp_chatinfo)
+                  }
+                }
+              })
+            }
+          }
+        )
+      },
+      init:function (){
+        if(this.getscrollheight()>0){
+          this.setscrollheight(this.getscrollheight());
+          var top=420-this.getscrollheight();
+          this.setscrollpos(top);
+          this.setchatspos(-1*top*(this.chatsheight()-424)/(420-this.getscrollheight()));
+          this.shpos=top;
+        }
+        window.addEventListener('mousewheel', this.debounce(this.handleScroll,100), true)||window.addEventListener("DOMMouseScroll",this.debounce(this.handleScroll,100),false)
       },
       waittime:function (fun,time){
         this.timer = setTimeout(()=>{fun
@@ -145,14 +196,17 @@
         };
       },
       submitmsg:function (){
-        var temp={
-          headimgsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
-          content:this.inputtext,
-          ifleft:false
-        };
-        if(temp.content!=""){
-            this.chatinfo.push(temp);
+        if(this.inputtext!=""){
+          this.$axios({
+            method:'get',
+            url:this.common.serveraddress+"/letter/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.targetid+"&content="+this.inputtext
+          }).then(res=>{
+            this.getChatinfo(this.datas.targetid)
             this.inputtext="";
+          })
+        }
+        else{
+          alert("私信内容不能为空")
         }
       }
     },

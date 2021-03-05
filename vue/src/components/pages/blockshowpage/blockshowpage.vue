@@ -15,10 +15,11 @@
       <div style="float:left;margin-top:20px;width:190px;"></div>
     </div>
   </div>
-  <bac id="bac1" :datas="articleCardInfo[(pagenumsinfo.pos-1)*3]" v-if="(pagenumsinfo.pos-1)*3<articlenum"></bac>
-  <bac id="bac2" :datas="articleCardInfo[(pagenumsinfo.pos-1)*3+1]" v-if="(pagenumsinfo.pos-1)*3+1<articlenum"></bac>
-  <bac id="bac3" :datas="articleCardInfo[(pagenumsinfo.pos-1)*3+2]" v-if="(pagenumsinfo.pos-1)*3+2<articlenum"></bac>
-  <pn id="pagenums_as" :datas="pagenumsinfo"></pn>
+  <bac id="bac1" :datas="articleCardInfo[(pagenumsinfo.pos-1)*4]" v-if="(pagenumsinfo.pos-1)*4<articlenum"></bac>
+  <bac id="bac2" :datas="articleCardInfo[(pagenumsinfo.pos-1)*4+1]" v-if="(pagenumsinfo.pos-1)*4+1<articlenum"></bac>
+  <bac id="bac3" :datas="articleCardInfo[(pagenumsinfo.pos-1)*4+2]" v-if="(pagenumsinfo.pos-1)*4+2<articlenum"></bac>
+  <bac id="bac4" :datas="articleCardInfo[(pagenumsinfo.pos-1)*4+3]" v-if="(pagenumsinfo.pos-1)*4+3<articlenum"></bac>
+  <pn v-if="articlenum!=0" :class="{pagenums_as_1:(pagenumsinfo.pos-1)*4+1==articlenum,pagenums_as_2:(pagenumsinfo.pos-1)*4+2==articlenum,pagenums_as_3:(pagenumsinfo.pos-1)*4+3==articlenum,pagenums_as_4:pagenumsinfo.pos*4<=articlenum}" :datas="pagenumsinfo"></pn>
 </div>
 </template>
 
@@ -39,7 +40,6 @@
     pos:1,
     sum:1
   }
-  var blocks={}
   export default {
     name: "articleshowpage",
     props:["datas"],
@@ -49,7 +49,7 @@
         sorttoolinfo:sorttoolinfo,
         articleCardInfo:articleCardInfo,
         pagenumsinfo:pagenumsinfo,
-        blocks:blocks,
+        blocks:{},
         inputtext:"",
         searchdata:"搜索内容",
         articlenum:0
@@ -62,83 +62,102 @@
     },
     created() {
       this.searchdata=this.$route.params.data;
+      this.inputtext=this.searchdata
     },
     methods:{
       searchto:function (){
         var temp=this.inputtext;
         this.inputtext="";
         this.$router.push("/"+this.$route.params.userid+"/articleshow/search/"+temp);
+        this.getarticleinfo()
       },
       showto:function (s){
+        if(s==this.$route.params.data){
+          return
+        }
         this.$router.push("/"+this.$route.params.userid+"/articleshow/block/"+s);
+        this.getarticleinfo()
       },
       searchresult:function (){
         var temp=this.searchdata;
         this.$router.push("/"+this.$route.params.userid+"/articleshow/search/"+temp);
+        this.getarticleinfo()
       },
+      getarticleinfo:function (){
+        this.pagenumsinfo={
+          pos:1,
+          sum:0
+        }
+        this.articlenum=0
+        this.articleCardInfo=[]
+        this.blocks={}
+        this.$axios.get(
+          this.common.serveraddress+"/blocks/get?userid="+this.$route.params.userid).then(
+          res=>{
+            for(var i=0;i<res.data.data.length&&i<15;i++){
+              var temp=res.data.data[i]
+              this.$set(this.blocks,temp.id,{index:i,name:temp.name_})
+            }
+            if(this.$route.params.type=="search"){
+              this.$axios.get(
+                this.common.serveraddress+"/article/getbysearch?userid="+this.$route.params.userid+"&searchcontent="+this.$route.params.data).then(
+                res=>{
+                  for(var i=0;i<res.data.data.length;i++){
+                    var temp={
+                      title:res.data.data[i].title,
+                      block:this.blocks[res.data.data[i].blockid]['name'],
+                      time:res.data.data[i].time,
+                      content:res.data.data[i].content,
+                      id:res.data.data[i].id
+                    }
+                    this.articleCardInfo.push(temp)
+                    this.articlenum++
+                  }
+                  this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
+                })
+            }
+            else if(this.$route.params.type=="label"){
+              this.$axios.get(
+                this.common.serveraddress+"/article/getbylabel?userid="+this.$route.params.userid+"&labelname="+this.$route.params.data).then(
+                res=>{
+                  for(var i=0;i<res.data.data.length;i++){
+                    var temp={
+                      title:res.data.data[i].title,
+                      block:this.blocks[res.data.data[i].blockid]['name'],
+                      time:res.data.data[i].time,
+                      content:res.data.data[i].content,
+                      id:res.data.data[i].id
+                    }
+                    this.articleCardInfo.push(temp)
+                    this.articlenum++
+                  }
+                  this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
+                })
+            }
+            else if(this.$route.params.type=="block"){
+              this.$axios.get(
+                this.common.serveraddress+"/article/getbyblock?userid="+this.$route.params.userid+"&blockname="+this.$route.params.data).then(
+                res=>{
+                  console.log('blocks',res)
+                  for(var i=0;i<res.data.data.length;i++){
+                    var temp={
+                      title:res.data.data[i].title,
+                      block:this.blocks[res.data.data[i].blockid]['name'],
+                      time:res.data.data[i].time,
+                      content:res.data.data[i].content,
+                      id:res.data.data[i].id
+                    }
+                    this.articleCardInfo.push(temp)
+                    this.articlenum++
+                  }
+                  this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
+                })
+            }
+          })
+      }
     },
     mounted() {
-      this.articleCardInfo=[]
-      this.blocks={}
-      this.$axios.get(
-        this.common.serveraddress+"/blocks/get?userid="+this.common.userinfo.id).then(
-        res=>{
-          for(var i=0;i<res.data.data.length&&i<15;i++){
-            var temp=res.data.data[i]
-            this.blocks[temp.id]={index:i,name:temp.name_}
-          }
-          if(this.$route.params.type=="search"){
-            this.$axios.get(
-              this.common.serveraddress+"/article/getbysearch?userid="+this.common.userinfo.id+"&searchcontent="+this.$route.params.data).then(
-              res=>{
-                for(var i=0;i<res.data.data.length;i++){
-                  var temp={
-                    title:res.data.data[i].title,
-                    block:this.blocks[res.data.data[i].blockid]['name'],
-                    time:res.data.data[i].time,
-                    content:res.data.data[i].content,
-                    id:res.data.data[i].id
-                  }
-                  this.articleCardInfo.push(temp)
-                  this.articlenum++
-                }
-              })
-          }
-          else if(this.$route.params.type=="label"){
-            this.$axios.get(
-              this.common.serveraddress+"/article/getbylabel?userid="+this.common.userinfo.id+"&labelname="+this.$route.params.data).then(
-              res=>{
-                for(var i=0;i<res.data.data.length;i++){
-                  var temp={
-                    title:res.data.data[i].title,
-                    block:this.blocks[res.data.data[i].blockid]['name'],
-                    time:res.data.data[i].time,
-                    content:res.data.data[i].content,
-                    id:res.data.data[i].id
-                  }
-                  this.articleCardInfo.push(temp)
-                  this.articlenum++
-                }
-              })
-          }
-          else if(this.$route.params.type=="block"){
-            this.$axios.get(
-              this.common.serveraddress+"/article/getbyblock?userid="+this.common.userinfo.id+"&blockname="+this.$route.params.data).then(
-              res=>{
-                for(var i=0;i<res.data.data.length;i++){
-                  var temp={
-                    title:res.data.data[i].title,
-                    block:this.blocks[res.data.data[i].blockid]['name'],
-                    time:res.data.data[i].time,
-                    content:res.data.data[i].content,
-                    id:res.data.data[i].id
-                  }
-                  this.articleCardInfo.push(temp)
-                  this.articlenum++
-                }
-              })
-          }
-        })
+      this.getarticleinfo()
     }
   }
 </script>
@@ -203,9 +222,29 @@
     top:741px;
     left: 33px;
   }
-  #pagenums_as{
+  #bac4{
+    position: absolute;
+    top:1015px;
+    left: 33px;
+  }
+  .pagenums_as_1{
+    position: absolute;
+    top:463px;
+    left: 49px;
+  }
+  .pagenums_as_2{
+    position: absolute;
+    top:737px;
+    left: 49px;
+  }
+  .pagenums_as_3{
     position: absolute;
     top:1011px;
+    left: 49px;
+  }
+  .pagenums_as_4{
+    position: absolute;
+    top:1285px;
     left: 49px;
   }
   #blockbox_as{

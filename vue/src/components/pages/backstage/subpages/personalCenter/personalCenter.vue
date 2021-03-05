@@ -54,6 +54,7 @@
       ls:letterset
     },
     mounted() {
+      this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
       this.headimgsrc=this.common.loginuserinfo.backimgsrc
       this.nickname=this.common.loginuserinfo.nickname
       this.introduction=this.common.loginuserinfo.introduction

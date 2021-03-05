@@ -10,6 +10,11 @@ public class User {
     private String securityAnswer;
     private String securityEmail;
 
+    public User(String nickname,String password_){
+        this.nickname=nickname;
+        this.password_=password_;
+    }
+
     public User(int id, String nickname, String password, String introduction, String backimgsrc, String securityQuestion, String securityAnswer, String securityEmail) {
         this.id = id;
         this.nickname = nickname;
@@ -94,6 +99,12 @@ public class User {
 
     public void setSecurityEmail(String securityEmail) {
         this.securityEmail = securityEmail;
+    }
+
+    public void hiddenforsafety(){
+        this.password_="******";
+        this.securityAnswer="******";
+        this.securityEmail="******";
     }
 
     @Override

@@ -39,17 +39,6 @@ new Vue({
   store:store,
   template: '<app></app>'
 })
-axios.interceptors.request.use(
-  config => {
-    if (localStorage.getItem('Authorization')) {
-      config.headers.Authorization = localStorage.getItem('Authorization');
-    }
-
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  });
 const s = document.createElement('script');
 s.type = 'text/javascript';
 s.src = 'http://caesar216.usa3v.net/caelog/images/tool/showdown-master/dist/showdown.min.js';

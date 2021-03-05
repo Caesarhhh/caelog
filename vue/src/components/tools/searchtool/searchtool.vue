@@ -19,7 +19,7 @@
     },
     methods:{
       searchto:function (){
-      this.$router.push("/articleshow/search/"+this.inputtext)
+      this.$router.push("/"+this.$route.params.userid+"/articleshow/search/"+this.inputtext)
     }
     }
   }

@@ -5,6 +5,7 @@ import com.ownblog.caelog.lang.Result;
 import com.ownblog.caelog.pojo.User;
 import com.ownblog.caelog.service.UserService;
 import com.ownblog.caelog.utils.BatisUtils;
+import com.ownblog.caelog.utils.TokenUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.springframework.stereotype.Repository;
@@ -29,6 +30,7 @@ public class UserServiceImpl implements UserService {
             return Result.fail("password is uncorrect");
         }
         sqlSession.close();
+        user.hiddenforsafety();
         return Result.succ(user);
     }
 
@@ -66,16 +68,26 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Result changeSecret(int userid,String password) {
+    public Result changeSecret(int userid,String oldpassword,String newpassword,String safetyanswerinput,String codeinput,String emailcode) {
         SqlSession sqlSession= BatisUtils.getSqlSession();
         UserDao userDao=sqlSession.getMapper(UserDao.class);
         User user=new User();
         HashMap map=new HashMap();
         map.put("userid",user.getId());
         user=userDao.getUserbyid(map).get(0);
+        String token= TokenUtil.getcode(emailcode);
+        if(!token.equals(codeinput)){
+            return Result.fail("验证码错误！");
+        }
+        if(!user.getPassword().equals(oldpassword)){
+            return Result.fail("原始密码输入错误！");
+        }
+        if(!user.getSecurityAnswer().equals(safetyanswerinput)){
+            return Result.fail("密保问题回答错误！");
+        }
         sqlSession.commit();
         sqlSession.close();
-        return changePersonlData(userid, user.getNickname(), password, user.getIntroduction(), user.getBackimgsrc(), user.getSecurityQuestion(),user.getSecurityAnswer(),user.getSecurityEmail());
+        return changePersonlData(userid, user.getNickname(), newpassword, user.getIntroduction(), user.getBackimgsrc(), user.getSecurityQuestion(),user.getSecurityAnswer(),user.getSecurityEmail());
     }
 
     @Override
@@ -86,6 +98,7 @@ public class UserServiceImpl implements UserService {
         map.put("userid",userid);
         User user=userDao.getUserbyid(map).get(0);
         sqlSession.close();
+        user.hiddenforsafety();
         return Result.succ(user);
     }
 
@@ -127,5 +140,35 @@ public class UserServiceImpl implements UserService {
         String nickname=userDao.getnickname(userid).get(0);
         sqlSession.close();
         return Result.succ(nickname);
+    }
+
+    @Override
+    public Result getuser(int userid) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap hashMap=new HashMap();
+        hashMap.put("userid",userid);
+        User user=userDao.getUserbyid(hashMap).get(0);
+        sqlSession.close();
+        return Result.succ(user);
+    }
+
+    @Override
+    public Result safetysetinput(int userid, String oldpassword, String securityAnswer) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        User user=new User();
+        HashMap map=new HashMap();
+        map.put("userid",user.getId());
+        user=userDao.getUserbyid(map).get(0);
+        if(!user.getPassword().equals(oldpassword)){
+            return Result.fail("原始密码输入错误！");
+        }
+        if(!user.getSecurityAnswer().equals(securityAnswer)){
+            return Result.fail("密保问题回答错误！");
+        }
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ("succeed!");
     }
 }

@@ -105,4 +105,43 @@ public class ArticleServiceImpl implements ArticleService {
         sqlSession.close();
         return Result.succ("add one good successfully!");
     }
+
+    @Override
+    public Result getarticlebylabel(int userid, String labelname) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        ArticleDao articleDao=sqlSession.getMapper(ArticleDao.class);
+        HashMap hashMap=new HashMap();
+        hashMap.put("userid",userid);
+        hashMap.put("labelname",labelname);
+        List<Article> article=articleDao.getArticlelistbylabel(hashMap);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ(article);
+    }
+
+    @Override
+    public Result getarticlebyblock(int userid, String blockname) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        ArticleDao articleDao=sqlSession.getMapper(ArticleDao.class);
+        HashMap hashMap=new HashMap();
+        hashMap.put("userid",userid);
+        hashMap.put("blockname",blockname);
+        List<Article> article=articleDao.getArticlelistbyblock(hashMap);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ(article);
+    }
+
+    @Override
+    public Result getarticlebysearch(int userid, String searchcontent) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        ArticleDao articleDao=sqlSession.getMapper(ArticleDao.class);
+        HashMap hashMap=new HashMap();
+        hashMap.put("userid",userid);
+        hashMap.put("content",searchcontent);
+        List<Article> article=articleDao.getArticlelistbysearch(hashMap);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ(article);
+    }
 }

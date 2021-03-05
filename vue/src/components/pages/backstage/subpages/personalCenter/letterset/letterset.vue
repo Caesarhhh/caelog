@@ -2,12 +2,12 @@
 <div class="letterset">
   <div id="title"><div>私信管理</div></div>
   <div id="letterbox">
-    <lc id="lc1" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6]"></lc>
-    <lc id="lc2" v-if="!(pagenumsinfo.pos==pagenumsinfo.sum&&letternum%6<2)" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+1]"></lc>
-    <lc id="lc3" v-if="!(pagenumsinfo.pos==pagenumsinfo.sum&&letternum%6<3)" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+2]"></lc>
-    <lc id="lc4" v-if="!(pagenumsinfo.pos==pagenumsinfo.sum&&letternum%6<4)" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+3]"></lc>
-    <lc id="lc5" v-if="!(pagenumsinfo.pos==pagenumsinfo.sum&&letternum%6<5)" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+4]"></lc>
-    <lc id="lc6" v-if="!(pagenumsinfo.pos==pagenumsinfo.sum&&letternum%6<6)" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+5]"></lc>
+    <lc id="lc1" v-if="(pagenumsinfo.pos-1)*6<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6]"></lc>
+    <lc id="lc2" v-if="(pagenumsinfo.pos-1)*6+1<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+1]"></lc>
+    <lc id="lc3" v-if="(pagenumsinfo.pos-1)*6+2<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+2]"></lc>
+    <lc id="lc4" v-if="(pagenumsinfo.pos-1)*6+3<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+3]"></lc>
+    <lc id="lc5" v-if="(pagenumsinfo.pos-1)*6+4<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+4]"></lc>
+    <lc id="lc6" v-if="(pagenumsinfo.pos-1)*6+5<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+5]"></lc>
     <div id="line"></div>
     <pn id="pagenums" :datas.sync="pagenumsinfo"></pn>
   </div>
@@ -67,6 +67,53 @@
       lc:lettercard
     },
     methods:{
+      getchatinfo:function (){
+        this.letterCardinfo=[]
+        this.letternum=0
+        this.$axios({
+          method:'get',
+          url:this.common.serveraddress+"/chat/getbysort?userid="+this.common.loginuserinfo.id
+        }).then(async res=>{
+          let len=res.data.data.length
+          for(var i=0;i<len;i++){
+            var tempdict={
+              nickname:"",
+              time:"",
+              headsrc:"",
+              targetid:res.data.data[i].person1id,
+              id:res.data.data[i].id
+            }
+            var tempid=res.data.data[i].person1id
+            if(tempid==this.common.loginuserinfo.id){
+              tempid=res.data.data[i].person2id
+              tempdict.targetid=tempid
+            }
+            await this.$axios({
+              method:'get',
+              url:this.common.serveraddress+"/user/get?userid="+tempid
+            }).then(ress=>{
+              this.$axios({
+                method:'get',
+                url:this.common.serveraddress+"/letter/get?chatid="+tempdict.id
+              }).then(resss=>{
+                tempdict.nickname=ress.data.data.nickname
+                tempdict.headsrc=ress.data.data.backimgsrc
+                this.letterCardinfo.push(tempdict)
+                tempdict.time=resss.data.data[0].time_.substring(2,10)
+                this.letternum++
+                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)
+              })
+            })
+          }
+        }).catch((e)=>{})
+      }
+    },
+    mounted() {
+      this.pagenumsinfo={
+        pos:1,
+        sum:0
+      }
+      this.getchatinfo()
     }
   }
 </script>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.ChatDao">
+    <insert id="insertChat" parameterType="Chat">
+       insert into Chat(person1id,person2id,id,ifview) values(#{person1id},#{person2id},#{id},#{ifview})
+    </insert>
+    <delete id="deleteChatbyid" parameterType="map">
+       delete from Chat where id=#{id}
+    </delete>
+    <select id="getChat" resultType="Chat" parameterType="map">
+        select * from Chat where ((person1id=#{person1id} and person2id=#{person2id}) or (person2id=#{person1id} and person1id=#{person2id}))
+    </select>
+    <select id="getbigestChatid" resultType="int" parameterType="map">
+        select max(id) from Chat
+    </select>
+    <update id="setifview" parameterType="map">
+        update Chat set ifview=#{ifview} where id=#{id}
+    </update>
+    <select id="getChatlistbyoneid" resultType="Chat" parameterType="int">
+        select * from Chat where person1id=#{userid} or person2id=#{userid}
+    </select>
+    <select id="getChatcount" resultType="int">
+        select count(*) from Chat
+    </select>
+</mapper>

@@ -195,7 +195,7 @@
     },
     mounted() {
       this.ifgood=this.datas.ifgood
-      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false){
+      if((JSON.stringify(this.common.loginuserinfo)==='{}')==false&&this.common.loginuserinfo!=null){
         this.iflog=true
       }
     }

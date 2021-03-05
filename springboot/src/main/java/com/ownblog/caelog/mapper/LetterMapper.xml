@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownblog.caelog.Dao.LetterDao">
+    <insert id="insertLetter" parameterType="Letter">
+       insert into Letter(chatid,time_,actorid,targetid,content) values(#{chatid},#{time_},#{actorid},#{targetid},#{content})
+    </insert>
+    <delete id="deleteLetterbychatid" parameterType="map">
+       delete from Letter where chatid=#{chatid}
+    </delete>
+    <select id="getLetterlist" resultType="Letter" parameterType="map">
+        select * from Letter where chatid=#{chatid}
+    </select>
+</mapper>

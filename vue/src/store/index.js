@@ -4,7 +4,9 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     // 存储token
-    Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : ''
+    Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : '',
+    userinfo:localStorage.getItem('userinfo')?localStorage.getItem("userinfo"):{},
+    token_emailcode:localStorage.getItem("token_emailcode")?localStorage.getItem("token_emailcode"):{code:"",time:""}
   },
   mutations: {
     // 修改token，并将token存入localStorage
