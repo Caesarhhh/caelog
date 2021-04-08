@@ -27,7 +27,7 @@ public class AnnouncementServiceImpl implements AnnouncementService {
                 id=announcements.get(i).getId();
             }
         }
-        Announcement announcement=new Announcement(userid,id+1,times,content,title,announcements.size()+1);
+        Announcement announcement=new Announcement(userid,id+3,times,content,title,announcements.size()+1);
         announcementDao.insertAnnouncement(announcement);
         sqlSession.commit();
         sqlSession.close();

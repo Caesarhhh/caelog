@@ -39,7 +39,6 @@
 .box{
   width:236px;
   height:528px;
-  border-style: ridge;
 }
 #idbox{
   width:222px;
@@ -73,7 +72,6 @@
 #idintroduction{
   width:205px;
   height:95px;
-  border-style: ridge;
   position: absolute;
   top:95px;
   left:7px;
@@ -91,7 +89,8 @@
 .selectbin{
   width:195px;
   height:40px;
-  border-bottom-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   float:left;
   margin-top:10px;
   margin-left:20px;

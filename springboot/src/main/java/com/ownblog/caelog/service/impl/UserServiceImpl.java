@@ -73,7 +73,7 @@ public class UserServiceImpl implements UserService {
         UserDao userDao=sqlSession.getMapper(UserDao.class);
         User user=new User();
         HashMap map=new HashMap();
-        map.put("userid",user.getId());
+        map.put("userid",userid);
         user=userDao.getUserbyid(map).get(0);
         String token= TokenUtil.getcode(emailcode);
         if(!token.equals(codeinput)){
@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserService {
         UserDao userDao=sqlSession.getMapper(UserDao.class);
         User user=new User();
         HashMap map=new HashMap();
-        map.put("userid",user.getId());
+        map.put("userid",userid);
         user=userDao.getUserbyid(map).get(0);
         return changePersonlData(userid, nickname, user.getPassword(), introduction, headimgsrc, user.getSecurityQuestion(),user.getSecurityAnswer(),user.getSecurityEmail());
     }

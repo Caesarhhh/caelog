@@ -141,8 +141,8 @@
       },
       uploadpic:function(e){
         let file = e.target.files[0]
-        let param = new FormData()  // 创建form对象
-        param.append('file', file)  // 通过append向form对象添加数据
+        let param = new FormData()
+        param.append('file', file)
         param.append('userid',this.common.userinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
           console.log(res.data)
@@ -230,13 +230,13 @@
           this.addarlabel_old(this.$route.params.articleid,0)
           if(res.data.code==200){
             alert("修改成功！")
-          }})
-        let params = new FormData()
-        let change_content=this.common.loginuserinfo.nickname+"修改了文章《"+this.titleinput+"》"
-        params.append('content_',change_content )
-        params.append('userid',this.common.loginuserinfo.id)
-        this.uploadFile("/change/add",params).then(res=>{
-          if(res.data.code==200){
+            let params = new FormData()
+            let change_content=this.common.loginuserinfo.nickname+"修改了文章《"+this.titleinput+"》"
+            params.append('content_',change_content )
+            params.append('userid',this.common.loginuserinfo.id)
+            this.uploadFile("/change/add",params).then(res=>{
+              if(res.data.code==200){
+              }})
           }})
       },
       closelb:function (index){
@@ -254,16 +254,25 @@
       getlabels:function (){
         this.labelcardinfo=[]
         this.originlabels=[]
-        if(!this.isEmptyObject(this.$route.params)){
+        if(this.$route.params.articleid>-1){
           this.ifnew=false
           this.$axios.get(
             this.common.serveraddress+"/article/getone?userid="+this.common.loginuserinfo.id+"&id="+this.$route.params.articleid).then(
             res=>{
-              var temp=res.data.data[0]
-              this.innerhtmlinput=temp.content
-              this.titleinput=temp.title
-              this.selected=temp.blockid
-              this.mdSwitch()
+              if(res.data.data.length>0){
+                var temp=res.data.data[0]
+                this.innerhtmlinput=temp.content
+                this.titleinput=temp.title
+                this.selected=temp.blockid
+                this.mdSwitch()
+              }
+              else{
+                var temp=res.data.data
+                this.innerhtmlinput=temp.content
+                this.titleinput=temp.title
+                this.selected=temp.blockid
+                this.mdSwitch()
+              }
             })
           this.$axios.get(
             this.common.serveraddress+"/labels/getar?userid="+this.common.loginuserinfo.id+"&articleid="+this.$route.params.articleid).then(
@@ -330,7 +339,7 @@
   #buttonbox {
     width: 720px;
     height: 60px;
-    border-style: ridge;
+    background-color: white;
     position: absolute;
     top: 13px;
     left: 152px;
@@ -341,7 +350,7 @@
     height: 45px;
     position: absolute;
     top: 6px;
-    border-style: ridge;
+    border-right-style: groove;
     line-height: 45px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
@@ -353,7 +362,7 @@
     height: 45px;
     position: absolute;
     top: 6px;
-    border-style: ridge;
+    border-right-style: groove;
     line-height: 45px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
@@ -364,26 +373,30 @@
     width: 480px;
     height: 40px;
     position: absolute;
-    border-style: ridge;
+    border-bottom-style: groove;
+    border-width: thin;
     line-height: 40px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
     font-weight: bold;
     top: 80px;
     left: 25px;
+    background-color: white;
   }
 
   #showtitle {
     width: 480px;
     height: 40px;
     position: absolute;
-    border-style: ridge;
+    border-bottom-style: groove;
+    border-width: thin;
     line-height: 40px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
     font-weight: bold;
     top: 80px;
     left: 519px;
+    background-color: white;
   }
 
   #markdownarea {
@@ -398,10 +411,10 @@
   .showarea {
     width: 480px;
     height: 777px;
-    border-style: ridge;
     position: absolute;
     top: 130px;
     left: 519px;
+    background-color: white;
   }
 
   #showhtml {
@@ -433,15 +446,18 @@
     width: 974px;
     height: auto;
     position: relative;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     left: 0px;
     top: 0px;
+    background-color: white;
   }
 
   #titlesetting{
     width: 946px;
     height: 58px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: absolute;
     left: 14px;
     top: 8px;
@@ -450,7 +466,8 @@
   #blockbox {
     width: 946px;
     height: 103px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: absolute;
     left: 14px;
     top: 78px;
@@ -459,7 +476,8 @@
   #titletitle {
     width: 112px;
     height: 33px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 33px;
     font-family: 华光楷体_CNKI;
     font-size: 22px;
@@ -481,7 +499,8 @@
   #blocktitle {
     width: 112px;
     height: 33px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 33px;
     font-family: 华光楷体_CNKI;
     font-size: 22px;
@@ -503,7 +522,8 @@
   #createblockarea {
     width: 518px;
     height: 39px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: absolute;
     left: 164px;
     top: 51px;
@@ -512,7 +532,8 @@
   #resultblock {
     width: 120px;
     height: 60px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 60px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
@@ -524,7 +545,8 @@
   #createtitle {
     width: 74px;
     height: 32px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 32px;
     position: absolute;
     top: 2px;
@@ -576,7 +598,8 @@
   #newconfirm {
     width: 60px;
     height: 32px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 32px;
     position: absolute;
     top: 2px;
@@ -588,7 +611,8 @@
   #labelsetting {
     width: 946px;
     height: 56px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: relative;
     margin-top: 198px;
     margin-bottom:10px;
@@ -598,7 +622,8 @@
   #labeltitle {
     width: 112px;
     height: 33px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 33px;
     position: absolute;
     left: 11px;
@@ -620,7 +645,8 @@
   #labelconfirm {
     width: 80px;
     height: 48px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 48px;
     position: absolute;
     right: 3px;
@@ -648,7 +674,8 @@
   .submit {
     width: 140px;
     height: 70px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     line-height: 70px;
     font-family: 华光楷体_CNKI;
     font-size: 35px;
@@ -656,5 +683,6 @@
     margin-top: 80px;
     margin-left: 420px;
     margin-bottom: 50px;
+    background-color: white;
   }
 </style>

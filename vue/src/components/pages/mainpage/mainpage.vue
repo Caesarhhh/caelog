@@ -14,7 +14,7 @@
     <div id="modibox">
       <div id="modititle">近期动态</div>
       <div id="modibody">
-        <mc class="modicard" v-for="i in modificationcardInfo" :datas="i"></mc>
+        <mc class="modicard" v-for="(i,index) in modificationcardInfo" :datas="i" v-if="index<6"></mc>
       </div>
     </div>
     <div id="blockbox">
@@ -161,6 +161,18 @@
         this.$axios.get(
           this.common.serveraddress+"/article/get?userid="+this.common.userinfo.id).then(
           res=>{
+            if(res.data.data.length==0){
+              console.log(this.common.userinfo.id)
+              var temp={
+                title:res.data.data.title,
+                time:res.data.data.time_.substring(2,10),
+                content:res.data.data.content,
+                block:blocksInfo[res.data.data.blockid],
+                id:res.data.data.id
+              }
+              this.articleCardInfo.push(temp)
+              this.articlenum++
+            }
             for(var i =0;i<res.data.data.length;i++){
               var temp={
                 title:res.data.data[i].title,
@@ -198,7 +210,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
     position: relative;
     margin-top: 0px;
     width:1024px;
@@ -216,12 +227,14 @@
   #announce{
     position: absolute;
     top:29px;
-    left:680px
+    left:680px;
+    background-color: white;
   }
   #recommendsong{
     position: absolute;
     left: 315px;
     top:91px;
+    background-color: white;
   }
   #sorttool{
     position: absolute;
@@ -239,11 +252,12 @@
     float:left;
     margin-top: 10px;
     margin-left: 10px;
+    background-color: white;
   }
   #modibox{
     width:180px;
     height: 711px;
-    border-style: ridge;
+    background-color: white;
     position: absolute;
     top: 240px;
     left: 829px;
@@ -252,6 +266,7 @@
     width:160px;
     height:35px;
     position: relative;
+    border-bottom-style: groove;
     margin-left:8px;
     margin-top:4px;
     text-align: left;
@@ -267,13 +282,16 @@
   .modicard{
     float:left;
     margin-left: 8px;
-    margin-top:16px;
+    margin-top:10px;
+    border-bottom-style: groove;
+    border-width: thin;
+    background-color: white;
   }
   #blockbox{
     width:280px;
     height:600px;
     position: absolute;
-    border-style: ridge;
+    background-color: white;
     left:14px;
     top:315px;
   }

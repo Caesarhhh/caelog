@@ -84,7 +84,8 @@
     width:616px;
     height:247px;
     border-radius: 10px;
-    border-style: ridge;
+    border-bottom-style: groove;
+    background-color: white;
     position: relative;
   }
   #info{

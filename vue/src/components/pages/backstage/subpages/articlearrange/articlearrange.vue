@@ -58,7 +58,7 @@
     },
     methods:{
       toedit:function (){
-        this.$router.push("/articleedit");
+        this.$router.push("/"+this.$route.params.userid+"/articleedit/-1");
       },
       uploadFile:function (url, data) {
         let config = {
@@ -137,12 +137,13 @@
 .box{
   width:721px;
   height:1150px;
-  border-style: ridge;
+  background-color: white;
 }
 #topbox{
   width: 677px;
   height:74px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:23px;
   left: 22px;
@@ -150,7 +151,8 @@
 #topbox select{
   width:222px;
   height: 37px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:18px;
   left:22px;
@@ -164,7 +166,8 @@
   width: 140px;
   height: 40px;
   position: absolute;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   line-height: 40px;
   top:116px;
   right:50px;

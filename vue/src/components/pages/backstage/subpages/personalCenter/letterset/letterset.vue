@@ -122,12 +122,14 @@
 .letterset{
   width:696px;
   height: 281px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #title{
   width:47px;
   height: 256px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:10px;
   left:15px;
@@ -141,7 +143,8 @@
 #letterbox{
   width:614px;
   height: 256px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:10px;
   left:71px;

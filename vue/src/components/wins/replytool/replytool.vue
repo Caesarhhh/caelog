@@ -81,11 +81,12 @@
 .window{
   width:550px;
   height: 310px;
-  border-style: ridge;
-  background-color: white;
+  background-color: azure;
   position: relative;
   margin-top: 0px;
   margin-left: 0px;
+  border-style: solid;
+  border-width: thin;
 }
 #upper{
   width: 530px;
@@ -144,7 +145,6 @@
 #submit{
   width:50px;
   height: 32px;
-  border-style: ridge;
   position: absolute;
   right: 2px;
   bottom: 2px;

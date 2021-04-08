@@ -4,13 +4,15 @@
     <div class="pagebutton" @click="topage('/mainpage')">首页</div>
     <div class="pagebutton" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
   </div>
-  <div id="title">{{title}}</div>
-  <div id="showarea">
-     <GeminiScrollbar>
-       <div id="gsd">
-         <div id="content"></div>
-       </div>
-     </GeminiScrollbar>
+  <div id="readcontent">
+    <div id="title">{{title}}</div>
+    <div id="showarea">
+      <GeminiScrollbar>
+        <div id="gsd">
+          <div id="content"></div>
+        </div>
+      </GeminiScrollbar>
+    </div>
   </div>
   <pc id="personalcard" :datas="pcpos"></pc>
   <st id="searchtool_ar"></st>
@@ -223,17 +225,15 @@
         this.$axios.get(
           this.common.serveraddress+"/article/getone?userid="+this.$route.params.userid+"&id="+this.$route.params.articleid).then(
           res=>{
-            for(var i =0;i<res.data.data.length;i++){
               var temp={
-                title:res.data.data[i].title,
-                time:res.data.data[i].time_.substring(2,10),
-                content:res.data.data[i].content,
-                block:blocklabels[res.data.data[i].blockid],
-                id:res.data.data[i].id
+                title:res.data.data.title,
+                time:res.data.data.time_.substring(2,10),
+                content:res.data.data.content,
+                block:blocklabels[res.data.data.blockid],
+                id:res.data.data.id
               }
               this.title=temp.title
               this.showtexthtml(temp.content)
-            }
           })
       },
       refreshcomment:async function (){
@@ -427,6 +427,7 @@
         }
       }
       await this.inituserinfo(this.$route.params.userid)
+      console.log(666)
     }
   }
 </script>
@@ -445,21 +446,22 @@
   #pagehrefbox{
     width:720px;
     height:60px;
-    border-style: groove;
     position: absolute;
     top:26px;
     left:8px;
+    background-color: white;
   }
   .pagebutton{
     width: 70px;
     height: 45px;
-    border-style: ridge;
+    border-right-style: groove;
     float: left;
     margin-top: 6px;
     margin-left: 15px;
     line-height: 45px;
     font-family: 华光楷体_CNKI;
     font-size: 25px;
+    background-color: white;
   }
   #personalcard{
     position: absolute;
@@ -469,7 +471,7 @@
   #searchtool_ar{
     position: absolute;
     top:333px;
-    left: 742px;
+    left: 732px;
   }
   #blockbox_ar{
     position: absolute;
@@ -477,7 +479,7 @@
     left:734px;
     width: 280px;
     height: 600px;
-    border-style: ridge;
+    background-color: white;
   }
   #blocks{
     float:left;
@@ -504,23 +506,30 @@
     margin-left: 50px;
   }
   #title{
-    width:648px;
+    width:682px;
     height: 61px;
-    border-bottom-style: ridge;
     position: absolute;
-    top:109px;
-    left:21px;
+    top:0px;
+    left:0px;
     font-family: 华光楷体_CNKI;
     font-size: 50px;
     line-height: 61px;
     text-align: left;
   }
   #showarea{
-    width: 682px;
+    width: 720px;
     height: 880px;
     position: absolute;
-    left:21px;
-    top:196px;
+    left:0px;
+    top:87px;
+  }
+  #readcontent{
+    width: 720px;
+    height: 958px;
+    position: absolute;
+    left:8px;
+    top:98px;
+    background-color: white;
   }
   #gsd{
     width: 682px;
@@ -536,15 +545,16 @@
   #commentarea{
     width: 976px;
     height: auto;
-    border-style: ridge;
     position: absolute;
     left:21px;
     top:1112px;
+    background-color: white;
   }
   #editcomment{
     width: 942px;
     height: 55px;
-    border-style:ridge;
+    border-bottom-style:groove;
+    border-width: thin;
     position: relative;
     margin-top:17px;
     margin-left:17px;
@@ -607,5 +617,6 @@
     left: 50%;
     margin-left: -300px;
     margin-top: -200px;
+    z-index: 100;
   }
 </style>

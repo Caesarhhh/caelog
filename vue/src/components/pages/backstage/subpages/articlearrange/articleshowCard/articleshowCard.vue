@@ -42,7 +42,8 @@
     width:500px;
     height:200px;
     border-radius: 10px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: relative;
   }
   #info{

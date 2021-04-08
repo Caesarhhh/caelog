@@ -12,6 +12,9 @@ const routers=[
     path:'/:userid/backstage',name:'backstage',component:backstage
   },
   {
+    path:'/',name:'loginpage',component: loginpage
+  },
+  {
     path:'/login',name:'loginpage',component: loginpage
   },
   {

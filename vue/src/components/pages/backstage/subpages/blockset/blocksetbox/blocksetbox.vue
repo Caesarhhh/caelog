@@ -28,7 +28,8 @@
 .box1{
   width:280px;
   height: 36px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #pic{
   width:28px;
@@ -44,7 +45,8 @@
 #name{
   width:94px;
   height: 28px;
-  border-left-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:5px;
   left:38px;
@@ -57,6 +59,7 @@
   height: 28px;
   border-left-style: ridge;
   border-right-style: ridge;
+  border-width: thin;
   position: absolute;
   top:5px;
   left:138px;

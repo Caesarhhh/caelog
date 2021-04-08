@@ -176,7 +176,7 @@
   .searchbox{
     width:450px;
     height:40px;
-    border-style: ridge;
+    background-color: white;
     position: absolute;
     left: 69px;
     top:61px;
@@ -184,7 +184,8 @@
   #searchinput{
     width:400px;
     height:30px;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: absolute;
     top:2px;
     left:4px;
@@ -206,6 +207,7 @@
     position: absolute;
     left:44px;
     top:125px;
+    background-color: white;
   }
   #bac1{
     position: absolute;
@@ -231,34 +233,40 @@
     position: absolute;
     top:463px;
     left: 49px;
+    background-color: white;
   }
   .pagenums_as_2{
     position: absolute;
     top:737px;
     left: 49px;
+    background-color: white;
   }
   .pagenums_as_3{
     position: absolute;
     top:1011px;
     left: 49px;
+    background-color: white;
   }
   .pagenums_as_4{
     position: absolute;
     top:1285px;
     left: 49px;
+    background-color: white;
   }
   #blockbox_as{
     width:250px;
     height: auto;
-    border-style: ridge;
+    border-style: groove;
+    border-width: thin;
     position: absolute;
     top:127px;
     left:711px;
+    background-color: white;
   }
   #blockstitle{
     width:230px;
     height: 74px;
-    border-bottom-style: ridge;
+    border-bottom-style: groove;
     float:left;
     margin-top:11px;
     margin-left:9px;
@@ -269,7 +277,8 @@
   #searchselect{
     width:190px;
     height: 40px;
-    border-bottom-style: ridge;
+    border-bottom-style: groove;
+    border-width: thin;
     line-height: 40px;
     font-size: 24px;
     font-family: 华光楷体_CNKI;
@@ -286,7 +295,8 @@
   .blockselect{
     width:190px;
     height: 40px;
-    border-bottom-style: ridge;
+    border-bottom-style: groove;
+    border-width: thin;
     line-height: 40px;
     font-size: 24px;
     font-family: 华光楷体_CNKI;

@@ -2,7 +2,9 @@ package com.ownblog.caelog.pojo;
 
 import com.ownblog.caelog.pojo.tools.Time;
 
-public class Article {
+import java.io.Serializable;
+
+public class Article implements Serializable {
     private int userid;
     private int id;
     private String title;

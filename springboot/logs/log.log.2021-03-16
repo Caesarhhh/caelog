@@ -1,0 +1,738 @@
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344120 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344124 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344124 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344126 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344127 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344130 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344131 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344133 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344134 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344139 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344140 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344140 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344141 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344142 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344143 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344144 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344145 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344146 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344169 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344170 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344171 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344172 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344172 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344175 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344176 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344177 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-2:344177 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344210 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344210 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344210 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344212 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344214 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344220 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344221 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344221 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344223 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344222 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344222 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344224 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344226 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344226 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344227 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344226 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344227 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-3:344227 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344227 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344228 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344228 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344227 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344231 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344233 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344230 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344233 ] - [ DEBUG ]  <==      Total: 8
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344233 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344237 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344237 ] - [ DEBUG ]  ==>  Preparing: select * from Changes where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344237 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344240 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344240 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344238 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-4:344240 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344240 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344242 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-5:344242 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344242 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344243 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344244 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:36  [ http-nio-8081-exec-8:344244 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344247 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344249 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344251 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:36  [ http-nio-8081-exec-7:344252 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344428 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344428 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344428 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344429 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344429 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344429 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344431 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344432 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344432 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 0(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344432 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 1(Integer)
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344435 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344435 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344435 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344436 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344438 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344438 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:36  [ http-nio-8081-exec-1:344438 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:36  [ http-nio-8081-exec-9:344439 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347036 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347036 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347036 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347036 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347038 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347039 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347039 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347040 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:39  [ http-nio-8081-exec-6:347041 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347061 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347062 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347063 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347065 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? and blockid in (select id from Blocks where name_=?) 
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347067 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 软件测试(String)
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347071 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347072 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347072 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:39  [ http-nio-8081-exec-4:347073 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352537 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352538 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352539 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352541 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352541 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352544 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352544 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352546 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-5:352546 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352549 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352550 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352550 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352551 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352552 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352555 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352555 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352557 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352557 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352559 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352561 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352561 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-8:352561 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352561 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352563 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352564 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352565 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-7:352566 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352584 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352585 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352586 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352589 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352589 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352592 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352593 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352593 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352592 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352595 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352595 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352596 ] - [ DEBUG ]  <==      Total: 8
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352597 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352596 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352596 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352597 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352597 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352597 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352597 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352598 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352598 ] - [ DEBUG ]  ==>  Preparing: select * from Changes where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352599 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352599 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352599 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352599 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352600 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352601 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352603 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352604 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352604 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352604 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352605 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352607 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352627 ] - [ DEBUG ]  Created connection 1979728542.
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352627 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:44  [ http-nio-8081-exec-1:352627 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-6:352628 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352628 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:00:44  [ http-nio-8081-exec-9:352628 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352629 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:44  [ http-nio-8081-exec-10:352629 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352634 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352637 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352640 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:44  [ http-nio-8081-exec-3:352641 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352660 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352660 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352661 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352661 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352661 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352661 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352662 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352662 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352663 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 0(Integer)
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352663 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 1(Integer)
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352665 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352665 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352665 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352666 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352667 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:45  [ http-nio-8081-exec-4:352667 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352668 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:45  [ http-nio-8081-exec-5:352669 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358991 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358991 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358992 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358995 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358996 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358998 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358999 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:358999 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-8:359000 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359003 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359003 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359004 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359005 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359006 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359007 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359008 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359009 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359010 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359015 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359015 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359015 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359016 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359017 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359020 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359020 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359021 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-2:359022 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359024 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359025 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359025 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359024 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359027 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359028 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359029 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359025 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359030 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359028 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359031 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 0(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359031 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359032 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359033 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359033 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359034 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359034 ] - [ DEBUG ]  <==      Total: 8
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359034 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359035 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359037 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359037 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359037 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359038 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359037 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-6:359038 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359038 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359039 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359041 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359042 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359042 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359042 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359048 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359049 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? and id=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359051 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359050 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359053 ] - [ DEBUG ]  ==>  Preparing: select * from Comments where userid=? and articleid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359053 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359056 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359057 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359058 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-4:359059 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359064 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359065 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359068 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:51  [ http-nio-8081-exec-5:359069 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359370 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359370 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359370 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359372 ] - [ DEBUG ]  ==>  Preparing: select backimgsrc from Users where id=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359372 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359373 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359373 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359373 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:51  [ http-nio-8081-exec-7:359374 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359388 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359389 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359389 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359390 ] - [ DEBUG ]  ==>  Preparing: select nickname from Users where id=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359390 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359392 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359392 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359393 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:51  [ http-nio-8081-exec-3:359393 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359415 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359415 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359415 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359416 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359416 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), commentgood(String), 0(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359417 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359417 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359418 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:51  [ http-nio-8081-exec-9:359418 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359430 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359430 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359431 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359431 ] - [ DEBUG ]  ==>  Preparing: select * from Addcomment where userid=? and articleid=? and commentid=? 
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359432 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer), 0(Integer)
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359437 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359437 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359438 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:51  [ http-nio-8081-exec-1:359438 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360234 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360234 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360235 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360236 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360237 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360238 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360239 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360240 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:52  [ http-nio-8081-exec-5:360240 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360245 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360246 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360246 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360248 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360248 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360249 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360250 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360250 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:00:52  [ http-nio-8081-exec-8:360250 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360262 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360263 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360263 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360265 ] - [ DEBUG ]  ==>  Preparing: select * from Chat where person1id=? or person2id=? 
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360265 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer)
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360268 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360268 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360270 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:00:52  [ http-nio-8081-exec-7:360270 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361945 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361945 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361945 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361947 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361947 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361949 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361949 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361950 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:00:54  [ http-nio-8081-exec-2:361951 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361960 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361960 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361961 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361962 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361963 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361967 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361967 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361968 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:00:54  [ http-nio-8081-exec-10:361968 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363008 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363009 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363009 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363009 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363010 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363011 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363012 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363013 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:00:55  [ http-nio-8081-exec-9:363013 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369034 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369034 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369034 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369034 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369035 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369036 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369036 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369039 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:01  [ http-nio-8081-exec-1:369039 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369913 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369913 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369913 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369914 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369915 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369917 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369918 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369920 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:02  [ http-nio-8081-exec-4:369921 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371905 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371905 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371905 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371906 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371906 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371908 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371909 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371909 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:04  [ http-nio-8081-exec-8:371910 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372469 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372469 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372470 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372471 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372473 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372475 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372476 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372477 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:04  [ http-nio-8081-exec-7:372477 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373194 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373195 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373195 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373196 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373196 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373196 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373198 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373198 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:05  [ http-nio-8081-exec-2:373199 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:403995 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:403995 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:403996 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:403997 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:403998 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:404000 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:404001 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:404002 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:01:36  [ http-nio-8081-exec-10:404002 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404003 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404003 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404004 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404005 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404006 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404012 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404012 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404013 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:01:36  [ http-nio-8081-exec-9:404014 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404458 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404458 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404459 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404460 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404460 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404460 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404460 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404461 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404461 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404462 ] - [ DEBUG ]  ==>  Preparing: select * from Chat where person1id=? or person2id=? 
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404462 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404462 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer)
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404463 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:01:36  [ http-nio-8081-exec-6:404463 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404464 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404465 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404466 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:01:36  [ http-nio-8081-exec-1:404467 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404468 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404468 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404469 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404470 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404471 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404475 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404476 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404477 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:01:36  [ http-nio-8081-exec-4:404478 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210083 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210083 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210083 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210084 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210085 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210086 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210087 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210088 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:15:02  [ http-nio-8081-exec-1:1210088 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210089 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210089 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210090 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210091 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210091 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210096 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210096 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210097 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:15:02  [ http-nio-8081-exec-4:1210097 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211064 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211064 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211065 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211066 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211066 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211066 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211066 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211067 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211068 ] - [ DEBUG ]  ==>  Preparing: select * from Chat where person1id=? or person2id=? 
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211069 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer)
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211070 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211071 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211071 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211071 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211072 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:15:03  [ http-nio-8081-exec-7:1211072 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211074 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:15:03  [ http-nio-8081-exec-2:1211074 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211076 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211076 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211077 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211078 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211079 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211081 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211081 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211082 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:15:03  [ http-nio-8081-exec-3:1211082 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576184 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576185 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576185 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576187 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576188 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576189 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576189 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576189 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576191 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576191 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576191 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:08  [ http-nio-8081-exec-8:1576193 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576193 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576194 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576198 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576199 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576200 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:08  [ http-nio-8081-exec-5:1576201 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576821 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576821 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576821 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576823 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576823 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576825 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576825 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576826 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:09  [ http-nio-8081-exec-7:1576826 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578629 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578629 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578629 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578631 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578631 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578633 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578633 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578635 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:10  [ http-nio-8081-exec-3:1578635 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579568 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579568 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579568 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579569 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579570 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579572 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579572 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579573 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:11  [ http-nio-8081-exec-6:1579574 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582390 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582390 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582390 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582390 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582391 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582393 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582394 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582396 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582397 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582402 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582403 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582403 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582405 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582406 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582411 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582412 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582414 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582414 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582416 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582416 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582416 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582417 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582418 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582419 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582420 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582421 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-9:1582421 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582437 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582438 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582439 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582440 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582441 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582446 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582447 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582449 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-10:1582450 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582455 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582455 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582455 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582456 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582455 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582456 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582457 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582458 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582460 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 0(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582461 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582463 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582463 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582464 ] - [ DEBUG ]  <==      Total: 8
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582463 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582465 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582464 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582464 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582464 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582467 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582467 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582467 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? and id=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582468 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582470 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582470 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-3:1582470 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-6:1582471 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582476 ] - [ DEBUG ]  ==>  Preparing: select * from Comments where userid=? and articleid=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582478 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582479 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582480 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582484 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:14  [ http-nio-8081-exec-4:1582484 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582485 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582486 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582487 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:14  [ http-nio-8081-exec-1:1582488 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582573 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582573 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582573 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582575 ] - [ DEBUG ]  ==>  Preparing: select backimgsrc from Users where id=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582577 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582579 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582579 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582582 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:14  [ http-nio-8081-exec-8:1582582 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582614 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582615 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582615 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582616 ] - [ DEBUG ]  ==>  Preparing: select nickname from Users where id=? 
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582617 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582618 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582618 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582619 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:14  [ http-nio-8081-exec-7:1582619 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582652 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582653 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582653 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582654 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582654 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), commentgood(String), 0(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582655 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582655 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582656 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1582656 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582670 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582670 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582671 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582672 ] - [ DEBUG ]  ==>  Preparing: select * from Addcomment where userid=? and articleid=? and commentid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582672 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 0(Integer), 0(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582675 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582675 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582677 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1582677 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583527 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583527 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583527 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583528 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583529 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583530 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583531 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583532 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583532 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583535 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583536 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583536 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583539 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583540 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583543 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583544 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583547 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583547 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583550 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583551 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583551 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583552 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583553 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583559 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583559 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583560 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-9:1583561 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583568 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583568 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583569 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583570 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583570 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583570 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583571 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583571 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583572 ] - [ DEBUG ]  <==      Total: 8
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583572 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583573 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583573 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583574 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-5:1583574 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583576 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583577 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583579 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:15  [ http-nio-8081-exec-2:1583579 ] - [ DEBUG ]  Returned connection 230606752 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583588 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583589 ] - [ DEBUG ]  Checked out connection 684485924 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583590 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583592 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583592 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583594 ] - [ DEBUG ]  <==      Total: 1
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583595 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583595 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583595 ] - [ DEBUG ]  Checked out connection 556171006 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583595 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583595 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28cc6d24]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583596 ] - [ DEBUG ]  Checked out connection 1979728542 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583595 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583596 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-10:1583596 ] - [ DEBUG ]  Returned connection 684485924 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583597 ] - [ DEBUG ]  ==>  Preparing: select * from Changes where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583597 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583598 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583598 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583602 ] - [ DEBUG ]  <==      Total: 4
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583602 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583603 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@21267efe]
+2021-03-16 00:21:15  [ http-nio-8081-exec-6:1583604 ] - [ DEBUG ]  Returned connection 556171006 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583604 ] - [ DEBUG ]  <==      Total: 2
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583605 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583608 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7600429e]
+2021-03-16 00:21:15  [ http-nio-8081-exec-4:1583608 ] - [ DEBUG ]  Returned connection 1979728542 to pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583628 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583629 ] - [ DEBUG ]  Checked out connection 749174291 from pool.
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583630 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583631 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583633 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 0(Integer)
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583636 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583637 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583638 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2ca77e13]
+2021-03-16 00:21:15  [ http-nio-8081-exec-1:1583639 ] - [ DEBUG ]  Returned connection 749174291 to pool.
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583662 ] - [ DEBUG ]  Opening JDBC Connection
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583662 ] - [ DEBUG ]  Checked out connection 230606752 from pool.
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583663 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583665 ] - [ DEBUG ]  ==>  Preparing: select * from Actions where actorid=? and targetid=? and type_=? and objectid=? 
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583665 ] - [ DEBUG ]  ==> Parameters: 4(Integer), 4(Integer), articlegood(String), 1(Integer)
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583667 ] - [ DEBUG ]  <==      Total: 0
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583668 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583669 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@dbec7a0]
+2021-03-16 00:21:16  [ http-nio-8081-exec-8:1583669 ] - [ DEBUG ]  Returned connection 230606752 to pool.

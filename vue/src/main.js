@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Vuex from 'vuex' //引入状态管理
+import Vuex from 'vuex'
 import App from './App'
 import routers from "./routers";
 import VueRouter from "vue-router";
@@ -15,7 +15,8 @@ Vue.prototype.common=common;
 /* eslint-disable no-new */
 const router=new VueRouter({
   mode:'history',
-  routes:routers
+  routes:routers,
+  base:'/caelog/'
 })
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') {

@@ -47,7 +47,8 @@
 .box1{
   width:251px;
   height: 47px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   border-radius: 5px;
 }
 .box1:hover #close{
@@ -68,7 +69,8 @@
 #info{
   width: 195px;
   height: 38px;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   position: absolute;
   top:2px;
   left:47px;

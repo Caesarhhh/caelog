@@ -91,8 +91,6 @@
       },
       changepassword:function (){
         var codedata=JSON.parse(localStorage.getItem("token_emailcode"))
-        console.log(codedata.time)
-        console.log(Date.parse(new Date()))
         if(codedata.time<Date.parse(new Date())){
           alert("验证码时效已过，请重新发送")
           this.ifcode=false
@@ -181,7 +179,8 @@
 .box{
   width:695px;
   height:330px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 .input{
   width: 205px;
@@ -196,7 +195,8 @@
   position: absolute;
   top:15px;
   left:15px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #title div{
   width:30px;
@@ -211,7 +211,8 @@
 #modify {
   width: 313px;
   height: 300px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top: 15px;
   left: 85px;
@@ -219,7 +220,8 @@
 #safety{
   width:266px;
   height: 300px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:15px;
   left:412px;
@@ -227,7 +229,8 @@
 #secretmodifyTitle{
   width:287px;
   height:34px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:14px;
   left: 14px;
@@ -238,7 +241,8 @@
 #originaltitle{
   width:70px;
   height: 26px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:14px;
   top:56px;
@@ -253,7 +257,8 @@
 #newtitle{
   width:70px;
   height: 26px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:14px;
   top:92px;
@@ -268,7 +273,8 @@
 #confirmtitle{
   width:70px;
   height: 26px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:14px;
   top:129px;
@@ -283,7 +289,8 @@
 #qusetiontitle{
   width:70px;
   height: 55px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:14px;
   top:167px;
@@ -295,7 +302,8 @@
 #questioncontent{
   top:168px;
   left:95px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   line-height: 22px;
 }
 #questironanswer{
@@ -305,7 +313,8 @@
 #emailtitle{
   width:70px;
   height: 49px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:14px;
   top:234px;
@@ -326,16 +335,18 @@
   cursor: pointer;
 }
 #confirmbutton{
-  width: 45px;
+  width: 50px;
   height: 22px;
   position: absolute;
   top:269px;
   left:255px;
+  background-color: white;
 }
 #safesettitle{
   width:236px;
   height: 31px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:15px;
   top:14px;
@@ -346,7 +357,8 @@
 #questionset{
   width: 236px;
   height: 63px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:15px;
   top:57px;
@@ -354,7 +366,8 @@
 #secretenter{
   width: 236px;
   height: 63px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:15px;
   top:125px;
@@ -362,7 +375,8 @@
 #safetysetenter{
   width: 236px;
   height: 63px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:15px;
   top:57px;
@@ -370,7 +384,8 @@
 #questiontitle{
   width:42px;
   height: 55px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:2px;
   left:5px;
@@ -384,7 +399,8 @@
 #secrettitle{
   width:42px;
   height: 55px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:2px;
   left:5px;
@@ -399,7 +415,8 @@
   width:174px;
   height:26px;
   position: absolute;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   top:2px;
   left:55px;
   font-family: 华光楷体_CNKI;
@@ -409,7 +426,8 @@
   width:174px;
   height:26px;
   position: absolute;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   top:2px;
   left:55px;
   font-family: 华光楷体_CNKI;
@@ -418,7 +436,8 @@
 #qusetiontitle_{
   width:42px;
   height: 55px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:2px;
   left:5px;
@@ -433,7 +452,8 @@
   width:174px;
   height:22px;
   position: absolute;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   top:2px;
   left:55px;
   border-style: ridge;
@@ -448,7 +468,8 @@
 #answer{
   width: 174px;
   height: 24px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:33px;
   left:55px;
@@ -465,7 +486,8 @@
 #emailset{
   width:236px;
   height: 34px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:15px;
   top:127px;
@@ -473,7 +495,8 @@
 #emailsettitle{
   width:42px;
   height: 27px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:5px;
   top:2px;
@@ -484,7 +507,8 @@
 #emailsetinput{
   width: 174px;
   height: 24px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left:55px;
   top:2px;

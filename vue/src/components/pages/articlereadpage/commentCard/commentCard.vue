@@ -207,13 +207,15 @@
   width:942px;
   border-radius: 10px;
   height: auto;
-  border-style: ridge;
+  border-bottom-style: ridge;
+  border-width: thin;
 }
 .maincomment{
   position: relative;
   margin-left: 5px;
   margin-top:10px;
   border-bottom-style: ridge;
+  border-width: thin;
   width:930px;
   height: auto;
 }
@@ -298,6 +300,7 @@
   margin-right: 5px;
   margin-top:2px;
   border-bottom-style: ridge;
+  border-width: thin;
   width:880px;
   height: auto;
 }

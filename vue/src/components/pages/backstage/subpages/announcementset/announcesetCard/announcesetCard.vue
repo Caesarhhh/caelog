@@ -35,12 +35,14 @@
 .box1{
   width: 656px;
   height: 166px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #contentbox{
   width: 596px;
   height: 148px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:7px;
   left: 10px;
@@ -48,7 +50,8 @@
 #title{
   width:576px;
   height: 32px;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   position: absolute;
   left:9px;
   top:5px;
@@ -60,7 +63,6 @@
 #content{
   width:576px;
   height: 95px;
-  border-style: ridge;
   position: absolute;
   left:9px;
   top:44px;
@@ -72,7 +74,8 @@
 #indexpic{
   width: 30px;
   height: 30px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:17px;
   right: 6px;

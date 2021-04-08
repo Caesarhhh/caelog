@@ -32,7 +32,9 @@
   min-width:80px;
   height: auto;
   min-height: 40px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
+  background-color: white;
 }
 .box1:hover #close{
   display: block;

@@ -54,18 +54,30 @@
       ls:letterset
     },
     mounted() {
-      this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
-      this.headimgsrc=this.common.loginuserinfo.backimgsrc
-      this.nickname=this.common.loginuserinfo.nickname
-      this.introduction=this.common.loginuserinfo.introduction
+      this.inituserinfo(this.$route.params.userid)
     },
     methods:{
+      inituserinfo(userid){
+        this.$axios({
+          url:this.common.serveraddress+"/user/get?userid="+userid,
+          method:"get"
+        }).then(
+          res=>{
+            localStorage.setItem("userinfo",JSON.stringify(res.data.data))
+            this.common.userinfo=res.data.data
+            this.common.loginuserinfo=res.data.data
+            this.headimgsrc=this.common.loginuserinfo.backimgsrc
+            this.nickname=this.common.loginuserinfo.nickname
+            this.introduction=this.common.loginuserinfo.introduction
+          }
+        )
+      },
       submit:function (){
         this.$axios.get(
           this.common.serveraddress+"/user/changebasedata?userid="+this.common.loginuserinfo.id+"&headimgsrc="+this.headimgsrc+"&nickname="+this.nickname+"&introduction="+this.introduction
         ).then(
           res=>{
-            console.log(res.data.data)
+            this.inituserinfo(this.$route.params.userid)
           }
         )
       },
@@ -109,12 +121,13 @@
 .box{
   width:721px;
   height:1051px;
-  border-style: ridge;
+  background-color: white;
 }
 #infocard{
   width: 696px;
   height: 219px;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   position: absolute;
   top:8px;
   left:12px;
@@ -181,7 +194,6 @@
 #backgroundset{
   width:696px;
   height: 160px;
-  border-style: ridge;
   position: absolute;
   left:13px;
   top:581px;
@@ -189,7 +201,6 @@
 #backgroundshow{
   width:596px;
   height: 150px;
-  border-style: ridge;
   position: absolute;
   width:100%;
   overflow: hidden;

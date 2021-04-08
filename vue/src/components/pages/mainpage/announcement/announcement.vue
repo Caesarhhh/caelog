@@ -50,7 +50,6 @@
   width: 315px;
   height: 183px;
   position: relative;
-  border-style: ridge;
 }
 #announcetitle{
   width:200px;

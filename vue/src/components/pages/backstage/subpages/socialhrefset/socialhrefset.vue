@@ -150,6 +150,7 @@
         param.append('file', file)  // 通过append向form对象添加数据
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
+          console.log(res)
           this.uploadurl=this.common.getserveraddress+res.data.data;
           this.picsrc=this.uploadurl;})
       },
@@ -189,12 +190,13 @@
 .box{
   width:721px;
   height:650px;
-  border-style: ridge;
+  background-color: white;
 }
 #titlebox{
   width:673px;
   height: 111px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left: 17px;
   top:18px;
@@ -208,6 +210,8 @@
   opacity: 0;
   z-index: 10;
   background-color:transparent !important;
+  border-style: groove;
+  border-width: thin;
 }
 #headchange{
   width: 80px;
@@ -215,6 +219,8 @@
   position: absolute;
   top:16px;
   left:25px;
+  border-style: groove;
+  border-width: thin;
   border-radius: 50%;
 }
 #hreftitle{
@@ -263,11 +269,13 @@
   right:10px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
+  background-color: white;
 }
 #announcement{
   width: 673px;
   height: 47px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:154px;
   left:17px;

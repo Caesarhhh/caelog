@@ -1,7 +1,9 @@
 package com.ownblog.caelog.service;
 
 import com.ownblog.caelog.lang.Result;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface ArticleService {
     public Result addarticle(int userid, String title, String content, String time_,int blockid);
     public Result deletearticle(int userid,int id);

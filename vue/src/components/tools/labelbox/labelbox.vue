@@ -30,6 +30,7 @@
   width:250px;
   height: 250px;
   position: relative;
+  background-color: white;
 }
 #title{
   width:100px;
@@ -45,7 +46,7 @@
   width:230px;
   height:190px;
   position: absolute;
-  border-style: ridge;
+  border-bottom-style: ridge;
   left:10px;
   top:50px;
 }

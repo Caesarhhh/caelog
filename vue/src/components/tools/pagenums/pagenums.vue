@@ -78,13 +78,15 @@
 .box_pn{
   width:584px;
   height:50px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #first{
   width: 65px;
   height: 34px;
   float:left;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   margin-top:6px;
   margin-left: 5px;
   line-height: 34px;
@@ -94,7 +96,8 @@
 #backbutton{
   width: 40px;
   height: 40px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   left: 78px;
   top:3px;
@@ -106,7 +109,8 @@
 #aheadbutton{
   width: 40px;
   height: 40px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   right: 78px;
   top:3px;
@@ -132,7 +136,8 @@
 .num{
   width: 32px;
   height: 32px;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   position: absolute;
   top:6px;
   line-height: 32px;
@@ -148,7 +153,7 @@
 }
 #num4{
   right:145px;
-  background-color: azure;
+  font-weight: bold;
 }
 #num5{
   right:100px;
@@ -163,7 +168,8 @@
   width: 65px;
   height: 34px;
   float:right;
-  border-style: ridge;
+  border-bottom-style: groove;
+  border-width: thin;
   margin-top:6px;
   margin-right: 5px;
   line-height: 34px;

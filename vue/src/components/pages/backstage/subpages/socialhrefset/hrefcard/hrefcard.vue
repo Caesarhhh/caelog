@@ -56,7 +56,8 @@
 .box{
   width: auto;
   height: 36px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
 }
 #pic{
   width: 28px;
@@ -73,6 +74,7 @@
   width:auto;
   height: 30px;
   border-left-style: ridge;
+  border-width: thin;
   float:left;
   margin-left:5px;
   margin-top:3px;
@@ -82,6 +84,7 @@
   width:auto;
   height: 30px;
   border-left-style: ridge;
+  border-width: thin;
   float:left;
   margin-left:3px;
   margin-top:3px;

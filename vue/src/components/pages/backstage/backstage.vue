@@ -51,7 +51,7 @@
       as:announcementset,
       bs:blockset
     },
-    mounted() {
+    beforeCreate() {
       if(((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null)){
         this.$router.push("/login")
       }
@@ -59,6 +59,8 @@
         alert("您无权访问该用户后台！")
         location.go(-1)
       }
+    },
+    mounted() {
       this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
       this.selectboxinfo.headsrc=this.common.loginuserinfo.backimgsrc
       this.selectboxinfo.introduction=this.common.loginuserinfo.introduction
@@ -82,6 +84,7 @@
   position: absolute;
   top:39px;
   left:23px;
+  background-color: white;
 }
 #personalcentor{
   position: absolute;

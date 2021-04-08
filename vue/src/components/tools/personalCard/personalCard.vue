@@ -116,17 +116,17 @@
 
 <style scoped>
   .box{
-    border-style: ridge;
     width: 250px;
     height: 279px;
     position: relative;
+    background-color: white;
   }
   .box_{
-    border-style: ridge;
     width: 250px;
     height: 279px;
     position: absolute;
     right: 0px;
+    background-color: white;
   }
   .empty_pc{
     width:1000px;
@@ -152,11 +152,13 @@
     position: absolute;
     top:100px;
     left:50px;
+    font-weight: bolder;
+    font-size: 20px;
   }
   #introduction{
     width: 232px;
     height: 97px;
-    border-style: ridge;
+    border-bottom-style: ridge;
     position: absolute;
     top:127px;
     left:9px;
@@ -193,14 +195,14 @@
   }
   .hrefwin{
     position: absolute;
-    bottom:4px;+
+    bottom:4px;
     left:2px;
     z-index: 999;
   }
   .hrefwin_{
     position: absolute;
     bottom:-277px;
-    right:2px;，
-    z-index: 999;
+    right:2px;
+    z-index:999;
   }
 </style>

@@ -54,7 +54,11 @@ public class FtpUtil {
             //16.把文件转换为二进制字符流的形式进行上传
             ftp.setFileType(FTP.BINARY_FILE_TYPE);
             //17、这才是真正上传方法storeFile(filename,input),返回Boolean雷类型，上传成功返回true
-            if (!ftp.storeFile(fileName, inputStream)) {
+            System.out.println("begin store...");
+            boolean storeflag=ftp.storeFile(fileName, inputStream);
+            System.out.println("end store...");
+            if (!storeflag) {
+                System.out.println("store fail");
                 return false;
             }
             // 18.关闭输入流
@@ -62,9 +66,11 @@ public class FtpUtil {
             // 19.退出ftp
             ftp.logout();
         } catch (IOException e) {
+            System.out.println("upload io error");
             e.printStackTrace();
             throw new IOException(e);
         } finally {
+            System.out.println("finally");
             if (ftp.isConnected()) {
                 try {
                     // 20.断开ftp的连接
@@ -74,6 +80,7 @@ public class FtpUtil {
                 }
             }
         }
+        System.out.println("last");
         return true;
     }
 }

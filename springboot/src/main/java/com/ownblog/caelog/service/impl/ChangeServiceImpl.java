@@ -28,7 +28,7 @@ public class ChangeServiceImpl implements ChangeService {
                 id_=changes.get(i).getId();
             }
         }
-        Change change=new Change(userid,id_+1,time_,content);
+        Change change=new Change(userid,id_+20,time_,content);
         changeDao.insertChange(change);
         sqlSession.commit();
         sqlSession.close();

@@ -49,6 +49,10 @@ export default {
     }
   },
   beforeMount() {
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = 'http://caesar216.usa3v.net/caelog/images/tool/showdown-master/dist/showdown.min.js';
+    document.body.appendChild(s);
     this.$axios.interceptors.request.use(
       config => {
         if (localStorage.getItem('Authorization')) {
@@ -60,26 +64,27 @@ export default {
       error => {
         return Promise.reject(error);
       });
-    this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
+    this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"));
   }
 }
 </script>
 
 <style>
-
-  *{
-    background-color: white;
+  body{
+    background-color: #f5f6f7;
   }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   position: relative;
   margin-top: 0px;
   width:1024px;
   margin:auto;
+  height:100%;
+  height: auto;
+  min-height: 1100px;
 }
 .log{
   position: absolute;
@@ -96,7 +101,7 @@ export default {
   height: 20px;
   right:60px;
   top:0px;
-  color:blue;
+  color: #0000ff;
   text-decoration: underline;
   cursor: pointer;
   z-index: 100;

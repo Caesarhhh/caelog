@@ -46,15 +46,19 @@
     width:67px;
     height:26px;
     left:38px;
-    border-style: ridge;
+    background-color: white;
     position: absolute;
+    border-style: groove;
+    border-width: thin;
   }
   #sort2{
     width:67px;
     height:26px;
     left:155px;
-    border-style: ridge;
+    background-color: white;
     position: absolute;
+    border-style: groove;
+    border-width: thin;
   }
   #select{
     width:102px;

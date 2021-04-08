@@ -41,7 +41,6 @@
 .box{
   width:312px;
   height:121px;
-  border-style: ridge;
   position: relative;
 }
 #pic{

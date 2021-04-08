@@ -3,7 +3,7 @@
   <div id="info">
     <div id="title">{{datas.title}}</div>
     <div id="articleblock">{{datas.block}}</div>
-    <div id="time">{{datas.time}}</div>
+    <div id="time"></div>
   </div>
   <div id="body">
     <div id="content">{{datas.content}}</div>
@@ -84,7 +84,7 @@
   width:500px;
   height:200px;
   border-radius: 10px;
-  border-style: ridge;
+  border-bottom-style: ridge;
   position: relative;
 }
 #info{

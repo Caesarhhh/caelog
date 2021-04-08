@@ -1,12 +1,13 @@
 package com.ownblog.caelog.Dao;
 
 import com.ownblog.caelog.pojo.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.HashMap;
 import java.util.List;
 
 
-public interface UserDao {
+public interface UserDao extends JpaRepository<User,Long> {
     List<User> getUserList();
     void insertUser(User user);
     void deleteUser(int id);

@@ -20,7 +20,6 @@
 .box{
   width:160px;
   height:90px;
-  border-style: ridge;
   border-radius: 10px;
   position: relative;
 }

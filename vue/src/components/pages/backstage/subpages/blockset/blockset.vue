@@ -162,12 +162,13 @@
 .box2{
   width:721px;
   height:631px;
-  border-style: ridge;
+  background-color: white;
 }
 #settingbox{
   width: 673px;
   height: 111px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:18px;
   left: 22px;
@@ -207,7 +208,8 @@
 #nameinput{
   width:193px;
   height: 38px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:32px;
   left:145px;
@@ -226,7 +228,8 @@
 #commentsinput{
   width:193px;
   height: 38px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:32px;
   left:404px;
@@ -240,13 +243,15 @@
   bottom:3px;
   right: 8px;
   font-family: 华光楷体_CNKI;
+  background-color: white;
   font-size: 20px;
   line-height: 28px;
 }
 #contentbox{
   width: 673px;
   height: 446px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:156px;
   left: 22px;

@@ -38,24 +38,23 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         List<String> excludePath = new ArrayList<>();
-        //排除拦截，除了注册登录(此时还没token)，其他都拦截
-        excludePath.add("/user/register");  //登录
-        excludePath.add("/user/login");     //注册
-        excludePath.add("/user/get");  //获取基本信息
-        excludePath.add("/user/getimgsrc");  //获取头像信息
-        excludePath.add("/user/getnickname");  //获取昵称信息
-        excludePath.add("/change/get");  //获取动态信息
-        excludePath.add("/labels/get");  //获取标签
-        excludePath.add("/blocks/get");  //获取板块
-        excludePath.add("/action/get");  //获取事件信息
-        excludePath.add("/article/get");  //获取文章信息
-        excludePath.add("/article/getone");  //获取单篇文章信息
-        excludePath.add("/socialhref/get");  //获取友链信息
-        excludePath.add("/announcement/get");  //获取公告信息
-        excludePath.add("/comment/get");  //获取评论信息
-        excludePath.add("/addcomment/get");  //获取附加评论信息
-        excludePath.add("/static/**");  //静态资源
-        excludePath.add("/assets/**");  //静态资源
+        excludePath.add("/user/register");
+        excludePath.add("/user/login");
+        excludePath.add("/user/get");
+        excludePath.add("/user/getimgsrc");
+        excludePath.add("/user/getnickname");
+        excludePath.add("/change/get");
+        excludePath.add("/labels/get");
+        excludePath.add("/blocks/get");
+        excludePath.add("/action/get");
+        excludePath.add("/article/get");
+        excludePath.add("/article/getone");
+        excludePath.add("/socialhref/get");
+        excludePath.add("/announcement/get");
+        excludePath.add("/comment/get");
+        excludePath.add("/addcomment/get");
+        excludePath.add("/static/**");
+        excludePath.add("/assets/**");
 
         registry.addInterceptor(tokenInterceptor)
                 .addPathPatterns("/**")

@@ -4,12 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ownblog.caelog.Dao.ChangeDao">
     <insert id="insertChange" parameterType="Change">
-       insert into Change(userid,id,time_,content) values(#{userid},#{id},#{time_},#{content})
+       insert into Changes(userid,id,time_,content) values(#{userid},#{id},#{time_},#{content})
     </insert>
     <delete id="deleteChange" parameterType="map">
-       delete from Change where userid=#{userid} and id=#{id}
+       delete from Changes where userid=#{userid} and id=#{id}
     </delete>
     <select id="getChangelist" resultType="Change" parameterType="map">
-        select * from Change where userid=#{userid}
+        select * from Changes where userid=#{userid}
     </select>
 </mapper>

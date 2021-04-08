@@ -137,20 +137,22 @@
 .box2{
   width:721px;
   height:1070px;
-  border-style: ridge;
+  background-color: white;
 }
 #settingtitle{
   width:680px;
   height: 217px;
   position: absolute;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   top:14px;
   left:20px;
 }
 #titletitle{
   width:41px;
   height:32px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:10px;
   left:12px;
@@ -161,7 +163,8 @@
 #titlecontent{
   width:491px;
   height:32px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:10px;
   left:64px;
@@ -171,7 +174,8 @@
 #contenttitle{
   width:41px;
   height:105px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:50px;
   left:12px;
@@ -188,7 +192,8 @@
 #contentcontent{
   width:491px;
   height:143px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:50px;
   left:63px;
@@ -203,12 +208,15 @@
   top:177px;
   left: 566px;
   font-family: 华光楷体_CNKI;
-  font-size: 21px;line-height: 35px;
+  font-size: 21px;
+  line-height: 35px;
+  background-color: white;
 }
 #announcement{
   width:680px;
   height: 48px;
-  border-style: ridge;
+  border-style: groove;
+  border-width: thin;
   position: absolute;
   top:242px;
   left:20px;

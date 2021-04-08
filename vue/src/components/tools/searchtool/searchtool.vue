@@ -29,7 +29,7 @@
   .searchbox{
     width:280px;
     height:40px;
-    border-style: ridge;
+    background-color: white;
     position: relative;
   }
   #searchinput{
