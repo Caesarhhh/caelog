@@ -429,7 +429,14 @@
         }
       }
       await this.inituserinfo(this.$route.params.userid)
-      console.log(666)
+      let data={
+        userid:this.$route.params.userid,
+        id:this.$route.params.articleid,
+        count:1
+      }
+      this.$axios.post(this.common.serveraddress+"/article/addview",data).then(res=>{
+        console.log(res)
+      })
     }
   }
 </script>
@@ -520,7 +527,7 @@
   }
   #showarea{
     width: 720px;
-    height: 880px;
+    height: 860px;
     position: absolute;
     left:0px;
     top:87px;

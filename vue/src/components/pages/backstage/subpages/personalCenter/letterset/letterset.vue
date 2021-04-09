@@ -91,17 +91,18 @@
             await this.$axios({
               method:'get',
               url:this.common.serveraddress+"/user/get?userid="+tempid
-            }).then(ress=>{
-              this.$axios({
+            }).then(async ress=>{
+              await this.$axios({
                 method:'get',
+                async:false,
                 url:this.common.serveraddress+"/letter/get?chatid="+tempdict.id
-              }).then(resss=>{
+              }).then(resss=>{{
                 tempdict.nickname=ress.data.data.nickname
                 tempdict.headsrc=ress.data.data.backimgsrc
                 this.letterCardinfo.push(tempdict)
                 tempdict.time=resss.data.data[0].time_.substring(2,10)
                 this.letternum++
-                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)
+                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)}
               })
             })
           }

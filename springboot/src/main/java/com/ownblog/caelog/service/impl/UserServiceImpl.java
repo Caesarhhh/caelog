@@ -42,6 +42,7 @@ public class UserServiceImpl implements UserService {
         int biggestid=userDao.findbiggestid();
         User user=new User(biggestid+1,nickname,password,introduction,backg,securityQuestion,securityAnswer,securityEmail);
         userDao.insertUser(user);
+        sqlSession.commit();
         sqlSession.close();
         return Result.succ(user);
     }
@@ -174,7 +175,7 @@ public class UserServiceImpl implements UserService {
         UserDao userDao=sqlSession.getMapper(UserDao.class);
         User user=new User();
         HashMap map=new HashMap();
-        map.put("userid",user.getId());
+        map.put("userid",userid);
         user=userDao.getUserbyid(map).get(0);
         if(!user.getPassword().equals(oldpassword)){
             return Result.fail("原始密码输入错误！");

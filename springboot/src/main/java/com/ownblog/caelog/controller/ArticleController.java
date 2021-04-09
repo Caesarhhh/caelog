@@ -1,12 +1,15 @@
 package com.ownblog.caelog.controller;
 
 import com.ownblog.caelog.service.impl.ArticleServiceImpl;
+import com.ownblog.caelog.utils.IpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 
 @RestController
 @RequestMapping(value="/article",method = RequestMethod.POST)
@@ -37,6 +40,13 @@ public class ArticleController {
     @GetMapping("/changegood")
     public Object addonegood(@RequestParam("userid")int userid,@RequestParam("id")int id,@RequestParam("count")int count){
         return articleService.addonegood(userid,id,count);
+    }
+    @RequestMapping(value="/addview",method = RequestMethod.POST)
+    public Object addview(HttpServletRequest request, @RequestBody Map<String,Object> para){
+        String userid= (String) para.get("userid");
+        String id= (String) para.get("id");
+        String count= String.valueOf((Integer) para.get("count"));
+        return articleService.addoneview(IpUtil.getIpAddr(request),userid, id, count);
     }
     @GetMapping("/getbylabel")
     public Object getarticlebylabel(@RequestParam("userid")int userid,@RequestParam("labelname")String labelname){

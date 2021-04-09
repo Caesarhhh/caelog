@@ -38,7 +38,7 @@ public class ArticleServiceImpl implements ArticleService {
             if(System.currentTimeMillis()-time>10000){
                 return Result.fail("添加超时，请稍后再试！");
             }
-        };
+        }
         List<Article> articles=articleDao.getArticlelist(hashMap);
         int id_=-1;
         for(int i=0;i<articles.size();i++){
@@ -46,7 +46,7 @@ public class ArticleServiceImpl implements ArticleService {
                 id_=articles.get(i).getId();
             }
         }
-        Article article=new Article(userid,id_+10,title,content,blockid,time_,0,0);
+        Article article=new Article(userid,id_+1,title,content,blockid,time_,0,0);
         articleDao.insertArticle(article);
         sqlSession.commit();
         sqlSession.close();
@@ -156,6 +156,27 @@ public class ArticleServiceImpl implements ArticleService {
         sqlSession.commit();
         sqlSession.close();
         return Result.succ("add one good successfully!");
+    }
+
+    @Override
+    public Result addoneview(String ipaddress,String userid, String id,String count) {
+        String key=ipaddress+"_addview_user_"+userid+"_id_"+id;
+        System.out.println(key);
+        ValueOperations<String,String>operations= redisTemplate.opsForValue();
+        if(redisTemplate.hasKey(key)){
+            return Result.succ("");
+        }
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        ArticleDao articleDao=sqlSession.getMapper(ArticleDao.class);
+        HashMap hashMap=new HashMap();
+        hashMap.put("userid",userid);
+        hashMap.put("id",id);
+        hashMap.put("count",count);
+        articleDao.addview(hashMap);
+        operations.set(key, "", 2, TimeUnit.MINUTES);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ("add one view successfully!");
     }
 
     @Override

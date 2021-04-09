@@ -57,7 +57,7 @@
   position: absolute;
   top:5px;
   left:18px;
-  font-size: 30px;
+  font-size: 28px;
   font-family: 华光楷体_CNKI;
 }
 #leftbutton{

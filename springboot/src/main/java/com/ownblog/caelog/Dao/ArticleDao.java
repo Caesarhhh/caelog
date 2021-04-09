@@ -12,6 +12,7 @@ public interface ArticleDao {
     void updateArticle(HashMap hashMap);
     List<Article> getArticlebyid(HashMap hashMap);
     void addonegood(HashMap hashMap);
+    void addview(HashMap hashMap);
     List<Article> getArticlelistbyblock(HashMap hashMap);
     List<Article> getArticlelistbylabel(HashMap hashMap);
     List<Article> getArticlelistbysearch(HashMap hashMap);

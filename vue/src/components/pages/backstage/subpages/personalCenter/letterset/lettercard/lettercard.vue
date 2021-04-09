@@ -32,6 +32,7 @@
     },
     methods:{
       openchat:function (){
+        this.chatinfo.targetid=this.datas.targetid
         this.chatinfo.ifwin=true;
       },
       getletterinfo:function (){

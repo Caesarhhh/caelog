@@ -28,6 +28,13 @@ public class UserController {
         String securityQuestion=(String)para.get("securityQuestion");
         String securityAnswer=(String)para.get("securityAnswer");
         String securityEmail=(String)para.get("securityEmail");
+        String emailcode=(String)para.get("emailcode");
+        String verifyemail=(String)para.get("verifyemail");
+        String codeinput=(String)para.get("inputcode");
+        String token= TokenUtil.getcode(emailcode);
+        if(!(token.equals(codeinput)&&TokenUtil.getcode(verifyemail).equals(securityEmail))){
+            return Result.fail("验证码错误！");
+        }
         return userserviceimpl.register(username,password,introduction,backg,securityQuestion,securityAnswer,securityEmail);
     }
     @RequestMapping(value = "/login",method = RequestMethod.POST)

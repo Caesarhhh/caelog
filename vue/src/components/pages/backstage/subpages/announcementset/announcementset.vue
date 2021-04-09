@@ -57,7 +57,6 @@
         return this.$axios.post(url, data, config);
       },
       submit:function (){
-        console.log(this.announcesetcardinfo.length)
         if(this.announcesetcardinfo.length>3){
           alert("公告最多为四个！")
           return
@@ -67,7 +66,6 @@
         param.append('userid',this.common.loginuserinfo.id)
         param.append('content',this.content)
         this.uploadFile("/announcement/add",param).then(res=>{
-          console.log(res.data)
           setTimeout(this.refresh,300)
       })
         let params = new FormData()

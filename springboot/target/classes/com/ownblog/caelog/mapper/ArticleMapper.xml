@@ -21,6 +21,9 @@
     <update id="addonegood" parameterType="map">
         update Article set goodnum=goodnum+#{count} where userid=#{userid} and id=#{id}
     </update>
+    <update id="addview" parameterType="map">
+        update Article set viewnum=viewnum+#{count} where userid=#{userid} and id=#{id}
+    </update>
     <select id="getArticlelistbyblock" resultType="Article" parameterType="map">
         select * from Article where userid=#{userid} and blockid in (select id from Blocks where name_=#{blockname})
     </select>

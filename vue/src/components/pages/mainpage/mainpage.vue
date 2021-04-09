@@ -112,6 +112,21 @@
             }
           })
       },
+      sortArticlebyTime(){
+        this.getarticles()
+      },
+      sortArticlebyHot(){
+        let len=this.articleCardInfo.length
+        for(let i=0;i<len;i++){
+          for(let j=0;j<len-1-i;j++){
+            if(this.articleCardInfo[j].goodnum*2+this.articleCardInfo[j].viewnum<this.articleCardInfo[j+1].goodnum*2+this.articleCardInfo[j+1].viewnum){
+              let temp=this.articleCardInfo[j]
+              this.$set(this.articleCardInfo,j,this.articleCardInfo[j+1])
+              this.$set(this.articleCardInfo,j+1,temp)
+            }
+          }
+        }
+      },
       getbls(){
         this.labelsInfo.labels=[]
         this.$axios.get(
@@ -158,28 +173,32 @@
       },
       getarticles(){
         this.articleCardInfo=[]
+        this.articlenum=0
         this.$axios.get(
           this.common.serveraddress+"/article/get?userid="+this.common.userinfo.id).then(
           res=>{
             if(res.data.data.length==0){
-              console.log(this.common.userinfo.id)
               var temp={
                 title:res.data.data.title,
                 time:res.data.data.time_.substring(2,10),
                 content:res.data.data.content,
                 block:blocksInfo[res.data.data.blockid],
-                id:res.data.data.id
+                id:res.data.data.id,
+                goodnum:res.data.data.goodnum,
+                viewnum:res.data.data.viewnum
               }
               this.articleCardInfo.push(temp)
               this.articlenum++
             }
-            for(var i =0;i<res.data.data.length;i++){
+            for(var i =res.data.data.length-1;i>=0;i--){
               var temp={
                 title:res.data.data[i].title,
                 time:res.data.data[i].time_.substring(2,10),
                 content:res.data.data[i].content,
                 block:blocksInfo[res.data.data[i].blockid],
-                id:res.data.data[i].id
+                id:res.data.data[i].id,
+                goodnum:res.data.data[i].goodnum,
+                viewnum:res.data.data[i].viewnum
               }
               this.articleCardInfo.push(temp)
               this.articlenum++

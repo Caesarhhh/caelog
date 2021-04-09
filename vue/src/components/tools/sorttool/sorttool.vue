@@ -1,7 +1,7 @@
 <template>
 <div class="sortbox">
-  <div id="sort1" @click="setsorttype(0)" :class="{shadow:sorttype==0,nonshadow:sorttype==1}">热度</div>
-  <div id="sort2" @click="setsorttype(1)" :class="{shadow:sorttype==1,nonshadow:sorttype==0}">时间</div>
+  <div id="sort1" @click="sortbyHot" :class="{shadow:sorttype==0,nonshadow:sorttype==1}">热度</div>
+  <div id="sort2" @click="sortbyTime" :class="{shadow:sorttype==1,nonshadow:sorttype==0}">时间</div>
   <div id="select">
     <select name="selecttime" v-model="timeselect">
       <option v-for="item in datas.timeslot" :value="item.id">{{item.st}}-{{item.et}}</option>
@@ -16,13 +16,21 @@
     data(){
       return {
         timeselect:{id:0,st:2015,et:2016},
-        sorttype:0
+        sorttype:1
       }
     },
     props:["datas"],
     methods:{
       setsorttype:function (index){
         this.sorttype=index;
+      },
+      sortbyTime:function (){
+        this.$parent.sortArticlebyTime()
+        this.setsorttype(1)
+      },
+      sortbyHot:function (){
+        this.$parent.sortArticlebyHot()
+        this.setsorttype(0)
       }
     }
   }

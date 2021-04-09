@@ -92,6 +92,12 @@
           this.emailvalid=false
           return
         }
+        var pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if(!pattern.test(data.emailaddress)){
+          this.emailtips=""
+          this.emailvalid=false
+          return
+        }
         this.$axios.post(this.common.serveraddress+"/user/testemail",data).then(res=>{
           if(res.data.code==200){
             this.emailtips="email is effective!"
@@ -130,6 +136,10 @@
           this.inputmsg.backgroundimgsrc=this.uploadurl;})
       },
       getrandomcode:function (){
+        if(!this.emailvalid){
+          alert("请输入有效的密保邮箱！")
+          return
+        }
         let data={
           'address':this.inputmsg.securityEmail
         }
@@ -139,8 +149,9 @@
             if(res.data.code==200){
               this.ifcode=true
               let temp={
-                code:res.data.data,
-                time:Date.parse(new Date())+120000
+                code:res.data.data.code,
+                time:Date.parse(new Date())+120000,
+                email:res.data.data.email
               }
               localStorage.setItem("token_emailcode",JSON.stringify(temp))
               this.ifcode=true
@@ -153,6 +164,10 @@
       submitForm(){
         if(this.inputmsg.textinput==""){
           alert("请输入用户名")
+          return
+        }
+        if(this.namevalid==false){
+          alert("请输入有效的用户名")
           return
         }
         if(this.inputmsg.passwordinput!=this.inputmsg.confirmpasswordinput){
@@ -175,18 +190,34 @@
           alert("请设置密保邮箱！")
           return
         }
-        let param = new FormData()
-        param.append('nickname',this.inputmsg.textinput)
-        param.append('password',this.inputmsg.passwordinput)
-        param.append('introduction',this.inputmsg.introduction)
-        param.append('backgroundimgsrc',this.inputmsg.backgroundimgsrc)
-        param.append('securityQuestion',this.inputmsg.securityQuestion)
-        param.append('securityAnswer',this.inputmsg.securityAnswer)
-        param.append('securityEmail',this.inputmsg.securityEmail)
-        this.uploadFile("/user/register",param).then(
+        if(!this.emailvalid){
+          alert("请输入有效的密保邮箱！")
+          return
+        }
+        var codedata=JSON.parse(localStorage.getItem("token_emailcode"))
+        var timestamp = Date.parse(new Date());
+        if(codedata.time+300000<timestamp){
+          this.ifcode=false
+          alert("验证码失效，请重新发送！")
+          return
+        }
+        let param={
+          nickname:this.inputmsg.textinput,
+          password:this.inputmsg.passwordinput,
+          introduction:this.inputmsg.introduction,
+          backgroundimgsrc:this.inputmsg.backgroundimgsrc,
+          securityQuestion:this.inputmsg.securityQuestion,
+          securityAnswer:this.inputmsg.securityAnswer,
+          securityEmail:this.inputmsg.securityEmail,
+          emailcode:codedata.code,
+          verifyemail:codedata.email,
+          inputcode:this.inputmsg.codeinput
+        }
+        this.$axios.post(this.common.serveraddress+"/user/register",param).then(
           res=>{
             if(res.data.code==200){
                  alert("注册成功")
+                 this.$router.push("/login")
             }
             else{
               alert(res.data.msg)

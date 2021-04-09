@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.security.GeneralSecurityException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -32,6 +33,9 @@ public class EmailController {
         String address= (String) para.get("address");
         String code=String.valueOf(Math.round((Math.random()+1) * 1000));
         sendEmailUtil.send(address,"来自Caelog的验证码",code);
-        return Result.succ(TokenUtil.initcode(code));
+        HashMap map=new HashMap();
+        map.put("code",TokenUtil.initcode(code));
+        map.put("email",TokenUtil.initcode(address));
+        return Result.succ(map);
     }
 }
