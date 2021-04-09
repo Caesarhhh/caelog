@@ -28,6 +28,6 @@ public class test {
 //        sqlSession.close();
         ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
         UserController userController=(UserController)ctx.getBean("userController");
-        userController.register();
+
     }
 }

@@ -89,14 +89,14 @@
     position: relative;
   }
   #info{
-    width: 479px;
+    width: auto;
     height: 39px;
     position: absolute;
     top:5px;
     left:7px;
   }
   #title{
-    width:auto;
+    width:320px;
     height: 37px;
     float:left;
     margin-top:16px;
@@ -107,21 +107,21 @@
     line-height: 100%;
   }
   #articleblock{
-    width:96px;
+    width:136px;
     height:28px;
     float:left;
-    margin-top:23px;
-    margin-left:90px;
+    margin-top:26px;
+    margin-left:5px;
     font-family: 华光楷体_CNKI;
     font-size: 22px;
     text-align: left;
     line-height: 100%;
   }
   #time{
-    width:85px;
+    width:105px;
     height:20px;
     float:right;
-    margin-top:26px;
+    margin-top:31px;
     margin-right:0px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;

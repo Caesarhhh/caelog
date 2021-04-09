@@ -12,4 +12,9 @@ public class UploadController {
         DoUploadService0 doUploadService0=new DoUploadService0();
         return doUploadService0.doUpload(multipartFile,userid);
     }
+    @GetMapping("/uploadtemp")
+    public Object uploadfiletemp(@RequestParam("file")MultipartFile multipartFile){
+        DoUploadService0 doUploadService0=new DoUploadService0();
+        return doUploadService0.doUpload(multipartFile,-1);
+    }
 }

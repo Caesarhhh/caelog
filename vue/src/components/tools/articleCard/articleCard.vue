@@ -3,7 +3,7 @@
   <div id="info">
     <div id="title">{{datas.title}}</div>
     <div id="articleblock">{{datas.block}}</div>
-    <div id="time"></div>
+    <div id="time">{{datas.time}}</div>
   </div>
   <div id="body">
     <div id="content">{{datas.content}}</div>
@@ -95,9 +95,10 @@
   left:7px;
 }
 #title{
-  width:auto;
+  width:350px;
   height: 37px;
   float:left;
+  overflow: hidden;
   margin-top:1px;
   margin-left:3px;
   font-family: 华光楷体_CNKI;
@@ -119,9 +120,9 @@
 #time{
   width:85px;
   height:20px;
-  float:right;
-  margin-top:15px;
-  margin-right:15px;
+  position: absolute;
+  top:15px;
+  right:15px;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
   text-align: left;

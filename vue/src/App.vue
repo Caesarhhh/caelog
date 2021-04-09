@@ -3,6 +3,7 @@
     <div class="log" v-if="state">欢迎，{{username}}</div>
     <div class="logout" v-if="state" @click="logout">logout</div>
     <div class="logout" v-if="!state" @click="login">login</div>
+    <div class="register" v-if="!state" @click="register">register</div>
     <router-view></router-view>
   </div>
 </template>
@@ -46,6 +47,9 @@ export default {
     },
     login:function (){
       this.$router.push("/login")
+    },
+    register:function (){
+      this.$router.push("/register")
     }
   },
   beforeMount() {
@@ -100,6 +104,17 @@ export default {
   width:30px;
   height: 20px;
   right:60px;
+  top:0px;
+  color: #0000ff;
+  text-decoration: underline;
+  cursor: pointer;
+  z-index: 100;
+}
+.register{
+  position: absolute;
+  width:30px;
+  height: 20px;
+  right:130px;
   top:0px;
   color: #0000ff;
   text-decoration: underline;

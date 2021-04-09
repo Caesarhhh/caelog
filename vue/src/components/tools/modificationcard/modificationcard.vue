@@ -25,12 +25,15 @@
 }
 #content{
   width:153px;
-  height: 60px;
+  height: 68px;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
   position: absolute;
   text-align: left;
   left:8px;
   top:5px;
-  font-size: 22px;
+  font-size: 21px;
   font-family: 华光楷体_CNKI;
 }
 #time{

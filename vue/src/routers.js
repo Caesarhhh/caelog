@@ -2,6 +2,7 @@ import mainpage from "./components/pages/mainpage/mainpage";
 import backstage from "./components/pages/backstage/backstage";
 import loginpage from "./components/pages/loginpage/loginpage";
 import articleedit from "./components/pages/articleedit/articleedit";
+import registerpage from "./components/pages/registepage/registerpage";
 import articleshowpage from "./components/pages/blockshowpage/blockshowpage";
 import articlereadpage from "./components/pages/articlereadpage/articlereadpage";
 const routers=[
@@ -16,6 +17,9 @@ const routers=[
   },
   {
     path:'/login',name:'loginpage',component: loginpage
+  },
+  {
+    path:'/register',name:'registerpage',component:registerpage
   },
   {
     path:'/:userid/articleedit',name:'articleedit',component: articleedit

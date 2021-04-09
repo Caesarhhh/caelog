@@ -49,6 +49,11 @@ public class WebConfiguration implements WebMvcConfigurer {
         excludePath.add("/action/get");
         excludePath.add("/article/get");
         excludePath.add("/article/getone");
+        excludePath.add("/article/getbyblock");
+        excludePath.add("/article/getbysearch");
+        excludePath.add("/article/getbylabel");
+        excludePath.add("/files/uploadtemp");
+        excludePath.add("/email/sendtemp");
         excludePath.add("/socialhref/get");
         excludePath.add("/announcement/get");
         excludePath.add("/comment/get");

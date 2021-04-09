@@ -77,6 +77,7 @@
   left: 50%;
   margin-top: -324px;
   margin-left: -212px;
+  background-color: white;
 }
 #empty{
   width:424px;

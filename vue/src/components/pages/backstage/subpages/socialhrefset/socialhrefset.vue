@@ -131,11 +131,6 @@
             if (typeof data1 == "string") {
               data = JSON.parse(data1);
             }
-            if (data.message && (data.data === 'login.invalid.token')) {
-              window.localStorage.removeItem("access-user");
-              alert("超时请重新登陆");
-              window.location.href = '/';
-            }
             return data;
           }],
           headers: {'Content-Type': "multipart/form-data"},

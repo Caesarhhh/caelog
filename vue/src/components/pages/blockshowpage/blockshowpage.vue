@@ -106,7 +106,7 @@
                     var temp={
                       title:res.data.data[i].title,
                       block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time,
+                      time:res.data.data[i].time_.substring(0,10),
                       content:res.data.data[i].content,
                       id:res.data.data[i].id
                     }
@@ -124,7 +124,7 @@
                     var temp={
                       title:res.data.data[i].title,
                       block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time,
+                      time:res.data.data[i].time_.substring(0,10),
                       content:res.data.data[i].content,
                       id:res.data.data[i].id
                     }
@@ -138,12 +138,11 @@
               this.$axios.get(
                 this.common.serveraddress+"/article/getbyblock?userid="+this.$route.params.userid+"&blockname="+this.$route.params.data).then(
                 res=>{
-                  console.log('blocks',res)
                   for(var i=0;i<res.data.data.length;i++){
                     var temp={
                       title:res.data.data[i].title,
                       block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time,
+                      time:res.data.data[i].time_.substring(0,10),
                       content:res.data.data[i].content,
                       id:res.data.data[i].id
                     }

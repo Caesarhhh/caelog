@@ -129,8 +129,11 @@
           })
       },
       getrandomcode:function (){
-        this.$axios.get(
-          this.common.serveraddress+"/email/send?userid="+this.common.loginuserinfo.id).then(
+        let data={
+          'userid':this.common.loginuserinfo.id
+        }
+        this.$axios.post(
+          this.common.serveraddress+"/email/send",data).then(
           res=>{
             if(res.data.code==200){
               this.ifcode=true

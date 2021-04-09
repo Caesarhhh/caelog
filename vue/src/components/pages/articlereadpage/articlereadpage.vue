@@ -305,7 +305,8 @@
                 addedcontent:[],
                 addednum:0,
                 count:0,
-                addid:[]
+                addid:[],
+                addtime:[]
               }
               await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+temp.actorid).then(
                 ress=>{
@@ -343,6 +344,7 @@
                     temp.addednicknames.push(ress.data.data[u].name_)
                     temp.goodnums.push(ress.data.data[u].goodnum)
                     temp.addid.push(ress.data.data[u].id)
+                    temp.addtime.push(ress.data.data[u].time_)
                     await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+ress.data.data[u].actorid).then(
                       resss=>{
                         temp.addedsrc.push(resss.data.data)

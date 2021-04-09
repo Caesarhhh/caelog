@@ -9,6 +9,7 @@
       <div class="reply" @click="reply(-1)"><img :src="relpyimgsrc" alt="error"></div>
       <div class="delete" @click="deletecard(-1)" v-if="replyinfo.name==datas.nickname"><img :src="deleteimgsrc" alt="error"></div>
     </div>
+    <div class="time">{{datas.time}}</div>
   </div>
   <div v-for="(item,index) in datas.addedsrc" class="addedcomment clearfix">
     <div class="addedsrc"><img :src="datas.addedsrc[index]" alt="error"></div>
@@ -19,6 +20,7 @@
       <div class="reply" @click="reply(index)"><img :src="relpyimgsrc" alt="error"></div>
       <div class="delete" @click="deletecard(index)" v-if="replyinfo.id==datas.actorid"><img :src="deleteimgsrc" alt="error"></div>
     </div>
+    <div class="time">{{datas.addtime[index]}}</div>
   </div>
 </div>
 </template>
@@ -266,6 +268,16 @@
   float: right;
   margin-right: 17px;
   margin-top: 3px;
+}
+.time{
+  width:160px;
+  height: 30px;
+  float: right;
+  line-height: 40px;
+  text-align: right;
+  margin-bottom: 0px;
+  margin-right: 15px;
+  font-family: 华光楷体_CNKI;
 }
 .delete img{
   width: 100%;
