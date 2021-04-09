@@ -21,6 +21,9 @@
     <select id="getUserbyname" resultType="User">
         select * from Users where nickname=#{nickname}
     </select>
+    <select id="getUserbyemail" resultType="User">
+        select * from Users where securityEmail=#{emailaddress}
+    </select>
     <select id="findbiggestid" resultType="int">
         select max(id) from Users
     </select>

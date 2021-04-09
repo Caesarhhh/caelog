@@ -3,6 +3,7 @@ package com.ownblog.caelog.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ownblog.caelog.Dao.UserDao;
+import com.ownblog.caelog.lang.Result;
 import com.ownblog.caelog.pojo.User;
 import com.ownblog.caelog.service.impl.UserServiceImpl;
 import com.ownblog.caelog.utils.TokenUtil;
@@ -43,6 +44,26 @@ public class UserController {
         hs.put("userinfo",userserviceimpl.login(username,password));
         ObjectMapper objectMapper=new ObjectMapper();
         return objectMapper.writeValueAsString(hs);
+    }
+    @RequestMapping(value="/testname",method = RequestMethod.POST)
+    public Object testname(@RequestBody Map<String,Object> para)throws JsonProcessingException{
+        String username=(String)para.get("username");
+        if(userserviceimpl.testname(username)){
+            return Result.succ("Nickname is effective!");
+        }
+        else{
+            return Result.fail("Duplicate nicknames exist!");
+        }
+    }
+    @RequestMapping(value="/testemail",method = RequestMethod.POST)
+    public Object testemail(@RequestBody Map<String,Object> para)throws JsonProcessingException{
+        String emailaddress=(String)para.get("emailaddress");
+        if(userserviceimpl.testemail(emailaddress)){
+            return Result.succ("E-mail address is effective!");
+        }
+        else{
+            return Result.fail("Duplicate e-mail address exist!");
+        }
     }
     @RequestMapping(value="/test",method=RequestMethod.GET)
     @ResponseBody

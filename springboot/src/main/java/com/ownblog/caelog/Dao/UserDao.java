@@ -14,6 +14,7 @@ public interface UserDao extends JpaRepository<User,Long> {
     void updateUser(User user);
     int findbiggestid();
     List<User> getUserbyid(HashMap map);
+    List<User> getUserbyemail(HashMap map);
     String getpasswordbyid(HashMap map);
     List<User>getUserbyname(HashMap map);
     List<String>getimgsrc(int userid);

@@ -8,6 +8,7 @@ import com.ownblog.caelog.utils.BatisUtils;
 import com.ownblog.caelog.utils.TokenUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -53,6 +54,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result changehead() {
         return null;
+    }
+
+    @Override
+    public Boolean testname(String username) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap map=new HashMap();
+        map.put("nickname",username);
+        System.out.println(username);
+        List<User>users=userDao.getUserbyname(map);
+        if(users.size()>0){
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -170,5 +185,19 @@ public class UserServiceImpl implements UserService {
         sqlSession.commit();
         sqlSession.close();
         return Result.succ("succeed!");
+    }
+
+    @Override
+    public boolean testemail(String emailaddress) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap map=new HashMap();
+        map.put("emailaddress",emailaddress);
+        System.out.println(emailaddress);
+        List<User>users=userDao.getUserbyemail(map);
+        if(users.size()>0){
+            return false;
+        }
+        return true;
     }
 }

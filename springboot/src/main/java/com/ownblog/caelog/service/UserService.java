@@ -7,6 +7,7 @@ public interface UserService {
     public Result register(String nickname,String password,String introduction,String backg,String securityQuestion,String securityAnswer,String securityEmail);
     public Result changebg();
     public Result changehead();
+    public Boolean testname(String username);
     public Result changePersonlData(int userid,String nickname,String password,String introduction,String backg,String securityQuestion,String securityAnswer,String securityEmail);
     public Result changeSecret(int userid,String oldpassword,String newpassword,String safetyanswerinpu,String codeinput,String emailcode);
     public Result getUserbyid(int userid);
@@ -16,4 +17,5 @@ public interface UserService {
     public Result getnickname(int userid);
     public Result getuser(int userid);
     public Result safetysetinput(int userid,String oldpassword,String securityAnswer);
+    boolean testemail(String emailaddress);
 }

@@ -9265,3 +9265,1464 @@
 2021-04-09 10:15:31  [ http-nio-8081-exec-7:42415 ] - [ DEBUG ]  Returned connection 1050498591 to pool.
 2021-04-09 10:15:31  [ http-nio-8081-exec-5:42415 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3f9a3b3d]
 2021-04-09 10:15:31  [ http-nio-8081-exec-5:42416 ] - [ DEBUG ]  Returned connection 1067072317 to pool.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:25:15  [ http-nio-8081-exec-1:170 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:16  [ http-nio-8081-exec-1:332 ] - [ DEBUG ]  Created connection 2045709132.
+2021-04-09 12:25:16  [ http-nio-8081-exec-1:332 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@79ef0b4c]
+2021-04-09 12:25:16  [ http-nio-8081-exec-1:332 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:16  [ http-nio-8081-exec-1:357 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:16  [ http-nio-8081-exec-1:370 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3671 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3678 ] - [ DEBUG ]  Created connection 2066526069.
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3678 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7b2caf75]
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3690 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3690 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:19  [ http-nio-8081-exec-3:3692 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6635 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6654 ] - [ DEBUG ]  Created connection 329863970.
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6655 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@13a95322]
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6658 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6658 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:22  [ http-nio-8081-exec-2:6661 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10150 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10174 ] - [ DEBUG ]  Created connection 167651028.
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10174 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@9fe26d4]
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10176 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10177 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:25  [ http-nio-8081-exec-7:10178 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14271 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14287 ] - [ DEBUG ]  Created connection 112206911.
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14288 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6b0243f]
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14290 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14291 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:30  [ http-nio-8081-exec-8:14293 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22425 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22433 ] - [ DEBUG ]  Created connection 662325763.
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22433 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@277a4a03]
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22433 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22433 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:38  [ http-nio-8081-exec-9:22433 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28301 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28309 ] - [ DEBUG ]  Created connection 1915682355.
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28309 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@722efe33]
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28309 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28309 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:44  [ http-nio-8081-exec-10:28309 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35702 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35710 ] - [ DEBUG ]  Created connection 157566509.
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35710 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@964462d]
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35710 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35710 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:51  [ http-nio-8081-exec-5:35710 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39051 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39069 ] - [ DEBUG ]  Created connection 1951708280.
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39069 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7454b478]
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39070 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39071 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:25:54  [ http-nio-8081-exec-6:39073 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57644 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57657 ] - [ DEBUG ]  Created connection 1074180263.
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57657 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4006b0a7]
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57657 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57657 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:26:13  [ http-nio-8081-exec-4:57657 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:26:15  [ http-nio-8081-exec-1:59424 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:26:15  [ http-nio-8081-exec-1:59429 ] - [ DEBUG ]  Claimed overdue connection 2045709132.
+2021-04-09 12:26:15  [ http-nio-8081-exec-1:59430 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:26:15  [ http-nio-8081-exec-1:59431 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:26:15  [ http-nio-8081-exec-1:59434 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:26:17  [ http-nio-8081-exec-3:61265 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:26:17  [ http-nio-8081-exec-3:61267 ] - [ DEBUG ]  Claimed overdue connection 2066526069.
+2021-04-09 12:26:17  [ http-nio-8081-exec-3:61268 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:26:17  [ http-nio-8081-exec-3:61268 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:26:17  [ http-nio-8081-exec-3:61270 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:52 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:52 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:184 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:336 ] - [ DEBUG ]  Created connection 1430334652.
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:336 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@55412cbc]
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:336 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:351 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:30:25  [ http-nio-8081-exec-1:377 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7461 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7482 ] - [ DEBUG ]  Created connection 1841584414.
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7483 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6dc4591e]
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7484 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7485 ] - [ DEBUG ]  ==> Parameters: null
+2021-04-09 12:30:32  [ http-nio-8081-exec-2:7487 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:53 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:169 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:373 ] - [ DEBUG ]  Created connection 852089339.
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:374 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:378 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:394 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:31:04  [ http-nio-8081-exec-1:410 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:31:07  [ http-nio-8081-exec-2:3915 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:08  [ http-nio-8081-exec-2:3939 ] - [ DEBUG ]  Created connection 576707121.
+2021-04-09 12:31:08  [ http-nio-8081-exec-2:3940 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@225fda31]
+2021-04-09 12:31:08  [ http-nio-8081-exec-2:3941 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:08  [ http-nio-8081-exec-2:3942 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:31:08  [ http-nio-8081-exec-2:3945 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13484 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13505 ] - [ DEBUG ]  Created connection 543485313.
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13506 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2064ed81]
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13508 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13508 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:31:17  [ http-nio-8081-exec-3:13510 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15434 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15450 ] - [ DEBUG ]  Created connection 845198760.
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15451 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3260b5a8]
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15452 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15452 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:31:19  [ http-nio-8081-exec-6:15454 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16521 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16537 ] - [ DEBUG ]  Created connection 1136460417.
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16538 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@43bd0281]
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16539 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16539 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:31:20  [ http-nio-8081-exec-5:16540 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17390 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17405 ] - [ DEBUG ]  Created connection 1324699614.
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17405 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ef54fde]
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17406 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17406 ] - [ DEBUG ]  ==> Parameters: Caesarddd(String)
+2021-04-09 12:31:21  [ http-nio-8081-exec-8:17408 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21104 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21128 ] - [ DEBUG ]  Created connection 1255784320.
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21129 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ad9bf80]
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21130 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21131 ] - [ DEBUG ]  ==> Parameters: Caesardddd(String)
+2021-04-09 12:31:25  [ http-nio-8081-exec-7:21132 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51821 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51838 ] - [ DEBUG ]  Created connection 1696688033.
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51839 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@652167a1]
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51840 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51840 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:31:55  [ http-nio-8081-exec-4:51842 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60481 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60500 ] - [ DEBUG ]  Created connection 817715557.
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60501 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@30bd5965]
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60501 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60502 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:32:04  [ http-nio-8081-exec-9:60503 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71528 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71542 ] - [ DEBUG ]  Created connection 921534415.
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71542 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71543 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71544 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:32:15  [ http-nio-8081-exec-10:71545 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:33:23  [ http-nio-8081-exec-2:139472 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:23  [ http-nio-8081-exec-2:139475 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:33:23  [ http-nio-8081-exec-2:139476 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:23  [ http-nio-8081-exec-2:139477 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:33:23  [ http-nio-8081-exec-2:139478 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:33:25  [ http-nio-8081-exec-3:141041 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:25  [ http-nio-8081-exec-3:141044 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:33:25  [ http-nio-8081-exec-3:141045 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:25  [ http-nio-8081-exec-3:141045 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:33:25  [ http-nio-8081-exec-3:141048 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:33:40  [ http-nio-8081-exec-6:156577 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:40  [ http-nio-8081-exec-6:156580 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:33:40  [ http-nio-8081-exec-6:156581 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:40  [ http-nio-8081-exec-6:156582 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:33:40  [ http-nio-8081-exec-6:156583 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:33:43  [ http-nio-8081-exec-5:159039 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:43  [ http-nio-8081-exec-5:159041 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:33:43  [ http-nio-8081-exec-5:159043 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:43  [ http-nio-8081-exec-5:159044 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:33:43  [ http-nio-8081-exec-5:159046 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:33:50  [ http-nio-8081-exec-8:166871 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:50  [ http-nio-8081-exec-8:166873 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:33:50  [ http-nio-8081-exec-8:166875 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:50  [ http-nio-8081-exec-8:166876 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:33:50  [ http-nio-8081-exec-8:166879 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:33:53  [ http-nio-8081-exec-7:169828 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:33:53  [ http-nio-8081-exec-7:169830 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:33:53  [ http-nio-8081-exec-7:169830 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:33:53  [ http-nio-8081-exec-7:169831 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:33:53  [ http-nio-8081-exec-7:169834 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:34:01  [ http-nio-8081-exec-4:177653 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:01  [ http-nio-8081-exec-4:177655 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:34:01  [ http-nio-8081-exec-4:177656 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:01  [ http-nio-8081-exec-4:177657 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:34:01  [ http-nio-8081-exec-4:177658 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:34:18  [ http-nio-8081-exec-9:194676 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:18  [ http-nio-8081-exec-9:194679 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:34:18  [ http-nio-8081-exec-9:194681 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:18  [ http-nio-8081-exec-9:194681 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:34:18  [ http-nio-8081-exec-9:194682 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:34:21  [ http-nio-8081-exec-10:197107 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:21  [ http-nio-8081-exec-10:197108 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:34:21  [ http-nio-8081-exec-10:197110 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:21  [ http-nio-8081-exec-10:197111 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:34:21  [ http-nio-8081-exec-10:197113 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:34:23  [ http-nio-8081-exec-1:199035 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:23  [ http-nio-8081-exec-1:199037 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:34:23  [ http-nio-8081-exec-1:199038 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:23  [ http-nio-8081-exec-1:199038 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:34:23  [ http-nio-8081-exec-1:199039 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:34:36  [ http-nio-8081-exec-2:212317 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:36  [ http-nio-8081-exec-2:212319 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:34:36  [ http-nio-8081-exec-2:212321 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:36  [ http-nio-8081-exec-2:212321 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:34:36  [ http-nio-8081-exec-2:212323 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:34:48  [ http-nio-8081-exec-3:224876 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:34:48  [ http-nio-8081-exec-3:224878 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:34:48  [ http-nio-8081-exec-3:224880 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:34:48  [ http-nio-8081-exec-3:224881 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:34:48  [ http-nio-8081-exec-3:224882 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:35:07  [ http-nio-8081-exec-6:243390 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:35:07  [ http-nio-8081-exec-6:243392 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:35:07  [ http-nio-8081-exec-6:243394 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:35:07  [ http-nio-8081-exec-6:243394 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:35:07  [ http-nio-8081-exec-6:243396 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:35:08  [ http-nio-8081-exec-5:244604 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:35:08  [ http-nio-8081-exec-5:244607 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:35:08  [ http-nio-8081-exec-5:244608 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:35:08  [ http-nio-8081-exec-5:244608 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:35:08  [ http-nio-8081-exec-5:244610 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:35:13  [ http-nio-8081-exec-8:249062 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:35:13  [ http-nio-8081-exec-8:249064 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:35:13  [ http-nio-8081-exec-8:249066 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:35:13  [ http-nio-8081-exec-8:249066 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:35:13  [ http-nio-8081-exec-8:249068 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:35:33  [ http-nio-8081-exec-7:269772 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:35:33  [ http-nio-8081-exec-7:269773 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:35:33  [ http-nio-8081-exec-7:269774 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:35:33  [ http-nio-8081-exec-7:269774 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:35:33  [ http-nio-8081-exec-7:269775 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:35:35  [ http-nio-8081-exec-4:271053 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:35:35  [ http-nio-8081-exec-4:271054 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:35:35  [ http-nio-8081-exec-4:271055 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:35:35  [ http-nio-8081-exec-4:271055 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:35:35  [ http-nio-8081-exec-4:271056 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:36:56  [ http-nio-8081-exec-10:352143 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:36:56  [ http-nio-8081-exec-10:352145 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:36:56  [ http-nio-8081-exec-10:352146 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:36:56  [ http-nio-8081-exec-10:352146 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:36:56  [ http-nio-8081-exec-10:352147 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:37:06  [ http-nio-8081-exec-1:362735 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:06  [ http-nio-8081-exec-1:362736 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:37:06  [ http-nio-8081-exec-1:362737 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:06  [ http-nio-8081-exec-1:362738 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:37:06  [ http-nio-8081-exec-1:362739 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:37:34  [ http-nio-8081-exec-2:390487 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:34  [ http-nio-8081-exec-2:390488 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:37:34  [ http-nio-8081-exec-2:390489 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:34  [ http-nio-8081-exec-2:390489 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:37:34  [ http-nio-8081-exec-2:390490 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:37:35  [ http-nio-8081-exec-3:391910 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:35  [ http-nio-8081-exec-3:391911 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:37:35  [ http-nio-8081-exec-3:391912 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:35  [ http-nio-8081-exec-3:391912 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:37:35  [ http-nio-8081-exec-3:391914 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:37:41  [ http-nio-8081-exec-6:397612 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:41  [ http-nio-8081-exec-6:397614 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:37:41  [ http-nio-8081-exec-6:397615 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:41  [ http-nio-8081-exec-6:397615 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:37:41  [ http-nio-8081-exec-6:397616 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:37:45  [ http-nio-8081-exec-5:401174 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:45  [ http-nio-8081-exec-5:401176 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:37:45  [ http-nio-8081-exec-5:401178 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:45  [ http-nio-8081-exec-5:401178 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:37:45  [ http-nio-8081-exec-5:401179 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:37:46  [ http-nio-8081-exec-8:402297 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:46  [ http-nio-8081-exec-8:402299 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:37:46  [ http-nio-8081-exec-8:402300 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:46  [ http-nio-8081-exec-8:402301 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 12:37:46  [ http-nio-8081-exec-8:402302 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:37:53  [ http-nio-8081-exec-7:409829 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:53  [ http-nio-8081-exec-7:409832 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:37:53  [ http-nio-8081-exec-7:409833 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:53  [ http-nio-8081-exec-7:409834 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:37:53  [ http-nio-8081-exec-7:409835 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:37:55  [ http-nio-8081-exec-4:411484 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:37:55  [ http-nio-8081-exec-4:411485 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:37:55  [ http-nio-8081-exec-4:411486 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:37:55  [ http-nio-8081-exec-4:411486 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:37:55  [ http-nio-8081-exec-4:411488 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:34  [ http-nio-8081-exec-9:450509 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:34  [ http-nio-8081-exec-9:450511 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:38:34  [ http-nio-8081-exec-9:450512 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:34  [ http-nio-8081-exec-9:450513 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:38:34  [ http-nio-8081-exec-9:450514 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:35  [ http-nio-8081-exec-10:451831 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:35  [ http-nio-8081-exec-10:451833 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:38:35  [ http-nio-8081-exec-10:451835 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:35  [ http-nio-8081-exec-10:451835 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:38:35  [ http-nio-8081-exec-10:451837 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:38:40  [ http-nio-8081-exec-1:455994 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:40  [ http-nio-8081-exec-1:455995 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:38:40  [ http-nio-8081-exec-1:455996 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:40  [ http-nio-8081-exec-1:455996 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:38:40  [ http-nio-8081-exec-1:455997 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:41  [ http-nio-8081-exec-2:456958 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:41  [ http-nio-8081-exec-2:456960 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:38:41  [ http-nio-8081-exec-2:456960 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:41  [ http-nio-8081-exec-2:456960 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:38:41  [ http-nio-8081-exec-2:456961 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:41  [ http-nio-8081-exec-3:457627 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:41  [ http-nio-8081-exec-3:457629 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:38:41  [ http-nio-8081-exec-3:457629 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:41  [ http-nio-8081-exec-3:457630 ] - [ DEBUG ]  ==> Parameters: Caesarddd(String)
+2021-04-09 12:38:41  [ http-nio-8081-exec-3:457631 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:42  [ http-nio-8081-exec-6:458522 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:42  [ http-nio-8081-exec-6:458523 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:38:42  [ http-nio-8081-exec-6:458524 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:42  [ http-nio-8081-exec-6:458524 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:38:42  [ http-nio-8081-exec-6:458525 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:42  [ http-nio-8081-exec-5:458697 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:42  [ http-nio-8081-exec-5:458700 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:38:42  [ http-nio-8081-exec-5:458700 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:42  [ http-nio-8081-exec-5:458700 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:38:42  [ http-nio-8081-exec-5:458702 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:38:43  [ http-nio-8081-exec-8:459058 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:38:43  [ http-nio-8081-exec-8:459060 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:38:43  [ http-nio-8081-exec-8:459061 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:38:43  [ http-nio-8081-exec-8:459061 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:38:43  [ http-nio-8081-exec-8:459062 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:43:33  [ http-nio-8081-exec-4:749474 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:43:33  [ http-nio-8081-exec-4:749475 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:43:33  [ http-nio-8081-exec-4:749476 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:43:33  [ http-nio-8081-exec-4:749477 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:43:33  [ http-nio-8081-exec-4:749478 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:58  [ http-nio-8081-exec-10:834477 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:58  [ http-nio-8081-exec-10:834478 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:44:58  [ http-nio-8081-exec-10:834478 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:58  [ http-nio-8081-exec-10:834478 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:44:58  [ http-nio-8081-exec-10:834479 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:58  [ http-nio-8081-exec-1:834584 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:58  [ http-nio-8081-exec-1:834585 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:44:58  [ http-nio-8081-exec-1:834585 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:58  [ http-nio-8081-exec-1:834586 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:44:58  [ http-nio-8081-exec-1:834587 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:59  [ http-nio-8081-exec-2:835130 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:59  [ http-nio-8081-exec-2:835132 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:44:59  [ http-nio-8081-exec-2:835133 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:59  [ http-nio-8081-exec-2:835133 ] - [ DEBUG ]  ==> Parameters: Ca(String)
+2021-04-09 12:44:59  [ http-nio-8081-exec-2:835134 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:59  [ http-nio-8081-exec-3:835380 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:59  [ http-nio-8081-exec-3:835381 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:44:59  [ http-nio-8081-exec-3:835383 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:59  [ http-nio-8081-exec-3:835383 ] - [ DEBUG ]  ==> Parameters: Cae(String)
+2021-04-09 12:44:59  [ http-nio-8081-exec-3:835384 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:59  [ http-nio-8081-exec-6:835672 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:59  [ http-nio-8081-exec-6:835673 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:44:59  [ http-nio-8081-exec-6:835673 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:59  [ http-nio-8081-exec-6:835674 ] - [ DEBUG ]  ==> Parameters: Caesa(String)
+2021-04-09 12:44:59  [ http-nio-8081-exec-6:835674 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:44:59  [ http-nio-8081-exec-5:835854 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:44:59  [ http-nio-8081-exec-5:835856 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:44:59  [ http-nio-8081-exec-5:835857 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:44:59  [ http-nio-8081-exec-5:835857 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:44:59  [ http-nio-8081-exec-5:835860 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:45:00  [ http-nio-8081-exec-8:836042 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:00  [ http-nio-8081-exec-8:836043 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:45:00  [ http-nio-8081-exec-8:836044 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:00  [ http-nio-8081-exec-8:836044 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:45:00  [ http-nio-8081-exec-8:836046 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:45:02  [ http-nio-8081-exec-7:838060 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:02  [ http-nio-8081-exec-7:838062 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:45:02  [ http-nio-8081-exec-7:838063 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:02  [ http-nio-8081-exec-7:838063 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:45:02  [ http-nio-8081-exec-7:838064 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:08  [ http-nio-8081-exec-4:844663 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:08  [ http-nio-8081-exec-4:844665 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:45:08  [ http-nio-8081-exec-4:844666 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:08  [ http-nio-8081-exec-4:844666 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:45:08  [ http-nio-8081-exec-4:844667 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:08  [ http-nio-8081-exec-9:844786 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:08  [ http-nio-8081-exec-9:844787 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:45:08  [ http-nio-8081-exec-9:844789 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:08  [ http-nio-8081-exec-9:844789 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:45:08  [ http-nio-8081-exec-9:844790 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:11  [ http-nio-8081-exec-10:847148 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:11  [ http-nio-8081-exec-10:847149 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:11  [ http-nio-8081-exec-1:847506 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:11  [ http-nio-8081-exec-1:847506 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:12  [ http-nio-8081-exec-2:847922 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:12  [ http-nio-8081-exec-2:847922 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:12  [ http-nio-8081-exec-3:847991 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:12  [ http-nio-8081-exec-3:847991 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:14  [ http-nio-8081-exec-6:850602 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:14  [ http-nio-8081-exec-6:850602 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:15  [ http-nio-8081-exec-5:851717 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:15  [ http-nio-8081-exec-5:851717 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:24  [ http-nio-8081-exec-8:860246 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:24  [ http-nio-8081-exec-8:860247 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:45:24  [ http-nio-8081-exec-8:860248 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:24  [ http-nio-8081-exec-8:860249 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:45:24  [ http-nio-8081-exec-8:860251 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:45:27  [ http-nio-8081-exec-7:863603 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:27  [ http-nio-8081-exec-7:863605 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:45:27  [ http-nio-8081-exec-7:863605 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:27  [ http-nio-8081-exec-7:863606 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:45:27  [ http-nio-8081-exec-7:863607 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:27  [ http-nio-8081-exec-4:863898 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:27  [ http-nio-8081-exec-4:863900 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:45:27  [ http-nio-8081-exec-4:863901 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:27  [ http-nio-8081-exec-4:863901 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:45:27  [ http-nio-8081-exec-4:863902 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:29  [ http-nio-8081-exec-9:865302 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:29  [ http-nio-8081-exec-9:865303 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:45:29  [ http-nio-8081-exec-9:865304 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:29  [ http-nio-8081-exec-9:865304 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:45:29  [ http-nio-8081-exec-9:865305 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:29  [ http-nio-8081-exec-8:865366 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:29  [ http-nio-8081-exec-8:865368 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:45:29  [ http-nio-8081-exec-8:865368 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:29  [ http-nio-8081-exec-8:865368 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:45:29  [ http-nio-8081-exec-8:865369 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:30  [ http-nio-8081-exec-7:866438 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:30  [ http-nio-8081-exec-7:866440 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:45:30  [ http-nio-8081-exec-7:866441 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:30  [ http-nio-8081-exec-7:866441 ] - [ DEBUG ]  ==> Parameters: Zoed(String)
+2021-04-09 12:45:30  [ http-nio-8081-exec-7:866442 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:31  [ http-nio-8081-exec-10:867152 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:45:31  [ http-nio-8081-exec-10:867154 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:31  [ http-nio-8081-exec-10:867154 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:45:31  [ http-nio-8081-exec-10:867155 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:31  [ http-nio-8081-exec-1:867507 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:45:31  [ http-nio-8081-exec-1:867507 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:31  [ http-nio-8081-exec-1:867507 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:45:31  [ http-nio-8081-exec-1:867507 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:32  [ http-nio-8081-exec-2:867923 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:45:32  [ http-nio-8081-exec-2:867923 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:32  [ http-nio-8081-exec-2:867923 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:45:32  [ http-nio-8081-exec-2:867923 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:32  [ http-nio-8081-exec-3:867997 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:45:32  [ http-nio-8081-exec-3:867999 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:32  [ http-nio-8081-exec-3:867999 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:45:32  [ http-nio-8081-exec-3:868000 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:33  [ http-nio-8081-exec-4:869895 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:33  [ http-nio-8081-exec-4:869896 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:34  [ http-nio-8081-exec-9:870457 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:34  [ http-nio-8081-exec-9:870457 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:34  [ http-nio-8081-exec-6:870617 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:34  [ http-nio-8081-exec-8:870618 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:34  [ http-nio-8081-exec-8:870618 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:34  [ http-nio-8081-exec-7:870792 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:34  [ http-nio-8081-exec-7:870792 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:35  [ http-nio-8081-exec-10:870966 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:35  [ http-nio-8081-exec-10:870966 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:35  [ http-nio-8081-exec-5:871724 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:36  [ http-nio-8081-exec-1:872840 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:36  [ http-nio-8081-exec-1:872840 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:53  [ http-nio-8081-exec-4:889906 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:45:53  [ http-nio-8081-exec-4:889906 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:53  [ http-nio-8081-exec-4:889906 ] - [ DEBUG ]  ==> Parameters: Zoedd(String)
+2021-04-09 12:45:53  [ http-nio-8081-exec-4:889906 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:53  [ http-nio-8081-exec-2:889913 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:53  [ http-nio-8081-exec-2:889914 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:45:53  [ http-nio-8081-exec-2:889914 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:53  [ http-nio-8081-exec-2:889914 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:45:53  [ http-nio-8081-exec-2:889914 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  ==> Parameters: Ca(String)
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  ==> Parameters: Cae(String)
+2021-04-09 12:45:53  [ http-nio-8081-exec-3:889914 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:54  [ http-nio-8081-exec-4:889932 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:54  [ http-nio-8081-exec-4:889933 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:45:54  [ http-nio-8081-exec-4:889933 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-4:889934 ] - [ DEBUG ]  ==> Parameters: Caesa(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-4:889934 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:54  [ http-nio-8081-exec-2:889937 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:54  [ http-nio-8081-exec-2:889939 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:45:54  [ http-nio-8081-exec-2:889940 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-2:889940 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-2:889941 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:45:54  [ http-nio-8081-exec-3:889944 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:45:54  [ http-nio-8081-exec-3:889946 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:45:54  [ http-nio-8081-exec-3:889947 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-3:889947 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-3:889948 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:45:54  [ http-nio-8081-exec-9:890477 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:45:54  [ http-nio-8081-exec-9:890477 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-9:890477 ] - [ DEBUG ]  ==> Parameters: Zoed(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-9:890477 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:54  [ http-nio-8081-exec-6:890624 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:45:54  [ http-nio-8081-exec-6:890624 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-6:890624 ] - [ DEBUG ]  ==> Parameters: Zoed(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-8:890624 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:45:54  [ http-nio-8081-exec-6:890624 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:54  [ http-nio-8081-exec-8:890624 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:45:54  [ http-nio-8081-exec-8:890624 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:45:54  [ http-nio-8081-exec-8:890624 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:45:54  [ http-nio-8081-exec-7:890794 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:55  [ http-nio-8081-exec-10:890979 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:55  [ http-nio-8081-exec-5:891729 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:45:56  [ http-nio-8081-exec-1:892852 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:46:14  [ http-nio-8081-exec-7:910796 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:46:14  [ http-nio-8081-exec-7:910796 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:14  [ http-nio-8081-exec-7:910796 ] - [ DEBUG ]  ==> Parameters: Zo(String)
+2021-04-09 12:46:14  [ http-nio-8081-exec-7:910796 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:15  [ http-nio-8081-exec-10:910986 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:46:15  [ http-nio-8081-exec-10:910987 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:15  [ http-nio-8081-exec-10:910987 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:46:15  [ http-nio-8081-exec-10:910987 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:15  [ http-nio-8081-exec-5:911733 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:46:15  [ http-nio-8081-exec-5:911733 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:15  [ http-nio-8081-exec-5:911733 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:46:15  [ http-nio-8081-exec-5:911733 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:16  [ http-nio-8081-exec-1:912859 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:46:16  [ http-nio-8081-exec-1:912859 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:16  [ http-nio-8081-exec-1:912859 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:46:16  [ http-nio-8081-exec-1:912859 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:56  [ http-nio-8081-exec-9:952407 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:56  [ http-nio-8081-exec-9:952408 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:46:56  [ http-nio-8081-exec-9:952408 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:56  [ http-nio-8081-exec-9:952409 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:46:56  [ http-nio-8081-exec-9:952409 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:56  [ http-nio-8081-exec-6:952569 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:56  [ http-nio-8081-exec-6:952570 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:46:56  [ http-nio-8081-exec-6:952571 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:56  [ http-nio-8081-exec-6:952572 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:46:56  [ http-nio-8081-exec-6:952573 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:57  [ http-nio-8081-exec-8:953619 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:57  [ http-nio-8081-exec-8:953620 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:46:57  [ http-nio-8081-exec-8:953621 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:57  [ http-nio-8081-exec-8:953621 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:46:57  [ http-nio-8081-exec-8:953622 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:57  [ http-nio-8081-exec-7:953782 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:57  [ http-nio-8081-exec-7:953783 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:46:57  [ http-nio-8081-exec-7:953784 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:57  [ http-nio-8081-exec-7:953785 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:46:57  [ http-nio-8081-exec-7:953786 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:46:58  [ http-nio-8081-exec-10:953939 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:58  [ http-nio-8081-exec-10:953940 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:46:58  [ http-nio-8081-exec-10:953941 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:58  [ http-nio-8081-exec-10:953942 ] - [ DEBUG ]  ==> Parameters: Caesa(String)
+2021-04-09 12:46:58  [ http-nio-8081-exec-10:953943 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:58  [ http-nio-8081-exec-5:954147 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:58  [ http-nio-8081-exec-5:954148 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:46:58  [ http-nio-8081-exec-5:954149 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:58  [ http-nio-8081-exec-5:954150 ] - [ DEBUG ]  ==> Parameters: Caes(String)
+2021-04-09 12:46:58  [ http-nio-8081-exec-5:954151 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:58  [ http-nio-8081-exec-1:954822 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:58  [ http-nio-8081-exec-1:954822 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:46:58  [ http-nio-8081-exec-1:954823 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:58  [ http-nio-8081-exec-1:954823 ] - [ DEBUG ]  ==> Parameters: Cae(String)
+2021-04-09 12:46:58  [ http-nio-8081-exec-1:954824 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:59  [ http-nio-8081-exec-4:955000 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:59  [ http-nio-8081-exec-4:955001 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:46:59  [ http-nio-8081-exec-4:955002 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:59  [ http-nio-8081-exec-4:955002 ] - [ DEBUG ]  ==> Parameters: Ca(String)
+2021-04-09 12:46:59  [ http-nio-8081-exec-4:955003 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:46:59  [ http-nio-8081-exec-3:955158 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:46:59  [ http-nio-8081-exec-3:955159 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:46:59  [ http-nio-8081-exec-3:955161 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:46:59  [ http-nio-8081-exec-3:955161 ] - [ DEBUG ]  ==> Parameters: C(String)
+2021-04-09 12:46:59  [ http-nio-8081-exec-3:955162 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:00  [ http-nio-8081-exec-2:956463 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:00  [ http-nio-8081-exec-2:956464 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:47:00  [ http-nio-8081-exec-2:956464 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:00  [ http-nio-8081-exec-2:956465 ] - [ DEBUG ]  ==> Parameters: c(String)
+2021-04-09 12:47:00  [ http-nio-8081-exec-2:956465 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:04  [ http-nio-8081-exec-9:960180 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:04  [ http-nio-8081-exec-9:960181 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:04  [ http-nio-8081-exec-6:960448 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:04  [ http-nio-8081-exec-6:960448 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:15  [ http-nio-8081-exec-7:971872 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:15  [ http-nio-8081-exec-7:971872 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:16  [ http-nio-8081-exec-10:972215 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:16  [ http-nio-8081-exec-10:972216 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:16  [ http-nio-8081-exec-5:972491 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:16  [ http-nio-8081-exec-5:972492 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:47:16  [ http-nio-8081-exec-5:972492 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:16  [ http-nio-8081-exec-5:972492 ] - [ DEBUG ]  ==> Parameters: ddddd(String)
+2021-04-09 12:47:16  [ http-nio-8081-exec-5:972493 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:24  [ http-nio-8081-exec-9:980191 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:47:24  [ http-nio-8081-exec-9:980191 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:24  [ http-nio-8081-exec-9:980191 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:47:24  [ http-nio-8081-exec-9:980191 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:24  [ http-nio-8081-exec-6:980450 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:47:24  [ http-nio-8081-exec-6:980452 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:24  [ http-nio-8081-exec-6:980452 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 12:47:24  [ http-nio-8081-exec-6:980452 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:29  [ http-nio-8081-exec-1:985598 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:29  [ http-nio-8081-exec-1:985600 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:47:29  [ http-nio-8081-exec-1:985602 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:29  [ http-nio-8081-exec-1:985602 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:47:29  [ http-nio-8081-exec-1:985604 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:47:32  [ http-nio-8081-exec-4:988285 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:32  [ http-nio-8081-exec-4:988286 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:47:32  [ http-nio-8081-exec-4:988287 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:32  [ http-nio-8081-exec-4:988288 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:47:32  [ http-nio-8081-exec-4:988289 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:33  [ http-nio-8081-exec-3:989114 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:33  [ http-nio-8081-exec-3:989115 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:47:33  [ http-nio-8081-exec-3:989116 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:33  [ http-nio-8081-exec-3:989116 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:47:33  [ http-nio-8081-exec-3:989117 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:34  [ http-nio-8081-exec-2:989993 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:34  [ http-nio-8081-exec-2:989994 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:47:34  [ http-nio-8081-exec-2:989994 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:34  [ http-nio-8081-exec-2:989995 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:47:34  [ http-nio-8081-exec-2:989996 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:34  [ http-nio-8081-exec-8:990356 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:34  [ http-nio-8081-exec-8:990357 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:47:34  [ http-nio-8081-exec-8:990358 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:34  [ http-nio-8081-exec-8:990358 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:47:34  [ http-nio-8081-exec-8:990360 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:47:35  [ http-nio-8081-exec-7:991888 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:47:35  [ http-nio-8081-exec-7:991888 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:35  [ http-nio-8081-exec-7:991888 ] - [ DEBUG ]  ==> Parameters: ddd(String)
+2021-04-09 12:47:35  [ http-nio-8081-exec-7:991888 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:36  [ http-nio-8081-exec-10:992229 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:47:36  [ http-nio-8081-exec-10:992229 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:36  [ http-nio-8081-exec-10:992229 ] - [ DEBUG ]  ==> Parameters: dddd(String)
+2021-04-09 12:47:36  [ http-nio-8081-exec-10:992229 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:38  [ http-nio-8081-exec-5:994495 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:38  [ http-nio-8081-exec-5:994496 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:47:38  [ http-nio-8081-exec-5:994496 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:38  [ http-nio-8081-exec-5:994496 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:47:38  [ http-nio-8081-exec-5:994497 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:39  [ http-nio-8081-exec-9:995261 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:39  [ http-nio-8081-exec-9:995262 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:40  [ http-nio-8081-exec-6:996336 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:40  [ http-nio-8081-exec-6:996337 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:41  [ http-nio-8081-exec-1:997251 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:41  [ http-nio-8081-exec-1:997251 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:43  [ http-nio-8081-exec-4:999524 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:43  [ http-nio-8081-exec-4:999524 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:44  [ http-nio-8081-exec-3:1000606 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:44  [ http-nio-8081-exec-3:1000608 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:47:44  [ http-nio-8081-exec-3:1000609 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:44  [ http-nio-8081-exec-3:1000610 ] - [ DEBUG ]  ==> Parameters: Caes(String)
+2021-04-09 12:47:44  [ http-nio-8081-exec-3:1000611 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:47:46  [ http-nio-8081-exec-2:1002103 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:46  [ http-nio-8081-exec-2:1002104 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:47:46  [ http-nio-8081-exec-2:1002105 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:46  [ http-nio-8081-exec-2:1002105 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:47:46  [ http-nio-8081-exec-2:1002106 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:47:46  [ http-nio-8081-exec-8:1002287 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:47:46  [ http-nio-8081-exec-8:1002288 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:47:59  [ http-nio-8081-exec-9:1015275 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:47:59  [ http-nio-8081-exec-9:1015275 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:47:59  [ http-nio-8081-exec-9:1015275 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:47:59  [ http-nio-8081-exec-9:1015275 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:00  [ http-nio-8081-exec-6:1016338 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:48:00  [ http-nio-8081-exec-6:1016338 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:00  [ http-nio-8081-exec-6:1016338 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:48:00  [ http-nio-8081-exec-6:1016338 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:01  [ http-nio-8081-exec-1:1017266 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:48:01  [ http-nio-8081-exec-1:1017266 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:01  [ http-nio-8081-exec-1:1017266 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:48:01  [ http-nio-8081-exec-1:1017266 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:48:03  [ http-nio-8081-exec-4:1019532 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:48:03  [ http-nio-8081-exec-4:1019535 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:03  [ http-nio-8081-exec-4:1019536 ] - [ DEBUG ]  ==> Parameters: Caesa(String)
+2021-04-09 12:48:03  [ http-nio-8081-exec-4:1019538 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:04  [ http-nio-8081-exec-7:1020361 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:04  [ http-nio-8081-exec-7:1020362 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:48:04  [ http-nio-8081-exec-7:1020364 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:04  [ http-nio-8081-exec-7:1020364 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:48:04  [ http-nio-8081-exec-7:1020365 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:05  [ http-nio-8081-exec-10:1021274 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:05  [ http-nio-8081-exec-10:1021276 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:48:05  [ http-nio-8081-exec-10:1021277 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:05  [ http-nio-8081-exec-10:1021278 ] - [ DEBUG ]  ==> Parameters: Caesardd(String)
+2021-04-09 12:48:05  [ http-nio-8081-exec-10:1021280 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:05  [ http-nio-8081-exec-5:1021888 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:05  [ http-nio-8081-exec-5:1021888 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:48:05  [ http-nio-8081-exec-5:1021889 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:05  [ http-nio-8081-exec-5:1021889 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:48:05  [ http-nio-8081-exec-5:1021890 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:06  [ http-nio-8081-exec-3:1022128 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:06  [ http-nio-8081-exec-3:1022129 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:48:06  [ http-nio-8081-exec-3:1022129 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:06  [ http-nio-8081-exec-3:1022130 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:48:06  [ http-nio-8081-exec-3:1022130 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:48:06  [ http-nio-8081-exec-8:1022316 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:48:06  [ http-nio-8081-exec-8:1022316 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:06  [ http-nio-8081-exec-8:1022316 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:48:06  [ http-nio-8081-exec-8:1022316 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:48:11  [ http-nio-8081-exec-2:1027887 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:11  [ http-nio-8081-exec-2:1027888 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:48:11  [ http-nio-8081-exec-2:1027889 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:11  [ http-nio-8081-exec-2:1027890 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:48:11  [ http-nio-8081-exec-2:1027891 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:12  [ http-nio-8081-exec-9:1028779 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:12  [ http-nio-8081-exec-9:1028780 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:13  [ http-nio-8081-exec-6:1029822 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:13  [ http-nio-8081-exec-6:1029822 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:15  [ http-nio-8081-exec-1:1031032 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:15  [ http-nio-8081-exec-1:1031032 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:15  [ http-nio-8081-exec-4:1031188 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:15  [ http-nio-8081-exec-4:1031189 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:16  [ http-nio-8081-exec-7:1032274 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:16  [ http-nio-8081-exec-7:1032274 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:16  [ http-nio-8081-exec-10:1032490 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:16  [ http-nio-8081-exec-10:1032490 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048788 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048788 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048788 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048788 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048788 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048788 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048788 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048788 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048798 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048801 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048802 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048804 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048805 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048807 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048809 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048810 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048811 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048811 ] - [ DEBUG ]  ==> Parameters: CaesarZ(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048812 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048814 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048815 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048817 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048817 ] - [ DEBUG ]  ==> Parameters: CaesarZ(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048818 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048821 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048822 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048823 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048823 ] - [ DEBUG ]  ==> Parameters: CaesarZoe(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048825 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048827 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048828 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048829 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048829 ] - [ DEBUG ]  ==> Parameters: CaesarZoe(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-5:1048830 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048832 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048833 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048833 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048834 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-3:1048834 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048837 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048839 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048839 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048840 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-8:1048841 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048843 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048844 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048845 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048845 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:48:32  [ http-nio-8081-exec-2:1048846 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048850 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:32  [ http-nio-8081-exec-9:1048850 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:33  [ http-nio-8081-exec-6:1049828 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:35  [ http-nio-8081-exec-1:1051036 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:35  [ http-nio-8081-exec-4:1051195 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:36  [ http-nio-8081-exec-7:1052282 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:36  [ http-nio-8081-exec-10:1052500 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068852 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068852 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068852 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068852 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068859 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068860 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068862 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068862 ] - [ DEBUG ]  ==> Parameters: Zoed(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068864 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068867 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068871 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068873 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068873 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068875 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-8:1068878 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-8:1068879 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:48:52  [ http-nio-8081-exec-8:1068879 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-8:1068879 ] - [ DEBUG ]  ==> Parameters: Zoed(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-8:1068880 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-2:1068883 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-2:1068885 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:48:52  [ http-nio-8081-exec-2:1068886 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-2:1068886 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-2:1068887 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068890 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068891 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068892 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068892 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-9:1068894 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068897 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068898 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068899 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068899 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-5:1068899 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068899 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068899 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068899 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068899 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:48:52  [ http-nio-8081-exec-3:1068899 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:53  [ http-nio-8081-exec-6:1069839 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:48:53  [ http-nio-8081-exec-6:1069840 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:53  [ http-nio-8081-exec-6:1069840 ] - [ DEBUG ]  ==> Parameters: ddd(String)
+2021-04-09 12:48:53  [ http-nio-8081-exec-6:1069841 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:55  [ http-nio-8081-exec-1:1071042 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:48:55  [ http-nio-8081-exec-1:1071043 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:48:55  [ http-nio-8081-exec-1:1071043 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 12:48:55  [ http-nio-8081-exec-1:1071044 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:48:55  [ http-nio-8081-exec-4:1071209 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:56  [ http-nio-8081-exec-7:1072291 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:48:56  [ http-nio-8081-exec-10:1072511 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:49:04  [ http-nio-8081-exec-8:1080511 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:04  [ http-nio-8081-exec-8:1080512 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:49:04  [ http-nio-8081-exec-2:1080766 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:04  [ http-nio-8081-exec-2:1080766 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:49:05  [ http-nio-8081-exec-9:1081321 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:05  [ http-nio-8081-exec-9:1081321 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:49:15  [ http-nio-8081-exec-4:1091215 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:49:15  [ http-nio-8081-exec-4:1091215 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:15  [ http-nio-8081-exec-4:1091215 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 12:49:15  [ http-nio-8081-exec-4:1091215 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:15  [ http-nio-8081-exec-5:1091215 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:15  [ http-nio-8081-exec-5:1091215 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:49:15  [ http-nio-8081-exec-5:1091215 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:15  [ http-nio-8081-exec-5:1091215 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:49:15  [ http-nio-8081-exec-5:1091215 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:16  [ http-nio-8081-exec-7:1092297 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:49:16  [ http-nio-8081-exec-7:1092297 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:16  [ http-nio-8081-exec-7:1092297 ] - [ DEBUG ]  ==> Parameters: D(String)
+2021-04-09 12:49:16  [ http-nio-8081-exec-7:1092297 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:16  [ http-nio-8081-exec-10:1092523 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:49:16  [ http-nio-8081-exec-10:1092523 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:16  [ http-nio-8081-exec-10:1092523 ] - [ DEBUG ]  ==> Parameters: D(String)
+2021-04-09 12:49:16  [ http-nio-8081-exec-10:1092523 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:24  [ http-nio-8081-exec-8:1100521 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:49:24  [ http-nio-8081-exec-8:1100521 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:24  [ http-nio-8081-exec-8:1100521 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:49:24  [ http-nio-8081-exec-8:1100521 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:24  [ http-nio-8081-exec-2:1100775 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:49:24  [ http-nio-8081-exec-2:1100775 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:24  [ http-nio-8081-exec-2:1100775 ] - [ DEBUG ]  ==> Parameters: Z(String)
+2021-04-09 12:49:24  [ http-nio-8081-exec-2:1100775 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:25  [ http-nio-8081-exec-9:1101325 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:49:25  [ http-nio-8081-exec-9:1101325 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:25  [ http-nio-8081-exec-9:1101325 ] - [ DEBUG ]  ==> Parameters: Zoe(String)
+2021-04-09 12:49:25  [ http-nio-8081-exec-9:1101325 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109983 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109984 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109986 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109986 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109988 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109989 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109990 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-3:1109991 ] - [ DEBUG ]  Returned connection 921534415 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110000 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110000 ] - [ DEBUG ]  Checked out connection 921534415 from pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110001 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110002 ] - [ DEBUG ]  ==>  Preparing: select * from Users where id=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110003 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110005 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110007 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110008 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-6:1110009 ] - [ DEBUG ]  Returned connection 921534415 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110019 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110020 ] - [ DEBUG ]  Checked out connection 921534415 from pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110022 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110023 ] - [ DEBUG ]  ==>  Preparing: select * from Socialhref where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110024 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110027 ] - [ DEBUG ]  <==      Total: 4
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110030 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110032 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-1:1110033 ] - [ DEBUG ]  Returned connection 921534415 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110043 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110044 ] - [ DEBUG ]  Checked out connection 921534415 from pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110044 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110045 ] - [ DEBUG ]  ==>  Preparing: select * from Announcement where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110046 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110047 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110051 ] - [ DEBUG ]  Claimed overdue connection 852089339.
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110052 ] - [ DEBUG ]  <==      Total: 3
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110053 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110053 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110053 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110053 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110054 ] - [ DEBUG ]  ==>  Preparing: select * from Blocks where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110055 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110055 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110056 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-4:1110058 ] - [ DEBUG ]  Returned connection 921534415 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110058 ] - [ DEBUG ]  ==>  Preparing: select distinct name_ from Labels where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110059 ] - [ DEBUG ]  Checked out connection 921534415 from pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110059 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110060 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110060 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110060 ] - [ DEBUG ]  <==      Total: 3
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110063 ] - [ DEBUG ]  ==>  Preparing: select * from Article where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110063 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110063 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110064 ] - [ DEBUG ]  <==      Total: 11
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110067 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@225fda31]
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110068 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:49:34  [ http-nio-8081-exec-7:1110069 ] - [ DEBUG ]  Returned connection 852089339 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110070 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@225fda31]
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110070 ] - [ DEBUG ]  Checked out connection 852089339 from pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110071 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:49:34  [ http-nio-8081-exec-5:1110071 ] - [ DEBUG ]  Returned connection 576707121 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110072 ] - [ DEBUG ]  ==>  Preparing: select * from Changes where userid=? 
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110074 ] - [ DEBUG ]  ==> Parameters: 4(Integer)
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110078 ] - [ DEBUG ]  <==      Total: 8
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110079 ] - [ DEBUG ]  <==      Total: 3
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110080 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110080 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110081 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:34  [ http-nio-8081-exec-8:1110081 ] - [ DEBUG ]  Returned connection 921534415 to pool.
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110083 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:49:34  [ http-nio-8081-exec-10:1110083 ] - [ DEBUG ]  Returned connection 852089339 to pool.
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114133 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114134 ] - [ DEBUG ]  Checked out connection 576707121 from pool.
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114134 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@225fda31]
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114135 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114135 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:49:38  [ http-nio-8081-exec-2:1114137 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115640 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115641 ] - [ DEBUG ]  Checked out connection 921534415 from pool.
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115641 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@36ed7fcf]
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115642 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115642 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:49:39  [ http-nio-8081-exec-9:1115643 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197907 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197908 ] - [ DEBUG ]  Checked out connection 852089339 from pool.
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197908 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32c9d9fb]
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197909 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197910 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:51:01  [ http-nio-8081-exec-10:1197911 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:51:30  [ http-nio-8081-exec-8:1226237 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:51:30  [ http-nio-8081-exec-8:1226239 ] - [ DEBUG ]  Claimed overdue connection 543485313.
+2021-04-09 12:51:30  [ http-nio-8081-exec-8:1226240 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:51:30  [ http-nio-8081-exec-8:1226240 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:51:30  [ http-nio-8081-exec-8:1226242 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:54:55  [ http-nio-8081-exec-3:1431041 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:54:55  [ http-nio-8081-exec-3:1431043 ] - [ DEBUG ]  Claimed overdue connection 845198760.
+2021-04-09 12:54:55  [ http-nio-8081-exec-3:1431045 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:54:55  [ http-nio-8081-exec-3:1431046 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:54:55  [ http-nio-8081-exec-3:1431049 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:56:56  [ http-nio-8081-exec-7:1552670 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:56:56  [ http-nio-8081-exec-7:1552672 ] - [ DEBUG ]  Claimed overdue connection 1136460417.
+2021-04-09 12:56:56  [ http-nio-8081-exec-7:1552673 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:56:56  [ http-nio-8081-exec-7:1552674 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:56:56  [ http-nio-8081-exec-7:1552676 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:57:10  [ http-nio-8081-exec-1:1565969 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:57:10  [ http-nio-8081-exec-1:1565970 ] - [ DEBUG ]  Claimed overdue connection 1324699614.
+2021-04-09 12:57:10  [ http-nio-8081-exec-1:1565970 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:57:10  [ http-nio-8081-exec-1:1565971 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 12:57:10  [ http-nio-8081-exec-1:1565971 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 12:57:49  [ http-nio-8081-exec-4:1605654 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:57:49  [ http-nio-8081-exec-4:1605655 ] - [ DEBUG ]  Claimed overdue connection 1255784320.
+2021-04-09 12:57:49  [ http-nio-8081-exec-4:1605657 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:57:49  [ http-nio-8081-exec-4:1605658 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:57:49  [ http-nio-8081-exec-4:1605659 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:57:58  [ http-nio-8081-exec-5:1614423 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:57:58  [ http-nio-8081-exec-5:1614425 ] - [ DEBUG ]  Claimed overdue connection 1696688033.
+2021-04-09 12:57:58  [ http-nio-8081-exec-5:1614427 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:57:58  [ http-nio-8081-exec-5:1614427 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:57:58  [ http-nio-8081-exec-5:1614429 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:58:10  [ http-nio-8081-exec-10:1626897 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:58:10  [ http-nio-8081-exec-10:1626898 ] - [ DEBUG ]  Claimed overdue connection 817715557.
+2021-04-09 12:58:10  [ http-nio-8081-exec-10:1626899 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:58:10  [ http-nio-8081-exec-10:1626900 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:58:10  [ http-nio-8081-exec-10:1626902 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 12:59:10  [ http-nio-8081-exec-8:1685974 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 12:59:10  [ http-nio-8081-exec-8:1685976 ] - [ DEBUG ]  Claimed overdue connection 576707121.
+2021-04-09 12:59:10  [ http-nio-8081-exec-8:1685977 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 12:59:10  [ http-nio-8081-exec-8:1685978 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 12:59:10  [ http-nio-8081-exec-8:1685980 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:00:01  [ http-nio-8081-exec-2:1737285 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:00:01  [ http-nio-8081-exec-2:1737286 ] - [ DEBUG ]  Claimed overdue connection 921534415.
+2021-04-09 13:00:01  [ http-nio-8081-exec-2:1737287 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:00:01  [ http-nio-8081-exec-2:1737287 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:00:01  [ http-nio-8081-exec-2:1737289 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:47 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:163 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:332 ] - [ DEBUG ]  Created connection 1904893457.
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:333 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@718a5e11]
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:336 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:350 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:05:34  [ http-nio-8081-exec-1:362 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:34  [ http-nio-8081-exec-2:792 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:35  [ http-nio-8081-exec-2:806 ] - [ DEBUG ]  Created connection 996372940.
+2021-04-09 13:05:35  [ http-nio-8081-exec-2:806 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3b6371cc]
+2021-04-09 13:05:35  [ http-nio-8081-exec-2:806 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:35  [ http-nio-8081-exec-2:806 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 13:05:35  [ http-nio-8081-exec-2:806 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1940 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1948 ] - [ DEBUG ]  Created connection 90700165.
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1948 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@567f985]
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1948 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1948 ] - [ DEBUG ]  ==> Parameters: ddd(String)
+2021-04-09 13:05:36  [ http-nio-8081-exec-3:1948 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4178 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4186 ] - [ DEBUG ]  Created connection 799472528.
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4186 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2fa6fb90]
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4186 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4186 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 13:05:38  [ http-nio-8081-exec-6:4196 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4321 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4329 ] - [ DEBUG ]  Created connection 36129693.
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4329 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2274b9d]
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4329 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4329 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:05:38  [ http-nio-8081-exec-5:4329 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4463 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4477 ] - [ DEBUG ]  Created connection 1179777942.
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4478 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4651fb96]
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4480 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4480 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:05:38  [ http-nio-8081-exec-8:4481 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4609 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4620 ] - [ DEBUG ]  Created connection 1492620201.
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4620 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@58f793a9]
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4620 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4620 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:05:38  [ http-nio-8081-exec-7:4620 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:56  [ http-nio-8081-exec-4:22789 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:57  [ http-nio-8081-exec-4:22808 ] - [ DEBUG ]  Created connection 1513777232.
+2021-04-09 13:05:57  [ http-nio-8081-exec-4:22808 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a3a6850]
+2021-04-09 13:05:57  [ http-nio-8081-exec-4:22810 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:05:57  [ http-nio-8081-exec-4:22810 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:05:57  [ http-nio-8081-exec-4:22814 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23902 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23913 ] - [ DEBUG ]  Created connection 1758501502.
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23914 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@68d09a7e]
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23914 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23915 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:05:58  [ http-nio-8081-exec-9:23916 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25523 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25531 ] - [ DEBUG ]  Created connection 1264385825.
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25531 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b5cff21]
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25531 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25531 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:05:59  [ http-nio-8081-exec-10:25531 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:05  [ http-nio-8081-exec-1:31330 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:05  [ http-nio-8081-exec-1:31331 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:06:05  [ http-nio-8081-exec-1:31331 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:05  [ http-nio-8081-exec-1:31331 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:06:05  [ http-nio-8081-exec-1:31332 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:06  [ http-nio-8081-exec-2:32495 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:06  [ http-nio-8081-exec-2:32497 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:06:06  [ http-nio-8081-exec-2:32497 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:06  [ http-nio-8081-exec-2:32498 ] - [ DEBUG ]  ==> Parameters: ddddddd(String)
+2021-04-09 13:06:06  [ http-nio-8081-exec-2:32499 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:08  [ http-nio-8081-exec-3:34331 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:08  [ http-nio-8081-exec-3:34332 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:06:08  [ http-nio-8081-exec-3:34334 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:08  [ http-nio-8081-exec-3:34334 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:08  [ http-nio-8081-exec-3:34335 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:08  [ http-nio-8081-exec-6:34523 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:08  [ http-nio-8081-exec-6:34524 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:06:08  [ http-nio-8081-exec-6:34526 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:08  [ http-nio-8081-exec-6:34526 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:08  [ http-nio-8081-exec-6:34527 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:09  [ http-nio-8081-exec-5:34955 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-5:34956 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:06:09  [ http-nio-8081-exec-8:34957 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-5:34957 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:09  [ http-nio-8081-exec-5:34958 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:09  [ http-nio-8081-exec-8:34958 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:06:09  [ http-nio-8081-exec-5:34959 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:09  [ http-nio-8081-exec-8:34960 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:09  [ http-nio-8081-exec-8:34960 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:09  [ http-nio-8081-exec-8:34963 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:09  [ http-nio-8081-exec-7:35045 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-4:35045 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-7:35046 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:06:09  [ http-nio-8081-exec-7:35047 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:09  [ http-nio-8081-exec-4:35047 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:09  [ http-nio-8081-exec-7:35047 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:09  [ http-nio-8081-exec-7:35048 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:09  [ http-nio-8081-exec-9:35413 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-9:35413 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:09  [ http-nio-8081-exec-10:35417 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-10:35417 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:09  [ http-nio-8081-exec-1:35648 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-1:35649 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:09  [ http-nio-8081-exec-2:35649 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-2:35649 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:09  [ http-nio-8081-exec-3:35784 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:09  [ http-nio-8081-exec-3:35784 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:24  [ http-nio-8081-exec-6:50318 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:24  [ http-nio-8081-exec-6:50318 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:06:24  [ http-nio-8081-exec-6:50325 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:06:24  [ http-nio-8081-exec-6:50325 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:06:24  [ http-nio-8081-exec-6:50325 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:06:26  [ http-nio-8081-exec-5:52557 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:26  [ http-nio-8081-exec-5:52559 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:06:26  [ http-nio-8081-exec-5:52559 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:26  [ http-nio-8081-exec-5:52560 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:06:26  [ http-nio-8081-exec-5:52561 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:26  [ http-nio-8081-exec-8:52670 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:26  [ http-nio-8081-exec-8:52673 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:06:26  [ http-nio-8081-exec-8:52673 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:26  [ http-nio-8081-exec-8:52674 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:06:26  [ http-nio-8081-exec-8:52675 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:27  [ http-nio-8081-exec-7:53150 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:27  [ http-nio-8081-exec-7:53152 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:06:27  [ http-nio-8081-exec-7:53152 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:27  [ http-nio-8081-exec-7:53153 ] - [ DEBUG ]  ==> Parameters: y(String)
+2021-04-09 13:06:27  [ http-nio-8081-exec-7:53153 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:27  [ http-nio-8081-exec-6:53316 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:27  [ http-nio-8081-exec-6:53319 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:06:27  [ http-nio-8081-exec-6:53319 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:27  [ http-nio-8081-exec-6:53320 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:27  [ http-nio-8081-exec-6:53320 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:28  [ http-nio-8081-exec-5:53919 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:28  [ http-nio-8081-exec-5:53919 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:29  [ http-nio-8081-exec-4:55048 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:06:29  [ http-nio-8081-exec-4:55049 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:29  [ http-nio-8081-exec-4:55050 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:29  [ http-nio-8081-exec-4:55051 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:29  [ http-nio-8081-exec-9:55423 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:06:29  [ http-nio-8081-exec-9:55423 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:29  [ http-nio-8081-exec-9:55423 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:29  [ http-nio-8081-exec-10:55423 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:06:29  [ http-nio-8081-exec-10:55423 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:29  [ http-nio-8081-exec-9:55423 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:29  [ http-nio-8081-exec-10:55423 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:29  [ http-nio-8081-exec-10:55423 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:29  [ http-nio-8081-exec-1:55654 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:06:29  [ http-nio-8081-exec-1:55654 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:29  [ http-nio-8081-exec-1:55654 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:29  [ http-nio-8081-exec-2:55654 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:06:29  [ http-nio-8081-exec-2:55654 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:29  [ http-nio-8081-exec-1:55654 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:29  [ http-nio-8081-exec-2:55654 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:29  [ http-nio-8081-exec-2:55654 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:29  [ http-nio-8081-exec-3:55788 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:40  [ http-nio-8081-exec-8:66009 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:40  [ http-nio-8081-exec-8:66009 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:42  [ http-nio-8081-exec-7:68176 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:42  [ http-nio-8081-exec-7:68176 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:43  [ http-nio-8081-exec-6:69220 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:43  [ http-nio-8081-exec-6:69220 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:48  [ http-nio-8081-exec-4:73839 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:48  [ http-nio-8081-exec-4:73840 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:06:48  [ http-nio-8081-exec-4:73841 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:48  [ http-nio-8081-exec-4:73842 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:06:48  [ http-nio-8081-exec-4:73842 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:48  [ http-nio-8081-exec-5:73930 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:06:48  [ http-nio-8081-exec-5:73931 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:48  [ http-nio-8081-exec-5:73931 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:48  [ http-nio-8081-exec-5:73932 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:49  [ http-nio-8081-exec-9:75216 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:49  [ http-nio-8081-exec-9:75218 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:06:49  [ http-nio-8081-exec-9:75218 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:49  [ http-nio-8081-exec-9:75219 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:06:49  [ http-nio-8081-exec-9:75220 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:49  [ http-nio-8081-exec-3:75803 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:06:50  [ http-nio-8081-exec-3:75804 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:50  [ http-nio-8081-exec-3:75804 ] - [ DEBUG ]  ==> Parameters: (String)
+2021-04-09 13:06:50  [ http-nio-8081-exec-3:75805 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:51  [ http-nio-8081-exec-10:76932 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:51  [ http-nio-8081-exec-10:76934 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:06:51  [ http-nio-8081-exec-10:76935 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:51  [ http-nio-8081-exec-10:76935 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:06:51  [ http-nio-8081-exec-10:76936 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:51  [ http-nio-8081-exec-1:77018 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:51  [ http-nio-8081-exec-1:77019 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:06:51  [ http-nio-8081-exec-1:77019 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:51  [ http-nio-8081-exec-1:77019 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:06:51  [ http-nio-8081-exec-1:77020 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:51  [ http-nio-8081-exec-2:77492 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:51  [ http-nio-8081-exec-2:77493 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:06:51  [ http-nio-8081-exec-2:77494 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:51  [ http-nio-8081-exec-2:77494 ] - [ DEBUG ]  ==> Parameters: yujk(String)
+2021-04-09 13:06:51  [ http-nio-8081-exec-2:77495 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:51  [ http-nio-8081-exec-4:77623 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:51  [ http-nio-8081-exec-4:77624 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:06:51  [ http-nio-8081-exec-4:77625 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:51  [ http-nio-8081-exec-4:77625 ] - [ DEBUG ]  ==> Parameters: yujkl(String)
+2021-04-09 13:06:51  [ http-nio-8081-exec-4:77626 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:51  [ http-nio-8081-exec-5:77701 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:51  [ http-nio-8081-exec-5:77703 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:06:51  [ http-nio-8081-exec-5:77703 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:51  [ http-nio-8081-exec-5:77704 ] - [ DEBUG ]  ==> Parameters: yujkl(String)
+2021-04-09 13:06:51  [ http-nio-8081-exec-5:77705 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:52  [ http-nio-8081-exec-9:78560 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:52  [ http-nio-8081-exec-9:78561 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:06:52  [ http-nio-8081-exec-9:78562 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:06:52  [ http-nio-8081-exec-9:78562 ] - [ DEBUG ]  ==> Parameters: yujkl54(String)
+2021-04-09 13:06:52  [ http-nio-8081-exec-9:78563 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:06:52  [ http-nio-8081-exec-3:78625 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:52  [ http-nio-8081-exec-3:78625 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:53  [ http-nio-8081-exec-10:78910 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:53  [ http-nio-8081-exec-10:78910 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:06:53  [ http-nio-8081-exec-1:78958 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:06:53  [ http-nio-8081-exec-1:78958 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:00  [ http-nio-8081-exec-8:86023 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:02  [ http-nio-8081-exec-7:88182 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:03  [ http-nio-8081-exec-6:89231 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98630 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98631 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98631 ] - [ DEBUG ]  ==> Parameters: yujkl54(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98631 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98631 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98631 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98631 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98631 ] - [ DEBUG ]  ==> Parameters: yujkl5487@(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98631 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98647 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98647 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98647 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98647 ] - [ DEBUG ]  ==> Parameters: yujkl5487@(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98647 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98647 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98647 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98647 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98647 ] - [ DEBUG ]  ==> Parameters: yujkl5487@q(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98647 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98662 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98662 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98662 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98662 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98662 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98662 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98662 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98662 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98662 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98662 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98678 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98678 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98678 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98678 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.c(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-2:98678 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98678 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98678 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98678 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98678 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-4:98678 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98696 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98697 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98699 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98700 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-5:98702 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98707 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98709 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98710 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98710 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.comd(String)
+2021-04-09 13:07:12  [ http-nio-8081-exec-9:98712 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98715 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:12  [ http-nio-8081-exec-3:98715 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:13  [ http-nio-8081-exec-10:98931 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:13  [ http-nio-8081-exec-1:98968 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:20  [ http-nio-8081-exec-8:106038 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:22  [ http-nio-8081-exec-7:108192 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:23  [ http-nio-8081-exec-6:109245 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118730 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118730 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118730 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118730 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118730 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118730 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118730 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118730 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118730 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118742 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118743 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118745 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118746 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118748 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118751 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118752 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118752 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118752 ] - [ DEBUG ]  ==> Parameters: yu(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118753 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118756 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118758 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118759 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118759 ] - [ DEBUG ]  ==> Parameters: yujk(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118760 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118763 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118764 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118765 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118765 ] - [ DEBUG ]  ==> Parameters: yujkl(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118766 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118769 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118770 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118771 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118771 ] - [ DEBUG ]  ==> Parameters: yujkl(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-2:118772 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118776 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118777 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118777 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118778 ] - [ DEBUG ]  ==> Parameters: yujkl54(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-4:118778 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118782 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118784 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118785 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118786 ] - [ DEBUG ]  ==> Parameters: yujkl54(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-5:118788 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118793 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118795 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118796 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118797 ] - [ DEBUG ]  ==> Parameters: yujkl5487(String)
+2021-04-09 13:07:32  [ http-nio-8081-exec-9:118798 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118801 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:32  [ http-nio-8081-exec-3:118801 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:33  [ http-nio-8081-exec-10:118949 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:33  [ http-nio-8081-exec-1:118980 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:40  [ http-nio-8081-exec-8:126043 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:42  [ http-nio-8081-exec-7:128207 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:43  [ http-nio-8081-exec-6:129258 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:07:53  [ http-nio-8081-exec-3:138822 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:07:53  [ http-nio-8081-exec-3:138822 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:53  [ http-nio-8081-exec-3:138822 ] - [ DEBUG ]  ==> Parameters: yujkl5487(String)
+2021-04-09 13:07:53  [ http-nio-8081-exec-3:138822 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:53  [ http-nio-8081-exec-2:138829 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:53  [ http-nio-8081-exec-2:138830 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:07:53  [ http-nio-8081-exec-2:138831 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:53  [ http-nio-8081-exec-2:138831 ] - [ DEBUG ]  ==> Parameters: yujkl5487@(String)
+2021-04-09 13:07:53  [ http-nio-8081-exec-2:138833 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:53  [ http-nio-8081-exec-4:138836 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:07:53  [ http-nio-8081-exec-4:138837 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:07:53  [ http-nio-8081-exec-4:138839 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:53  [ http-nio-8081-exec-4:138839 ] - [ DEBUG ]  ==> Parameters: yujkl5487@(String)
+2021-04-09 13:07:53  [ http-nio-8081-exec-4:138841 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:53  [ http-nio-8081-exec-10:138966 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:07:53  [ http-nio-8081-exec-10:138966 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:53  [ http-nio-8081-exec-10:138966 ] - [ DEBUG ]  ==> Parameters: yujkl5487(String)
+2021-04-09 13:07:53  [ http-nio-8081-exec-10:138966 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:07:53  [ http-nio-8081-exec-1:138985 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:07:53  [ http-nio-8081-exec-1:138985 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:07:53  [ http-nio-8081-exec-1:138985 ] - [ DEBUG ]  ==> Parameters: yujkl5487(String)
+2021-04-09 13:07:53  [ http-nio-8081-exec-1:138985 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:00  [ http-nio-8081-exec-8:146052 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:08:00  [ http-nio-8081-exec-8:146053 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:08:00  [ http-nio-8081-exec-8:146053 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:08:00  [ http-nio-8081-exec-8:146055 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:08:00  [ http-nio-8081-exec-5:146358 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:00  [ http-nio-8081-exec-5:146359 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:08:00  [ http-nio-8081-exec-5:146360 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:00  [ http-nio-8081-exec-5:146360 ] - [ DEBUG ]  ==> Parameters: yujkl5487@q(String)
+2021-04-09 13:08:00  [ http-nio-8081-exec-5:146361 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:02  [ http-nio-8081-exec-7:148207 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:08:02  [ http-nio-8081-exec-7:148208 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:02  [ http-nio-8081-exec-7:148208 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:08:02  [ http-nio-8081-exec-7:148208 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:03  [ http-nio-8081-exec-6:149259 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:08:03  [ http-nio-8081-exec-6:149259 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:03  [ http-nio-8081-exec-6:149259 ] - [ DEBUG ]  ==> Parameters: dd(String)
+2021-04-09 13:08:03  [ http-nio-8081-exec-6:149259 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:06  [ http-nio-8081-exec-9:152114 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:06  [ http-nio-8081-exec-9:152115 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:08:06  [ http-nio-8081-exec-9:152115 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:06  [ http-nio-8081-exec-9:152116 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq(String)
+2021-04-09 13:08:06  [ http-nio-8081-exec-9:152117 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:09  [ http-nio-8081-exec-3:154831 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:09  [ http-nio-8081-exec-3:154832 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:08:12  [ http-nio-8081-exec-2:158413 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:12  [ http-nio-8081-exec-2:158413 ] - [ DEBUG ]  Waiting as long as 20000 milliseconds for connection.
+2021-04-09 13:08:15  [ http-nio-8081-exec-4:161012 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:15  [ http-nio-8081-exec-4:161014 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:08:15  [ http-nio-8081-exec-4:161014 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:15  [ http-nio-8081-exec-4:161015 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.co(String)
+2021-04-09 13:08:15  [ http-nio-8081-exec-4:161016 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:15  [ http-nio-8081-exec-10:161342 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:15  [ http-nio-8081-exec-10:161343 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:08:15  [ http-nio-8081-exec-10:161343 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:15  [ http-nio-8081-exec-10:161344 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:08:15  [ http-nio-8081-exec-10:161345 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:08:18  [ http-nio-8081-exec-1:164739 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:18  [ http-nio-8081-exec-1:164740 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:08:18  [ http-nio-8081-exec-1:164741 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:18  [ http-nio-8081-exec-1:164742 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.co(String)
+2021-04-09 13:08:18  [ http-nio-8081-exec-1:164742 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:19  [ http-nio-8081-exec-8:165703 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:19  [ http-nio-8081-exec-8:165704 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:08:19  [ http-nio-8081-exec-8:165704 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:19  [ http-nio-8081-exec-8:165705 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:08:19  [ http-nio-8081-exec-8:165706 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:08:21  [ http-nio-8081-exec-5:167429 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:21  [ http-nio-8081-exec-5:167430 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:08:21  [ http-nio-8081-exec-5:167431 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:21  [ http-nio-8081-exec-5:167432 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.comd(String)
+2021-04-09 13:08:21  [ http-nio-8081-exec-5:167433 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:21  [ http-nio-8081-exec-7:167731 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:21  [ http-nio-8081-exec-7:167732 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:08:21  [ http-nio-8081-exec-7:167732 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:21  [ http-nio-8081-exec-7:167732 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:08:21  [ http-nio-8081-exec-7:167733 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:08:22  [ http-nio-8081-exec-6:168367 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:22  [ http-nio-8081-exec-6:168368 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:08:22  [ http-nio-8081-exec-6:168369 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:22  [ http-nio-8081-exec-6:168369 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.co(String)
+2021-04-09 13:08:22  [ http-nio-8081-exec-6:168370 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:23  [ http-nio-8081-exec-9:169210 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:23  [ http-nio-8081-exec-9:169211 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:08:23  [ http-nio-8081-exec-9:169212 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:23  [ http-nio-8081-exec-9:169212 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.com(String)
+2021-04-09 13:08:23  [ http-nio-8081-exec-9:169213 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:08:29  [ http-nio-8081-exec-3:174835 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:08:29  [ http-nio-8081-exec-3:174837 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:29  [ http-nio-8081-exec-3:174838 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.(String)
+2021-04-09 13:08:29  [ http-nio-8081-exec-3:174840 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:32  [ http-nio-8081-exec-2:178440 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:08:32  [ http-nio-8081-exec-2:178440 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:32  [ http-nio-8081-exec-2:178440 ] - [ DEBUG ]  ==> Parameters: yujkl5487@qq.c(String)
+2021-04-09 13:08:32  [ http-nio-8081-exec-2:178440 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:08:59  [ http-nio-8081-exec-8:204887 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:08:59  [ http-nio-8081-exec-8:204888 ] - [ DEBUG ]  Claimed overdue connection 1513777232.
+2021-04-09 13:08:59  [ http-nio-8081-exec-8:204889 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:08:59  [ http-nio-8081-exec-8:204889 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:08:59  [ http-nio-8081-exec-8:204890 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:09:58  [ http-nio-8081-exec-6:264609 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:09:58  [ http-nio-8081-exec-6:264610 ] - [ DEBUG ]  Claimed overdue connection 1758501502.
+2021-04-09 13:09:58  [ http-nio-8081-exec-6:264611 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:09:58  [ http-nio-8081-exec-9:264611 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:09:58  [ http-nio-8081-exec-6:264611 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:09:58  [ http-nio-8081-exec-9:264612 ] - [ DEBUG ]  Claimed overdue connection 1264385825.
+2021-04-09 13:09:58  [ http-nio-8081-exec-6:264613 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:09:58  [ http-nio-8081-exec-9:264614 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:09:58  [ http-nio-8081-exec-9:264614 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:09:58  [ http-nio-8081-exec-9:264618 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:10:00  [ http-nio-8081-exec-3:266266 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:10:00  [ http-nio-8081-exec-3:266267 ] - [ DEBUG ]  Claimed overdue connection 1904893457.
+2021-04-09 13:10:00  [ http-nio-8081-exec-3:266267 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:10:00  [ http-nio-8081-exec-3:266268 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 13:10:00  [ http-nio-8081-exec-3:266268 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:10:02  [ http-nio-8081-exec-2:268043 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:10:02  [ http-nio-8081-exec-2:268045 ] - [ DEBUG ]  Claimed overdue connection 996372940.
+2021-04-09 13:10:02  [ http-nio-8081-exec-2:268045 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:10:02  [ http-nio-8081-exec-2:268046 ] - [ DEBUG ]  ==> Parameters: Caesard(String)
+2021-04-09 13:10:02  [ http-nio-8081-exec-2:268047 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:10:03  [ http-nio-8081-exec-10:268900 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:10:03  [ http-nio-8081-exec-10:268901 ] - [ DEBUG ]  Claimed overdue connection 90700165.
+2021-04-09 13:10:03  [ http-nio-8081-exec-10:268902 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:10:03  [ http-nio-8081-exec-10:268902 ] - [ DEBUG ]  ==> Parameters: d(String)
+2021-04-09 13:10:03  [ http-nio-8081-exec-10:268903 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:10:29  [ http-nio-8081-exec-1:295411 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:10:29  [ http-nio-8081-exec-1:295412 ] - [ DEBUG ]  Claimed overdue connection 799472528.
+2021-04-09 13:10:29  [ http-nio-8081-exec-1:295414 ] - [ DEBUG ]  ==>  Preparing: select * from Users where nickname=? 
+2021-04-09 13:10:29  [ http-nio-8081-exec-1:295414 ] - [ DEBUG ]  ==> Parameters: Caesar(String)
+2021-04-09 13:10:29  [ http-nio-8081-exec-1:295415 ] - [ DEBUG ]  <==      Total: 1
+2021-04-09 13:12:34  [ http-nio-8081-exec-5:420024 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:12:34  [ http-nio-8081-exec-5:420025 ] - [ DEBUG ]  Claimed overdue connection 36129693.
+2021-04-09 13:12:34  [ http-nio-8081-exec-5:420025 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:12:34  [ http-nio-8081-exec-5:420026 ] - [ DEBUG ]  ==> Parameters: k(String)
+2021-04-09 13:12:34  [ http-nio-8081-exec-5:420026 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:12:34  [ http-nio-8081-exec-7:420175 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:12:34  [ http-nio-8081-exec-7:420176 ] - [ DEBUG ]  Claimed overdue connection 1179777942.
+2021-04-09 13:12:34  [ http-nio-8081-exec-7:420177 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:12:34  [ http-nio-8081-exec-7:420177 ] - [ DEBUG ]  ==> Parameters: kk(String)
+2021-04-09 13:12:34  [ http-nio-8081-exec-7:420178 ] - [ DEBUG ]  <==      Total: 0
+2021-04-09 13:12:34  [ http-nio-8081-exec-6:420309 ] - [ DEBUG ]  Opening JDBC Connection
+2021-04-09 13:12:34  [ http-nio-8081-exec-6:420310 ] - [ DEBUG ]  Claimed overdue connection 1492620201.
+2021-04-09 13:12:34  [ http-nio-8081-exec-6:420311 ] - [ DEBUG ]  ==>  Preparing: select * from Users where securityEmail=? 
+2021-04-09 13:12:34  [ http-nio-8081-exec-6:420311 ] - [ DEBUG ]  ==> Parameters: kkk(String)
+2021-04-09 13:12:34  [ http-nio-8081-exec-6:420312 ] - [ DEBUG ]  <==      Total: 0

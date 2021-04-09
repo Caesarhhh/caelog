@@ -9,22 +9,24 @@
       <img :src="inputmsg.backgroundimgsrc" alt="error">
     </div>
     <div id="body">
+      <div :class="namevalid?'tips_valid':'tips'">{{nametips}}</div>
       <div id="nametitle">用户名</div>
       <div id="passwordtitle">密码</div>
       <div id="confirmpasswordtitle">确认密码</div>
       <div id="introductiontitle">个人介绍</div>
       <div id="securityQuestiontitle">密保问题</div>
       <div id="securityAnswertitle">密保回答</div>
+      <div :class="emailvalid?'tips_valid_email':'tips_email'">{{emailtips}}</div>
       <div id="securityEmailtitle">密保邮箱</div>
       <div id="emailbutton" v-if="!ifcode" @click="getrandomcode">验证</div>
       <div id="securityEmailcodetitle">验证码</div>
-      <input type="text" id="nameinput" v-model="inputmsg.textinput">
+      <input type="text" @keyup="testname" id="nameinput" v-model="inputmsg.textinput">
       <input type="password" id="passwordinput" v-model="inputmsg.passwordinput">
       <input type="password" id="confirmpasswordinput" v-model="inputmsg.confirmpasswordinput">
       <textarea id="introductioninput" v-model="inputmsg.introduction" />
       <input type="text" id="securityQuestioninput" v-model="inputmsg.securityQuestion">
       <input type="text" id="securityAnswerinput" v-model="inputmsg.securityAnswer">
-      <input type="text" id="securityEmailinput" v-model="inputmsg.securityEmail">
+      <input @keyup="testemail" type="text" id="securityEmailinput" v-model="inputmsg.securityEmail">
       <input type="text" id="securityEmailcodeinput" v-model="inputmsg.codeinput">
       <div id="register" class="unselect" @click="submitForm">注册</div>
     </div>
@@ -51,12 +53,56 @@
           securityEmail:"",
           codeinput:""
         },
+        nametips:"",
+        namevalid:false,
+        emailtips:"",
+        emailvalid:false,
         ifcode:false,
         userToken:'',
       }
     },
     methods:{
       ...mapMutations(['changeLogin']),
+      testname:function(){
+        let data={
+          username:this.inputmsg.textinput
+        }
+        if(data.username==""){
+          this.nametips="Please input nickname!"
+          this.namevalid=false
+          return
+        }
+        this.$axios.post(this.common.serveraddress+"/user/testname",data).then(res=>{
+          if(res.data.code==200){
+            this.nametips="Nickname is effective!"
+            this.namevalid=true
+          }
+          else{
+            this.nametips=res.data.msg
+            this.namevalid=false
+          }
+        })
+      },
+      testemail:function(){
+        let data={
+          emailaddress:this.inputmsg.securityEmail
+        }
+        if(data.emailaddress==""){
+          this.emailtips="Please input email!"
+          this.emailvalid=false
+          return
+        }
+        this.$axios.post(this.common.serveraddress+"/user/testemail",data).then(res=>{
+          if(res.data.code==200){
+            this.emailtips="email is effective!"
+            this.emailvalid=true
+          }
+          else{
+            this.emailtips=res.data.msg
+            this.emailvalid=false
+          }
+        })
+      },
       uploadFile:function (url, data) {
         let config = {
           url: url,
@@ -164,6 +210,38 @@
   margin-left: -212px;
   background-color: white;
 ;
+}
+.tips{
+  position: absolute;
+  left:200px;
+  top:10px;
+  font-size: 15px;
+  font-family: 华光楷体_CNKI;
+  color: red;
+}
+.tips_valid{
+  position: absolute;
+  left:200px;
+  top:10px;
+  font-size: 15px;
+  font-family: 华光楷体_CNKI;
+  color: green;
+}
+.tips_email{
+  position: absolute;
+  left:200px;
+  top:414px;
+  font-size: 15px;
+  font-family: 华光楷体_CNKI;
+  color: red;
+}
+.tips_valid_email{
+  position: absolute;
+  left:200px;
+  top:414px;
+  font-size: 15px;
+  font-family: 华光楷体_CNKI;
+  color: green;
 }
 #empty{
   width:424px;
