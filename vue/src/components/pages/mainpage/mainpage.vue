@@ -6,11 +6,12 @@
     <rs id="recommendsong" :datas="songInfo"></rs>
     <sorttool id="sorttool" :datas="sortinfo"></sorttool>
     <div id="articlebox">
-      <ac class="articlecard" :datas="articleCardInfo[0]" v-if="articlenum>0"></ac>
-      <ac class="articlecard" :datas="articleCardInfo[1]" v-if="articlenum>1"></ac>
-      <ac class="articlecard" :datas="articleCardInfo[2]" v-if="articlenum>2"></ac>
-      <ac class="articlecard" :datas="articleCardInfo[3]" v-if="articlenum>3"></ac>
+      <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4]" v-if="(pagenumsinfo.pos-1)*4<articlenum"></ac>
+      <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+1]" v-if="(pagenumsinfo.pos-1)*4+1<articlenum"></ac>
+      <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+2]" v-if="(pagenumsinfo.pos-1)*4+2<articlenum"></ac>
+      <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+3]" v-if="(pagenumsinfo.pos-1)*4+3<articlenum"></ac>
     </div>
+    <pn v-if="articlenum>3" class="pn" :datas.sync="pagenumsinfo"></pn>
     <div id="modibox">
       <div id="modititle">近期动态</div>
       <div id="modibody">
@@ -33,6 +34,7 @@
   import articleCard from "../../tools/articleCard/articleCard";
   import modificationcard from "../../tools/modificationcard/modificationcard";
   import labelbox from "../../tools/labelbox/labelbox";
+  import pagenums from "../../tools/pagenums/pagenums";
   var chatinfo={
     ifwin:false
   }
@@ -53,7 +55,7 @@
     songurl:"http://caesar216.usa3v.net/caelog/images/心要野.mp3"
   }
   var sortinfo={
-    timeslot:[{id:1,st:2015,et:2016},{id:2,st:2017,et:2018},{id:3,st:2019,et:2020}]
+    timeslot:[{id:1,st:2015,et:2016}]
   }
   var modificationcardInfo=[{
     content:"修改了一些内容",
@@ -77,11 +79,17 @@
         songInfo:songInfo,
         sortinfo:sortinfo,
         articleCardInfo:[],
+        articleCardInfoprint:[],
         modificationcardInfo:modificationcardInfo,
         blocksInfo:blocksInfo,
         labelsInfo:labelsInfo,
         pcpos:{pos:'left'},
-        articlenum:0
+        articlenum:0,
+        sorttype:1,
+        pagenumsinfo:{
+          sum:1,
+          pos:1
+        }
       }
     },
     components: {
@@ -92,7 +100,8 @@
       sorttool:sorttool,
       ac:articleCard,
       mc:modificationcard,
-      lb:labelbox
+      lb:labelbox,
+      pn:pagenums
     },
     mounted() {
       this.inituserinfo(this.$route.params.userid)
@@ -112,20 +121,75 @@
             }
           })
       },
-      sortArticlebyTime(){
-        this.getarticles()
+      comparetime(time1,time2){
+        let t1=[]
+        t1.push(parseInt(time1.substring(0,4)))
+        t1.push(parseInt(time1.substring(5,7)))
+        t1.push(parseInt(time1.substring(8,10)))
+        t1.push(parseInt(time1.substring(11,13)))
+        t1.push(parseInt(time1.substring(14,16)))
+        t1.push(parseInt(time1.substring(17,19)))
+        t1.push(parseInt(time1.substring(20,22)))
+        let t2=[]
+        t2.push(parseInt(time2.substring(0,4)))
+        t2.push(parseInt(time2.substring(5,7)))
+        t2.push(parseInt(time2.substring(8,10)))
+        t2.push(parseInt(time2.substring(11,13)))
+        t2.push(parseInt(time2.substring(14,16)))
+        t2.push(parseInt(time2.substring(17,19)))
+        t2.push(parseInt(time2.substring(20,22)))
+        for(var i=0;i<t1.length;i++){
+          if(t1[i]!=t2[i]){
+            return t1[i]-t2[i]
+          }
+        }
+        return 0
       },
-      sortArticlebyHot(){
-        let len=this.articleCardInfo.length
+      sortArticlebyTime(){
+        let len=this.articleCardInfoprint.length
         for(let i=0;i<len;i++){
           for(let j=0;j<len-1-i;j++){
-            if(this.articleCardInfo[j].goodnum*2+this.articleCardInfo[j].viewnum<this.articleCardInfo[j+1].goodnum*2+this.articleCardInfo[j+1].viewnum){
-              let temp=this.articleCardInfo[j]
-              this.$set(this.articleCardInfo,j,this.articleCardInfo[j+1])
-              this.$set(this.articleCardInfo,j+1,temp)
+            if(this.comparetime(this.articleCardInfoprint[j].time,this.articleCardInfoprint[j+1].time)<0){
+              let temp=this.articleCardInfoprint[j]
+              this.$set(this.articleCardInfoprint,j,this.articleCardInfoprint[j+1])
+              this.$set(this.articleCardInfoprint,j+1,temp)
             }
           }
         }
+        this.sorttype=1
+      },
+      sortArticlebyHot(){
+        let len=this.articleCardInfoprint.length
+        for(let i=0;i<len;i++){
+          for(let j=0;j<len-1-i;j++){
+            if(this.articleCardInfoprint[j].goodnum*2+this.articleCardInfoprint[j].viewnum<this.articleCardInfoprint[j+1].goodnum*2+this.articleCardInfoprint[j+1].viewnum){
+              let temp=this.articleCardInfoprint[j]
+              this.$set(this.articleCardInfoprint,j,this.articleCardInfoprint[j+1])
+              this.$set(this.articleCardInfoprint,j+1,temp)
+            }
+          }
+        }
+        this.sorttype=0
+      },
+      selectbyTime:async function (s){
+        let len=this.articleCardInfo.length
+        let temp=[]
+        this.pagenumsinfo={
+          sum:0,
+          pos:1
+        }
+        for(let i=0;i<len;i++){
+          if(s=="all"||s==this.articleCardInfo[i].time.substring(2,7)){
+            temp.push(this.articleCardInfo[i])
+          }
+        }
+        this.articlenum=temp.length
+        this.articleCardInfoprint=[]
+        this.articleCardInfoprint=temp
+        if(this.sorttype==0){
+          this.sortArticlebyHot()
+        }
+        this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
       },
       getbls(){
         this.labelsInfo.labels=[]
@@ -174,13 +238,18 @@
       getarticles(){
         this.articleCardInfo=[]
         this.articlenum=0
+        this.sortinfo.timeslot=[]
+        this.pagenumsinfo={
+          sum:0,
+          pos:1
+        }
         this.$axios.get(
           this.common.serveraddress+"/article/get?userid="+this.common.userinfo.id).then(
           res=>{
             if(res.data.data.length==0){
               var temp={
                 title:res.data.data.title,
-                time:res.data.data.time_.substring(2,10),
+                time:res.data.data.time_,
                 content:res.data.data.content,
                 block:blocksInfo[res.data.data.blockid],
                 id:res.data.data.id,
@@ -188,21 +257,35 @@
                 viewnum:res.data.data.viewnum
               }
               this.articleCardInfo.push(temp)
+              this.sortinfo.timeslot.push({
+                id:this.sortinfo.timeslot.length,
+                st:temp.time.substring(2,4),
+                et:temp.time.substring(5,7)
+              })
               this.articlenum++
             }
             for(var i =res.data.data.length-1;i>=0;i--){
               var temp={
                 title:res.data.data[i].title,
-                time:res.data.data[i].time_.substring(2,10),
+                time:res.data.data[i].time_,
                 content:res.data.data[i].content,
                 block:blocksInfo[res.data.data[i].blockid],
                 id:res.data.data[i].id,
                 goodnum:res.data.data[i].goodnum,
                 viewnum:res.data.data[i].viewnum
               }
+              if(this.sortinfo.timeslot.length==0||this.sortinfo.timeslot[this.sortinfo.timeslot.length-1].st!=temp.time.substring(2,4)||this.sortinfo.timeslot[this.sortinfo.timeslot.length-1].et!=temp.time.substring(5,7)){
+                this.sortinfo.timeslot.push({
+                  id:this.sortinfo.timeslot.length,
+                  st:temp.time.substring(2,4),
+                  et:temp.time.substring(5,7)
+                })
+              }
               this.articleCardInfo.push(temp)
+              this.articleCardInfoprint.push(temp)
               this.articlenum++
             }
+            this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
           })
       },
       inituserinfo(userid){
@@ -232,6 +315,12 @@
     position: relative;
     margin-top: 0px;
     width:1024px;
+  }
+  .pn{
+    background-color: white;
+    position: absolute;
+    left:265px;
+    top:1143px;
   }
   #personalCard{
     position: absolute;

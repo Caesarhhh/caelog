@@ -3,7 +3,7 @@
     <div id="info">
       <div id="title">{{datas.title}}</div>
       <div id="articleblock">{{datas.block}}</div>
-      <div id="time">{{datas.time}}</div>
+      <div id="time">{{datas.time.substring(2,10)}}</div>
     </div>
     <div id="body">
       <div id="content">{{datas.content}}</div>
@@ -60,22 +60,22 @@
       },
       readto:function (){
         this.$router.push("/"+this.$route.params.userid+"/articleread/"+this.datas.id);
-      },
-      mounted() {
-        if((JSON.stringify(this.common.loginuserinfo)==='{}')==false&&this.common.loginuserinfo!=null){
-          this.$axios.get(
-            this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=articlegood"+"&objectid="+this.datas.id).then(
-            res=>{
-              if(res.data.code==400){
-                this.good=-1
-              }
-              else{
-                this.good=1
-              }
-            })
-        }
       }
-    }
+    },
+      mounted() {
+          if((JSON.stringify(this.common.loginuserinfo)==='{}')==false&&this.common.loginuserinfo!=null){
+              this.$axios.get(
+                  this.common.serveraddress+"/action/ifin?actorid="+this.common.loginuserinfo.id+"&targetid="+this.$route.params.userid+"&type_=articlegood"+"&objectid="+this.datas.id).then(
+                  res=>{
+                      if(res.data.code==400){
+                          this.good=-1
+                      }
+                      else{
+                          this.good=1
+                      }
+                  })
+          }
+      }
   }
 </script>
 

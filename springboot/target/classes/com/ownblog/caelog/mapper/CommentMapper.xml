@@ -16,6 +16,6 @@
         select * from Comments where userid=#{userid}
     </select>
     <update id="addonegood" parameterType="map">
-        update Comments set goodnum=(select goodnum from Comment where userid=#{userid} and id=#{id} and articleid=#{articleid})+#{count} where userid=#{userid} and id=#{id} and articleid=#{articleid}
+        update Comments set goodnum=goodnum+#{count} where userid=#{userid} and id=#{id} and articleid=#{articleid}
     </update>
 </mapper>

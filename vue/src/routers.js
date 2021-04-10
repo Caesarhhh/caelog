@@ -31,6 +31,9 @@ const routers=[
     path:'/:userid/articleshow/:type/:data',name:'articleshow',component: articleshowpage
   },
   {
+    path:'/:userid/articleshow/:type',name:'articleshow',component: articleshowpage
+  },
+  {
     path:'/:userid/articleread/:articleid',name:'articleread',component: articlereadpage
   }
 ]

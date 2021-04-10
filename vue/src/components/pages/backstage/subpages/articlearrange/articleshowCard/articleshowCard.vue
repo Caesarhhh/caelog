@@ -3,7 +3,7 @@
     <div id="info">
       <div id="title">{{datas.title}}</div>
       <div id="articleblock">{{datas.block}}</div>
-      <div id="time">{{datas.time}}</div>
+      <div id="time">{{datas.time.substring(2,10)}}</div>
     </div>
     <div id="body">
       <div id="content">{{datas.content}}</div>
@@ -54,22 +54,24 @@
     left:7px;
   }
   #title{
-    width:auto;
+    width:300px;
     height: 37px;
-    float:left;
-    margin-top:1px;
-    margin-left:3px;
+    position: absolute;
+    overflow: hidden;
+    top:1px;
+    left:3px;
     font-family: 华光楷体_CNKI;
-    font-size: 28px;
+    font-size: 26px;
     text-align: left;
     line-height: 100%;
   }
   #articleblock{
     width:96px;
     height:28px;
-    float:left;
-    margin-top:9px;
-    margin-left:56px;
+    overflow: hidden;
+    position: absolute;
+    top:3px;
+    left:310px;
     font-family: 华光楷体_CNKI;
     font-size: 22px;
     text-align: left;
@@ -78,9 +80,9 @@
   #time{
     width:85px;
     height:20px;
-    float:right;
-    margin-top:15px;
-    margin-right:15px;
+    position: absolute;
+    top:26px;
+    right:0px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;
     text-align: left;

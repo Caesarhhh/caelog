@@ -304,6 +304,7 @@
                 addedsrc:[],
                 addedcontent:[],
                 addednum:0,
+                addedactorid:[],
                 count:0,
                 addid:[],
                 addtime:[]
@@ -344,6 +345,7 @@
                     temp.addednicknames.push(ress.data.data[u].name_)
                     temp.goodnums.push(ress.data.data[u].goodnum)
                     temp.addid.push(ress.data.data[u].id)
+                    temp.addedactorid.push(ress.data.data[u].actorid)
                     temp.addtime.push(ress.data.data[u].time_)
                     await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+ress.data.data[u].actorid).then(
                       resss=>{
@@ -435,7 +437,6 @@
         count:1
       }
       this.$axios.post(this.common.serveraddress+"/article/addview",data).then(res=>{
-        console.log(res)
       })
     }
   }

@@ -3,7 +3,8 @@
   <div id="sort1" @click="sortbyHot" :class="{shadow:sorttype==0,nonshadow:sorttype==1}">热度</div>
   <div id="sort2" @click="sortbyTime" :class="{shadow:sorttype==1,nonshadow:sorttype==0}">时间</div>
   <div id="select">
-    <select name="selecttime" v-model="timeselect">
+    <select @change="selectbyTime" name="selecttime" v-model="timeselect">
+      <option value="-1">全部</option>
       <option v-for="item in datas.timeslot" :value="item.id">{{item.st}}-{{item.et}}</option>
     </select>
   </div>
@@ -20,6 +21,9 @@
       }
     },
     props:["datas"],
+    mounted() {
+      this.timeselect=-1
+    },
     methods:{
       setsorttype:function (index){
         this.sorttype=index;
@@ -31,6 +35,13 @@
       sortbyHot:function (){
         this.$parent.sortArticlebyHot()
         this.setsorttype(0)
+      },
+      selectbyTime:function (){
+        if(this.timeselect==-1){
+          this.$parent.selectbyTime("all")
+          return
+        }
+        this.$parent.selectbyTime(this.datas.timeslot[this.timeselect].st+"-"+this.datas.timeslot[this.timeselect].et)
       }
     }
   }

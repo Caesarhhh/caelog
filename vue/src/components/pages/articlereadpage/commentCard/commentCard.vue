@@ -80,9 +80,9 @@
         if(num==-1){
           if(temp.ifmaingood==-1){
             this.$axios.get(
-              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=commentgood"+"&objectid="+this.datas.id).then(
+              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.actorid+"&type_=commentgood"+"&objectid="+this.datas.id).then(
               res=>{
-                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=1"+"&articleid="+this.$route.params.articleid).then(
+                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.$route.params.userid+"&id="+this.datas.id+"&count=1"+"&articleid="+this.$route.params.articleid).then(
                   res=>{
                     temp.ifmaingood*=-1;
                     temp.maingoodnums+=temp.ifmaingood;
@@ -93,9 +93,9 @@
           }
           else{
             this.$axios.get(
-              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=commentgood"+"&objectid="+this.datas.id).then(
+              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.actorid+"&type_=commentgood"+"&objectid="+this.datas.id).then(
               res=>{
-                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.common.userinfo.id+"&id="+this.datas.id+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
+                this.$axios.get(this.common.serveraddress+"/comment/changegood?userid="+this.$route.params.userid+"&id="+this.datas.id+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
                   res=>{
                     temp.ifmaingood*=-1;
                     temp.maingoodnums+=temp.ifmaingood;
@@ -108,9 +108,9 @@
         else{
           if(temp.ifgood[num]==-1){
             this.$axios.get(
-              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
+              this.common.serveraddress+"/action/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.addedactorid[num]+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
               res=>{
-                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.common.userinfo.id+"&id="+this.datas.addid[num]+"&count=1"+"&articleid="+this.$route.params.articleid).then(
+                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.$route.params.userid+"&id="+this.datas.addid[num]+"&count=1"+"&articleid="+this.$route.params.articleid).then(
                   res=>{
                     temp.ifgood[num]*=-1;
                     temp.goodnums[num]+=temp.ifgood[num];
@@ -125,9 +125,9 @@
           }
           else{
             this.$axios.get(
-              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.common.userinfo.id+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
+              this.common.serveraddress+"/action/delete?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.addedactorid[num]+"&type_=addcommentgood"+"&objectid="+this.datas.addid[num]).then(
               res=>{
-                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.common.userinfo.id+"&id="+this.datas.addid[num]+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
+                this.$axios.get(this.common.serveraddress+"/addcomment/changegoodnum?userid="+this.$route.params.userid+"&id="+this.datas.addid[num]+"&count=-1"+"&articleid="+this.$route.params.articleid).then(
                   res=>{
                     temp.ifgood[num]*=-1;
                     temp.goodnums[num]+=temp.ifgood[num];

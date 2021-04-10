@@ -1,17 +1,18 @@
 <template>
 <div class="box">
   <div id="topbox">
-    <select>
-      <option v-for="key in this.blocks" v-model="blockselect">{{key}}</option>
+    <select @change="selectbyBlock" v-model="blockselect">
+      <option value="all">全部</option>
+      <option v-for="key in this.blocks" :value="key">{{key}}</option>
     </select>
-    <st id="sorttool" :datas="sorttoolinfo"></st>
+    <st id="sorttool" :datas="sortinfo"></st>
   </div>
   <div id="punisharticle" @click="toedit">发布文章</div>
   <div id="articlesbox">
-    <ac id="ac1" :datas="acinfo[(pginfo.pos-1)*4]" v-if="(pginfo.pos-1)*4<articlenum"></ac>
-    <ac id="ac2" :datas="acinfo[(pginfo.pos-1)*4+1]" v-if="(pginfo.pos-1)*4+1<articlenum"></ac>
-    <ac id="ac3" :datas="acinfo[(pginfo.pos-1)*4+2]" v-if="(pginfo.pos-1)*4+2<articlenum"></ac>
-    <ac id="ac4" :datas="acinfo[(pginfo.pos-1)*4+3]" v-if="(pginfo.pos-1)*4+3<articlenum"></ac>
+    <ac id="ac1" :datas="acinfoprint[(pginfo.pos-1)*4]" v-if="(pginfo.pos-1)*4<articlenum"></ac>
+    <ac id="ac2" :datas="acinfoprint[(pginfo.pos-1)*4+1]" v-if="(pginfo.pos-1)*4+1<articlenum"></ac>
+    <ac id="ac3" :datas="acinfoprint[(pginfo.pos-1)*4+2]" v-if="(pginfo.pos-1)*4+2<articlenum"></ac>
+    <ac id="ac4" :datas="acinfoprint[(pginfo.pos-1)*4+3]" v-if="(pginfo.pos-1)*4+3<articlenum"></ac>
   </div>
   <pn id="pagenums" :datas.sync="pginfo"></pn>
 </div>
@@ -21,8 +22,8 @@
   import sorttool from "../../../../tools/sorttool/sorttool";
   import articleshowCard from "./articleshowCard/articleshowCard";
   import pagenums from "../../../../tools/pagenums/pagenums";
-  var sorttoolinfo={
-    timeslot: [{id:0,st:2014,et:2015},{id:0,st:2016,et:2017},{id:0,st:2018,et:2019},{id:0,st:2020,et:"now"}]
+  var sortinfo={
+    timeslot: [{id:0,st:2014,et:2015}]
   }
   var acinfo=[
     {
@@ -39,10 +40,11 @@
     name: "articlearrange",
     data(){
       return{
-        sorttoolinfo:sorttoolinfo,
+        sortinfo:sortinfo,
         blocks: {},
         blockselect:{id:0,name:"C++"},
         acinfo:acinfo,
+        acinfoprint:acinfo,
         pginfo:pginfo,
         articlenum:0,
       }
@@ -54,9 +56,31 @@
       pn:pagenums
     },
     mounted() {
+      this.blockselect="all"
       this.refresh_article()
     },
     methods:{
+      selectbyBlock:async function (){
+        let s=this.blockselect
+        let len=this.acinfo.length
+        let temp=[]
+        this.pginfo={
+          sum:0,
+          pos:1
+        }
+        for(let i=0;i<len;i++){
+          if(s=="all"||s==this.acinfo[i].block){
+            temp.push(this.acinfo[i])
+          }
+        }
+        this.articlenum=temp.length
+        this.acinfoprint=[]
+        this.acinfoprint=temp
+        if(this.sorttype==0){
+          this.sortArticlebyHot()
+        }
+        this.pginfo.sum=Math.ceil(this.articlenum/4)
+      },
       toedit:function (){
         this.$router.push("/"+this.$route.params.userid+"/articleedit/-1");
       },
@@ -82,6 +106,76 @@
         };
         return this.$axios.post(url, data, config);
       },
+      comparetime(time1,time2){
+        let t1=[]
+        t1.push(parseInt(time1.substring(0,4)))
+        t1.push(parseInt(time1.substring(5,7)))
+        t1.push(parseInt(time1.substring(8,10)))
+        t1.push(parseInt(time1.substring(11,13)))
+        t1.push(parseInt(time1.substring(14,16)))
+        t1.push(parseInt(time1.substring(17,19)))
+        t1.push(parseInt(time1.substring(20,22)))
+        let t2=[]
+        t2.push(parseInt(time2.substring(0,4)))
+        t2.push(parseInt(time2.substring(5,7)))
+        t2.push(parseInt(time2.substring(8,10)))
+        t2.push(parseInt(time2.substring(11,13)))
+        t2.push(parseInt(time2.substring(14,16)))
+        t2.push(parseInt(time2.substring(17,19)))
+        t2.push(parseInt(time2.substring(20,22)))
+        for(var i=0;i<t1.length;i++){
+          if(t1[i]!=t2[i]){
+            return t1[i]-t2[i]
+          }
+        }
+        return 0
+      },
+      sortArticlebyTime(){
+        let len=this.acinfoprint.length
+        for(let i=0;i<len;i++){
+          for(let j=0;j<len-1-i;j++){
+            if(this.comparetime(this.acinfoprint[j].time,this.acinfoprint[j+1].time)<0){
+              let temp=this.acinfoprint[j]
+              this.$set(this.acinfoprint,j,this.acinfoprint[j+1])
+              this.$set(this.acinfoprint,j+1,temp)
+            }
+          }
+        }
+        this.sorttype=1
+      },
+      sortArticlebyHot(){
+        let len=this.acinfoprint.length
+        for(let i=0;i<len;i++){
+          for(let j=0;j<len-1-i;j++){
+            if(this.acinfoprint[j].goodnum*2+this.acinfoprint[j].viewnum<this.acinfoprint[j+1].goodnum*2+this.acinfoprint[j+1].viewnum){
+              let temp=this.acinfoprint[j]
+              this.$set(this.acinfoprint,j,this.acinfoprint[j+1])
+              this.$set(this.acinfoprint,j+1,temp)
+            }
+          }
+        }
+        this.sorttype=0
+      },
+      selectbyTime:async function (s){
+        let len=this.acinfo.length
+        let temp=[]
+        this.pginfo={
+          sum:0,
+          pos:1
+        }
+        for(let i=0;i<len;i++){
+          if(s=="all"||s==this.acinfo[i].time.substring(2,7)){
+            temp.push(this.acinfo[i])
+          }
+        }
+        this.articlenum=temp.length
+        this.acinfoprint=[]
+        this.acinfoprint=temp
+        if(this.sorttype==0){
+          this.sortArticlebyHot()
+        }
+        this.pginfo.sum=Math.ceil(this.articlenum/4)
+      },
       getblocks:function (){
         this.blocks={}
         this.$axios.get(
@@ -97,23 +191,36 @@
       refresh_article:function (){
         this.getblocks()
         this.acinfo=[]
+        this.acinfoprint=[]
         this.articlenum=0
+        this.sortinfo.timeslot=[]
         let param = new FormData()
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/article/get",param).then(res=>{
           if(res.data.code==200){
             for(var i =0;i<res.data.data.length;i++){
-              var temp={time:res.data.data[i].time_.substring(2,10),
+              var temp={time:res.data.data[i].time_,
                         title:res.data.data[i].title,
                         block:this.blocks[res.data.data[i].blockid],
                         content:res.data.data[i].content.substring(0,300),
-                        articleid:res.data.data[i].id}
+                        articleid:res.data.data[i].id,
+                        goodnum:res.data.data[i].goodnum,
+                        viewnum:res.data.data[i].viewnum
+              }
+              if(this.sortinfo.timeslot.length==0||this.sortinfo.timeslot[this.sortinfo.timeslot.length-1].st!=temp.time.substring(2,4)||this.sortinfo.timeslot[this.sortinfo.timeslot.length-1].et!=temp.time.substring(5,7)){
+                this.sortinfo.timeslot.push({
+                  id:this.sortinfo.timeslot.length,
+                  st:temp.time.substring(2,4),
+                  et:temp.time.substring(5,7)
+                })
+              }
               // this.$set(this.acinfo,this.articlenum,temp)
               this.acinfo.push(temp)
+              this.acinfoprint.push(temp)
               this.articlenum++
             }
           }
-          this.pginfo.sum=Math.floor(this.articlenum/4)
+          this.pginfo.sum=Math.ceil(this.articlenum/4)
         })
       },
       deleteac:function (arid){
