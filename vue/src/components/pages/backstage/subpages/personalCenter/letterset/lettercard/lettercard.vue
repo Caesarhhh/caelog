@@ -1,5 +1,5 @@
 <template>
-<div class="box1">
+<div class="boxlc" @click="toChatterPage" :style="getcolor4()">
   <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
   <div id="head"><img :src="datas.headsrc" alt="error"></div>
   <div id="info" @click="openchat">
@@ -31,6 +31,12 @@
       cw:chatwin
     },
     methods:{
+      toChatterPage(){
+        this.$router.push("/"+this.datas.targetid+"/mainpage")
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
       openchat:function (){
         this.chatinfo.targetid=this.datas.targetid
         this.chatinfo.ifwin=true;
@@ -45,12 +51,13 @@
 </script>
 
 <style scoped>
-.box1{
+.boxlc{
   width:251px;
   height: 47px;
   border-style: groove;
   border-width: thin;
   border-radius: 5px;
+  cursor: pointer;
 }
 .box1:hover #close{
   display: block;
@@ -76,6 +83,7 @@
   top:2px;
   left:47px;
   border-radius: 2px;
+  cursor: pointer;
 }
 #nickname{
   width: 70px;

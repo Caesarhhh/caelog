@@ -1,13 +1,13 @@
 <template>
 <div class="box1">
-  <div class="searchbox">
+  <div class="searchbox" :style="getcolor1()">
     <input id="searchinput" v-model="inputtext"></input>
     <div id="searchbutton" @click="searchto">
       <img :src="searchimgsrc" alt="error">
     </div>
   </div>
-  <st :datas="sorttoolinfo" id="sorttool_as"></st>
-  <div id="blockbox_as">
+  <st :datas="sorttoolinfo" :style="getcolor1()" id="sorttool_as"></st>
+  <div id="blockbox_as" :style="getcolor1()">
     <div id="blockstitle">板块</div>
     <div id="searchselect" @click="searchresult"><div>搜索结果</div></div>
     <div id="blockselects">
@@ -19,7 +19,7 @@
   <bac id="bac2" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+1]" v-if="(pagenumsinfo.pos-1)*4+1<articlenum"></bac>
   <bac id="bac3" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+2]" v-if="(pagenumsinfo.pos-1)*4+2<articlenum"></bac>
   <bac id="bac4" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+3]" v-if="(pagenumsinfo.pos-1)*4+3<articlenum"></bac>
-  <pn v-if="articlenum!=0" :class="{pagenums_as_1:(pagenumsinfo.pos-1)*4+1==articlenum,pagenums_as_2:(pagenumsinfo.pos-1)*4+2==articlenum,pagenums_as_3:(pagenumsinfo.pos-1)*4+3==articlenum,pagenums_as_4:pagenumsinfo.pos*4<=articlenum}" :datas="pagenumsinfo"></pn>
+  <pn :style="getcolor1()" v-if="articlenum!=0" :class="{pagenums_as_1:(pagenumsinfo.pos-1)*4+1==articlenum,pagenums_as_2:(pagenumsinfo.pos-1)*4+2==articlenum,pagenums_as_3:(pagenumsinfo.pos-1)*4+3==articlenum,pagenums_as_4:pagenumsinfo.pos*4<=articlenum}" :datas="pagenumsinfo"></pn>
 </div>
 </template>
 
@@ -68,6 +68,12 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       searchto:function (){
         this.inputtext=this.inputtext.replace(/(^\s*)|(\s*$)/g, "")
         if(this.inputtext==""){
@@ -284,7 +290,6 @@
   .searchbox{
     width:450px;
     height:40px;
-    background-color: white;
     position: absolute;
     left: 69px;
     top:61px;
@@ -315,7 +320,6 @@
     position: absolute;
     left:44px;
     top:125px;
-    background-color: white;
   }
   #bac1{
     position: absolute;
@@ -341,25 +345,21 @@
     position: absolute;
     top:463px;
     left: 49px;
-    background-color: white;
   }
   .pagenums_as_2{
     position: absolute;
     top:737px;
     left: 49px;
-    background-color: white;
   }
   .pagenums_as_3{
     position: absolute;
     top:1011px;
     left: 49px;
-    background-color: white;
   }
   .pagenums_as_4{
     position: absolute;
     top:1285px;
     left: 49px;
-    background-color: white;
   }
   #blockbox_as{
     width:250px;
@@ -369,7 +369,6 @@
     position: absolute;
     top:127px;
     left:711px;
-    background-color: white;
   }
   #blockstitle{
     width:230px;

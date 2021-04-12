@@ -31,6 +31,10 @@ router.beforeEach((to, from, next) => {
     }
   }
 });
+router.afterEach(() => {
+  window.scrollTo(0,0);
+})
+
 new Vue({
   el: '#app',
   components:{

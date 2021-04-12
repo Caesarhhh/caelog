@@ -2,8 +2,8 @@
   <div id="mainpage">
     <pc id="personalCard" :datas="pcpos"></pc>
     <st id="searchtool"></st>
-    <announce id="announce" :datas="announceInfo"></announce>
-    <rs id="recommendsong" :datas="songInfo"></rs>
+    <announce id="announce" :style="getcolor1()" :datas="announceInfo"></announce>
+    <rs id="recommendsong" :style="getcolor1()" :datas="songInfo"></rs>
     <sorttool id="sorttool" :datas="sortinfo"></sorttool>
     <div id="articlebox">
       <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4]" v-if="(pagenumsinfo.pos-1)*4<articlenum"></ac>
@@ -11,16 +11,19 @@
       <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+2]" v-if="(pagenumsinfo.pos-1)*4+2<articlenum"></ac>
       <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+3]" v-if="(pagenumsinfo.pos-1)*4+3<articlenum"></ac>
     </div>
-    <pn v-if="articlenum>3" class="pn" :datas.sync="pagenumsinfo"></pn>
-    <div id="modibox">
+    <pn v-if="articlenum>3" class="pn" :style="getcolor1()" :datas.sync="pagenumsinfo"></pn>
+    <div id="modibox" :style="getcolor1()">
       <div id="modititle">近期动态</div>
       <div id="modibody">
-        <mc class="modicard" v-for="(i,index) in modificationcardInfo" :datas="i" v-if="index<6"></mc>
+        <mc class="modicard" :style="getcolor1()" v-for="(i,index) in modificationcardInfo" :datas="i" v-if="index<6"></mc>
       </div>
     </div>
-    <div id="blockbox">
+    <div id="blockbox" :style="getcolor1()">
       <lb id="blocks" :datas="blocksInfo"></lb>
       <lb id="labels" :datas="labelsInfo"></lb>
+    </div>
+    <div id="toback" @click="tobackstage" :style="getcolor3()" v-if="this.common.loginuserinfo.id==this.$route.params.userid">
+      <div>前往后台</div>
     </div>
   </div>
 </template>
@@ -104,9 +107,29 @@
       pn:pagenums
     },
     mounted() {
+      if(typeof this.$route.params.userid==='undefined'){
+        this.router.push("/4/mainpage")
+      }
       this.inituserinfo(this.$route.params.userid)
     },
     methods:{
+      getColor4(){
+        return {
+          backgroundColor:this.$store.state.color4
+        }
+      },
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      tobackstage(){
+        this.$router.push("/"+this.$route.params.userid+"/backstage")
+      },
       addChange(){
         this.modificationcardInfo=[]
         this.$axios.get(
@@ -316,8 +339,22 @@
     margin-top: 0px;
     width:1024px;
   }
+  #toback{
+    width: 80px;
+    height: 120px;
+    background-color: #d7eee9;
+    position: absolute;
+    left:10px;
+    cursor: pointer;
+  }
+  #toback div{
+    position: absolute;
+    top:20px;
+    font-family: 华光楷体_CNKI;
+    font-size: 28px;
+    line-height: 40px;
+  }
   .pn{
-    background-color: white;
     position: absolute;
     left:265px;
     top:1143px;
@@ -336,13 +373,11 @@
     position: absolute;
     top:29px;
     left:680px;
-    background-color: white;
   }
   #recommendsong{
     position: absolute;
     left: 315px;
     top:91px;
-    background-color: white;
   }
   #sorttool{
     position: absolute;
@@ -360,12 +395,10 @@
     float:left;
     margin-top: 10px;
     margin-left: 10px;
-    background-color: white;
   }
   #modibox{
     width:180px;
     height: 711px;
-    background-color: white;
     position: absolute;
     top: 240px;
     left: 829px;
@@ -393,13 +426,11 @@
     margin-top:10px;
     border-bottom-style: groove;
     border-width: thin;
-    background-color: white;
   }
   #blockbox{
     width:280px;
     height:600px;
     position: absolute;
-    background-color: white;
     left:14px;
     top:315px;
   }

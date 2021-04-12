@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="box" :style="getcolor4()">
   <div id="pic"><img :src="datas.picsrc" alt="error"></div>
   <div id="href">{{datas.href}}</div>
   <div id="comments">{{datas.comments}}</div>
@@ -26,6 +26,11 @@
       this.confirmsrc()
     },
     methods:{
+      getcolor4(){
+        return {
+          backgroundColor:this.$store.state.color4
+        }
+      },
       changechecked:function (event){
         this.changehref();
       },

@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="box" :style="getcolor1()">
   <div id="title">
     {{datas.title}}
   </div>
@@ -18,6 +18,12 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       showto:function (s){
         this.$router.push("/"+this.$route.params.userid+"/articleshow/"+this.datas.type+"/"+s);
       }
@@ -30,7 +36,6 @@
   width:250px;
   height: 250px;
   position: relative;
-  background-color: white;
 }
 #title{
   width:100px;
@@ -58,5 +63,6 @@
   margin-left:14px;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
+  cursor: pointer;
 }
 </style>

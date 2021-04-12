@@ -152,5 +152,7 @@
   line-height: 32px;
   font-family: 华光楷体_CNKI;
   font-size: 21px;
+  color:black;
+  cursor: pointer;
 }
 </style>

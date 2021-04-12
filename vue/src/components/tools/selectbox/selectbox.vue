@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="boxse" :style="getColor1()">
   <div id="idbox">
     <div id="head"><img :src="datas.headsrc" alt="error"></div>
     <div id="nickname">{{datas.nickname}}</div>
@@ -26,7 +26,14 @@
     mounted() {
       this.pageindex=this.pageindex_;
     },
+    computed:{
+    },
     methods:{
+      getColor1(){
+        return {
+          backgroundColor:this.$store.state.color1
+        }
+      },
       changeindex:function (num){
         this.pageindex=num;
         this.$emit("update:pageindex_",num);
@@ -36,7 +43,7 @@
 </script>
 
 <style scoped>
-.box{
+.boxse{
   width:236px;
   height:528px;
 }
@@ -98,5 +105,6 @@
   font-size: 28px;
   text-align: center;
   line-height: 46px;
+  cursor: pointer;
 }
 </style>

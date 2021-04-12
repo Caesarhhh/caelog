@@ -15,6 +15,9 @@
     <update id="updateUser" parameterType="User">
         update Users set nickname=#{nickname},password_=#{password},introduction=#{introduction},backimgsrc=#{backimgsrc},securityQuestion=#{securityQuestion},securityAnswer=#{securityAnswer},securityEmail=#{securityEmail} where id=#{id};
     </update>
+    <update id="changebc" parameterType="map">
+        update Users set backgroundColorSelect=#{colorNum} where id=#{id};
+    </update>
     <select id="getUserbyid" resultType="User" parameterType="map">
         select * from Users where id=#{userid}
     </select>
@@ -29,6 +32,9 @@
     </select>
     <select id="getimgsrc" parameterType="int" resultType="String">
         select backimgsrc from Users where id=#{userid}
+    </select>
+    <select id="getbc" parameterType="map" resultType="int">
+        select backgroundColorSelect from Users where id=#{id}
     </select>
     <select id="getnickname" parameterType="int" resultType="String">
         select nickname from Users where id=#{userid}

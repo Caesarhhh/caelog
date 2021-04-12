@@ -1,5 +1,5 @@
 <template>
-<div class="box11">
+<div class="box11" :style="getcolor1()">
   <div id="empty">
     <div id="close" @click="close" class="unselect"><img :src="closeimgsrc" alt="error"></div>
     <div id="chatarea">
@@ -15,7 +15,7 @@
     </GeminiScrollbar>
     </div>
     <div id="buttonarea">
-      <div id="submit" @click="submitmsg">发送</div>
+      <div id="submit" :style="getcolor3()" @click="submitmsg">发送</div>
     </div>
     <textarea id="textinput" v-model="inputtext"></textarea>
   </div>
@@ -30,7 +30,8 @@
   var chatinfo=[{
     headimgsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
     content:"只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-    ifleft:false
+    ifleft:false,
+    chatterid:0
   }]
   export default {
     name: "chatwin",
@@ -55,6 +56,25 @@
       this.getChatinfo(this.datas.targetid)
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      gettime(){
+        let x=new Date().toLocaleString()
+        let ar=x.split(/,|:| |-|\/|[\u4e00-\u9fa5]./)
+        for(let i=1;i<6;i++){
+          if(ar[i].length==1){
+            ar[i]="0"+ar[i]
+          }
+        }
+        return ar[0]+"-"+ar[1]+"-"+ar[2]+" "+ar[3]+":"+ar[4]+":"+ar[5]
+      },
       close:function (){
         var temp=this.datas;
         temp.ifwin=false;
@@ -87,7 +107,8 @@
                     headimgsrc: that.common.loginuserinfo.backimgsrc,
                     content:temp[i].content,
                     ifleft:false,
-                    time:temp[i].time_
+                    time:temp[i].time_,
+                    chatterid:that.$route.params.userid
                   }
                   if(temp[i].actorid!=that.common.loginuserinfo.id){
                    await that.$axios({
@@ -97,6 +118,7 @@
                       resss=>{
                         temp_chatinfo.ifleft=true
                         temp_chatinfo.headimgsrc=resss.data.data
+                        temp_chatinfo.chatterid=that.datas.targetid
                         that.chatinfo.push(temp_chatinfo)
                       }
                     )
@@ -197,11 +219,20 @@
       },
       submitmsg:function (){
         if(this.inputtext!=""){
+          var temptext=this.inputtext
           this.$axios({
             method:'get',
-            url:this.common.serveraddress+"/letter/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.targetid+"&content="+this.inputtext
+            url:this.common.serveraddress+"/letter/add?actorid="+this.common.loginuserinfo.id+"&targetid="+this.datas.targetid+"&content="+temptext
           }).then(res=>{
-            this.getChatinfo(this.datas.targetid)
+            if(res.data.code==200){
+              var temp_chatinfo={
+                headimgsrc: this.common.loginuserinfo.backimgsrc,
+                content:temptext,
+                ifleft:false,
+                time:this.gettime()
+              }
+              this.chatinfo.push(temp_chatinfo)
+            }
             this.inputtext="";
           })
         }
@@ -221,7 +252,6 @@
   width:700px;
   height:691px;
   border-style: ridge;
-  background-color: white;
   position: fixed;
   top:50%;
   left: 50%;
@@ -253,6 +283,7 @@
   right: 5px;
   width:40px;
   height: 40px;
+  cursor: pointer;
 }
 #close img{
   width: 100%;
@@ -286,12 +317,13 @@
   width: 75px;
   height: 37px;
   position: absolute;
-  border-style: ridge;
+  border-radius: 5px;
   top:1px;
   right: 5px;
   font-family: 华光楷体_CNKI;
   font-size: 24px;
   line-height: 37px;
+  cursor: pointer;
 }
 #textinput {
   width: 628px;

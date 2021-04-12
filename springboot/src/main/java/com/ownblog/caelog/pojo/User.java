@@ -9,8 +9,37 @@ public class User {
     private String securityQuestion;
     private String securityAnswer;
     private String securityEmail;
+    private int backgroundColorSelect;
 
-    public User(String nickname,String password_){
+    public User(int id, String nickname, String password_, String introduction, String backimgsrc, String securityQuestion, String securityAnswer, String securityEmail, int backgroundColorSelect) {
+        this.id = id;
+        this.nickname = nickname;
+        this.password_ = password_;
+        this.introduction = introduction;
+        this.backimgsrc = backimgsrc;
+        this.securityQuestion = securityQuestion;
+        this.securityAnswer = securityAnswer;
+        this.securityEmail = securityEmail;
+        this.backgroundColorSelect = backgroundColorSelect;
+    }
+
+    public String getPassword_() {
+        return password_;
+    }
+
+    public void setPassword_(String password_) {
+        this.password_ = password_;
+    }
+
+    public int getBackgroundColorSelect() {
+        return backgroundColorSelect;
+    }
+
+    public void setBackgroundColorSelect(int backgroundColorSelect) {
+        this.backgroundColorSelect = backgroundColorSelect;
+    }
+
+    public User(String nickname, String password_){
         this.nickname=nickname;
         this.password_=password_;
     }

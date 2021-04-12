@@ -1,6 +1,6 @@
 <template>
-<div class="loginpage">
-  <div id="empty">
+<div class="loginpage" :style="getcolor1()">
+  <div id="empty" :style="getcolor1()">
     <div id="close">
       <img :src="closeimgsrc" alt="error">
     </div>
@@ -18,7 +18,7 @@
       <div id="securityAnswertitle">密保回答</div>
       <div :class="emailvalid?'tips_valid_email':'tips_email'">{{emailtips}}</div>
       <div id="securityEmailtitle">密保邮箱</div>
-      <div id="emailbutton" v-if="!ifcode" @click="getrandomcode">验证</div>
+      <div id="emailbutton" v-if="!ifcode" :style="getcolorFont2()" @click="getrandomcode">验证</div>
       <div id="securityEmailcodetitle">验证码</div>
       <input type="text" @keyup="testname" id="nameinput" v-model="inputmsg.textinput">
       <input type="password" id="passwordinput" v-model="inputmsg.passwordinput">
@@ -61,8 +61,19 @@
         userToken:'',
       }
     },
+    computed:{
+    },
     methods:{
       ...mapMutations(['changeLogin']),
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolorFont2(){
+        return {color:this.$store.state.colorFont2}
+      },
       testname:function(){
         let data={
           username:this.inputmsg.textinput
@@ -136,10 +147,10 @@
           this.inputmsg.backgroundimgsrc=this.uploadurl;})
       },
       getrandomcode:function (){
-        if(!this.emailvalid){
-          alert("请输入有效的密保邮箱！")
-          return
-        }
+        // if(!this.emailvalid){
+        //   alert("请输入有效的密保邮箱！")
+        //   return
+        // }
         let data={
           'address':this.inputmsg.securityEmail
         }
@@ -190,10 +201,10 @@
           alert("请设置密保邮箱！")
           return
         }
-        if(!this.emailvalid){
-          alert("请输入有效的密保邮箱！")
-          return
-        }
+        // if(!this.emailvalid){
+        //   alert("请输入有效的密保邮箱！")
+        //   return
+        // }
         var codedata=JSON.parse(localStorage.getItem("token_emailcode"))
         var timestamp = Date.parse(new Date());
         if(codedata.time+300000<timestamp){
@@ -239,8 +250,6 @@
   left: 50%;
   margin-top: -324px;
   margin-left: -212px;
-  background-color: white;
-;
 }
 .tips{
   position: absolute;
@@ -276,11 +285,10 @@
 }
 #empty{
   width:424px;
-  height: 249px;
+  height: 620px;
   position: relative;
   margin-top: 0px;
   margin-left: 0px;
-  background-color: white;
 }
 #close{
   width:45px;
@@ -421,7 +429,6 @@
   line-height: 30px;
   font-family: 华光楷体_CNKI;
   font-size: 22px;
-  color: #735c0f;
   cursor: pointer;
 }
 #securityEmailtitle{

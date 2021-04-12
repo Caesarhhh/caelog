@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="log" v-if="state">欢迎，{{username}}</div>
-    <div class="logout" v-if="state" @click="logout">logout</div>
-    <div class="logout" v-if="!state" @click="login">login</div>
-    <div class="register" v-if="!state" @click="register">register</div>
-    <router-view></router-view>
+    <div class="log" :style="getcolorFont2()" v-if="state">欢迎，{{username}}</div>
+    <div class="logout" :style="getcolorFont2()" v-if="state" @click="logout">logout</div>
+    <div class="logout" :style="getcolorFont2()" v-if="!state" @click="login">login</div>
+    <div class="register" v-if="!state" :style="getcolorFont2()" @click="register">register</div>
+    <router-view :style="stylevar"></router-view>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
   name: 'App',
   data(){
     return {
+      bcolor:"green"
     }
   },
   computed:{
@@ -28,6 +29,9 @@ export default {
     },
     username:function (){
       return this.common.loginuserinfo.nickname
+    },
+    stylevar:function (){
+      return this.getcolors()
     }
   },
   components: {
@@ -38,7 +42,29 @@ export default {
     lg:loginpage,
     ae:articleedit
   },
+  mounted() {
+  },
   methods:{
+    getcolor1(){
+      return {backgroundColor: this.$store.state.color1}
+    },
+    getcolor2(){
+      return {backgroundColor: this.$store.state.color2}
+    },
+    getcolors(){
+      return {
+        backgroundColor: this.$store.state.color2,
+        color:this.$store.state.colorFont
+      }
+    },
+    getcolorFont2(){
+      return {
+        color: this.$store.state.colorFont2
+      }
+    },
+    changeback(){
+      document.querySelector('body').setAttribute('style', 'background-color:'+this.$store.state.color2+";")
+    },
     logout:function (){
       localStorage.removeItem("userinfo")
       localStorage.removeItem("Authorization")
@@ -50,6 +76,9 @@ export default {
     },
     register:function (){
       this.$router.push("/register")
+    },
+    getFontColor(){
+      return {color:this.$store.state.colorFont}
     }
   },
   beforeMount() {
@@ -69,14 +98,25 @@ export default {
         return Promise.reject(error);
       });
     this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"));
+    let params={
+      userid:this.$route.params.userid
+    }
+    this.$axios.post(this.common.serveraddress+"/user/getbc",params).then(res=>{
+      this.$store.commit('changecolorSelect',res.data.data)
+      let i=this.$store.state.colorNum
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color1,1])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color2,2])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color3,3])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color4,4])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont,"Font"])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont2,"Font2"])
+      this.changeback()
+    })
   }
 }
 </script>
 
-<style>
-  body{
-    background-color: #f5f6f7;
-  }
+<style vars="{ stylevar }">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -105,7 +145,6 @@ export default {
   height: 20px;
   right:60px;
   top:0px;
-  color: #0000ff;
   text-decoration: underline;
   cursor: pointer;
   z-index: 100;
@@ -116,7 +155,6 @@ export default {
   height: 20px;
   right:130px;
   top:0px;
-  color: #0000ff;
   text-decoration: underline;
   cursor: pointer;
   z-index: 100;

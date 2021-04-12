@@ -1,13 +1,13 @@
 <template>
-<div class="box2">
+<div class="box2" :style="getcolor1()">
   <div id="settingtitle">
     <div id="titletitle">标题</div>
     <input type="text" id="titlecontent" v-model="title">
     <div id="contenttitle"><div>公告内容</div></div>
     <textarea cols="30" rows="10" id="contentcontent" v-model="content"></textarea>
-    <button id="addbutton" @click="submit">添加</button>
+    <div id="addbutton" :style="getcolor3()" @click="submit">添加</div>
   </div>
-  <div id="announcement">公告最多四条</div>
+  <div id="announcement" :style="getcolor3()">公告最多四条</div>
   <ac id="ac1" :datas="announcesetcardinfo[0]" v-if="sum>0"></ac>
   <ac id="ac2" :datas="announcesetcardinfo[1]" v-if="sum>1"></ac>
   <ac id="ac3" :datas="announcesetcardinfo[2]" v-if="sum>2"></ac>
@@ -33,6 +33,15 @@
       ac:announcesetCard,
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
       uploadFile:function (url, data) {
         let config = {
           url: url,
@@ -135,7 +144,6 @@
 .box2{
   width:721px;
   height:1070px;
-  background-color: white;
 }
 #settingtitle{
   width:680px;
@@ -208,7 +216,8 @@
   font-family: 华光楷体_CNKI;
   font-size: 21px;
   line-height: 35px;
-  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
 #announcement{
   width:680px;

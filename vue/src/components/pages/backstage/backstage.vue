@@ -43,6 +43,17 @@
         blocksetinfo:blocksetinfo
       }
     },
+    methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      changeback(){
+        this.$parent.changeback()
+      }
+    },
     components:{
       sb:selectbox,
       pc:personalCenter,
@@ -84,7 +95,6 @@
   position: absolute;
   top:39px;
   left:23px;
-  background-color: white;
 }
 #personalcentor{
   position: absolute;

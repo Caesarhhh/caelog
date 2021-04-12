@@ -12,6 +12,8 @@ public interface UserDao extends JpaRepository<User,Long> {
     void insertUser(User user);
     void deleteUser(int id);
     void updateUser(User user);
+    void changebc(HashMap map);
+    int getbc(HashMap map);
     int findbiggestid();
     List<User> getUserbyid(HashMap map);
     List<User> getUserbyemail(HashMap map);

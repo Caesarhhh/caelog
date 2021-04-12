@@ -1,5 +1,5 @@
 <template>
-<div class="box2">
+<div class="box2" :style="getcolor1()">
   <div id="settingbox">
     <form action="">
       <input id="pic" name="multipartFile" type="file" @change="uploadpic" enctype="multipart/form-data">
@@ -9,7 +9,7 @@
     <input id="nameinput" v-model="inputname"></input>
     <div id="commentstitle">备注</div>
     <input id="commentsinput" v-model="inputremark"></input>
-    <button id="addbutton" @click="submit">添加</button>
+    <div id="addbutton" :style="getcolor3()" @click="submit">添加</div>
   </div>
   <div id="contentbox">
     <pn id="pagenums" :datas.sync="pagenumsinfo"></pn>
@@ -58,6 +58,17 @@
       bsb:blocksetbox
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {
+          backgroundColor:this.$store.state.color3
+        }
+      },
       refresh:function (){
         this.hrefcardinfo=[]
         this.hrefnum=0
@@ -162,7 +173,6 @@
 .box2{
   width:721px;
   height:631px;
-  background-color: white;
 }
 #settingbox{
   width: 673px;
@@ -178,7 +188,7 @@
   height: 80px;
   position: absolute;
   top:26px;
-  left:35px;
+  left:15px;
   opacity: 0;
   z-index: 10;
   background-color:transparent !important;
@@ -188,7 +198,7 @@
   height: 80px;
   position: absolute;
   top:16px;
-  left:25px;
+  left:15px;
   border-radius: 50%;
 }
 #settingpic img{
@@ -243,9 +253,10 @@
   bottom:3px;
   right: 8px;
   font-family: 华光楷体_CNKI;
-  background-color: white;
   font-size: 20px;
   line-height: 28px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 #contentbox{
   width: 673px;

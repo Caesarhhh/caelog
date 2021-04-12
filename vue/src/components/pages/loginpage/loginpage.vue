@@ -1,6 +1,6 @@
 <template>
-<div class="loginpage">
-  <div id="empty">
+<div class="loginpage" :style="getcolor1()">
+  <div id="empty" :style="getcolor1()">
     <div id="close">
       <img :src="closeimgsrc" alt="error">
     </div>
@@ -32,6 +32,12 @@
     },
     methods:{
       ...mapMutations(['changeLogin']),
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       submitForm(){
         let v=this
         let param = new FormData()
@@ -71,13 +77,11 @@
 .loginpage{
   width:424px;
   height: 240px;
-  border-style: ridge;
   position: fixed;
   top:50%;
   left: 50%;
   margin-top: -324px;
   margin-left: -212px;
-  background-color: white;
 }
 #empty{
   width:424px;
@@ -85,6 +89,7 @@
   position: relative;
   margin-top: 0px;
   margin-left: 0px;
+  border-style: groove;
 }
 #close{
   width:45px;

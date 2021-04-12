@@ -1,5 +1,5 @@
 <template>
-<div class="box1">
+<div class="box1" :style="getcolor1()">
   <div id="empty">
     <div id="value">{{datas.label}}</div>
     <div id="close" @click="close">
@@ -14,6 +14,12 @@
     name: "labelcard",
     props:["datas"],
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       close:function (){
         this.$parent.closelb(this.datas.index)
       }
@@ -34,7 +40,6 @@
   min-height: 40px;
   border-style: groove;
   border-width: thin;
-  background-color: white;
 }
 .box1:hover #close{
   display: block;

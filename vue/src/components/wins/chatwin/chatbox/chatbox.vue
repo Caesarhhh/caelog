@@ -1,8 +1,8 @@
 <template>
 <div :class="{box3l:datas.ifleft,box3r:!datas.ifleft}">
   <div id="empty" class="clearfix">
-    <div class="unselect" :class="{headimg:datas.ifleft,headimg_:!datas.ifleft}"><img :src="datas.headimgsrc" alt="error"></div>
-    <div :class="{content:datas.ifleft,content_:!datas.ifleft}" class="chattext"><div>{{datas.content}}</div></div>
+    <div @click="toChatterpage" class="unselect" :class="{headimg:datas.ifleft,headimg_:!datas.ifleft}"><img :src="datas.headimgsrc" alt="error"></div>
+    <div :style="getcolor4()" :class="{content:datas.ifleft,content_:!datas.ifleft}" class="chattext"><div>{{datas.content}}</div></div>
   </div>
 </div>
 </template>
@@ -10,7 +10,15 @@
 <script>
   export default {
     name: "chatbox",
-    props:["datas"]
+    props:["datas"],
+    methods:{
+      toChatterpage(){
+        this.$router.push("/"+this.datas.chatterid+"/mainpage")
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      }
+    }
   }
 </script>
 
@@ -88,7 +96,6 @@
   height: auto;
   min-width: 20px;
   max-width: 500px;
-  min-height: 50px;
   float: right;
   background-color: #f0ffff;
   border-radius: 10px;
@@ -129,5 +136,6 @@
 
   user-select:none;
 
+  cursor: pointer;
 }
 </style>

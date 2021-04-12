@@ -99,6 +99,19 @@ public class UserController {
         String safetyanswerinput=(String)para.get("safetyanswerinput");
         return userserviceimpl.safetysetinput(userid,oldpassword,safetyanswerinput);
     }
+    @RequestMapping(value="/changebc",method=RequestMethod.POST)
+    @ResponseBody
+    public Object changebc(@RequestBody Map<String,Object> para){
+        int userid= (int) para.get("userid");
+        int colorNum=(int)para.get("colorNum");
+        return userserviceimpl.changebc(userid,colorNum);
+    }
+    @RequestMapping(value="/getbc",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getbc(@RequestBody Map<String,Object> para){
+        int userid=Integer.parseInt((String)para.get("userid"));
+        return userserviceimpl.getbc(userid);
+    }
     @GetMapping("/get")
     public Object getUserbyid(@RequestParam("userid")int userid){
         return userserviceimpl.getUserbyid(userid);

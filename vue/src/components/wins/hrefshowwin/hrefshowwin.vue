@@ -1,5 +1,5 @@
 <template>
-<div class="boxhhwin">
+<div class="boxhhwin" :style="getcolor1()">
   <div id="close_hwin" @click="closewin">
     <img :src="closeimg" alt="error">
   </div>
@@ -18,6 +18,12 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       closewin:function (){
         var temp=this.datas;
         temp.ifwin=false;
@@ -32,7 +38,6 @@
   width:auto;
   height: 40px;
   border-style: ridge;
-  background-color: white;
   z-index: 10;
 }
 #close_hwin{

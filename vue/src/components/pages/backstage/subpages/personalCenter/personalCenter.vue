@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="boxper" :style="getcolor1()">
   <div id="infocard">
     <input type="file"id="inputhead" @change="uploadpic">
     <div id="headimg"><img :src="headimgsrc" alt="error"></div>
@@ -9,12 +9,17 @@
     <div id="intro">
       <textarea cols="30" rows="10" v-model="introduction">{{introduction}}</textarea>
     </div>
-    <button @click="submit">保存修改</button>
+    <div class="button" @click="submit" :style="getcolor3()">保存修改</div>
   </div>
   <safeset :datas="safetysettinginfo" id="safetysetting"></safeset>
   <div id="backgroundset">
-    <div id="backgroundshow"><img :src="backgroundsrc" alt="error"></div>
-    <button id="backgroundbutton">更换背景</button>
+    <div id="backgroundshow">
+      <div @click="selectColor(index)" v-for="(item,index) in colorsSelect" :class="{colorSelect:colorNum==index,colorSelectnon:colorNum!=index}">
+        <div :class="{color1select:colorNum==index,color1selectnon:colorNum!=index}" :style="getcolor(index,1)"></div>
+        <div :class="{color2select:colorNum==index,color2selectnon:colorNum!=index}" :style="getcolor(index,2)"></div>
+      </div>
+    </div>
+    <div :style="getcolor3()" id="backgroundbutton" @click="changebc()">更换背景</div>
   </div>
   <ls id="letterarange"></ls>
 </div>
@@ -45,6 +50,8 @@
         introduction:"",
         safetysettinginfo:safetysettinginfo,
         lettersetinfo:lettersetinfo,
+        colorsSelect:[],
+        colorNum:0,
         backgroundsrc:"http://caesar216.usa3v.net/caelog/images/background.png"
       }
     },
@@ -53,10 +60,63 @@
       safeset:safetysetting,
       ls:letterset
     },
+    computed:{
+    },
+    watch:{
+      getcolor1(val){
+        console.log(val)
+      }
+    },
     mounted() {
       this.inituserinfo(this.$route.params.userid)
+      this.colorsSelect=this.$store.state.colorSelect
+      this.colorNum=this.$store.state.colorNum
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor(num,i){
+        let color="red"
+        if(i==1){
+          color=this.colorsSelect[num].color1
+        }
+        if(i==2){
+          color=this.colorsSelect[num].color2
+        }
+        return {backgroundColor: color}
+      },
+      selectColor(i){
+        this.$store.commit("changecolorSelect",i)
+        this.colorNum=i
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color1,1])
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color2,2])
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color3,3])
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color4,4])
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont,"Font"])
+        this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont2,"Font2"])
+        this.$parent.changeback()
+      },
+      changebc(){
+        let params={
+          userid:this.common.loginuserinfo.id,
+          colorNum:this.$store.state.colorNum
+        }
+        this.$axios.post(this.common.serveraddress+"/user/changebc",params).then(res=>{
+          if(res.data.code==200){
+            alert("背景更换成功！")
+          }
+          else{
+            alert("背景更换失败!")
+          }
+        })
+      },
       inituserinfo(userid){
         this.$axios({
           url:this.common.serveraddress+"/user/get?userid="+userid,
@@ -118,19 +178,65 @@
 </script>
 
 <style scoped>
-.box{
+.boxper{
   width:721px;
   height:1051px;
-  background-color: white;
 }
-#infocard{
-  width: 696px;
-  height: 219px;
-  border-bottom-style: groove;
-  border-width: thin;
-  position: absolute;
-  top:8px;
-  left:12px;
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.colorSelectnon{
+  border-radius: 18px;
+  width: 90px;
+  height: 35px;
+  float: left;
+  margin-left:20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.colorSelect{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  width: 86px;
+  height: 31px;
+  float: left;
+  margin-left:20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.color1selectnon{
+  width:45px;
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 35px;
+}
+.color2selectnon{
+  width:45px;
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 35px;
+}
+.color1select{
+  width:43px;
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 35px;
+}
+.color2select{
+  width:43px;
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 35px;
 }
 #inputhead{
   width: 60px;
@@ -179,12 +285,17 @@
   height: 100%;
   text-align: left;
 }
-#infocard button{
+.button{
   width:98px;
   height:43px;
   position: absolute;
   top:162px;
   left:582px;
+  line-height: 43px;
+  font-family: 华光楷体_CNKI;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 #safetysetting{
   position: absolute;
@@ -202,7 +313,6 @@
   width:596px;
   height: 150px;
   position: absolute;
-  width:100%;
   overflow: hidden;
   top:3px;
   left:7px;
@@ -211,8 +321,14 @@
   width:75px;
   height: 42px;
   position: absolute;
-  top:113px;
+  top:125px;
   left:615px;
+  line-height: 42px;
+  font-family: 华光楷体_CNKI;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #e6f0f5;
+  border-radius: 5px;
 }
 #letterarange{
   position: absolute;

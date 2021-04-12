@@ -1,7 +1,7 @@
 <template>
 <div class="sortbox">
-  <div id="sort1" @click="sortbyHot" :class="{shadow:sorttype==0,nonshadow:sorttype==1}">热度</div>
-  <div id="sort2" @click="sortbyTime" :class="{shadow:sorttype==1,nonshadow:sorttype==0}">时间</div>
+  <div id="sort1" :style="getcolor1()" @click="sortbyHot" :class="{shadow:sorttype==0,nonshadow:sorttype==1}">热度</div>
+  <div id="sort2" :style="getcolor1()" @click="sortbyTime" :class="{shadow:sorttype==1,nonshadow:sorttype==0}">时间</div>
   <div id="select">
     <select @change="selectbyTime" name="selecttime" v-model="timeselect">
       <option value="-1">全部</option>
@@ -25,6 +25,12 @@
       this.timeselect=-1
     },
     methods:{
+        getcolor1(){
+            return {backgroundColor: this.$store.state.color1}
+        },
+        getcolor2(){
+            return {backgroundColor: this.$store.state.color2}
+        },
       setsorttype:function (index){
         this.sorttype=index;
       },
@@ -65,19 +71,19 @@
     width:67px;
     height:26px;
     left:38px;
-    background-color: white;
     position: absolute;
     border-style: groove;
     border-width: thin;
+    cursor: pointer;
   }
   #sort2{
     width:67px;
     height:26px;
     left:155px;
-    background-color: white;
     position: absolute;
     border-style: groove;
     border-width: thin;
+    cursor: pointer;
   }
   #select{
     width:102px;

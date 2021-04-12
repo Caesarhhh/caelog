@@ -5,8 +5,8 @@
 <script>
   export default {
     name: "common",
-    //serveraddress:"http://47.115.18.74:8081",
-    serveraddress:"http://localhost:8081",
+    serveraddress:"http://47.115.18.74:8081",
+    //serveraddress:"http://localhost:8081",
     getserveraddress:"http://caesar216.usa3v.net/",
     userinfo:{},
     hrefinfo:[],
@@ -17,5 +17,7 @@
 </script>
 
 <style scoped>
-
+.test{
+  background-color:rgb(4,91,98);
+}
 </style>

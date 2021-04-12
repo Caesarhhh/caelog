@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="box" :style="getcolor1()">
     <div id="titlebox">
     <form action="">
       <input id="pic" name="multipartFile" type="file" @change="uploadpic" enctype="multipart/form-data">
@@ -9,7 +9,7 @@
     <input id="hrefcontent" v-model="hrefcontent"></input>
     <div id="commentstitle">备注</div>
     <input id="commentscontent" v-model="commentcontent"></input>
-    <button id="confirm" @click="submit">添加</button>
+    <div id="confirm" :style="getcolor3()" @click="submit">添加</div>
   </div>
   <div id="announcement">可见的链接最多只能有四个</div>
   <hc id="hc1" :datas.sync="hrefcardinfo[(pagenumsinfo.pos-1)*6]" v-if="(pagenumsinfo.pos-1)*6<hrefnum"></hc>
@@ -47,6 +47,15 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
       refresh:function (){
         this.hrefcardinfo=[]
         this.hrefnum=0
@@ -185,7 +194,6 @@
 .box{
   width:721px;
   height:650px;
-  background-color: white;
 }
 #titlebox{
   width:673px;
@@ -201,7 +209,7 @@
   height: 80px;
   position: absolute;
   top:26px;
-  left:35px;
+  left:25px;
   opacity: 0;
   z-index: 10;
   background-color:transparent !important;
@@ -264,7 +272,9 @@
   right:10px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
-  background-color: white;
+  line-height: 25px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 #announcement{
   width: 673px;

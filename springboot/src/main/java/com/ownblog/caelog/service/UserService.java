@@ -17,5 +17,7 @@ public interface UserService {
     public Result getnickname(int userid);
     public Result getuser(int userid);
     public Result safetysetinput(int userid,String oldpassword,String securityAnswer);
+    public Result changebc(int userid,int colorNum);
+    public Result getbc(int userid);
     boolean testemail(String emailaddress);
 }

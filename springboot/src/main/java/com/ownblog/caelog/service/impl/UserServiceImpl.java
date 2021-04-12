@@ -189,6 +189,31 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Result changebc(int userid, int colorNum) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap map=new HashMap();
+        map.put("id",userid);
+        map.put("colorNum",colorNum);
+        userDao.changebc(map);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ("succeed!");
+    }
+
+    @Override
+    public Result getbc(int userid) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap map=new HashMap();
+        map.put("id",userid);
+        int res=userDao.getbc(map);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ(res);
+    }
+
+    @Override
     public boolean testemail(String emailaddress) {
         SqlSession sqlSession= BatisUtils.getSqlSession();
         UserDao userDao=sqlSession.getMapper(UserDao.class);

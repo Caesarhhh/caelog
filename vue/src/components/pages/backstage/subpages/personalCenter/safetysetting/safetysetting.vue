@@ -15,7 +15,7 @@
     <div id="emailtitle">邮箱验证码</div>
     <input class="input" id="emailinput" v-model="codeinput" v-if="ifcode"></input>
     <div id="emailget" @click="getrandomcode" v-if="!ifcode">获取验证码</div>
-    <button id="confirmbutton" @click="changepassword">提交</button>
+    <div id="confirmbutton" :style="getcolor3()" @click="changepassword">提交</div>
   </div>
   <div id="safety">
     <div id="safesettitle">密保安全</div>
@@ -27,7 +27,7 @@
     <div id="secretenter" v-if="safetyenter==0">
       <div id="secrettitle"><div>输入密码</div></div>
       <input id="secretinput" type="password" v-model="safetyinput"></input>
-      <button id="secretbutton" @click="entersecret">确认</button>
+      <div :style="getcolor3()" id="secretbutton" @click="entersecret">确认</div>
     </div>
     <div id="questionset" v-if="safetyenter==1">
     <div id="questiontitle">密保问题</div>
@@ -127,6 +127,15 @@
               alert(res.data.msg)
             }
           })
+      },
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
       },
       getrandomcode:function (){
         let data={
@@ -343,7 +352,9 @@
   position: absolute;
   top:269px;
   left:255px;
-  background-color: white;
+  font-family: 华光楷体_CNKI;
+  line-height: 22px;
+  cursor: pointer;
 }
 #safesettitle{
   width:236px;
@@ -485,6 +496,9 @@
   position: absolute;
   right:10px;
   top:37px;
+  font-family: 华光楷体_CNKI;
+  line-height: 24px;
+  cursor: pointer;
 }
 #emailset{
   width:236px;

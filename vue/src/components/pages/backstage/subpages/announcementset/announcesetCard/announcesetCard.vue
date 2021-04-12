@@ -1,5 +1,5 @@
 <template>
-<div class="box1">
+<div class="box1" :style="getColor4()">
   <div id="contentbox">
     <div id="title">{{datas.title}}</div>
     <div id="content">{{datas.content}}</div>
@@ -21,6 +21,11 @@
       }
     },
     methods:{
+      getColor4(){
+        return {
+          backgroundColor:this.$store.state.color4
+        }
+      },
       del:function (id){
         this.$parent.deletean(id)
       },
@@ -41,7 +46,6 @@
 #contentbox{
   width: 596px;
   height: 148px;
-  border-style: groove;
   border-width: thin;
   position: absolute;
   top:7px;

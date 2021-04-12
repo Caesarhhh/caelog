@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" :style="getcolor1()">
     <div id="info">
       <div id="title">{{datas.title}}</div>
       <div id="articleblock">{{datas.block}}</div>
@@ -30,6 +30,12 @@
     },
     props:["datas"],
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       toglegood:function (){
         if((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null){
           alert("请先登录")
@@ -85,7 +91,6 @@
     height:247px;
     border-radius: 10px;
     border-bottom-style: groove;
-    background-color: white;
     position: relative;
   }
   #info{

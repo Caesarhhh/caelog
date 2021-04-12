@@ -1,5 +1,5 @@
 <template>
-<div class="box1">
+<div class="box1" :style="getcolor4()">
   <div id="pic"><img :src="datas.imgsrc" alt=""></div>
   <div id="name">{{datas.name}}</div>
   <div id="comments">{{datas.comments}}</div>
@@ -17,6 +17,11 @@
     },
     props:["datas"],
     methods:{
+      getcolor4(){
+        return {
+          backgroundColor:this.$store.state.color4
+        }
+      },
       del:function (id){
           this.$parent.deletebl(id)
       }

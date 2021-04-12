@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="box" :style="getcolor1()">
   <div id="topbox">
     <select @change="selectbyBlock" v-model="blockselect">
       <option value="all">全部</option>
@@ -7,7 +7,7 @@
     </select>
     <st id="sorttool" :datas="sortinfo"></st>
   </div>
-  <div id="punisharticle" @click="toedit">发布文章</div>
+  <div id="punisharticle" :style="getcolor3()" @click="toedit">发布文章</div>
   <div id="articlesbox">
     <ac id="ac1" :datas="acinfoprint[(pginfo.pos-1)*4]" v-if="(pginfo.pos-1)*4<articlenum"></ac>
     <ac id="ac2" :datas="acinfoprint[(pginfo.pos-1)*4+1]" v-if="(pginfo.pos-1)*4+1<articlenum"></ac>
@@ -60,6 +60,15 @@
       this.refresh_article()
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
       selectbyBlock:async function (){
         let s=this.blockselect
         let len=this.acinfo.length
@@ -244,7 +253,6 @@
 .box{
   width:721px;
   height:1150px;
-  background-color: white;
 }
 #topbox{
   width: 677px;
@@ -280,6 +288,8 @@
   right:50px;
   font-family: 华光楷体_CNKI;
   font-size: 22px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #articlesbox{
   width:656px;

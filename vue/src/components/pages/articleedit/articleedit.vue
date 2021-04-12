@@ -1,14 +1,14 @@
 <template>
   <div class="articleedit">
     <div id="empty">
-      <div id="buttonbox">
+      <div id="buttonbox" :style="getcolor1()">
         <div id="mainhref" @click="topage('/mainpage')">首页</div>
         <div id="backhref" @click="topage('/backstage')">后台</div>
       </div>
-      <div id="markdowntitle">markdown</div>
+      <div id="markdowntitle" :style="getcolor1()">markdown</div>
       <textarea id="markdownarea" v-model="innerhtmlinput" @keyup="mdSwitch"></textarea>
-      <div id="showtitle">预览</div>
-      <div :class="{showarea:count>-2}">
+      <div id="showtitle" :style="getcolor1()">预览</div>
+      <div :class="{showarea:count>-2}" :style="getcolor1()">
         <GeminiScrollbar>
           <div id="gsd">
             <div id="showhtml"></div>
@@ -16,7 +16,7 @@
         </GeminiScrollbar>
       </div>
       <div id="bot">
-        <div id="settingbox">
+        <div id="settingbox" :style="getcolor1()">
           <div id="titlesetting">
             <div id="titletitle">标题定义</div>
             <input type="text" id="titleinput" v-model="titleinput"></input>
@@ -24,7 +24,7 @@
           <div id="blockbox">
             <div id="blocktitle">模块选择</div>
             <select id="blockselect" v-model="selected">
-              <option v-for="(item,index) in blocks" :value="index">{{ item }}</option>
+              <option v-for="(item,index) in blocks" :value="index" v-if="blocks.length>0">{{ item }}</option>
             </select>
             <div id="createblockarea">
               <div id="createtitle">新建板块</div>
@@ -47,8 +47,8 @@
             <lc class="labelcard" v-for="item in labelcardinfo" :datas="item"></lc>
           </div>
         </div>
-        <div class="submit" @click="submit" v-if="ifnew">发表</div>
-        <div class="submit" @click="submit_old" v-if="!ifnew">完成修改</div>
+        <div class="submit" :style="getcolor1()" @click="submit" v-if="ifnew">发表</div>
+        <div class="submit" :style="getcolor1()" @click="submit_old" v-if="!ifnew">完成修改</div>
       </div>
     </div>
   </div>
@@ -86,8 +86,14 @@
       lc: labelcard
     },
     methods: {
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       topage(s){
-        this.$router.push({path:"/"+this.common.loginuserinfo.id+s})
+        this.$router.push({path:"/"+this.$store.state.loginuserinfo.id+s})
       },
       addlabel: function () {
         var temp = {
@@ -105,7 +111,7 @@
         this.count*=-1;
       },
       refresh_blocks:function (){
-        this.blocks=[{label:"",id:""}]
+        this.blocks=[]
         this.$axios.get(
           this.common.serveraddress+"/blocks/get?userid="+this.common.loginuserinfo.id).then(
           res=>{
@@ -143,7 +149,7 @@
         let file = e.target.files[0]
         let param = new FormData()
         param.append('file', file)
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
           console.log(res.data)
           this.newimgsrc=this.common.getserveraddress+res.data.data})
@@ -151,7 +157,7 @@
       addblock:function (){
         let param = new FormData()  // 创建form对象
         param.append('imgsrc', this.newimgsrc)  // 通过append向form对象添加数据
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append("name_",this.newblockname)
         param.append("remark",this.newblockcomment)
         this.uploadFile("/blocks/add",param).then(res=>{
@@ -167,7 +173,7 @@
         }
         let param = new FormData()
         param.append('name_', this.labelcardinfo[pos].label)
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('articleid',articleid)
         this.uploadFile("/labels/add",param).then(res=>{
           if(res.data.code==200){
@@ -180,7 +186,7 @@
         }
         let param = new FormData()
         param.append('name_', this.originlabels[pos].label)
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('articleid',articleid)
         this.uploadFile("/labels/add",param).then(res=>{
           if(res.data.code==200){
@@ -190,7 +196,7 @@
       deletelabel:function (set){
         let param = new FormData()
         for(var i=0;i<set.length;i++){
-        param.append('userid',this.common.userinfo.id)
+        param.append('userid',this.common.loginuserinfo.id)
         param.append('id',this.labelss[set[i].label])
         this.uploadFile("/labels/delete",param).then(res=>{
           if(res.data.code==200){
@@ -339,7 +345,6 @@
   #buttonbox {
     width: 720px;
     height: 60px;
-    background-color: white;
     position: absolute;
     top: 13px;
     left: 152px;
@@ -381,7 +386,6 @@
     font-weight: bold;
     top: 80px;
     left: 25px;
-    background-color: white;
   }
 
   #showtitle {
@@ -396,7 +400,6 @@
     font-weight: bold;
     top: 80px;
     left: 519px;
-    background-color: white;
   }
 
   #markdownarea {
@@ -414,7 +417,6 @@
     position: absolute;
     top: 130px;
     left: 519px;
-    background-color: white;
   }
 
   #showhtml {
@@ -450,7 +452,6 @@
     border-width: thin;
     left: 0px;
     top: 0px;
-    background-color: white;
   }
 
   #titlesetting{
@@ -683,6 +684,5 @@
     margin-top: 80px;
     margin-left: 420px;
     margin-bottom: 50px;
-    background-color: white;
   }
 </style>

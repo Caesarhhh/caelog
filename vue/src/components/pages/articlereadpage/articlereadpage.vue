@@ -1,10 +1,10 @@
 <template>
 <div class="box2">
-  <div id="pagehrefbox">
-    <div class="pagebutton" @click="topage('/mainpage')">首页</div>
-    <div class="pagebutton" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
+  <div id="pagehrefbox" :style="getcolor1()">
+    <div class="pagebutton" :style="getcolor1()" @click="topage('/mainpage')">首页</div>
+    <div class="pagebutton" :style="getcolor1()" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
   </div>
-  <div id="readcontent">
+  <div id="readcontent" :style="getcolor1()">
     <div id="title">{{title}}</div>
     <div id="showarea">
       <GeminiScrollbar>
@@ -16,7 +16,7 @@
   </div>
   <pc id="personalcard" :datas="pcpos"></pc>
   <st id="searchtool_ar"></st>
-  <div id="blockbox_ar">
+  <div id="blockbox_ar" :style="getcolor1()">
     <lb id="blocks" :datas="blocklabels"></lb>
     <lb id="labels" :datas="labellabels"></lb>
   </div>
@@ -24,7 +24,7 @@
     <img :src="this.good==-1?nogoodimgsrc:goodimgsrc" alt="error" @click="toglegood">
     <img :src="transmitimgsrc" alt="error">
   </div>
-  <div id="commentarea">
+  <div id="commentarea" :style="getcolor1()">
     <div id="editcomment">
       <div id="editImgsrc"><img :src="headimgsrc" alt="未登录"></div>
       <input id="editinput" v-model="inputtext"></input>
@@ -393,6 +393,12 @@
               }
             })
       },
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       inituserinfo(userid){
         this.$axios({
           url:this.common.serveraddress+"/user/get?userid="+userid,
@@ -459,7 +465,6 @@
     position: absolute;
     top:26px;
     left:8px;
-    background-color: white;
   }
   .pagebutton{
     width: 70px;
@@ -471,7 +476,7 @@
     line-height: 45px;
     font-family: 华光楷体_CNKI;
     font-size: 25px;
-    background-color: white;
+    cursor: pointer;
   }
   #personalcard{
     position: absolute;
@@ -489,7 +494,6 @@
     left:734px;
     width: 280px;
     height: 600px;
-    background-color: white;
   }
   #blocks{
     float:left;
@@ -539,7 +543,6 @@
     position: absolute;
     left:8px;
     top:98px;
-    background-color: white;
   }
   #gsd{
     width: 682px;
@@ -558,7 +561,6 @@
     position: absolute;
     left:21px;
     top:1112px;
-    background-color: white;
   }
   #editcomment{
     width: 942px;

@@ -1,5 +1,5 @@
 <template>
-<div class="searchbox">
+<div class="searchbox" :style="getcolor1()">
 <input id="searchinput" v-model="inputtext"></input>
   <div id="searchbutton" @click="searchto">
     <img :src="searchimg" alt="error">
@@ -18,6 +18,12 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
       searchto:function (){
       this.$router.push("/"+this.$route.params.userid+"/articleshow/search/"+this.inputtext)
     }
@@ -29,7 +35,6 @@
   .searchbox{
     width:280px;
     height:40px;
-    background-color: white;
     position: relative;
   }
   #searchinput{

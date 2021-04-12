@@ -1,6 +1,6 @@
 <template>
 <div class="box_pn clearfix">
-  <div id="bigbox">
+  <div id="bigbox" :style="getColor4()">
     <div id="first" @click="postostart">首页</div>
     <div id="backbutton" v-if="datas.pos>1" @click="redpos"><img :src="backsrc" alt="error"></div>
     <div id="numsbox">
@@ -31,6 +31,11 @@
       }
     },
     methods:{
+      getColor4(){
+        return{
+          backgroundColor:this.$store.state.color4
+        }
+      },
       addpos:function (){
         if(this.datas.pos<this.datas.sum){
           var temp={
@@ -78,8 +83,8 @@
 .box_pn{
   width:584px;
   height:50px;
-  border-style: groove;
   border-width: thin;
+  border-radius: 10px;
 }
 #first{
   width: 65px;
@@ -92,6 +97,7 @@
   line-height: 34px;
   font-family: 华光楷体_CNKI;
   font-size: 22px;
+  cursor: pointer;
 }
 #backbutton{
   width: 40px;
@@ -101,6 +107,7 @@
   position: absolute;
   left: 78px;
   top:3px;
+  cursor: pointer;
 }
 #backbutton img{
   width: 100%;
@@ -114,6 +121,7 @@
   position: absolute;
   right: 78px;
   top:3px;
+  cursor: pointer;
 }
 #aheadbutton img{
   width: 100%;
@@ -141,6 +149,7 @@
   position: absolute;
   top:6px;
   line-height: 32px;
+  cursor: pointer;
 }
 #num1{
   right:280px;
@@ -175,6 +184,7 @@
   line-height: 34px;
   font-family: 华光楷体_CNKI;
   font-size: 22px;
+  cursor: pointer;
 }
 .clearfix:after{
   content: "";

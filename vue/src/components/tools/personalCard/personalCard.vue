@@ -1,7 +1,7 @@
 <template>
   <div class="empty_pc">
-    <hsw :class="{hrefwin:datas.pos=='left',hrefwin_:datas.pos=='right'}" :datas.sync="hrefwininfo" v-if="hrefwininfo.ifwin"></hsw>
-    <div :class="{box:datas.pos=='left',box_:datas.pos=='right'}">
+    <hsw :style="getcolor3()" :class="{hrefwin:datas.pos=='left',hrefwin_:datas.pos=='right'}" :datas.sync="hrefwininfo" v-if="hrefwininfo.ifwin"></hsw>
+    <div :class="{box:datas.pos=='left',box_:datas.pos=='right'}" :style="getcolor1()">
       <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
       <div id="pic">
         <img v-bind:src="this.common.userinfo.backimgsrc" alt="error">
@@ -57,6 +57,15 @@
       hsw:hrefshowwin
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
       openchat:function (){
         if(!this.hrefwininfo.ifwin){
         this.chatinfo.ifwin=true;
@@ -119,14 +128,12 @@
     width: 250px;
     height: 279px;
     position: relative;
-    background-color: white;
   }
   .box_{
     width: 250px;
     height: 279px;
     position: absolute;
     right: 0px;
-    background-color: white;
   }
   .empty_pc{
     width:1000px;

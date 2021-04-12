@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" :style="getcolor4()">
     <div id="info">
       <div id="title">{{datas.title}}</div>
       <div id="articleblock">{{datas.block}}</div>
@@ -27,6 +27,11 @@
     },
     props:["datas"],
     methods:{
+      getcolor4(){
+        return{
+          backgroundColor:this.$store.state.color4
+        }
+      },
       deleteac:function (aid){
         this.$parent.deleteac(aid)
       },

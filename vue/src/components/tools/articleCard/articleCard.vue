@@ -1,5 +1,5 @@
 <template>
-<div class="box">
+<div class="boxac" :style="getColor4()">
   <div id="info">
     <div id="title">{{datas.title}}</div>
     <div id="articleblock">{{datas.block}}</div>
@@ -30,6 +30,11 @@
     },
     props:["datas"],
     methods:{
+        getColor4(){
+            return {
+                backgroundColor:this.$store.state.color4
+            }
+        },
       toglegood:function (){
         if((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null){
           alert("请先登录")
@@ -80,7 +85,7 @@
 </script>
 
 <style scoped>
-.box{
+.boxac{
   width:500px;
   height:200px;
   border-radius: 10px;
