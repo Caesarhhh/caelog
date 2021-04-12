@@ -28,6 +28,7 @@ D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\Dao\SocialhrefDao.j
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\CommentService.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\SocialhrefController.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\impl\ArticleServiceImpl.java
+D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\configurer\HttpToHttpsConfig.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\UserService.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\ActionController.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\Socialhref.java

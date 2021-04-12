@@ -41,6 +41,7 @@ public class WebConfiguration implements WebMvcConfigurer {
         excludePath.add("/user/register");
         excludePath.add("/user/login");
         excludePath.add("/user/get");
+        excludePath.add("/user/getbc");
         excludePath.add("/user/getimgsrc");
         excludePath.add("/user/getnickname");
         excludePath.add("/user/testname");

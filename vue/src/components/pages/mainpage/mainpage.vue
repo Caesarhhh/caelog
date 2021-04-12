@@ -22,7 +22,7 @@
       <lb id="blocks" :datas="blocksInfo"></lb>
       <lb id="labels" :datas="labelsInfo"></lb>
     </div>
-    <div id="toback" @click="tobackstage" :style="getcolor3()" v-if="this.common.loginuserinfo.id==this.$route.params.userid">
+    <div id="toback" @click="tobackstage" :style="getcolor3()" v-if="ifback">
       <div>前往后台</div>
     </div>
   </div>
@@ -89,6 +89,7 @@
         pcpos:{pos:'left'},
         articlenum:0,
         sorttype:1,
+        ifback:false,
         pagenumsinfo:{
           sum:1,
           pos:1
@@ -109,6 +110,12 @@
     mounted() {
       if(typeof this.$route.params.userid==='undefined'){
         this.router.push("/4/mainpage")
+      }
+      let tmp=this.common.loginuserinfo
+      if(!(!tmp && typeof(tmp)!="undefined" && tmp!=0)){
+        if(this.common.loginuserinfo.id==this.$route.params.userid){
+          this.ifback=true
+        }
       }
       this.inituserinfo(this.$route.params.userid)
     },
