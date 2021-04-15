@@ -1,5 +1,5 @@
 <template>
-  <div class="box" :style="getcolor1()">
+  <div class="box" :style="getcolor4()">
     <div id="info">
       <div id="title">{{datas.title}}</div>
       <div id="articleblock">{{datas.block}}</div>
@@ -9,7 +9,7 @@
       <div id="content">{{datas.content}}</div>
       <div id="buttonbox">
         <div class="button" @click="toglegood()"><img :src="this.good==1?goodsrc:nogoodsrc" alt="error"></div>
-        <div class="button"><img :src="turnsrc" alt="error"></div>
+        <div class="button" @click="share()"><img :src="turnsrc" alt="error"></div>
         <div class="button" @click="readto"><img :src="readsrc" alt="error"></div>
       </div>
     </div>
@@ -30,11 +30,16 @@
     },
     props:["datas"],
     methods:{
-      getcolor1(){
-        return {backgroundColor: this.$store.state.color1}
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
       },
       getcolor2(){
         return {backgroundColor: this.$store.state.color2}
+      },
+      share(){
+        this.$copyText(this.common.siteaddress+"/"+this.$route.params.userid+"/articleread/"+this.datas.id).then(res=>{
+          alert("已复制文章连接到剪切板")
+        })
       },
       toglegood:function (){
         if((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null){

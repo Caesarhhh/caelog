@@ -64,6 +64,62 @@ const store = new Vuex.Store({
         color4:"rgb(145,78,193)",
         colorFont:"rgb(255,255,255)",
         colorFont2:"white"
+      },{
+        color1:"#05668D",
+        color2:"#028090",
+        color3:"#B2DBBF",
+        color4:"#02C39A",
+        colorFont:"white",
+        colorFont2:"#F0F3BD"
+      },{
+        color1:"#607D8B",
+        color2:"#455A64",
+        color3:"#757575",
+        color4:"#FFFFFF",
+        colorFont:"#212121",
+        colorFont2:"#BDBDBD"
+      },{
+        color1:"#4CAF50",
+        color2:"#689F38",
+        color3:"#8BC34A",
+        color4:"#FFFFFF",
+        colorFont:"#212121",
+        colorFont2:"#BDBDBD"
+      },{
+        color1:"#03A9F4",
+        color2:"#0288D1",
+        color3:"#448AFF",
+        color4:"#FFFFFF",
+        colorFont:"#212121",
+        colorFont2:"#BDBDBD"
+      },{
+        color1:"#9DC8C8",
+        color2:"#519D9E",
+        color3:"#8CD790",
+        color4:"#58C9B9",
+        colorFont:"#212121",
+        colorFont2:"#BDBDBD"
+      },{
+        color1:"#278E9F",
+        color2:"#10606B",
+        color3:"#444678",
+        color4:"#73C2B4",
+        colorFont:"white",
+        colorFont2:"#67797D"
+      },{
+        color1:"#E4CD9B",
+        color2:"#5E4F45",
+        color3:"#BBA180",
+        color4:"#FFEED0",
+        colorFont:"green",
+        colorFont2:"#67797D"
+      },{
+        color1:"#34526C",
+        color2:"#04403F",
+        color3:"#203D3C",
+        color4:"#483F38",
+        colorFont:"white",
+        colorFont2:"#BDBDBD"
       }
     ]
   },

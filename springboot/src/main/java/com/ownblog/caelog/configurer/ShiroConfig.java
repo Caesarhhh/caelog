@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@Configuration
 public class ShiroConfig {
     @Bean
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier("getDeafultWebSecurityManager")DefaultWebSecurityManager defaultWebSecurityManager){

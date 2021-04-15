@@ -1,6 +1,8 @@
 <template>
 <div class="backstage">
-  <sb id="selectbox" :datas="selectboxinfo" :pageindex_.sync="pageindex"></sb>
+  <div @click="tomainpage" id="tomain" :style="getcolor3()">首页</div>
+  <div @click="tomainpage" :style="getcolor3_()" id="tri"></div>
+  <sb id="selectbox" ref="sb" :datas="selectboxinfo" :pageindex_.sync="pageindex"></sb>
   <pc id="personalcentor" :datas="personalCenterinfo" v-if="this.pageindex==1"></pc>
   <ar id="articlearrange" :datas="articlearrangeinfo" v-if="this.pageindex==2"></ar>
   <shs id="socialhrefset" :datas="socialhrefinfo" v-if="this.pageindex==3"></shs>
@@ -50,8 +52,26 @@
       getcolor2(){
         return {backgroundColor: this.$store.state.color2}
       },
+      getcolor3(){
+        return {
+          backgroundColor: this.$store.state.color3
+        }
+      },
+      getcolor3_(){
+        return {
+          borderWidth:"20px",
+          borderStyle:"solid",
+          borderTopColor:this.$store.state.color3,
+          borderBottomColor:"transparent",
+          borderLeftColor:"transparent",
+          borderRightColor:"transparent"
+        }
+      },
       changeback(){
         this.$parent.changeback()
+      },
+      tomainpage(){
+        this.$router.push("/"+this.common.loginuserinfo.id+"/mainpage")
       }
     },
     components:{
@@ -67,9 +87,11 @@
         this.$router.push("/login")
       }
       if(this.common.loginuserinfo.id!=this.$route.params.userid){
+        this.$router.push("/"+this.common.loginuserinfo.id+"/mainpage")
         alert("您无权访问该用户后台！")
-        location.go(-1)
       }
+    },
+    beforeMount() {
     },
     mounted() {
       this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"))
@@ -90,6 +112,28 @@
   position: relative;
   margin-top: 0px;
   width:1024px;
+}
+#tomain{
+  position: absolute;
+  cursor: pointer;
+  width:40px;
+  font-family: 华光楷体_CNKI;
+  height: 60px;
+  top:0px;
+  font-size: 22px;
+  line-height: 35px;
+  z-index: 99;
+  border-radius: 2px;
+}
+#tri{
+  width: 0px;
+  height: 0px;
+  left:0px;
+  top:59px;
+  position: absolute;
+  z-index: 98;
+  border-radius: 2px;
+  cursor: pointer;
 }
 #selectbox{
   position: absolute;

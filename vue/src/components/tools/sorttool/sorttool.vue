@@ -72,8 +72,10 @@
     height:26px;
     left:38px;
     position: absolute;
-    border-style: groove;
-    border-width: thin;
+    border-radius: 10px;
+    font-family: 华光楷体_CNKI;
+    font-size: 18px;
+    line-height: 26px;
     cursor: pointer;
   }
   #sort2{
@@ -81,8 +83,10 @@
     height:26px;
     left:155px;
     position: absolute;
-    border-style: groove;
-    border-width: thin;
+    font-family: 华光楷体_CNKI;
+    font-size: 18px;
+    line-height: 26px;
+    border-radius: 10px;
     cursor: pointer;
   }
   #select{
@@ -93,7 +97,19 @@
     position: absolute;
   }
   #select select{
+    border-radius: 10px;
+    border-width: thin;
+    border-style: solid;
+    position: absolute;
+    top:0px;
+    left:0px;
+    outline: none;
     width:100%;
     height:100%;
+    font-family: 华光楷体_CNKI;
+    font-size: 18px;
+  }
+  #select select:focus{
+    border-width: 2px;
   }
 </style>

@@ -9,7 +9,7 @@
       <div id="passwordtitle">密码</div>
       <input type="text" id="nameinput" v-model="inputmsg.textinput">
       <input type="password" id="passwordinput" v-model="inputmsg.passwordinput">
-      <div id="login" class="unselect" @click="submitForm">登录</div>
+      <div id="login" :style="getcolor3()" class="unselect" @click="submitForm">登录</div>
     </div>
   </div>
 </div>
@@ -37,6 +37,12 @@
       },
       getcolor2(){
         return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
       },
       submitForm(){
         let v=this
@@ -138,12 +144,13 @@
   font-size: 22px;
 }
 #login{
-  border-style: ridge;
+  border-radius: 5px;
   position: absolute;
   top:145px;
   right:25px;
   font-family: 华光楷体_CNKI;
   font-size: 25px;
+  cursor: pointer;
 }
 .unselect{
 

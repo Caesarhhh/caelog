@@ -124,7 +124,7 @@ public class UserServiceImpl implements UserService {
         UserDao userDao=sqlSession.getMapper(UserDao.class);
         User user=new User();
         HashMap map=new HashMap();
-        map.put("userid",user.getId());
+        map.put("userid",userid);
         user=userDao.getUserbyid(map).get(0);
         return changePersonlData(userid, user.getNickname(), user.getPassword(), user.getIntroduction(), user.getBackimgsrc(), safetyq,safetya,safetye);
     }
@@ -170,9 +170,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Result safetysetinput(int userid, String oldpassword, String securityAnswer) {
+    public Result safetysetinput(int userid, String oldpassword, String securityAnswer,String emailcode,String codeinput) {
         SqlSession sqlSession= BatisUtils.getSqlSession();
         UserDao userDao=sqlSession.getMapper(UserDao.class);
+        String token= TokenUtil.getcode(emailcode);
+        if(!token.equals(codeinput)){
+            return Result.fail("验证码错误！");
+        }
         User user=new User();
         HashMap map=new HashMap();
         map.put("userid",userid);
@@ -208,6 +212,18 @@ public class UserServiceImpl implements UserService {
         HashMap map=new HashMap();
         map.put("id",userid);
         int res=userDao.getbc(map);
+        sqlSession.commit();
+        sqlSession.close();
+        return Result.succ(res);
+    }
+
+    @Override
+    public Result getemail(int userid) {
+        SqlSession sqlSession= BatisUtils.getSqlSession();
+        UserDao userDao=sqlSession.getMapper(UserDao.class);
+        HashMap map=new HashMap();
+        map.put("userid",userid);
+        String res=userDao.getemail(map);
         sqlSession.commit();
         sqlSession.close();
         return Result.succ(res);

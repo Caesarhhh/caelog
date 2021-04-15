@@ -8,11 +8,22 @@ import VueRouter from "vue-router";
 import axios from "axios";
 import common from "./components/tools/common/common";
 import store from "./store";
+import VueClipboard from 'vue-clipboard2';
+import 'prismjs/themes/prism.css';
+import hljs from "highlight.js"
+import 'highlight.js/styles/stackoverflow-dark.css';
 Vue.config.productionTip = false
+Vue.use(VueClipboard)
 Vue.use(VueRouter)
 Vue.prototype.$axios=axios;
 Vue.prototype.common=common;
 /* eslint-disable no-new */
+Vue.directive('highlight',function (el) {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block)=>{
+    hljs.highlightBlock(block)
+  })
+})
 const router=new VueRouter({
   mode:'history',
   routes:routers,
@@ -34,7 +45,6 @@ router.beforeEach((to, from, next) => {
 router.afterEach(() => {
   window.scrollTo(0,0);
 })
-
 new Vue({
   el: '#app',
   components:{

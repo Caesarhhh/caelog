@@ -1,12 +1,12 @@
 <template>
-<div class="box1">
+<div class="box">
   <div class="searchbox" :style="getcolor1()">
     <input id="searchinput" v-model="inputtext"></input>
     <div id="searchbutton" @click="searchto">
       <img :src="searchimgsrc" alt="error">
     </div>
   </div>
-  <st :datas="sorttoolinfo" :style="getcolor1()" id="sorttool_as"></st>
+  <st :datas="sorttoolinfo" id="sorttool_as"></st>
   <div id="blockbox_as" :style="getcolor1()">
     <div id="blockstitle">板块</div>
     <div id="searchselect" @click="searchresult"><div>搜索结果</div></div>
@@ -164,6 +164,7 @@
         this.getarticleinfo()
       },
       getarticleinfo:function (){
+        var that=this
         this.pagenumsinfo={
           pos:1,
           sum:0
@@ -186,16 +187,16 @@
               }
               this.$axios.get(
                 this.common.serveraddress+"/article/getbysearch?userid="+this.$route.params.userid+"&searchcontent="+searchdata).then(
-                res=>{
-                  for(var i=0;i<res.data.data.length;i++){
+                ress=>{
+                  for(var i=0;i<ress.data.data.length;i++){
                     var temp={
-                      title:res.data.data[i].title,
-                      block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time_,
-                      content:res.data.data[i].content,
-                      id:res.data.data[i].id,
-                      goodnum:res.data.data[i].goodnum,
-                      viewnum:res.data.data[i].viewnum
+                      title:ress.data.data[i].title,
+                      block:this.blocks[ress.data.data[i].blockid]['name'],
+                      time:ress.data.data[i].time_,
+                      content:ress.data.data[i].content,
+                      id:ress.data.data[i].id,
+                      goodnum:ress.data.data[i].goodnum,
+                      viewnum:rses.data.data[i].viewnum
                     }
                     if(this.sorttoolinfo.timeslot.length==0||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].st!=temp.time.substring(2,4)||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].et!=temp.time.substring(5,7)){
                       this.sorttoolinfo.timeslot.push({
@@ -214,16 +215,16 @@
             else if(this.$route.params.type=="label"){
               this.$axios.get(
                 this.common.serveraddress+"/article/getbylabel?userid="+this.$route.params.userid+"&labelname="+this.$route.params.data).then(
-                res=>{
-                  for(var i=0;i<res.data.data.length;i++){
+                ress=>{
+                  for(var i=0;i<ress.data.data.length;i++){
                     var temp={
-                      title:res.data.data[i].title,
-                      block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time_,
-                      content:res.data.data[i].content,
-                      id:res.data.data[i].id,
-                      goodnum:res.data.data[i].goodnum,
-                      viewnum:res.data.data[i].viewnum
+                      title:ress.data.data[i].title,
+                      block:that.blocks[ress.data.data[i].blockid]['name'],
+                      time:ress.data.data[i].time_,
+                      content:ress.data.data[i].content,
+                      id:ress.data.data[i].id,
+                      goodnum:ress.data.data[i].goodnum,
+                      viewnum:ress.data.data[i].viewnum
                     }
                     if(this.sorttoolinfo.timeslot.length==0||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].st!=temp.time.substring(2,4)||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].et!=temp.time.substring(5,7)){
                       this.sorttoolinfo.timeslot.push({
@@ -242,16 +243,17 @@
             else if(this.$route.params.type=="block"){
               this.$axios.get(
                 this.common.serveraddress+"/article/getbyblock?userid="+this.$route.params.userid+"&blockname="+this.$route.params.data).then(
-                res=>{
-                  for(var i=0;i<res.data.data.length;i++){
+                ress=>{
+                  console.log(ress)
+                  for(var i=0;i<ress.data.data.length;i++){
                     var temp={
-                      title:res.data.data[i].title,
-                      block:this.blocks[res.data.data[i].blockid]['name'],
-                      time:res.data.data[i].time_,
-                      content:res.data.data[i].content,
-                      id:res.data.data[i].id,
-                      goodnum:res.data.data[i].goodnum,
-                      viewnum:res.data.data[i].viewnum
+                      title:ress.data.data[i].title,
+                      block:that.blocks[ress.data.data[i].blockid]['name'],
+                      time:ress.data.data[i].time_,
+                      content:ress.data.data[i].content,
+                      id:ress.data.data[i].id,
+                      goodnum:ress.data.data[i].goodnum,
+                      viewnum:ress.data.data[i].viewnum
                     }
                     if(this.sorttoolinfo.timeslot.length==0||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].st!=temp.time.substring(2,4)||this.sorttoolinfo.timeslot[this.sorttoolinfo.timeslot.length-1].et!=temp.time.substring(5,7)){
                       this.sorttoolinfo.timeslot.push({
@@ -364,8 +366,7 @@
   #blockbox_as{
     width:250px;
     height: auto;
-    border-style: groove;
-    border-width: thin;
+    border-radius: 10px;;
     position: absolute;
     top:127px;
     left:711px;
@@ -392,6 +393,7 @@
     float: left;
     margin-top:10px;
     margin-left:30px;
+    cursor: pointer;
   }
   #blockselects{
     width:248px;
@@ -407,6 +409,7 @@
     line-height: 40px;
     font-size: 24px;
     font-family: 华光楷体_CNKI;
+    cursor: pointer;
     float:left;
     margin-top:10px;
     margin-left:30px;

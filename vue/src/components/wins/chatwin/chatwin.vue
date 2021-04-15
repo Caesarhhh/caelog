@@ -6,7 +6,7 @@
       <GeminiScrollbar>
         <div id="gsd">
           <div id="chats" ref="chats" class="clearfix">
-            <cb v-for="item in chatinfo" :datas="item" :class="{unselect:ifunselect}"></cb>
+            <cb v-for="(item,index) in chatinfo" :key="index" :datas="item" :class="{unselect:ifunselect}"></cb>
           </div>
 <!--        <div id="scrollarea" ref="scrollpos">-->
 <!--          <div id="scroll" @mousedown="move"></div>-->

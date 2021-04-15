@@ -1,6 +1,6 @@
 <template>
-<div class="box1">
-  <div class="window">
+<div class="box123">
+  <div class="window" :style="getcolor4()">
     <div id="upper">
       <div id="head"><img :src="datas.headimgsrc" alt="error"></div>
       <div id="nickname">{{datas.nickname}}</div>
@@ -10,7 +10,7 @@
     </div>
     <div id="lower">
       <textarea id="inputtext" v-model="inputtext"></textarea>
-      <div @click="submit" id="submit">提交</div>
+      <div @click="submit" id="submit" :style="[getcolor3(),getcolorFont()]">提交</div>
     </div>
   </div>
 </div>
@@ -27,6 +27,24 @@
       }
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
+      getcolorFont(){
+        return {color: this.$store.state.colorFont}
+      },
+      getcolorFont2(){
+        return {color: this.$store.state.colorFont2}
+      },
       changestate:function (state){
         var temp=this.datas;
         temp.ifreply=state;
@@ -56,17 +74,18 @@
       },
       submit:function (){
         let param = new FormData()
-        param.append('userid',this.common.loginuserinfo.id)
+        param.append('userid',this.$route.params.userid)
         param.append('content_',this.inputtext)
         param.append('articleid',this.$route.params.articleid)
-        param.append('actorid',this.datas.targetid)
+        param.append('actorid',this.common.loginuserinfo.id)
         param.append('commentid',this.datas.commentid)
         param.append('name_',this.datas.nickname)
         this.uploadFile("/addcomment/add",param).then(async res=>{
+          console.log(res)
           var temp=this.datas;
           temp.ifreply=false;
           this.$emit("update:datas",temp);
-          await this.$parent.refreshcomment()
+          this.$parent.addaddedcomment(this.datas.commentid,this.datas.index)
         })
       }
     }
@@ -74,14 +93,13 @@
 </script>
 
 <style scoped>
-.box1{
+.box123{
   width: 300px;
   height: 200px;
 }
 .window{
   width:550px;
   height: 310px;
-  background-color: azure;
   position: relative;
   margin-top: 0px;
   margin-left: 0px;
@@ -154,5 +172,6 @@
   font-size: 21px;
   color:black;
   cursor: pointer;
+  border-radius: 5px;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
 <div class="box2" :style="getcolor1()">
   <div id="settingtitle">
-    <div id="titletitle">标题</div>
+    <div id="titletitle" :style="getcolor4()">标题</div>
     <input type="text" id="titlecontent" v-model="title">
-    <div id="contenttitle"><div>公告内容</div></div>
+    <div id="contenttitle" :style="getcolor4()"><div>公告内容</div></div>
     <textarea cols="30" rows="10" id="contentcontent" v-model="content"></textarea>
     <div id="addbutton" :style="getcolor3()" @click="submit">添加</div>
   </div>
@@ -41,6 +41,9 @@
       },
       getcolor3(){
         return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
       },
       uploadFile:function (url, data) {
         let config = {
@@ -149,16 +152,13 @@
   width:680px;
   height: 217px;
   position: absolute;
-  border-style: groove;
-  border-width: thin;
   top:14px;
   left:20px;
 }
 #titletitle{
   width:41px;
   height:32px;
-  border-style: groove;
-  border-width: thin;
+  border-radius: 10px;
   position: absolute;
   top:10px;
   left:12px;
@@ -180,8 +180,7 @@
 #contenttitle{
   width:41px;
   height:105px;
-  border-style: groove;
-  border-width: thin;
+  border-radius: 10px;
   position: absolute;
   top:50px;
   left:12px;

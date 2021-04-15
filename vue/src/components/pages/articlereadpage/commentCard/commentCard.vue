@@ -1,7 +1,7 @@
 <template>
 <div class="box1">
   <div class="maincomment clearfix">
-    <div id="mainsrc"><img :src="datas.mainsrc" alt="error"></div>
+    <div @click="tomainpage(datas.actorid)" id="mainsrc"><img :src="datas.mainsrc" alt="error"></div>
     <div id="maincontent"><div>{{datas.nickname}} : {{datas.maincontent}}</div></div>
     <div class="buttonbox">
       <div class="goodnums">{{datas.maingoodnums}}</div>
@@ -12,13 +12,13 @@
     <div class="time">{{datas.time}}</div>
   </div>
   <div v-for="(item,index) in datas.addedsrc" class="addedcomment clearfix">
-    <div class="addedsrc"><img :src="datas.addedsrc[index]" alt="error"></div>
+    <div @click="tomainpage(datas.addedactorid[index])" class="addedsrc"><img :src="datas.addedsrc[index]" alt="error"></div>
     <div class="addedcontent"><div>{{datas.addednicknames[index]}} : {{datas.addedcontent[index]}}</div></div>
     <div class="buttonbox" v-if="datas.count>-2">
       <div class="goodnums">{{datas.goodnums[index]}}</div>
       <img @click="toglegood(index)" :src="ifgood[index]==-1?nogoodimgsrc:goodimgsrc" alt="error" class="good">
       <div class="reply" @click="reply(index)"><img :src="relpyimgsrc" alt="error"></div>
-      <div class="delete" @click="deletecard(index)" v-if="replyinfo.id==datas.actorid"><img :src="deleteimgsrc" alt="error"></div>
+      <div class="delete" @click="deletecard(index)" v-if="replyinfo.id==datas.addedactorid[index]"><img :src="deleteimgsrc" alt="error"></div>
     </div>
     <div class="time">{{datas.addtime[index]}}</div>
   </div>
@@ -40,6 +40,9 @@
       }
     },
     methods:{
+      tomainpage(id){
+        this.$router.push("/"+id+"/mainpage")
+      },
       getname:function (s){
         var pos=s.indexOf("@");
         if(pos==-1){
@@ -158,7 +161,6 @@
           this.$emit("update:replyinfo",temp);
         }
         else{
-
           var temp=this.replyinfo;
           temp.ifreply=true;
           temp.nickname=temp.name;
@@ -167,6 +169,7 @@
           temp.commentid=this.datas.id
           temp.targetid=this.datas.actorid
           temp.nickname+=this.getname(this.datas.addednicknames[target]);
+          temp.index=this.datas.index
           this.$emit("update:replyinfo",temp);
         }
       },
@@ -227,6 +230,7 @@
   float:left;
   margin-left: 5px;
   margin-top: 5px;
+  cursor: pointer;
 }
 #mainsrc img{
   width:100%;
@@ -322,6 +326,7 @@
   float:left;
   margin-left: 5px;
   margin-top: 5px;
+  cursor: pointer;
 }
 .addedsrc img{
   width:100%;

@@ -27,6 +27,9 @@
     <select id="getUserbyemail" resultType="User">
         select * from Users where securityEmail=#{emailaddress}
     </select>
+    <select id="getemail" resultType="String">
+        select securityEmail from Users where id=#{userid}
+    </select>
     <select id="findbiggestid" resultType="int">
         select max(id) from Users
     </select>

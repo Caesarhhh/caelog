@@ -8,47 +8,47 @@
       <div id="markdowntitle" :style="getcolor1()">markdown</div>
       <textarea id="markdownarea" v-model="innerhtmlinput" @keyup="mdSwitch"></textarea>
       <div id="showtitle" :style="getcolor1()">预览</div>
-      <div :class="{showarea:count>-2}" :style="getcolor1()">
+      <div :class="{showarea:count>-2}" :style="getcolor4()">
         <GeminiScrollbar>
           <div id="gsd">
-            <div id="showhtml"></div>
+            <div id="showhtml" v-highlight></div>
           </div>
         </GeminiScrollbar>
       </div>
       <div id="bot">
         <div id="settingbox" :style="getcolor1()">
           <div id="titlesetting">
-            <div id="titletitle">标题定义</div>
+            <div id="titletitle" :style="getcolor4()">标题定义</div>
             <input type="text" id="titleinput" v-model="titleinput"></input>
           </div>
           <div id="blockbox">
-            <div id="blocktitle">模块选择</div>
+            <div id="blocktitle" :style="getcolor4()">模块选择</div>
             <select id="blockselect" v-model="selected">
-              <option v-for="(item,index) in blocks" :value="index" v-if="blocks.length>0">{{ item }}</option>
+              <option v-for="(item,index) in blocks" :key="index" :value="index" v-if="blocks.length>0">{{ item }}</option>
             </select>
             <div id="createblockarea">
-              <div id="createtitle">新建板块</div>
+              <div id="createtitle" :style="getcolor4()">新建板块</div>
               <form action="">
                 <input id="newblockinput" name="multipartFile" type="file" @change="uploadpic" enctype="multipart/form-data">
               </form>
               <img :src="newimgsrc" id="newblockimg" />
-              <input id="newinput" type="text" v-model="newblockname">
-              <input id="newinputcomment" type="text" v-model="newblockcomment">
-              <div id="newconfirm" @click="addblock">确认</div>
+              <input @click="cleartext(0)" id="newinput" type="text" v-model="newblockname">
+              <input @click="cleartext(1)" id="newinputcomment" type="text" v-model="newblockcomment">
+              <div id="newconfirm" :style="getcolor3()" @click="addblock">确认</div>
             </div>
-            <div id="resultblock">{{ blocks[selected] }}</div>
+            <div id="resultblock" :style="getcolor4()">{{ blocks[selected] }}</div>
           </div>
           <div id="labelsetting">
-            <div id="labeltitle">标签定义</div>
+            <div id="labeltitle" :style="getcolor4()">标签定义</div>
             <input id="labelinput" v-model="labelinput"></input>
-            <div id="labelconfirm" @click="addlabel">添加</div>
+            <div id="labelconfirm" @click="addlabel" :style="getcolor3()">添加</div>
           </div>
           <div id="labels" class="clearfix">
-            <lc class="labelcard" v-for="item in labelcardinfo" :datas="item"></lc>
+            <lc class="labelcard" v-for="(item,index) in labelcardinfo" :key="index" :datas="item"></lc>
           </div>
         </div>
-        <div class="submit" :style="getcolor1()" @click="submit" v-if="ifnew">发表</div>
-        <div class="submit" :style="getcolor1()" @click="submit_old" v-if="!ifnew">完成修改</div>
+        <div class="submit" :style="getcolor3()" @click="submit" v-if="ifnew">发表</div>
+        <div class="submit" :style="getcolor3()" @click="submit_old" v-if="!ifnew">完成修改</div>
       </div>
     </div>
   </div>
@@ -92,8 +92,22 @@
       getcolor2(){
         return {backgroundColor: this.$store.state.color2}
       },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
       topage(s){
-        this.$router.push({path:"/"+this.$store.state.loginuserinfo.id+s})
+        this.$router.push("/"+this.$route.params.userid+s)
+      },
+      cleartext(i){
+        if(i===0&&this.newblockname==="板块名称"){
+          this.newblockname=""
+        }
+        if(i===1&&this.newblockcomment==="在此输入板块备注"){
+          this.newblockcomment=""
+        }
       },
       addlabel: function () {
         var temp = {
@@ -155,6 +169,10 @@
           this.newimgsrc=this.common.getserveraddress+res.data.data})
       },
       addblock:function (){
+        if(this.newblockcomment===""||this.newblockname===""){
+          alert("请输入完整的板块信息！")
+          return
+        }
         let param = new FormData()  // 创建form对象
         param.append('imgsrc', this.newimgsrc)  // 通过append向form对象添加数据
         param.append('userid',this.common.loginuserinfo.id)
@@ -231,6 +249,7 @@
         param.append('blockid',this.id[this.selected])
         param.append('id',this.$route.params.articleid)
         this.uploadFile("/article/update",param).then(res=>{
+          console.log(res)
           this.deletelabel(this.subset(this.originlabels,this.labelcardinfo))
           this.originlabels=this.subset(this.labelcardinfo,this.originlabels)
           this.addarlabel_old(this.$route.params.articleid,0)
@@ -348,6 +367,7 @@
     position: absolute;
     top: 13px;
     left: 152px;
+    border-radius: 10px;
   }
 
   #mainhref {
@@ -360,6 +380,7 @@
     font-family: 华光楷体_CNKI;
     font-size: 24px;
     left: 15px;
+    cursor: pointer;
   }
 
   #backhref {
@@ -372,6 +393,7 @@
     font-family: 华光楷体_CNKI;
     font-size: 24px;
     left: 100px;
+    cursor: pointer;
   }
 
   #markdowntitle {
@@ -392,7 +414,7 @@
     width: 480px;
     height: 40px;
     position: absolute;
-    border-bottom-style: groove;
+    border-bottom-style: solid;
     border-width: thin;
     line-height: 40px;
     font-family: 华光楷体_CNKI;
@@ -448,7 +470,9 @@
     width: 974px;
     height: auto;
     position: relative;
-    border-style: groove;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: transparent;
     border-width: thin;
     left: 0px;
     top: 0px;
@@ -456,18 +480,19 @@
 
   #titlesetting{
     width: 946px;
-    height: 58px;
-    border-style: groove;
-    border-width: thin;
+    height: 64px;
     position: absolute;
     left: 14px;
     top: 8px;
+    border-bottom-style: solid;
+    border-width: thin;
   }
 
   #blockbox {
     width: 946px;
     height: 103px;
-    border-style: groove;
+    border-bottom-style: solid;
+    border-radius: 0px;
     border-width: thin;
     position: absolute;
     left: 14px;
@@ -477,7 +502,7 @@
   #titletitle {
     width: 112px;
     height: 33px;
-    border-style: groove;
+    border-radius: 10px;
     border-width: thin;
     line-height: 33px;
     font-family: 华光楷体_CNKI;
@@ -495,12 +520,20 @@
     top: 5px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
   }
-
+  #titleinput:focus{
+    border-width: 2px;
+    top:4px;
+    left:141px;
+  }
   #blocktitle {
     width: 112px;
     height: 33px;
-    border-style: groove;
+    border-radius: 10px;
     border-width: thin;
     line-height: 33px;
     font-family: 华光楷体_CNKI;
@@ -518,13 +551,17 @@
     left: 171px;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
   }
-
+  #blockselect:focus{
+    border-width: 2px;
+  }
   #createblockarea {
     width: 518px;
     height: 39px;
-    border-style: groove;
-    border-width: thin;
     position: absolute;
     left: 164px;
     top: 51px;
@@ -533,24 +570,23 @@
   #resultblock {
     width: 120px;
     height: 60px;
-    border-style: groove;
-    border-width: thin;
+    border-radius: 10px;
     line-height: 60px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
     position: absolute;
     top: 32px;
-    right: 110px;
+    right: 70px;
   }
 
   #createtitle {
     width: 74px;
     height: 32px;
-    border-style: groove;
+    border-radius: 10px;
     border-width: thin;
     line-height: 32px;
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 2px;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
@@ -573,6 +609,7 @@
     width:32px;
     height: 32px;
     left:84px;
+    border-radius: 50%;
   }
   #newinputcomment{
     width: 220px;
@@ -583,8 +620,16 @@
     font-family: 华光楷体_CNKI;
     font-size: 18px;
     z-index: 12;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
   }
-
+  #newinputcomment:focus{
+    border-width: 2px;
+    top:1px;
+    left:220px;
+  }
   #newinput {
     width: 90px;
     height: 30px;
@@ -594,16 +639,26 @@
     font-family: 华光楷体_CNKI;
     font-size: 18px;
     z-index: 12;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
+  }
+  #newinput:focus{
+    border-width: 2px;
+    top:1px;
+    left:123px;
   }
 
   #newconfirm {
     width: 60px;
     height: 32px;
-    border-style: groove;
+    border-radius: 10px;
+    cursor: pointer;
     border-width: thin;
     line-height: 32px;
     position: absolute;
-    top: 2px;
+    top: 4px;
     right: 2px;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
@@ -612,8 +667,6 @@
   #labelsetting {
     width: 946px;
     height: 56px;
-    border-style: groove;
-    border-width: thin;
     position: relative;
     margin-top: 198px;
     margin-bottom:10px;
@@ -623,7 +676,7 @@
   #labeltitle {
     width: 112px;
     height: 33px;
-    border-style: groove;
+    border-radius: 10px;
     border-width: thin;
     line-height: 33px;
     position: absolute;
@@ -641,12 +694,22 @@
     top: 5px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
+  }
+  #labelinput:focus{
+    border-width: 2px;
+    top:4px;
+    left:131px;
   }
 
   #labelconfirm {
     width: 80px;
     height: 48px;
-    border-style: groove;
+    border-radius: 10px;
+    cursor: pointer;
     border-width: thin;
     line-height: 48px;
     position: absolute;
@@ -675,7 +738,8 @@
   .submit {
     width: 140px;
     height: 70px;
-    border-style: groove;
+    border-radius: 10px;
+    cursor: pointer;
     border-width: thin;
     line-height: 70px;
     font-family: 华光楷体_CNKI;

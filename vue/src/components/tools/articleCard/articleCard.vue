@@ -9,7 +9,7 @@
     <div id="content">{{datas.content}}</div>
     <div id="buttonbox">
       <div class="button" @click="toglegood()"><img :src="this.good==1?goodsrc:nogoodsrc" alt="error"></div>
-      <div class="button"><img :src="turnsrc" alt="error"></div>
+      <div class="button" @click="share()"><img :src="turnsrc" alt="error"></div>
       <div class="button" @click="readto"><img :src="readsrc" alt="error"></div>
     </div>
   </div>
@@ -35,6 +35,11 @@
                 backgroundColor:this.$store.state.color4
             }
         },
+      share(){
+          this.$copyText(this.common.siteaddress+"/"+this.$route.params.userid+"/articleread/"+this.datas.id).then(res=>{
+            alert("已复制文章连接到剪切板")
+          })
+      },
       toglegood:function (){
         if((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null){
           alert("请先登录")

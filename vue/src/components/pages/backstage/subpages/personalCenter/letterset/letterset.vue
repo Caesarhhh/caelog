@@ -1,6 +1,6 @@
 <template>
 <div class="letterset">
-  <div id="title"><div>私信管理</div></div>
+  <div id="title" :style="getcolor4()"><div>私信管理</div></div>
   <div id="letterbox">
     <lc id="lc1" v-if="(pagenumsinfo.pos-1)*6<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6]"></lc>
     <lc id="lc2" v-if="(pagenumsinfo.pos-1)*6+1<letternum" :datas="letterCardinfo[(pagenumsinfo.pos-1)*6+1]"></lc>
@@ -67,6 +67,18 @@
       lc:lettercard
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
       getchatinfo:function (){
         this.letterCardinfo=[]
         this.letternum=0
@@ -129,7 +141,7 @@
 #title{
   width:47px;
   height: 256px;
-  border-style: groove;
+  border-radius: 10px;
   border-width: thin;
   position: absolute;
   top:10px;

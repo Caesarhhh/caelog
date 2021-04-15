@@ -1,5 +1,6 @@
 package com.ownblog.caelog.service.impl;
 
+import com.ownblog.caelog.Dao.AddcommentDao;
 import com.ownblog.caelog.Dao.CommentDao;
 import com.ownblog.caelog.lang.Result;
 import com.ownblog.caelog.pojo.Comment;
@@ -41,6 +42,11 @@ public class CommentServiceImpl implements CommentService {
         hashMap.put("id",id);
         hashMap.put("articleid",articleid);
         commentDao.deleteComment(hashMap);
+        sqlSession.commit();
+        sqlSession.close();
+        SqlSession sqlSession1= BatisUtils.getSqlSession();
+        AddcommentDao addcommentDao=sqlSession1.getMapper(AddcommentDao.class);
+        addcommentDao.deleteAddcommentbyCommentid(hashMap);
         sqlSession.commit();
         sqlSession.close();
         return Result.succ("delete successfully!");

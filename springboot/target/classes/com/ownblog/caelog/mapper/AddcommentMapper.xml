@@ -9,6 +9,9 @@
     <delete id="deleteAddcomment" parameterType="map">
        delete from Addcomment where userid=#{userid} and id=#{id} and articleid=#{articleid}
     </delete>
+    <delete id="deleteAddcommentbyCommentid" parameterType="map">
+       delete from Addcomment where userid=#{userid} and articleid=#{articleid} and commentid=#{id}
+    </delete>
     <select id="getAddcommentlist" resultType="Addcomment" parameterType="map">
         select * from Addcomment where userid=#{userid} and articleid=#{articleid} and commentid=#{commentid}
     </select>

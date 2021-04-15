@@ -9,6 +9,9 @@
     <delete id="deleteLabels" parameterType="map">
        delete from Labels where userid=#{userid} and id=#{id}
     </delete>
+    <delete id="clearLabels" parameterType="map">
+       delete from Labels where userid=#{userid} and articleid=#{articleid}
+    </delete>
     <select id="getLabelslist" resultType="Labels" parameterType="map">
         select distinct name_ from Labels where userid=#{userid}
     </select>

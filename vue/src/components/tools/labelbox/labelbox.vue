@@ -4,7 +4,9 @@
     {{datas.title}}
   </div>
   <div id="body">
-    <div v-for="i in datas.labels" class="label" @click="showto(i)">{{i}}</div>
+    <GeminiScrollbar>
+      <div v-for="i in datas.labels" class="label" @click="showto(i)">{{i}}</div>
+    </GeminiScrollbar>
   </div>
 </div>
 </template>

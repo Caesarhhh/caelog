@@ -2,7 +2,9 @@
 <div class="box1" :style="getcolor4()">
   <div id="pic"><img :src="datas.imgsrc" alt=""></div>
   <div id="name">{{datas.name}}</div>
+  <GeminiScrollbar>
   <div id="comments">{{datas.comments}}</div>
+  </GeminiScrollbar>
   <div id="delpic" @click="del(datas.id)"><img :src="delimgsrc" alt="error"></div>
 </div>
 </template>
@@ -35,6 +37,7 @@
   height: 36px;
   border-style: groove;
   border-width: thin;
+  border-radius: 10px;
 }
 #pic{
   width:28px;
@@ -50,7 +53,7 @@
 #name{
   width:94px;
   height: 28px;
-  border-style: groove;
+  border-left-style: groove;
   border-width: thin;
   position: absolute;
   top:5px;

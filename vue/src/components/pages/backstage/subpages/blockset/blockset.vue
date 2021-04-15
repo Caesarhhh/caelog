@@ -5,9 +5,9 @@
       <input id="pic" name="multipartFile" type="file" @change="uploadpic" enctype="multipart/form-data">
     </form>
     <img id="headchange" :src="settingpicsrc" alt="error">
-    <div id="nametitle">板块名称</div>
+    <div id="nametitle" :style="getcolor4()">板块名称</div>
     <input id="nameinput" v-model="inputname"></input>
-    <div id="commentstitle">备注</div>
+    <div id="commentstitle" :style="getcolor4()">备注</div>
     <input id="commentsinput" v-model="inputremark"></input>
     <div id="addbutton" :style="getcolor3()" @click="submit">添加</div>
   </div>
@@ -67,6 +67,11 @@
       getcolor3(){
         return {
           backgroundColor:this.$store.state.color3
+        }
+      },
+      getcolor4(){
+        return {
+          backgroundColor:this.$store.state.color4
         }
       },
       refresh:function (){
@@ -144,15 +149,13 @@
           this.refresh()})
       },
       deletebl:function (id){
-        console.log(id)
-        var valid=true
+        var valid=confirm("删除板块会导致删除板块下所有文章，确定删除吗？")
         if(valid){
           this.$axios.get(
             this.common.serveraddress+"/blocks/delete?userid="+this.common.loginuserinfo.id+"&id="+id).then(
             res=>{
               this.refresh();
               if(res.data.code==200){
-
               }
               else{
                 alert(res.data.msg)
@@ -177,8 +180,6 @@
 #settingbox{
   width: 673px;
   height: 111px;
-  border-style: groove;
-  border-width: thin;
   position: absolute;
   top:18px;
   left: 22px;
@@ -213,7 +214,8 @@
   top:34px;
   left:100px;
   font-family: 华光楷体_CNKI;
-  font-size: 20px;
+  font-size: 17px;
+  border-radius: 5px;
 }
 #nameinput{
   width:193px;
@@ -224,16 +226,25 @@
   top:32px;
   left:145px;
   font-family: 华光楷体_CNKI;
-  font-size: 18px;
+  border-radius: 10px;
+  border-width: thin;
+  border-style: solid;
+  outline: none;
+}
+#nameinput:focus{
+  top:31px;
+  left:144px;
+  border-width: 2px;
 }
 #commentstitle{
-  width:38px;
+  width:33px;
   height: 38px;
   position: absolute;
   top:35px;
   left:370px;
   font-family: 华光楷体_CNKI;
-  font-size: 20px;
+  font-size: 17px;
+  border-radius: 10px;
 }
 #commentsinput{
   width:193px;
@@ -242,9 +253,18 @@
   border-width: thin;
   position: absolute;
   top:32px;
-  left:404px;
+  left:406px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
+  border-radius: 10px;
+  border-width: thin;
+  border-style: solid;
+  outline: none;
+}
+#commentsinput:focus{
+  top:31px;
+  left:405px;
+  border-width: 2px;
 }
 #addbutton{
   width: 97px;

@@ -15,7 +15,7 @@
     <div id="modibox" :style="getcolor1()">
       <div id="modititle">近期动态</div>
       <div id="modibody">
-        <mc class="modicard" :style="getcolor1()" v-for="(i,index) in modificationcardInfo" :datas="i" v-if="index<6"></mc>
+        <mc class="modicard" :style="getcolor1()" v-for="(i,index) in modificationcardInfo" :key="index" :datas="i" v-if="index<6"></mc>
       </div>
     </div>
     <div id="blockbox" :style="getcolor1()">
@@ -277,23 +277,25 @@
           this.common.serveraddress+"/article/get?userid="+this.common.userinfo.id).then(
           res=>{
             if(res.data.data.length==0){
-              var temp={
-                title:res.data.data.title,
-                time:res.data.data.time_,
-                content:res.data.data.content,
-                block:blocksInfo[res.data.data.blockid],
-                id:res.data.data.id,
-                goodnum:res.data.data.goodnum,
-                viewnum:res.data.data.viewnum
-              }
-              this.articleCardInfo.push(temp)
-              this.sortinfo.timeslot.push({
-                id:this.sortinfo.timeslot.length,
-                st:temp.time.substring(2,4),
-                et:temp.time.substring(5,7)
-              })
-              this.articlenum++
+
+              // var temp={
+              //   title:res.data.data.title,
+              //   time:res.data.data.time_,
+              //   content:res.data.data.content,
+              //   block:blocksInfo[res.data.data.blockid],
+              //   id:res.data.data.id,
+              //   goodnum:res.data.data.goodnum,
+              //   viewnum:res.data.data.viewnum
+              // }
+              // this.articleCardInfo.push(temp)
+              // this.sortinfo.timeslot.push({
+              //   id:this.sortinfo.timeslot.length,
+              //   st:temp.time.substring(2,4),
+              //   et:temp.time.substring(5,7)
+              // })
+              // this.articlenum++
             }
+            else{
             for(var i =res.data.data.length-1;i>=0;i--){
               var temp={
                 title:res.data.data[i].title,
@@ -316,6 +318,7 @@
               this.articlenum++
             }
             this.pagenumsinfo.sum=Math.ceil(this.articlenum/4)
+            }
           })
       },
       inituserinfo(userid){
@@ -353,6 +356,7 @@
     position: absolute;
     left:10px;
     cursor: pointer;
+    border-radius: 10px;
   }
   #toback div{
     position: absolute;
@@ -380,11 +384,13 @@
     position: absolute;
     top:29px;
     left:680px;
+    border-radius: 10px;
   }
   #recommendsong{
     position: absolute;
     left: 315px;
     top:91px;
+    border-radius: 20px;
   }
   #sorttool{
     position: absolute;
@@ -409,6 +415,7 @@
     position: absolute;
     top: 240px;
     left: 829px;
+    border-radius: 20px;
   }
   #modititle{
     width:160px;
@@ -440,6 +447,7 @@
     position: absolute;
     left:14px;
     top:315px;
+    border-radius: 20px;
   }
   #blocks{
     float:left;

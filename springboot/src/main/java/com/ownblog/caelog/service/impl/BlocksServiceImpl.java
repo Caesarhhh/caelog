@@ -1,7 +1,10 @@
 package com.ownblog.caelog.service.impl;
+import com.ownblog.caelog.Dao.ArticleDao;
 import com.ownblog.caelog.Dao.BlocksDao;
+import com.ownblog.caelog.Dao.LabelsDao;
 import com.ownblog.caelog.Dao.SocialhrefDao;
 import com.ownblog.caelog.lang.Result;
+import com.ownblog.caelog.pojo.Article;
 import com.ownblog.caelog.pojo.Blocks;
 import com.ownblog.caelog.pojo.Socialhref;
 import com.ownblog.caelog.service.BlocksService;
@@ -40,6 +43,14 @@ public class BlocksServiceImpl implements BlocksService {
         hashMap.put("userid",userid);
         hashMap.put("id",id);
         blocksDao.deleteBlocks(hashMap);
+        ArticleDao articleDao=sqlSession.getMapper(ArticleDao.class);
+        LabelsDao labelsDao=sqlSession.getMapper(LabelsDao.class);
+        List<Article>articles=articleDao.getArticlelistbyblockid(hashMap);
+        articleDao.deleteArticlebyblock(hashMap);
+        for(int i=0;i<articles.size();i++){
+            hashMap.put("articleid",articles.get(i).getId());
+            labelsDao.clearLabels(hashMap);
+        }
         sqlSession.commit();
         sqlSession.close();
         return Result.succ("delete successfully!");

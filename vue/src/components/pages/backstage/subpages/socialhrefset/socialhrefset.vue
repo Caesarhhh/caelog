@@ -1,17 +1,17 @@
 <template>
 <div class="box" :style="getcolor1()">
-    <div id="titlebox">
+    <div id="titlebox" :style="getcolor4()">
     <form action="">
       <input id="pic" name="multipartFile" type="file" @change="uploadpic" enctype="multipart/form-data">
     </form>
     <img id="headchange" :src="picsrc" alt="error">
-    <div id="hreftitle">链接</div>
+    <div id="hreftitle" :style="getcolor4()">链接</div>
     <input id="hrefcontent" v-model="hrefcontent"></input>
-    <div id="commentstitle">备注</div>
+    <div id="commentstitle" :style="getcolor4()">备注</div>
     <input id="commentscontent" v-model="commentcontent"></input>
     <div id="confirm" :style="getcolor3()" @click="submit">添加</div>
   </div>
-  <div id="announcement">可见的链接最多只能有四个</div>
+  <div id="announcement" :style="getcolor3()">可见的链接最多只能有四个</div>
   <hc id="hc1" :datas.sync="hrefcardinfo[(pagenumsinfo.pos-1)*6]" v-if="(pagenumsinfo.pos-1)*6<hrefnum"></hc>
   <hc id="hc2" :datas.sync="hrefcardinfo[(pagenumsinfo.pos-1)*6+1]" v-if="(pagenumsinfo.pos-1)*6+1<hrefnum"></hc>
   <hc id="hc3" :datas.sync="hrefcardinfo[(pagenumsinfo.pos-1)*6+2]" v-if="(pagenumsinfo.pos-1)*6+2<hrefnum"></hc>
@@ -56,6 +56,9 @@
       getcolor3(){
         return {backgroundColor: this.$store.state.color3}
       },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
       refresh:function (){
         this.hrefcardinfo=[]
         this.hrefnum=0
@@ -98,7 +101,7 @@
         }
       },
       deletehr:function (id){
-        var valid=true
+        var valid=confirm("确定删除友链吗？")
         if(valid){
           this.$axios.get(
             this.common.serveraddress+"/socialhref/delete?userid="+this.common.loginuserinfo.id+"&hrefid="+id).then(
@@ -198,8 +201,9 @@
 #titlebox{
   width:673px;
   height: 111px;
-  border-style: groove;
+  border-style: solid;
   border-width: thin;
+  border-radius: 15px;
   position: absolute;
   left: 17px;
   top:18px;
@@ -235,6 +239,7 @@
   line-height: 25px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
+  border-radius: 10px;
 }
 #hrefcontent{
   width:220px;
@@ -244,6 +249,15 @@
   left:190px;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
+  outline: none;
+  border-width: thin;
+  border-style: solid;
+  border-radius: 10px;
+}
+#hrefcontent:focus{
+  top:36px;
+  left:189px;
+  border-width: 2px;
 }
 #commentstitle{
   width:40px;
@@ -254,6 +268,7 @@
   line-height: 25px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
+  border-radius: 10px;
 }
 #commentscontent{
   width:160px;
@@ -263,6 +278,15 @@
   font-size: 20px;
   top:37px;
   left:490px;
+  outline: none;
+  border-width: thin;
+  border-style: solid;
+  border-radius: 10px;
+}
+#commentscontent:focus{
+  top:36px;
+  left:489px;
+  border-width: 2px;
 }
 #confirm{
   width:60px;

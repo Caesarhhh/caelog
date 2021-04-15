@@ -1,5 +1,5 @@
 <template>
-<div class="box_pn clearfix">
+<div class="box_pns clearfix">
   <div id="bigbox" :style="getColor4()">
     <div id="first" @click="postostart">首页</div>
     <div id="backbutton" v-if="datas.pos>1" @click="redpos"><img :src="backsrc" alt="error"></div>
@@ -80,7 +80,7 @@
 </script>
 
 <style scoped>
-.box_pn{
+.box_pns{
   width:584px;
   height:50px;
   border-width: thin;
@@ -133,6 +133,7 @@
   margin-left:0px;
   width: 584px;
   height: 50px;
+  border-radius: 10px;
 }
 #numsbox{
   width:330px;

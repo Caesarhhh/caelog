@@ -28,7 +28,7 @@
       <input type="text" id="securityAnswerinput" v-model="inputmsg.securityAnswer">
       <input @keyup="testemail" type="text" id="securityEmailinput" v-model="inputmsg.securityEmail">
       <input type="text" id="securityEmailcodeinput" v-model="inputmsg.codeinput">
-      <div id="register" class="unselect" @click="submitForm">注册</div>
+      <div id="register" :style="getcolor3()" @click="submitForm">注册</div>
     </div>
   </div>
 </div>
@@ -70,6 +70,12 @@
       },
       getcolor2(){
         return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
       },
       getcolorFont2(){
         return {color:this.$store.state.colorFont2}
@@ -460,22 +466,12 @@
   font-size: 22px;
 }
 #register{
-  border-style: ridge;
   position: absolute;
+  border-radius: 5px;
   bottom:0px;
   right:25px;
   font-family: 华光楷体_CNKI;
   font-size: 25px;
-}
-.unselect{
-
-  -webkit-user-select:none;
-
-  -moz-user-select:none;
-
-  -ms-user-select:none;
-
-  user-select:none;
-
+  cursor: pointer;
 }
 </style>

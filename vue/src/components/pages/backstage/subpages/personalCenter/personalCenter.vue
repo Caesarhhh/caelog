@@ -19,7 +19,7 @@
         <div :class="{color2select:colorNum==index,color2selectnon:colorNum!=index}" :style="getcolor(index,2)"></div>
       </div>
     </div>
-    <div :style="getcolor3()" id="backgroundbutton" @click="changebc()">更换背景</div>
+    <div :style="getcolor3()" id="backgroundbutton" @click="changebc()">更换主题</div>
   </div>
   <ls id="letterarange"></ls>
 </div>
@@ -133,11 +133,23 @@
         )
       },
       submit:function (){
-        this.$axios.get(
-          this.common.serveraddress+"/user/changebasedata?userid="+this.common.loginuserinfo.id+"&headimgsrc="+this.headimgsrc+"&nickname="+this.nickname+"&introduction="+this.introduction
+        let params={
+          userid:this.common.loginuserinfo.id,
+          headimgsrc:this.headimgsrc,
+          nickname:this.nickname,
+          introduction:this.introduction
+        }
+        this.$axios.post(
+          this.common.serveraddress+"/user/changebasedata",params
         ).then(
           res=>{
-            this.inituserinfo(this.$route.params.userid)
+            if(res.data.code==200){
+              this.inituserinfo(this.$route.params.userid)
+              alert("修改成功！")
+            }
+            else{
+              alert(res.data.msg)
+            }
           }
         )
       },
@@ -169,9 +181,9 @@
         param.append('file', file)  // 通过append向form对象添加数据
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
-          console.log(res.data)
           var uploadurl=this.common.getserveraddress+res.data.data;
-          this.headimgsrc=uploadurl;})
+          this.headimgsrc=uploadurl;
+        })
       }
     }
   }
@@ -272,6 +284,18 @@
   font-size: 18px;
   font-family: 华光楷体_CNKI;
   text-align: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  outline: none;
+  position: absolute;
+  left:0px;
+  top:0px;
+}
+#nickname input:focus{
+  border-width: 2px;
+  top:-1px;
+  left:-1px;
 }
 #intro{
   width: 300px;
@@ -284,6 +308,19 @@
   width: 100%;
   height: 100%;
   text-align: left;
+  border-radius: 10px;
+  outline: none;
+  font-family: 华光楷体_CNKI;
+  border-width: thin;
+  border-style: solid;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+#intro textarea:focus{
+  border-width: 2px;
+  left:-1px;
+  top:-1px;
 }
 .button{
   width:98px;

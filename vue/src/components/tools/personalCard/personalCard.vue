@@ -10,7 +10,10 @@
         {{this.common.userinfo.nickname}}
       </div>
       <div id="introduction">
-        <p>{{this.common.userinfo.introduction}}</p>
+        <GeminiScrollbar>
+          <div id="content_pc">
+          </div>
+        </GeminiScrollbar>
       </div>
       <div id="buttonbox">
         <div v-for="(item,index) in hrefdatas" class="hrefbox" @click="openhrefwin(index)">
@@ -27,6 +30,7 @@
 <script>
   import chatwin from "../../wins/chatwin/chatwin";
   import hrefshowwin from "../../wins/hrefshowwin/hrefshowwin";
+  import showdown from "showdown"
   var chatinfo={
     ifwin:false,
     targetid:0
@@ -66,6 +70,20 @@
       getcolor3(){
         return {backgroundColor: this.$store.state.color3}
       },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
+      getintro(){
+        this.$axios({
+          url:this.common.serveraddress+"/user/get?userid="+this.$route.params.userid,
+          method:"get"
+        }).then(res=>{
+          var mdValue=res.data.data.introduction;
+          var converter = new showdown.Converter();
+          var html = converter.makeHtml(mdValue);
+          document.getElementById("content_pc").innerHTML = html;
+        })
+      },
       openchat:function (){
         if(!this.hrefwininfo.ifwin){
         this.chatinfo.ifwin=true;
@@ -104,6 +122,7 @@
           res=>{
             this.common.userinfo=res.data.data
             this.inithrefinfo()
+            this.getintro()
           }
         )
       }
@@ -128,12 +147,14 @@
     width: 250px;
     height: 279px;
     position: relative;
+    border-radius: 20px;
   }
   .box_{
     width: 250px;
     height: 279px;
     position: absolute;
     right: 0px;
+    border-radius: 20px;
   }
   .empty_pc{
     width:1000px;
@@ -170,6 +191,17 @@
     top:127px;
     left:9px;
   }
+  #content_pc{
+     width: 230px;
+     height:90px;
+     position: absolute;
+     word-wrap: break-word;
+     word-break: break-all;
+     left:0px;
+     text-align: left;
+     font-family: 华光楷体_CNKI;
+     border-top-style: dashed;
+   }
   #buttonbox{
     width:244px;
     height: 45px;

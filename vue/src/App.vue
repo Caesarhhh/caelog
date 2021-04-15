@@ -7,7 +7,6 @@
     <router-view :style="stylevar"></router-view>
   </div>
 </template>
-
 <script>
 import mainpage from "./components/pages/mainpage/mainpage";
 import backstage from "./components/pages/backstage/backstage";
@@ -81,11 +80,9 @@ export default {
       return {color:this.$store.state.colorFont}
     }
   },
+  beforeCreate() {
+  },
   beforeMount() {
-    const s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = 'http://caesar216.usa3v.net/caelog/images/tool/showdown-master/dist/showdown.min.js';
-    document.body.appendChild(s);
     this.$axios.interceptors.request.use(
       config => {
         if (localStorage.getItem('Authorization')) {
@@ -98,6 +95,18 @@ export default {
         return Promise.reject(error);
       });
     this.common.loginuserinfo=JSON.parse(localStorage.getItem("userinfo"));
+    if(typeof this.$route.params.userid=="undefined"){
+      this.$store.commit('changecolorSelect',0)
+      let i=0
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color1,1])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color2,2])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color3,3])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].color4,4])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont,"Font"])
+      this.$store.commit('changecolor',[this.$store.state.colorSelect[i].colorFont2,"Font2"])
+      this.changeback()
+      return
+    }
     let params={
       userid:this.$route.params.userid
     }

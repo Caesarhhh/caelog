@@ -3,7 +3,12 @@
   <div id="idbox">
     <div id="head"><img :src="datas.headsrc" alt="error"></div>
     <div id="nickname">{{datas.nickname}}</div>
-    <div id="idintroduction">{{datas.introduction}}</div>
+    <div id="idintroduction">
+      <GeminiScrollbar>
+        <div id="content">
+        </div>
+      </GeminiScrollbar>
+    </div>
   </div>
   <div id="line"></div>
   <div class="selectbin" @click="changeindex(1)">个人中心</div>
@@ -13,8 +18,11 @@
   <div class="selectbin" @click="changeindex(5)">版块管理</div>
 </div>
 </template>
-
 <script>
+  import GeminiScrollbar from 'vue-gemini-scrollbar';
+  import Vue from "vue";
+  import showdown from "showdown";
+  Vue.use(GeminiScrollbar);
   export default {
     name: "selectbox",
     props:["datas","pageindex_"],
@@ -25,10 +33,17 @@
     },
     mounted() {
       this.pageindex=this.pageindex_;
+      this.getintro()
     },
     computed:{
     },
     methods:{
+      getintro(){
+        var mdValue=this.common.loginuserinfo.introduction;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(mdValue);
+        document.getElementById("content").innerHTML = html;
+      },
       getColor1(){
         return {
           backgroundColor:this.$store.state.color1
@@ -84,6 +99,17 @@
   left:7px;
   font-family: 华光楷体_CNKI;
   font-size: 18px;
+}
+#content{
+  width: 200px;
+  height:90px;
+  position: absolute;
+  word-wrap: break-word;
+  word-break: break-all;
+  left:0px;
+  text-align: left;
+  font-family: 华光楷体_CNKI;
+  border-top-style: dashed;
 }
 #line{
   width:230px;

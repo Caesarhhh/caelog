@@ -9,6 +9,9 @@
     <delete id="deleteArticle" parameterType="map">
        delete from Article where userid=#{userid} and id=#{id}
     </delete>
+    <delete id="deleteArticlebyblock" parameterType="map">
+       delete from Article where userid=#{userid} and blockid=#{id}
+    </delete>
     <update id="updateArticle" parameterType="map">
         update Article set userid=#{userid},id=#{id},title=#{title},content=#{content},blockid=#{blockid},time_=#{time_},goodnum=#{goodnum},viewnum=#{viewnum} where userid=#{userid} and id=#{id}
     </update>
@@ -25,10 +28,13 @@
         update Article set viewnum=viewnum+#{count} where userid=#{userid} and id=#{id}
     </update>
     <select id="getArticlelistbyblock" resultType="Article" parameterType="map">
-        select * from Article where userid=#{userid} and blockid in (select id from Blocks where name_=#{blockname})
+        select * from Article where userid=#{userid} and blockid in (select id from Blocks where name_=#{blockname} and userid=#{userid})
+    </select>
+    <select id="getArticlelistbyblockid" resultType="Article" parameterType="map">
+        select * from Article where userid=#{userid} and blockid=#{id}
     </select>
     <select id="getArticlelistbylabel" resultType="Article" parameterType="map">
-        select * from Article where userid=#{userid} and id in(select articleid from Labels where userid=#{userid} and id in (select id from Labels where name_=#{labelname}))
+        select * from Article where userid=#{userid} and id in(select articleid from Labels where userid=#{userid} and id in (select id from Labels where name_=#{labelname} and userid=#{userid}))
     </select>
     <select id="getArticlelistbysearch" resultType="Article" parameterType="map">
         select * from Article where userid=#{userid} and ((blockid in (select id from Blocks where name_ like (#{content}) and userid=#{userid})) or (title like (#{content})) or (id in (select articleid from Labels where name_ like (#{content}) and userid=#{userid})))

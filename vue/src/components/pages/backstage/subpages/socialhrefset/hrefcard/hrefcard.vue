@@ -63,6 +63,7 @@
   height: 36px;
   border-style: groove;
   border-width: thin;
+  border-radius: 10px;
 }
 #pic{
   width: 28px;

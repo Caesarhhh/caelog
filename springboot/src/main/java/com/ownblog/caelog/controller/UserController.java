@@ -97,7 +97,9 @@ public class UserController {
         int userid=(int)para.get("userid");
         String oldpassword=(String)para.get("oldpassword");
         String safetyanswerinput=(String)para.get("safetyanswerinput");
-        return userserviceimpl.safetysetinput(userid,oldpassword,safetyanswerinput);
+        String emailcode=(String)para.get("emailcode");
+        String codeinput=(String)para.get("codeinput");
+        return userserviceimpl.safetysetinput(userid,oldpassword,safetyanswerinput,emailcode,codeinput);
     }
     @RequestMapping(value="/changebc",method=RequestMethod.POST)
     @ResponseBody
@@ -112,9 +114,42 @@ public class UserController {
         int userid=Integer.parseInt((String)para.get("userid"));
         return userserviceimpl.getbc(userid);
     }
+    @RequestMapping(value="/changesafetyset",method=RequestMethod.POST)
+    @ResponseBody
+    public Object changesecrets(@RequestBody Map<String,Object> para){
+        int userid= (int) para.get("userid");
+        String safetyquestion= (String) para.get("safetyquestion");
+        String safetyanswer = (String) para.get("safetyanswer");
+        String safetyemail= (String) para.get("safetyemail");
+        int ifemailchange= (int) para.get("ifemailchange");
+        if(ifemailchange==1){
+            String emailcode=(String)para.get("emailcode");
+            String verifyemail=(String)para.get("verifyemail");
+            String codeinput=(String)para.get("inputcode");
+            String token= TokenUtil.getcode(emailcode);
+            if(!(token.equals(codeinput)&&TokenUtil.getcode(verifyemail).equals(safetyemail))){
+                return Result.fail("验证码错误！");
+            }
+
+        }
+        return userserviceimpl.changeSafetyset(userid,safetyquestion,safetyanswer,safetyemail);
+    }
+    @RequestMapping(value="/changebasedata",method=RequestMethod.POST)
+    @ResponseBody
+    public Object changebasedata(@RequestBody Map<String,Object> para){
+        int userid= (int) para.get("userid");
+        String headimgsrc= (String) para.get("headimgsrc");
+        String nickname = (String) para.get("nickname");
+        String introduction= (String) para.get("introduction");
+        return userserviceimpl.changeBasedata(userid,headimgsrc,nickname,introduction);
+    }
     @GetMapping("/get")
     public Object getUserbyid(@RequestParam("userid")int userid){
         return userserviceimpl.getUserbyid(userid);
+    }
+    @GetMapping("/getemail")
+    public Object getemailbyid(@RequestParam("userid")int userid){
+        return userserviceimpl.getemail(userid);
     }
     @GetMapping("/getimgsrc")
     public Object getimgsrc(@RequestParam("userid")int userid){
@@ -123,13 +158,5 @@ public class UserController {
     @GetMapping("/getnickname")
     public Object getnickname(@RequestParam("userid")int userid){
         return userserviceimpl.getnickname(userid);
-    }
-    @GetMapping("/changesafetyset")
-    public Object changesecret(@RequestParam("userid")int userid,@RequestParam("safetyquestion")String safetyquestion,@RequestParam("safetyanswer")String safetyanswer,@RequestParam("safetyemail")String safetyemail){
-        return userserviceimpl.changeSafetyset(userid,safetyquestion,safetyanswer,safetyemail);
-    }
-    @GetMapping("/changebasedata")
-    public Object changebasedata(@RequestParam("userid")int userid,@RequestParam("headimgsrc")String headimgsrc,@RequestParam("nickname")String nickname,@RequestParam("introduction")String introduction){
-        return userserviceimpl.changeBasedata(userid,headimgsrc,nickname,introduction);
     }
 }

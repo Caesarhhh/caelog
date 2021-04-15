@@ -1,6 +1,6 @@
 <template>
 <div class="box" :style="getcolor1()">
-  <div id="topbox">
+  <div id="topbox" :style="getcolor4()">
     <select @change="selectbyBlock" v-model="blockselect">
       <option value="all">全部</option>
       <option v-for="key in this.blocks" :value="key">{{key}}</option>
@@ -68,6 +68,9 @@
       },
       getcolor3(){
         return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
       },
       selectbyBlock:async function (){
         let s=this.blockselect
@@ -233,11 +236,14 @@
         })
       },
       deleteac:function (arid){
+        var valid=confirm("确定删除文章吗？")
+        if(!valid){
+          return
+        }
         this.$axios.get(
           this.common.serveraddress+"/article/delete?userid="+this.common.loginuserinfo.id+"&id="+arid).then(
           res=>{
             if(res.data.code==200){
-              alert("删除成功！")
               this.refresh_article()
             }
             else{
@@ -257,11 +263,12 @@
 #topbox{
   width: 677px;
   height:74px;
-  border-style: groove;
+  border-style: solid;
   border-width: thin;
   position: absolute;
   top:23px;
   left: 22px;
+  border-radius: 15px;
 }
 #topbox select{
   width:222px;

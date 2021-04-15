@@ -1,7 +1,7 @@
 <template>
-<div class="boxlc" @click="toChatterPage" :style="getcolor4()">
+<div class="boxlc" :style="getcolor3()">
   <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
-  <div id="head"><img :src="datas.headsrc" alt="error"></div>
+  <div id="head" @click="toChatterPage"><img :src="datas.headsrc" alt="error"></div>
   <div id="info" @click="openchat">
     <div id="nickname">{{datas.nickname}}</div>
     <div id="time">{{datas.time}}</div>
@@ -34,8 +34,8 @@
       toChatterPage(){
         this.$router.push("/"+this.datas.targetid+"/mainpage")
       },
-      getcolor4(){
-        return {backgroundColor: this.$store.state.color4}
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
       },
       openchat:function (){
         this.chatinfo.targetid=this.datas.targetid
@@ -57,7 +57,6 @@
   border-style: groove;
   border-width: thin;
   border-radius: 5px;
-  cursor: pointer;
 }
 .box1:hover #close{
   display: block;
@@ -66,6 +65,7 @@
   width: 38px;
   height: 38px;
   position: absolute;
+  cursor: pointer;
   top:4px;
   left:4px;
 }

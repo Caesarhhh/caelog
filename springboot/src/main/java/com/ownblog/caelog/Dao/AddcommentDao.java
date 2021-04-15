@@ -11,5 +11,6 @@ public interface AddcommentDao {
     List<Addcomment> getAddcommentlistall(HashMap hashMap);
     void insertAddcomment(Addcomment addcomment);
     void deleteAddcomment(HashMap hashMap);
+    void deleteAddcommentbyCommentid(HashMap hashMap);
     void changegoodnum(HashMap hashMap);
 }

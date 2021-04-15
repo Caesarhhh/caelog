@@ -4,12 +4,12 @@
     <div class="pagebutton" :style="getcolor1()" @click="topage('/mainpage')">首页</div>
     <div class="pagebutton" :style="getcolor1()" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
   </div>
-  <div id="readcontent" :style="getcolor1()">
+  <div id="readcontent" :style="getcolor4()">
     <div id="title">{{title}}</div>
     <div id="showarea">
       <GeminiScrollbar>
         <div id="gsd">
-          <div id="content"></div>
+          <div id="content" v-highlight v-html="content"></div>
         </div>
       </GeminiScrollbar>
     </div>
@@ -22,13 +22,13 @@
   </div>
   <div id="buttonbox">
     <img :src="this.good==-1?nogoodimgsrc:goodimgsrc" alt="error" @click="toglegood">
-    <img :src="transmitimgsrc" alt="error">
+    <img :src="transmitimgsrc" @click="share()" alt="error">
   </div>
   <div id="commentarea" :style="getcolor1()">
     <div id="editcomment">
       <div id="editImgsrc"><img :src="headimgsrc" alt="未登录"></div>
       <input id="editinput" v-model="inputtext"></input>
-      <button id="editbutton" @click="addcard">发表</button>
+      <div id="editbutton" :style="getcolor3()" @click="addcard">发表</div>
     </div>
     <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3<commentnum"></cc>
     <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3+1]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3+1<commentnum"></cc>
@@ -46,8 +46,11 @@
   import commentCard from "./commentCard/commentCard";
   import pagenums from "../../tools/pagenums/pagenums";
   import replytool from "../../wins/replytool/replytool";
+  import marked from 'marked';
+  import showdown from "showdown";
   import GeminiScrollbar from 'vue-gemini-scrollbar';
   import Vue from "vue";
+  var HyperDown=require('hyperdown');
   Vue.use(GeminiScrollbar);
   var blocklabels={
     labels:{},
@@ -95,15 +98,33 @@
         inputtext:"",
         bigsum:4,
         pcpos:{pos:'right'},
-        ifloginsame:false
+        ifloginsame:false,
+        index:0
       }
     },
     created() {
       this.title=this.$route.params.articleid;
     },
     methods:{
+      getcolor1(){
+        return {backgroundColor: this.$store.state.color1}
+      },
+      getcolor2(){
+        return {backgroundColor: this.$store.state.color2}
+      },
+      getcolor3(){
+        return {backgroundColor: this.$store.state.color3}
+      },
+      getcolor4(){
+        return {backgroundColor: this.$store.state.color4}
+      },
       topage:function (s){
         this.$router.push("/"+this.$route.params.userid+s);
+      },
+      share(){
+        this.$copyText(this.common.siteaddress+"/"+this.$route.params.userid+"/articleread/"+this.$route.params.articleid).then(res=>{
+          alert("已复制文章连接到剪切板")
+        })
       },
       toglegood:function (){
         if(!this.iflog){
@@ -143,6 +164,30 @@
         this.replyinfo.commentid=0
 
       },
+      addaddedcomment(commentid){
+        var index=0
+        for(var i=0;i<this.commentCardinfo.length;i++){
+          if(this.commentCardinfo[i].id==commentid){
+            index=i
+            break
+          }
+        }
+        let temp=this.commentCardinfo[index]
+        temp.addednum++
+        this.$axios.get(
+          this.common.serveraddress+"/addcomment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid+"&commentid="+commentid).then(
+          res=>{
+            temp.addednicknames.unshift(this.common.loginuserinfo.nickname)
+            temp.ifgood.unshift(-1)
+            temp.addedsrc.unshift(this.common.loginuserinfo.backimgsrc)
+            temp.goodnums.unshift(0)
+            temp.addedcontent.unshift(res.data.data[0].content)
+            temp.addedactorid.unshift(this.common.loginuserinfo.userid)
+            temp.addid.unshift(res.data.data[0].id)
+            temp.addtime.unshift(res.data.data[0].time_)
+            this.$set(this.commentCardinfo,i,temp);
+          })
+      },
       addcard:function (){
         if(!this.iflog){
           alert("请先登录")
@@ -158,16 +203,50 @@
         param.append('articleid',this.$route.params.articleid)
         param.append('actorid',this.common.loginuserinfo.id)
         this.uploadFile("/comment/add",param).then(async res=>{
-          await this.getcomments()
           this.commentCardinfo=this.commentCardinfo_
           this.commentnum=this.commentnum_
+          if(res.data.code==200){
+            this.inputtext=""
+            this.$axios.get(
+              this.common.serveraddress+"/comment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid).then(
+                res=>{
+                  var temp={
+                    id:res.data.data[0].id,
+                    actorid:res.data.data[0].actorid,
+                    maincontent:res.data.data[0].content,
+                    mainsrc:this.common.loginuserinfo.backimgsrc,
+                    index:0,
+                    nickname:this.common.loginuserinfo.nickname,
+                    addednicknames:[],
+                    ifmaingood:-1,
+                    maingoodnums:res.data.data[0].goodnum,
+                    time:res.data.data[0].time_,
+                    ifgood:[],
+                    goodnums:[],
+                    addedsrc:[],
+                    addedcontent:[],
+                    addednum:0,
+                    addedactorid:[],
+                    count:0,
+                    addid:[],
+                    addtime:[]
+                  }
+                  this.commentnum++;
+                  this.commentCardinfo.unshift(temp)
+                  this.pagenumsinfo.pos=1
+                  this.pagenumsinfo.sum=Math.ceil(this.commentnum/3)
+                }
+            )
+          }
+          else{
+            alert(res.data.msg)
+          }
         })
       },
       showtexthtml: function (x) {
         var mdValue=x;
         var converter = new showdown.Converter();
-        var html = converter.makeHtml(mdValue);
-        document.getElementById("content").innerHTML = html;
+        this.content=marked(mdValue)
         this.count*=-1;
       },
       deletecard:function (pos){
@@ -222,6 +301,7 @@
           })
       },
       getarticle(){
+        console.log(this.common.serveraddress+"/article/getone?userid="+this.$route.params.userid+"&id="+this.$route.params.articleid)
         this.$axios.get(
           this.common.serveraddress+"/article/getone?userid="+this.$route.params.userid+"&id="+this.$route.params.articleid).then(
           res=>{
@@ -232,6 +312,7 @@
                 block:blocklabels[res.data.data.blockid],
                 id:res.data.data.id
               }
+              console.log(temp.content)
               this.title=temp.title
               this.showtexthtml(temp.content)
           })
@@ -286,9 +367,9 @@
         this.commentnum_=0
         this.$axios.get(
           this.common.serveraddress+"/comment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid).then(
-          async res=> {
-            for(var i =0;i<res.data.data.length;i++){
-              var temp={
+           res=> {
+            for(let i =0;i<res.data.data.length;i++){
+                let temp={
                 id:res.data.data[i].id,
                 actorid:res.data.data[i].actorid,
                 maincontent:res.data.data[i].content,
@@ -309,12 +390,12 @@
                 addid:[],
                 addtime:[]
               }
-              await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+temp.actorid).then(
+              this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+temp.actorid).then(
                 ress=>{
                   temp.mainsrc=ress.data.data
                 }
               )
-              await this.$axios.get(this.common.serveraddress+"/user/getnickname?userid="+temp.actorid).then(
+              this.$axios.get(this.common.serveraddress+"/user/getnickname?userid="+temp.actorid).then(
                 ress=>{
                   temp.nickname=ress.data.data
                 }
@@ -325,7 +406,7 @@
                 param.append('actorid',this.common.loginuserinfo.id)
                 param.append('type_',"commentgood")
                 param.append('objectid',temp.id)
-              await this.uploadFile("/action/ifin",param).then(ress=>{
+              this.uploadFile("/action/ifin",param).then(ress=>{
                 if(ress.data.code==400){
                   temp.ifmaingood=-1
                 }
@@ -337,17 +418,17 @@
             else{
               temp.ifmaingood=-1
               }
-              await this.$axios.get(
+              this.$axios.get(
                 this.common.serveraddress+"/addcomment/get?userid="+this.common.userinfo.id+"&articleid="+this.$route.params.articleid+"&commentid="+temp.id).then(
-                async ress=>{
-                  for(var u=0;u<ress.data.data.length;u++){
+                 ress=>{
+                  for(let u=0;u<ress.data.data.length;u++){
                     temp.addedcontent.push(ress.data.data[u].content)
                     temp.addednicknames.push(ress.data.data[u].name_)
                     temp.goodnums.push(ress.data.data[u].goodnum)
                     temp.addid.push(ress.data.data[u].id)
                     temp.addedactorid.push(ress.data.data[u].actorid)
                     temp.addtime.push(ress.data.data[u].time_)
-                    await this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+ress.data.data[u].actorid).then(
+                    this.$axios.get(this.common.serveraddress+"/user/getimgsrc?userid="+ress.data.data[u].actorid).then(
                       resss=>{
                         temp.addedsrc.push(resss.data.data)
                       }
@@ -358,7 +439,7 @@
                     param.append('type_',"addcommentgood")
                     param.append('objectid',temp.addid[u])
                     if(this.iflog){
-                    await this.uploadFile("/action/ifin",param).then(resss=>{
+                    this.uploadFile("/action/ifin",param).then(resss=>{
                       if(resss.data.code==400){
                         temp.ifgood.push(-1)
                       }
@@ -392,12 +473,6 @@
                 this.good=1
               }
             })
-      },
-      getcolor1(){
-        return {backgroundColor: this.$store.state.color1}
-      },
-      getcolor2(){
-        return {backgroundColor: this.$store.state.color2}
       },
       inituserinfo(userid){
         this.$axios({
@@ -465,6 +540,7 @@
     position: absolute;
     top:26px;
     left:8px;
+    border-radius: 10px;
   }
   .pagebutton{
     width: 70px;
@@ -494,6 +570,7 @@
     left:734px;
     width: 280px;
     height: 600px;
+    border-radius: 15px;
   }
   #blocks{
     float:left;
@@ -543,6 +620,7 @@
     position: absolute;
     left:8px;
     top:98px;
+    border-radius: 10px;
   }
   #gsd{
     width: 682px;
@@ -561,6 +639,7 @@
     position: absolute;
     left:21px;
     top:1112px;
+    border-radius: 20px;
   }
   #editcomment{
     width: 942px;
@@ -587,20 +666,31 @@
   #editinput{
     width:798px;
     height:42px;
-    border-style: ridge;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    outline: none;
     position: absolute;
     top:5px;
     left:55px;
     font-family: 华光楷体_CNKI;
     font-size: 24px;
   }
+  #editinput:focus{
+    border-width: 2px;
+    left:54px;
+    top:4px;
+  }
   #editbutton{
     width:70px;
     height: 42px;
     position: absolute;
     top:8px;
-    right: 5px;
+    border-radius: 6px;
+    line-height: 42px;
+    right: 3px;
     font-size: 20px;
+    cursor: pointer;
     font-family: 华光楷体_CNKI;
   }
   .commentCard{
