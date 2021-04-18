@@ -9,7 +9,7 @@
     <div id="showarea">
       <GeminiScrollbar>
         <div id="gsd">
-          <div id="content" v-highlight v-html="content"></div>
+          <div id="content" v-html="content"></div>
         </div>
       </GeminiScrollbar>
     </div>
@@ -48,10 +48,12 @@
   import replytool from "../../wins/replytool/replytool";
   import marked from 'marked';
   import showdown from "showdown";
+  import Prism from "prismjs";
   import GeminiScrollbar from 'vue-gemini-scrollbar';
   import Vue from "vue";
-  var HyperDown=require('hyperdown');
+  Vue.use(Prism)
   Vue.use(GeminiScrollbar);
+  Prism.highlightAll()
   var blocklabels={
     labels:{},
     title:"板块",
@@ -99,7 +101,8 @@
         bigsum:4,
         pcpos:{pos:'right'},
         ifloginsame:false,
-        index:0
+        index:0,
+        content:""
       }
     },
     created() {
@@ -246,8 +249,10 @@
       showtexthtml: function (x) {
         var mdValue=x;
         var converter = new showdown.Converter();
-        this.content=marked(mdValue)
+        this.content=converter.makeHtml(mdValue)
         this.count*=-1;
+        this.$nextTick(()=>{
+          Prism.highlightAll()})
       },
       deletecard:function (pos){
         var temp=confirm("确定删除吗？");
@@ -312,9 +317,9 @@
                 block:blocklabels[res.data.data.blockid],
                 id:res.data.data.id
               }
-              console.log(temp.content)
               this.title=temp.title
               this.showtexthtml(temp.content)
+              Prism.highlightAll()
           })
       },
       refreshcomment:async function (){

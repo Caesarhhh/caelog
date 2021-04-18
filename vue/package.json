@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "babel-plugin-prismjs": "^2.0.1",
     "highlight": "^0.2.4",
     "highlight.js": "^10.7.2",
     "marked": "^2.0.3",

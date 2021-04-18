@@ -5,16 +5,17 @@
         <div id="mainhref" @click="topage('/mainpage')">首页</div>
         <div id="backhref" @click="topage('/backstage')">后台</div>
       </div>
-      <div id="markdowntitle" :style="getcolor1()">markdown</div>
-      <textarea id="markdownarea" v-model="innerhtmlinput" @keyup="mdSwitch"></textarea>
-      <div id="showtitle" :style="getcolor1()">预览</div>
-      <div :class="{showarea:count>-2}" :style="getcolor4()">
-        <GeminiScrollbar>
-          <div id="gsd">
-            <div id="showhtml" v-highlight></div>
-          </div>
-        </GeminiScrollbar>
-      </div>
+<!--      <div id="markdowntitle" :style="getcolor1()">markdown</div>-->
+<!--      <textarea id="markdownarea" v-model="innerhtmlinput" @keyup="mdSwitch"></textarea>-->
+<!--      <div id="showtitle" :style="getcolor1()">预览</div>-->
+<!--      <div :class="{showarea:count>-2}" :style="getcolor4()">-->
+<!--        <GeminiScrollbar>-->
+<!--          <div id="gsd">-->
+<!--            <div id="showhtml"></div>-->
+<!--          </div>-->
+<!--        </GeminiScrollbar>-->
+<!--      </div>-->
+      <vueCeditor v-model="innerhtmlinput" id="vueCeditor"></vueCeditor>
       <div id="bot">
         <div id="settingbox" :style="getcolor1()">
           <div id="titlesetting">
@@ -58,7 +59,11 @@
   import labelcard from "./labelcard/labelcard";
   import GeminiScrollbar from 'vue-gemini-scrollbar'
   import Vue from "vue";
+  import Prism from 'prismjs';
+  import vueCeditor from "../../tools/ArticleEditTool/vueCeditor";
+  Vue.use(Prism);
   Vue.use(GeminiScrollbar);
+  Prism.highlightAll()
   var labelcardinfo = [
   ]
   export default {
@@ -83,7 +88,8 @@
       }
     },
     components: {
-      lc: labelcard
+      lc: labelcard,
+      vueCeditor:vueCeditor
     },
     methods: {
       getcolor1(){
@@ -118,11 +124,12 @@
         this.labelinput = "";
       },
       mdSwitch: function () {
-        var mdValue = document.getElementById("markdownarea").value;
-        var converter = new showdown.Converter();
-        var html = converter.makeHtml(mdValue);
-        document.getElementById("showhtml").innerHTML = html;
-        this.count*=-1;
+        // var mdValue = document.getElementById("markdownarea").value;
+        // var converter = new showdown.Converter();
+        // var html = converter.makeHtml(mdValue);
+        // document.getElementById("showhtml").innerHTML = html;
+        // Prism.highlightAll()
+        // this.count*=-1;
       },
       refresh_blocks:function (){
         this.blocks=[]
@@ -422,6 +429,14 @@
     font-weight: bold;
     top: 80px;
     left: 519px;
+  }
+
+  #vueCeditor{
+    width:1400px;
+    height: 850px;
+    position: absolute;
+    left:-190px;
+    top:50px;
   }
 
   #markdownarea {
