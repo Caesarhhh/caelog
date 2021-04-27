@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss.file",
+      "type": "com.ownblog.caelog.utils.ossUtil",
+      "sourceType": "com.ownblog.caelog.utils.ossUtil"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.oss.file.bucketname",
+      "type": "java.lang.String",
+      "sourceType": "com.ownblog.caelog.utils.ossUtil"
+    },
+    {
+      "name": "aliyun.oss.file.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.ownblog.caelog.utils.ossUtil"
+    },
+    {
+      "name": "aliyun.oss.file.keyid",
+      "type": "java.lang.String",
+      "sourceType": "com.ownblog.caelog.utils.ossUtil"
+    },
+    {
+      "name": "aliyun.oss.file.keysecret",
+      "type": "java.lang.String",
+      "sourceType": "com.ownblog.caelog.utils.ossUtil"
+    }
+  ],
+  "hints": []
+}

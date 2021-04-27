@@ -49,5 +49,5 @@ new Vue({
 })
 const s = document.createElement('script');
 s.type = 'text/javascript';
-s.src = 'http://caesar216.usa3v.net/caelog/images/tool/showdown-master/dist/showdown.min.js';
+s.src = common.getserveraddress+'images/tool/showdown-master/dist/showdown.min.js';
 document.body.appendChild(s);

@@ -38,6 +38,8 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         List<String> excludePath = new ArrayList<>();
+        excludePath.add("/eduoss/fileOss");
+        excludePath.add("/user/test");
         excludePath.add("/user/register");
         excludePath.add("/user/login");
         excludePath.add("/user/get");

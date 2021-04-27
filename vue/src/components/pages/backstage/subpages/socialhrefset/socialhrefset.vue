@@ -35,7 +35,7 @@
     props:["datas"],
     data(){
       return{
-        picsrc:"http://caesar216.usa3v.net/caelog/images/tool/uploadpic.png",
+        picsrc:this.common.getserveraddress+"images/tool/uploadpic.png",
         hrefcardinfo:hrefcardinfo,
         pagenumsinfo:pagenumsinfo,
         hrefcontent:" ",
@@ -72,10 +72,10 @@
                 for(var i=0;i<this.common.hrefinfo.length;i++){
                   var x=this.common.hrefinfo[i]
                   var temp=true;
-                  var cc="http://caesar216.usa3v.net/caelog/images/tool/selected.png";
+                  var cc=this.common.getserveraddress+"images/tool/selected.png";
                   if(x.ifuse==0){
                     temp=false
-                    var cc="http://caesar216.usa3v.net/caelog/images/tool/nonselected.png";
+                    var cc=this.common.getserveraddress+"images/tool/nonselected.png";
                   }
                   this.hrefcardinfo.push(
                     {
@@ -158,7 +158,7 @@
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
           console.log(res)
-          this.uploadurl=this.common.getserveraddress+res.data.data;
+          this.uploadurl=res.data.data.url;
           this.picsrc=this.uploadurl;})
       },
       getObjectURL(file) {

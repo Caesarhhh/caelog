@@ -18,16 +18,6 @@
   import socialhrefset from "./subpages/socialhrefset/socialhrefset";
   import announcementset from "./subpages/announcementset/announcementset";
   import blockset from "./subpages/blockset/blockset";
-  var selectboxinfo={
-    headsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    introduction:"帅气的人",
-    nickname:"Caesar"
-  }
-  var personalCenterinfo={
-    headsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    introduction:"帅气的人",
-    nickname:"Caesar"
-  }
   var articlearrangeinfo={}
   var socialhrefinfo={}
   var anouncementsetinfo={}
@@ -37,8 +27,16 @@
     data(){
       return{
         pageindex:1,
-        selectboxinfo:selectboxinfo,
-        personalCenterinfo:personalCenterinfo,
+        selectboxinfo:{
+          headsrc:this.common.getserveraddress+"images/head.jpg",
+          introduction:"帅气的人",
+          nickname:"Caesar"
+        },
+        personalCenterinfo:{
+          headsrc:this.common.getserveraddress+"images/head.jpg",
+          introduction:"帅气的人",
+          nickname:"Caesar"
+        },
         articlearrangeinfo:articlearrangeinfo,
         socialhrefinfo:socialhrefinfo,
         anouncementsetinfo:anouncementsetinfo,

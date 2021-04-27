@@ -41,13 +41,13 @@
     props:["datas"],
     data(){
       return{
-        closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close2.png",
+        closeimgsrc:this.common.getserveraddress+"images/close2.png",
         inputmsg:{
           textinput:"",
           passwordinput:"",
           confirmpasswordinput:"",
           introduction:"",
-          backgroundimgsrc:"http://caesar216.usa3v.net/caelog/images/tool/uploadpic.png",
+          backgroundimgsrc:this.common.getserveraddress+"images/tool/uploadpic.png",
           securityQuestion:"",
           securityAnswer:"",
           securityEmail:"",
@@ -147,10 +147,14 @@
         let file = e.target.files[0]
         let param = new FormData()
         param.append('file', file)
-        this.uploadFile("/files/uploadtemp",param).then(res=>{
-          console.log(res)
-          this.uploadurl=this.common.getserveraddress+res.data.data;
-          this.inputmsg.backgroundimgsrc=this.uploadurl;})
+        this.$axios.post(this.common.serveraddress+"/files/uploadtemp",param).then(res=>{
+          this.uploadurl=res.data.data.url
+          this.inputmsg.backgroundimgsrc=this.uploadurl
+        })
+        // this.uploadFile("/files/uploadtemp",param).then(res=>{
+        //   console.log(res)
+        //   this.uploadurl=this.common.getserveraddress+res.data.data;
+        //   this.inputmsg.backgroundimgsrc=this.uploadurl;})
       },
       getrandomcode:function (){
         // if(!this.emailvalid){

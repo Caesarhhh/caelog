@@ -16,8 +16,8 @@
     props:["datas"],
     data(){
       return{
-        upsrc:"http://caesar216.usa3v.net/caelog/images/up.png",
-        delsrc:"http://caesar216.usa3v.net/caelog/images/delete.png"
+        upsrc:this.common.getserveraddress+"images/up.png",
+        delsrc:this.common.getserveraddress+"images/delete.png"
       }
     },
     methods:{

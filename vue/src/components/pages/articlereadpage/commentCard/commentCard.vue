@@ -31,10 +31,10 @@
     props:["datas","replyinfo"],
     data(){
       return{
-        goodimgsrc:"http://caesar216.usa3v.net/caelog/images/good.png",
-        nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
-        relpyimgsrc:"http://caesar216.usa3v.net/caelog/images/reply.png",
-        deleteimgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png",
+        goodimgsrc:this.common.getserveraddress+"images/good.png",
+        nogoodimgsrc:this.common.getserveraddress+"images/nogood.png",
+        relpyimgsrc:this.common.getserveraddress+"images/reply.png",
+        deleteimgsrc:this.common.getserveraddress+"images/delete.png",
         ifgood:[],
         iflog:false
       }

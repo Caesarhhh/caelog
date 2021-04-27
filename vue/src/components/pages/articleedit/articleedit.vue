@@ -84,7 +84,7 @@
         newblockname:"板块名称",
         newblockcomment:"在此输入板块备注",
         titleinput:"",
-        newimgsrc:"http://caesar216.usa3v.net/caelog/images/tool/uploadpic.png",
+        newimgsrc:this.common.getserveraddress+"images/tool/uploadpic.png",
       }
     },
     components: {
@@ -172,8 +172,7 @@
         param.append('file', file)
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
-          console.log(res.data)
-          this.newimgsrc=this.common.getserveraddress+res.data.data})
+          this.newimgsrc=res.data.data.url})
       },
       addblock:function (){
         if(this.newblockcomment===""||this.newblockname===""){
@@ -230,12 +229,13 @@
         }
       },
       submit:function (){
-        let param = new FormData()
-        param.append('content', this.innerhtmlinput)
-        param.append('userid',this.common.loginuserinfo.id)
-        param.append('title',this.titleinput)
-        param.append('blockid',this.id[this.selected])
-        this.uploadFile("/article/add",param).then(res=>{
+        let param ={
+          content:this.innerhtmlinput,
+          userid:this.common.loginuserinfo.id,
+          title:this.titleinput,
+          blockid:this.id[this.selected]
+        }
+        this.$axios.post(this.common.serveraddress+"/article/add",param).then(res=>{
           this.addarlabel(res.data.data.id,0)
           if(res.data.code==200){
             alert("发表成功！")
@@ -255,6 +255,7 @@
         param.append('title',this.titleinput)
         param.append('blockid',this.id[this.selected])
         param.append('id',this.$route.params.articleid)
+        console.log(this.innerhtmlinput)
         this.uploadFile("/article/update",param).then(res=>{
           console.log(res)
           this.deletelabel(this.subset(this.originlabels,this.labelcardinfo))

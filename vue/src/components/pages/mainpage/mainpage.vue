@@ -41,22 +41,6 @@
   var chatinfo={
     ifwin:false
   }
-  var announceInfo={
-    title:[],
-    time:[],
-    text:[],
-    leftsrc:"http://caesar216.usa3v.net/caelog/images/left.png",
-    rightsrc:"http://caesar216.usa3v.net/caelog/images/right.png",
-    count:0
-  }
-  var songInfo={
-    songname:"心要野",
-    singer:"后海大鲨鱼",
-    imgurl:"http://caesar216.usa3v.net/caelog/images/singer.png",
-    playurl:"http://caesar216.usa3v.net/caelog/images/play.png",
-    pauseurl:"http://caesar216.usa3v.net/caelog/images/pause.png",
-    songurl:"http://caesar216.usa3v.net/caelog/images/心要野.mp3"
-  }
   var sortinfo={
     timeslot:[{id:1,st:2015,et:2016}]
   }
@@ -78,8 +62,22 @@
     name: 'mainpage',
     data(){
       return {
-        announceInfo:announceInfo,
-        songInfo:songInfo,
+        announceInfo:{
+          title:[],
+          time:[],
+          text:[],
+          leftsrc:this.common.getserveraddress+"images/left.png",
+          rightsrc:this.common.getserveraddress+"images/right.png",
+          count:0
+        },
+        songInfo:{
+          songname:"心要野",
+          singer:"后海大鲨鱼",
+          imgurl:this.common.getserveraddress+"images/singer.png",
+          playurl:this.common.getserveraddress+"images/play.png",
+          pauseurl:this.common.getserveraddress+"images/pause.png",
+          songurl:this.common.getserveraddress+"images/心要野.mp3"
+        },
         sortinfo:sortinfo,
         articleCardInfo:[],
         articleCardInfoprint:[],

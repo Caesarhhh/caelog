@@ -22,7 +22,7 @@
     props:["datas"],
     data(){
       return{
-        closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close2.png",
+        closeimgsrc:this.common.getserveraddress+"images/close2.png",
         inputmsg:{
           textinput:"",
           passwordinput:""
@@ -59,6 +59,7 @@
             }
           }
         ).then(res=>{
+          console.log(res)
           if(res.data.code==400){
             alert('密码或用户名错误');
             return

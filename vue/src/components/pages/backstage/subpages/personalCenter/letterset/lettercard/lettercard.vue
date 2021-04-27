@@ -4,7 +4,7 @@
   <div id="head" @click="toChatterPage"><img :src="datas.headsrc" alt="error"></div>
   <div id="info" @click="openchat">
     <div id="nickname">{{datas.nickname}}</div>
-    <div id="time">{{datas.time}}</div>
+    <div id="time">{{datas.time.substring(2,10)}}</div>
   </div>
   <div id="close" class="close">
     <img :src="closesrc" alt="error">
@@ -22,7 +22,7 @@
     name: "letterCard",
     data(){
       return{
-        closesrc:"http://caesar216.usa3v.net/caelog/images/close.png",
+        closesrc:this.common.getserveraddress+"images/close.png",
         chatinfo:chatinfo,
       }
     },

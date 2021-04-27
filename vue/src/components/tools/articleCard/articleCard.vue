@@ -22,10 +22,10 @@
     data(){
       return {
         good:-1,
-        goodsrc:"http://caesar216.usa3v.net/caelog/images/good.png",
-        nogoodsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
-        turnsrc:"http://caesar216.usa3v.net/caelog/images/transmit.png",
-        readsrc:"http://caesar216.usa3v.net/caelog/images/read.png"
+        goodsrc:this.common.getserveraddress+"images/good.png",
+        nogoodsrc:this.common.getserveraddress+"images/nogood.png",
+        turnsrc:this.common.getserveraddress+"images/transmit.png",
+        readsrc:this.common.getserveraddress+"images/read.png"
       }
     },
     props:["datas"],

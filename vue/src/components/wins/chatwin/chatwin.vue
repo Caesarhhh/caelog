@@ -27,12 +27,8 @@
   import GeminiScrollbar from 'vue-gemini-scrollbar';
   import Vue from "vue";
   Vue.use(GeminiScrollbar);
-  var chatinfo=[{
-    headimgsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
-    content:"只看一个人的着作，结果是不大好的：你就得不到多方面的优点。必须如蜜蜂一样，采过许多花，这才能酿出蜜来。倘若叮在一处，所得就非常有限，枯燥了。",
-    ifleft:false,
-    chatterid:0
-  }]
+  var that=this
+  var chatinfo=[]
   export default {
     name: "chatwin",
     props:["datas"],
@@ -40,7 +36,7 @@
     },
     data(){
       return{
-        closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close2.png",
+        closeimgsrc:this.common.getserveraddress+"images/close2.png",
         chatinfo:chatinfo,
         sheight:420,
         shpos:0,
@@ -52,7 +48,6 @@
       }
     },
     mounted() {
-      this.init()
       this.getChatinfo(this.datas.targetid)
     },
     methods:{
@@ -131,91 +126,6 @@
             }
           }
         )
-      },
-      init:function (){
-        if(this.getscrollheight()>0){
-          this.setscrollheight(this.getscrollheight());
-          var top=420-this.getscrollheight();
-          this.setscrollpos(top);
-          this.setchatspos(-1*top*(this.chatsheight()-424)/(420-this.getscrollheight()));
-          this.shpos=top;
-        }
-        window.addEventListener('mousewheel', this.debounce(this.handleScroll,100), true)||window.addEventListener("DOMMouseScroll",this.debounce(this.handleScroll,100),false)
-      },
-      waittime:function (fun,time){
-        this.timer = setTimeout(()=>{fun
-        },time);
-      },
-      setscrollpos:function (pos){
-        this.$refs.scrollpos.style.setProperty("--scrollpos",String(pos)+"px");
-      },
-      setscrollheight:function (height){
-        this.$refs.scrollpos.style.setProperty("--scrollheight",String(height)+"px");
-      },
-      setchatspos:function (pos){
-        this.$refs.chats.style.setProperty("--chattop",String(pos)+"px");
-      },
-      chatsheight(){
-        return this.$refs.chats.offsetHeight+10;
-      },
-      getscrollheight(){
-        if(this.chatsheight()<424){
-          return 0;
-        }
-        var temp=424*420/this.chatsheight();
-        this.setscrollheight(temp);
-        return temp;
-      },
-      debounce(func, wait) {
-        let timeout;
-        return function () {
-          let context = this;
-          let args = arguments;
-          if (timeout) clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            func.apply(context, args)
-          }, wait);
-        }
-      },
-      handleScroll(e){
-        let direction = e.deltaY > 0 ? 'down' : 'up'
-        if(this.getscrollheight()>0){
-          if(direction=='down'){
-            this.shpos+=60;
-            if(this.shpos>this.chatsheight()-424){
-              this.shpos=this.chatsheight()-424;
-            }
-            this.setscrollpos(this.shpos*(420-this.getscrollheight())/(this.chatsheight()-424));
-            this.setchatspos(-1*this.shpos);
-          }
-          else{
-            this.shpos-=60;
-            if(this.shpos<0){
-              this.shpos=0;
-            }
-            this.setscrollpos(this.shpos*(420-this.getscrollheight())/(this.chatsheight()-424));
-            this.setchatspos(-1*this.shpos);
-          }
-        }
-      },
-      move(e){
-        let odiv = e.target;
-        let disY = e.clientY - odiv.offsetTop;
-        document.onmousemove = (e)=>{
-          let top = e.clientY - disY;
-          if(top+this.getscrollheight()<420&&top>0){
-          this.setscrollpos(top);
-          this.setchatspos(-1*top*(this.chatsheight()-424)/(420-this.getscrollheight()));
-          odiv.style.top = top + 'px';
-          this.ifunselect=true;
-          this.shpos=top;
-          }
-        };
-        document.onmouseup = (e) => {
-          document.onmousemove = null;
-          document.onmouseup = null;
-          this.ifunselect=false;
-        };
       },
       submitmsg:function (){
         if(this.inputtext!=""){

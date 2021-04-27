@@ -22,7 +22,7 @@
     props:["datas","commentinfo"],
     data(){
       return{
-        closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close2.png",
+        closeimgsrc:this.common.getserveraddress+"images/close2.png",
         inputtext:""
       }
     },

@@ -14,7 +14,7 @@
     props:["datas"],
     data(){
       return{
-        closeimg:"http://caesar216.usa3v.net/caelog/images/close2.png"
+        closeimg:this.common.getserveraddress+"images/close2.png"
       }
     },
     methods:{

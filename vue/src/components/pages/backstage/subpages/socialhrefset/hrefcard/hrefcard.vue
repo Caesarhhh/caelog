@@ -14,10 +14,10 @@
     props:["datas"],
     data(){
       return{
-        imgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png",
-        deletesrc:"http://caesar216.usa3v.net/caelog/images/delete.png",
-        selectsrc:"http://caesar216.usa3v.net/caelog/images/tool/selected.png",
-        nonselectsrc:"http://caesar216.usa3v.net/caelog/images/tool/nonselected.png",
+        imgsrc:this.common.getserveraddress+"images/delete.png",
+        deletesrc:this.common.getserveraddress+"images/delete.png",
+        selectsrc:this.common.getserveraddress+"images/tool/selected.png",
+        nonselectsrc:this.common.getserveraddress+"images/tool/nonselected.png",
         checked:true
       }
     },

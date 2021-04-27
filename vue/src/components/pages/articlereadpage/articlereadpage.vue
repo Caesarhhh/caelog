@@ -65,16 +65,6 @@
     type:'label'
   }
   var commentCardinfo=[]
-  var replyinfo={
-    id:0,
-    headimgsrc:"http://caesar216.usa3v.net/caelog/images/head.jpg",
-    nickname:"Luffy",
-    name:"Luffy",
-    ifreply:false,
-    ccindex:0,
-    commentid:0,
-    targetid:0
-  }
   const s = document.createElement('script');
   export default {
     name: "articlereadpage",
@@ -84,9 +74,9 @@
         iflog:false,
         blocklabels:blocklabels,
         labellabels:labellabels,
-        transmitimgsrc:"http://caesar216.usa3v.net/caelog/images/transmit.png",
-        goodimgsrc:"http://caesar216.usa3v.net/caelog/images/good.png",
-        nogoodimgsrc:"http://caesar216.usa3v.net/caelog/images/nogood.png",
+        transmitimgsrc:this.common.getserveraddress+"images/transmit.png",
+        goodimgsrc:this.common.getserveraddress+"images/good.png",
+        nogoodimgsrc:this.common.getserveraddress+"images/nogood.png",
         title:"",
         good:-1,
         headimgsrc:"",
@@ -95,7 +85,16 @@
         pagenumsinfo:{sum:1,pos:1},
         commentnum:0,
         commentnum_:0,
-        replyinfo:replyinfo,
+        replyinfo:{
+          id:0,
+          headimgsrc:this.common.getserveraddress+"images/head.jpg",
+          nickname:"Luffy",
+          name:"Luffy",
+          ifreply:false,
+          ccindex:0,
+          commentid:0,
+          targetid:0
+        },
         nickname: "Caesar",
         inputtext:"",
         bigsum:4,

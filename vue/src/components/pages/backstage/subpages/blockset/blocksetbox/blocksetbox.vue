@@ -14,7 +14,7 @@
     name: "blocksetbox",
     data(){
       return{
-        delimgsrc:"http://caesar216.usa3v.net/caelog/images/delete.png"
+        delimgsrc:this.common.getserveraddress+"images/delete.png"
       }
     },
     props:["datas"],

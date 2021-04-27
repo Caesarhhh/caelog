@@ -18,6 +18,7 @@ public class sendEmailUtil {
         sf.setTrustAllHosts(true);
         properties.put("mail.smtp.ssl.enable", "true");
         properties.put("mail.smtp.ssl.socketFactory", sf);
+        properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {

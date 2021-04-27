@@ -42,7 +42,7 @@
     name: "blockset",
     data(){
       return{
-        settingpicsrc:"http://caesar216.usa3v.net/caelog/images/tool/uploadpic.png",
+        settingpicsrc:this.common.getserveraddress+"images/tool/uploadpic.png",
         uploadurl:"",
         pagenumsinfo:pagenumsinfo,
         blocksetboxinfo:blocksetboxinfo,
@@ -134,8 +134,7 @@
         param.append('file', file)  // 通过append向form对象添加数据
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
-          console.log(res.data)
-          this.uploadurl=this.common.getserveraddress+res.data.data;
+          this.uploadurl=res.data.data.url;
           this.settingpicsrc=this.uploadurl;})
       },
       submit:function (e){

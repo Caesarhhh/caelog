@@ -46,9 +46,9 @@
     props:['datas'],
     data(){
       return{
-        headpicsrc: "http://caesar216.usa3v.net/caelog/images/head.jpg",
+        headpicsrc: this.common.getserveraddress+"images/head.jpg",
         personalIntroduction: "帅气的人",
-        chatpicsrc:"http://caesar216.usa3v.net/caelog/images/personalchat.png",
+        chatpicsrc:this.common.getserveraddress+"images/personalchat.png",
         hrefdatas:hrefdatas,
         name:"Caesar",
         chatinfo:chatinfo,

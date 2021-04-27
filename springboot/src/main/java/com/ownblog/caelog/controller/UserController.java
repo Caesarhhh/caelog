@@ -37,6 +37,11 @@ public class UserController {
         }
         return userserviceimpl.register(username,password,introduction,backg,securityQuestion,securityAnswer,securityEmail);
     }
+    @RequestMapping(value="/test",method = RequestMethod.POST)
+    @ResponseBody
+    public Object test(){
+        return "test";
+    }
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public Object login(@RequestBody Map<String,Object> para)throws JsonProcessingException {

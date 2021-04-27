@@ -29,7 +29,7 @@
     },
     data(){
       return{
-        closeimgsrc:"http://caesar216.usa3v.net/caelog/images/close.png"
+        closeimgsrc:this.common.getserveraddress+"images/close.png"
       }
     }
   }

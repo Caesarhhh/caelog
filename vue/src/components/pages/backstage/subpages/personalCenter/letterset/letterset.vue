@@ -21,45 +21,20 @@
     pos:1,
     sum:2
   }
-  var letterCardinfo=
-  [{nickname:"Luffy",
-    time:"20-12-17 18:30",
-    headsrc:"http://caesar216.usa3v.net/caelog/images/luffy.png"},
-    {nickname:"Zoro",
-      time:"20-12-19 17:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/zoro.png"},
-    {nickname:"Nami",
-      time:"20-12-18 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/nami.png"},
-    {nickname:"Sanji",
-      time:"20-12-15 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/sanji.png"},
-    {nickname:"Wusopu",
-      time:"20-12-14 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/wusopu.png"},
-    {nickname:"Joba",
-      time:"20-12-13 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/joba.png"},
-    {nickname:"Robin",
-      time:"20-12-12 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/robin.png"},
-    {nickname:"Franky",
-      time:"20-12-14 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/franky.png"},
-    {nickname:"Blook",
-      time:"20-12-15 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/blook.png"},
-    {nickname:"Shinpin",
-      time:"20-12-19 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/shinpin.png"}]
   export default {
     name: "letterset",
     props:["datas"],
     data(){
       return{
         pagenumsinfo:pagenumsinfo,
-        letternum:10,
-        letterCardinfo:letterCardinfo
+        letternum:0,
+        letterCardinfo:[{
+          nickname:"Jack",
+          time:"21-04-12",
+          headsrc:this.common.getserveraddress+"/userdata/-1/1617959159018505.png",
+          targetid:1,
+          id:0
+        }]
       }
     },
     components:{
@@ -79,16 +54,41 @@
       getcolor4(){
         return {backgroundColor: this.$store.state.color4}
       },
+      comparetime(time1,time2){
+        let t1=[]
+        t1.push(parseInt(time1.substring(0,4)))
+        t1.push(parseInt(time1.substring(5,7)))
+        t1.push(parseInt(time1.substring(8,10)))
+        t1.push(parseInt(time1.substring(11,13)))
+        t1.push(parseInt(time1.substring(14,16)))
+        t1.push(parseInt(time1.substring(17,19)))
+        t1.push(parseInt(time1.substring(20,22)))
+        let t2=[]
+        t2.push(parseInt(time2.substring(0,4)))
+        t2.push(parseInt(time2.substring(5,7)))
+        t2.push(parseInt(time2.substring(8,10)))
+        t2.push(parseInt(time2.substring(11,13)))
+        t2.push(parseInt(time2.substring(14,16)))
+        t2.push(parseInt(time2.substring(17,19)))
+        t2.push(parseInt(time2.substring(20,22)))
+        for(var i=0;i<t1.length;i++){
+          if(t1[i]!=t2[i]){
+            return t1[i]-t2[i]
+          }
+        }
+        return 0
+      },
       getchatinfo:function (){
         this.letterCardinfo=[]
         this.letternum=0
         this.$axios({
           method:'get',
           url:this.common.serveraddress+"/chat/getbysort?userid="+this.common.loginuserinfo.id
-        }).then(async res=>{
+        }).then(res=>{
           let len=res.data.data.length
-          for(var i=0;i<len;i++){
-            var tempdict={
+          this.letternum=0
+          for(let i=0;i<len;i++){
+            let tempdict={
               nickname:"",
               time:"",
               headsrc:"",
@@ -100,11 +100,11 @@
               tempid=res.data.data[i].person2id
               tempdict.targetid=tempid
             }
-            await this.$axios({
+            this.$axios({
               method:'get',
               url:this.common.serveraddress+"/user/get?userid="+tempid
             }).then(async ress=>{
-              await this.$axios({
+              this.$axios({
                 method:'get',
                 async:false,
                 url:this.common.serveraddress+"/letter/get?chatid="+tempdict.id
@@ -112,9 +112,21 @@
                 tempdict.nickname=ress.data.data.nickname
                 tempdict.headsrc=ress.data.data.backimgsrc
                 this.letterCardinfo.push(tempdict)
-                tempdict.time=resss.data.data[0].time_.substring(2,10)
+                tempdict.time=resss.data.data[0].time_
                 this.letternum++
-                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)}
+                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)
+                if(this.letternum==len){
+                  for(let pi=0;pi<len;pi++){
+                    for(let pj=0;pj<len-pi-1;pj++){
+                      if(this.comparetime(this.letterCardinfo[pj].time,this.letterCardinfo[pj+1].time)<0){
+                        let templetter=this.letterCardinfo[pj]
+                        this.$set(this.letterCardinfo,pj,this.letterCardinfo[pj+1])
+                        this.$set(this.letterCardinfo,pj+1,templetter)
+                      }
+                    }
+                  }
+                }
+              }
               })
             })
           }

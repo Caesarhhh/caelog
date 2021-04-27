@@ -34,13 +34,6 @@
     email:"yujkl5487@qq.com",
     secret:"123456"
   }
-  var lettersetinfo={
-    letters:[{
-      nickname:"Luffy",
-      time:"20-12-17 18:30",
-      headsrc:"http://caesar216.usa3v.net/caelog/images/luffy.png"
-    }]
-  }
   export default {
     name: "personalCentor",
     data(){
@@ -49,10 +42,16 @@
         nickname:"",
         introduction:"",
         safetysettinginfo:safetysettinginfo,
-        lettersetinfo:lettersetinfo,
+        lettersetinfo:{
+          letters:[{
+            nickname:"Luffy",
+            time:"20-12-17 18:30",
+            headsrc:this.common.getserveraddress+"images/luffy.png"
+          }]
+        },
         colorsSelect:[],
         colorNum:0,
-        backgroundsrc:"http://caesar216.usa3v.net/caelog/images/background.png"
+        backgroundsrc:this.common.getserveraddress+"images/background.png"
       }
     },
     props:["datas"],
@@ -110,10 +109,10 @@
         }
         this.$axios.post(this.common.serveraddress+"/user/changebc",params).then(res=>{
           if(res.data.code==200){
-            alert("背景更换成功！")
+            alert("主题更换成功！")
           }
           else{
-            alert("背景更换失败!")
+            alert("主题更换失败!")
           }
         })
       },
@@ -181,7 +180,7 @@
         param.append('file', file)  // 通过append向form对象添加数据
         param.append('userid',this.common.loginuserinfo.id)
         this.uploadFile("/files/upload",param).then(res=>{
-          var uploadurl=this.common.getserveraddress+res.data.data;
+          var uploadurl=res.data.data.url;
           this.headimgsrc=uploadurl;
         })
       }

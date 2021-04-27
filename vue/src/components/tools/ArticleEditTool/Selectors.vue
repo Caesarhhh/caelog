@@ -2,10 +2,10 @@
 <div class="Selectors">
   <div id="selectBox">
     <div class="button" :style="getcolor3()" @click="openPicwin">
-      <img src="http://caesar216.usa3v.net/caelog/images/picture.png" alt="error">
+      <img src="https://caelog.oss-cn-beijing.aliyuncs.com/images/picture.png" alt="error">
     </div>
     <div class="button" :style="getcolor3()" @click="save">
-      <img src="http://caesar216.usa3v.net/caelog/images/save.png" alt="error">
+      <img src="https://caelog.oss-cn-beijing.aliyuncs.com/images/save.png" alt="error">
     </div>
     <div id="ImgBox" v-if="ifwin" :style="[getcolorFont(),getcolor4()]">
       <div id="close" @click="closePicwin">
@@ -40,20 +40,8 @@
     data(){
       return{
         imgs:[
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png",
-          "http://caesar216.usa3v.net/caelog/images/picture.png"
         ],
-        closeImgSrc:"http://caesar216.usa3v.net/caelog/images/close2.png",
+        closeImgSrc:this.common.getserveraddress+"images/close2.png",
         ifwin:false,
         selectedIndex:99999
       }
@@ -115,7 +103,7 @@
         params.append('userid',this.common.loginuserinfo.id);
         var that=this
         axios.post(this.common.serveraddress+'/files/upload', params).then(res=>{
-          that.imgs.push(this.common.getserveraddress+res.data.data)
+          that.imgs.push(res.data.data.url)
         })
       },
       uploadFilebyClick (e) {
@@ -125,7 +113,7 @@
         params.append('userid',this.common.loginuserinfo.id);
         var that=this
         axios.post(this.common.serveraddress+'/files/upload', params).then(res=>{
-          that.imgs.push(this.common.getserveraddress+res.data.data)
+          that.imgs.push(res.data.data.url)
         })
       },
       save:function (){

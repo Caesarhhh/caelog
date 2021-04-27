@@ -16,6 +16,9 @@ const routers=[
     path:'/',name:'loginpage',component: loginpage
   },
   {
+    path:'',name:'loginpage',component: loginpage
+  },
+  {
     path:'/login',name:'loginpage',component: loginpage
   },
   {

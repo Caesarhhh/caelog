@@ -21,8 +21,8 @@
     data(){
       return {
         good:-1,
-        modifysrc:"http://caesar216.usa3v.net/caelog/images/modify.png",
-        delsrc:"http://caesar216.usa3v.net/caelog/images/delete.png"
+        modifysrc:this.common.getserveraddress+"images/modify.png",
+        delsrc:this.common.getserveraddress+"images/delete.png"
       }
     },
     props:["datas"],

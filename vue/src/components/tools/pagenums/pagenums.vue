@@ -19,15 +19,13 @@
 </template>
 
 <script>
-  var aheadsrc="http://caesar216.usa3v.net/caelog/images/ahead.png"
-  var backsrc="http://caesar216.usa3v.net/caelog/images/back.png"
   export default {
     name: "pagenums",
     props:["datas"],
     data(){
       return{
-        aheadsrc:aheadsrc,
-        backsrc:backsrc
+        aheadsrc:this.common.getserveraddress+"images/ahead.png",
+        backsrc:this.common.getserveraddress+"images/back.png"
       }
     },
     methods:{

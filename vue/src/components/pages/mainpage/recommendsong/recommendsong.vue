@@ -20,7 +20,7 @@
     data(){
       return{
         songstate:-1,
-        audio:new Audio("http://caesar216.usa3v.net/caelog/images/心要野.mp3")
+        audio:new Audio(this.common.getserveraddress+"images/心要野.mp3")
       }
     },
     methods:{

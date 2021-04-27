@@ -14,9 +14,14 @@ import java.util.Map;
 @RestController
 @RequestMapping(value="/article",method = RequestMethod.POST)
 public class ArticleController {
-    @Autowired ArticleServiceImpl articleService;
-    @GetMapping(value = "/add")
-    public Object addarticle(@RequestParam("userid")int userid, @RequestParam("content")String content, @RequestParam("title")String title, @RequestParam("blockid")int blockid){
+    @Autowired
+    ArticleServiceImpl articleService;
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public Object addarticle(@RequestBody Map<String,Object> para){
+        int userid= (int) para.get("userid");
+        String content= (String) para.get("content");
+        String title= (String) para.get("title");
+        int blockid= (int) para.get("blockid");
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         String times=df.format(new Date());
         return articleService.addarticle(userid,title,content,times,blockid);
