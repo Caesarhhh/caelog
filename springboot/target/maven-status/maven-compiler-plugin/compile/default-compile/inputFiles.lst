@@ -6,6 +6,7 @@ D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\impl\Announ
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\utils\FtpProperties.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\BlocksController.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\impl\BlocksServiceImpl.java
+D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\ossService.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\Dao\ArticleDao.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\Letter.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\utils\BatisUtils.java
@@ -31,11 +32,13 @@ D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\impl\Articl
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\configurer\HttpToHttpsConfig.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\UserService.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\ActionController.java
+D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\ossController.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\Socialhref.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\tools\Time.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\Dao\BlocksDao.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\Chat.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\pojo\Comment.java
+D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\utils\ossUtil.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\controller\ChatController.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\impl\CommentServiceImpl.java
 D:\github\caelog\springboot\src\main\java\com\ownblog\caelog\service\LetterService.java
