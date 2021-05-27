@@ -1,9 +1,32 @@
 <template>
   <div id="app">
-    <div class="log" :style="getcolorFont2()" v-if="state">欢迎，{{username}}</div>
-    <div class="logout" :style="getcolorFont2()" v-if="state" @click="logout">logout</div>
-    <div class="logout" :style="getcolorFont2()" v-if="!state" @click="login">login</div>
-    <div class="register" v-if="!state" :style="getcolorFont2()" @click="register">register</div>
+    <a-page-header
+      style="border-bottom: 1px solid rgb(235, 237, 240)"
+      title="Caelog.top"
+      :sub-title="welcomeText"
+    >
+      <template slot="extra">
+        <a-popover :title="adminName" class="popBox" style="background-color: white;border-style: none">
+          <template slot="content">
+            <div v-if="iflogin" class="userButton" @click="toBackStage">前往后台</div>
+            <div v-if="iflogin" class="userButton" @click="logout">退出登录</div>
+            <div v-if="!iflogin" class="userButton" @click="login">登录</div>
+            <div v-if="!iflogin" class="userButton" @click="register">注册</div>
+          </template>
+          <a-button type="primary">
+            <a-icon type="user" style="color: rgba(0,0,0,.25)"/>
+          </a-button>
+        </a-popover>
+        <a-popover class="popBox" @click="toDocPage" style="background-color: white;border-style: none">
+          <template slot="content">
+            <div>项目文档</div>
+          </template>
+          <a-button type="primary">
+            <a-icon type="question" style="color: rgba(0,0,0,.25)"/>
+          </a-button>
+        </a-popover>
+      </template>
+    </a-page-header>
     <router-view :style="stylevar"></router-view>
   </div>
 </template>
@@ -19,7 +42,10 @@ export default {
   name: 'App',
   data(){
     return {
-      bcolor:"green"
+      bcolor:"green",
+      adminName:"",
+      welcomeText:"",
+      iflogin:false
     }
   },
   computed:{
@@ -42,6 +68,15 @@ export default {
     ae:articleedit
   },
   mounted() {
+    if(((JSON.stringify(this.common.loginuserinfo)==='{}')||this.common.loginuserinfo==null)){
+      this.welcomeText="您好，未登录"
+      this.adminName="未登录"
+      this.iflogin=false
+      return
+    }
+    this.adminName=this.common.loginuserinfo.nickname
+    this.welcomeText="欢迎，"+this.adminName+"!"
+    this.iflogin=true
   },
   methods:{
     getcolor1(){
@@ -55,6 +90,12 @@ export default {
         backgroundColor: this.$store.state.color2,
         color:this.$store.state.colorFont
       }
+    },
+    toBackStage(){
+      this.$router.push("/"+this.common.loginuserinfo.id+"/backstage")
+    },
+    toDocPage: function () {
+      window.open("https://github.com/Caesarhhh/caelog");
     },
     getcolorFont2(){
       return {
@@ -133,39 +174,31 @@ export default {
   text-align: center;
   position: relative;
   margin-top: 0px;
-  width:1024px;
-  margin:auto;
-  height:100%;
-  height: auto;
-  min-height: 1100px;
 }
-.log{
-  position: absolute;
-  width:120px;
-  height: 20px;
-  right:100px;
-  top:0px;
-  text-align: center;
-  z-index: 100;
-}
-.logout{
-  position: absolute;
-  width:30px;
-  height: 20px;
-  right:60px;
-  top:0px;
-  text-decoration: underline;
+
+.userButton {
   cursor: pointer;
-  z-index: 100;
+  background-color: inherit;
+  height: 30px;
 }
-.register{
-  position: absolute;
-  width:30px;
-  height: 20px;
-  right:130px;
-  top:0px;
-  text-decoration: underline;
-  cursor: pointer;
-  z-index: 100;
+
+.userButton :hover {
+  background-color: coral;
+  color: coral;
+}
+
+
+.popBox {
+  background-color: white;
+  color: white;
+  border-style: none;
+}
+
+.popBox:hover {
+  background-color: white;
+}
+
+.popBox:focus {
+  background-color: inherit;
 }
 </style>

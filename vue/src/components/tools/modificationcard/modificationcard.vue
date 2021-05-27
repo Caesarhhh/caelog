@@ -1,7 +1,9 @@
 <template>
 <div class="box">
   <div id="content">
-    {{datas.content}}
+    <GeminiScrollbar>
+      {{datas.content}}
+    </GeminiScrollbar>
   </div>
   <div id="time">
     {{datas.time}}
@@ -18,13 +20,14 @@
 
 <style scoped>
 .box{
-  width:160px;
+  width:96%;
   height:90px;
   border-radius: 10px;
   position: relative;
+  margin-left: 2%;
 }
 #content{
-  width:153px;
+  width:100%;
   height: 68px;
   word-break: break-all;
   word-wrap: break-word;
@@ -37,10 +40,10 @@
   font-family: 华光楷体_CNKI;
 }
 #time{
-  width: 70px;
+  width: 50%;
   height:16px;
   position: absolute;
-  right:2px;
+  right:2%;
   bottom:2px;
   font-family: 华光楷体_CNKI;
 }

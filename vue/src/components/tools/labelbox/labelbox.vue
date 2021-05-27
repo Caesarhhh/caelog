@@ -35,26 +35,26 @@
 
 <style scoped>
 .box{
-  width:250px;
+  width:86%;
   height: 250px;
   position: relative;
 }
 #title{
-  width:100px;
+  width:94%;
   height:35px;
   position: absolute;
   top:5px;
-  left:10px;
+  left:3%;
   line-height: 35px;
   font-size: 28px;
   font-family: 华光楷体_CNKI;
 }
 #body{
-  width:230px;
+  width:94%;
   height:190px;
   position: absolute;
   border-bottom-style: ridge;
-  left:10px;
+  left:3%;
   top:50px;
 }
 .label{
@@ -62,7 +62,7 @@
   height:21px;
   float:left;
   margin-top: 10px;
-  margin-left:14px;
+  margin-left:4%;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
   cursor: pointer;

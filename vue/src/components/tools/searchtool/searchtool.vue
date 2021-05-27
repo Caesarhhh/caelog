@@ -33,12 +33,12 @@
 
 <style scoped>
   .searchbox{
-    width:280px;
+    width:95%;
     height:40px;
     position: relative;
   }
   #searchinput{
-    width:230px;
+    width:80%;
     height:30px;
     border-style: ridge;
     position: absolute;

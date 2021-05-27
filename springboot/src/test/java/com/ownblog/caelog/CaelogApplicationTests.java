@@ -81,6 +81,7 @@ class CaelogApplicationTests {
 
         @Test
         public void test(){
+            System.out.println(articleService);
         }
 
 

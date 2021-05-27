@@ -91,26 +91,26 @@
 
 <style scoped>
 .boxac{
-  width:500px;
+  width:100%;
   height:200px;
   border-radius: 10px;
   border-bottom-style: ridge;
   position: relative;
 }
 #info{
-  width: 479px;
+  width: 94%;
   height: 39px;
   position: absolute;
   top:5px;
-  left:7px;
+  left:3%;
 }
 #title{
-  width:350px;
+  width:70%;
   height: 37px;
   float:left;
   overflow: hidden;
   margin-top:1px;
-  margin-left:3px;
+  margin-left:2%;
   font-family: 华光楷体_CNKI;
   font-size: 28px;
   text-align: left;
@@ -128,25 +128,25 @@
   line-height: 100%;
 }
 #time{
-  width:85px;
+  width:25%;
   height:20px;
   position: absolute;
   top:15px;
-  right:15px;
+  right:0%;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
   text-align: left;
   line-height: 100%;
 }
 #body{
-  width:484px;
+  width:98%;
   height: 147px;
   position: absolute;
   top:45px;
-  left:7px;
+  left:1%;
 }
 #content{
-  width: 436px;
+  width: 94%;
   height: 138px;
   float:left;
   margin-top:8px;
@@ -160,15 +160,14 @@
   overflow: hidden;
 }
 #buttonbox{
-  width:36px;
+  width:5%;
   height: 134px;
   float:right;
   margin-top:5px;
   margin-right: 0px;
 }
 .button{
-  width:30px;
-  height:30px;
+  width:90%;
   margin-top:14px;
   margin-left:3px;
   float:left;

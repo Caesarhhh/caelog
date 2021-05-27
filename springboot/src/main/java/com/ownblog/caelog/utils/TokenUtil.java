@@ -18,7 +18,6 @@ public class TokenUtil {
                     .withIssuer("auth0")
                     .withClaim("nickname", user.getNickname())
                     .withExpiresAt(expiresAt)
-                    // 使用了HMAC256加密算法。
                     .sign(Algorithm.HMAC256(TOKEN_SECRET));
         } catch (Exception e){
             e.printStackTrace();
@@ -33,7 +32,6 @@ public class TokenUtil {
                     .withIssuer("auth0")
                     .withClaim("code", c)
                     .withExpiresAt(expiresAt)
-                    // 使用了HMAC256加密算法。
                     .sign(Algorithm.HMAC256(TOKEN_SECRET));
         } catch (Exception e){
             e.printStackTrace();

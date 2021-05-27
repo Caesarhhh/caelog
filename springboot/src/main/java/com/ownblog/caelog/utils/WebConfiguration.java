@@ -15,7 +15,6 @@ import java.util.concurrent.Executors;
 public class WebConfiguration implements WebMvcConfigurer {
     private TokenInterceptor tokenInterceptor;
 
-    //构造方法
     public WebConfiguration(TokenInterceptor tokenInterceptor){
         this.tokenInterceptor = tokenInterceptor;
     }
