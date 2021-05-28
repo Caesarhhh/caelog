@@ -11,11 +11,11 @@
     </div>
   </div>
   <div id="line"></div>
-  <div class="selectbin" @click="changeindex(1)">个人中心</div>
-  <div class="selectbin" @click="changeindex(2)">文章管理</div>
-  <div class="selectbin" @click="changeindex(3)">友链管理</div>
-  <div class="selectbin" @click="changeindex(4)">公告管理</div>
-  <div class="selectbin" @click="changeindex(5)">版块管理</div>
+<!--  <div class="selectbin" @click="changeindex(1)">个人中心</div>-->
+<!--  <div class="selectbin" @click="changeindex(2)">文章管理</div>-->
+<!--  <div class="selectbin" @click="changeindex(3)">友链管理</div>-->
+<!--  <div class="selectbin" @click="changeindex(4)">公告管理</div>-->
+<!--  <div class="selectbin" @click="changeindex(5)">版块管理</div>-->
 </div>
 </template>
 <script>

@@ -20,7 +20,7 @@
         </a-row>
         <a-row>
           <a-col :span="20">
-            <sorttool id="sorttool" :datas="sortinfo"></sorttool>
+            <sorttool :sortbyTimef="sortArticlebyTime" :sortbyHotf="sortArticlebyHot" :selectbyTimef="selectbyTime" id="sorttool" :datas="sortinfo"></sorttool>
             <div id="articlebox">
               <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4]"
                   v-if="(pagenumsinfo.pos-1)*4<articlenum"></ac>
@@ -99,7 +99,9 @@
           pauseurl: this.common.getserveraddress + "images/pause.png",
           songurl: this.common.getserveraddress + "images/心要野.mp3"
         },
-        sortinfo: sortinfo,
+        sortinfo: {
+          timeslot: [{id: 1, st: 2015, et: 2016}]
+        },
         articleCardInfo: [],
         articleCardInfoprint: [],
         modificationcardInfo: modificationcardInfo,

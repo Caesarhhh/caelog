@@ -21,7 +21,7 @@
         sorttype: 1
       }
     },
-    props: ["datas"],
+    props: ["datas","sortbyTimef","sortbyHotf","selectbyTimef"],
     mounted() {
       this.timeselect = -1
     },
@@ -33,22 +33,23 @@
         return {backgroundColor: this.$store.state.color2}
       },
       setsorttype: function (index) {
+        this.s
         this.sorttype = index;
       },
       sortbyTime: function () {
-        this.$parent.$parent.$parent.$parent.$parent.sortArticlebyTime()
+        this.sortbyTimef()
         this.setsorttype(1)
       },
       sortbyHot: function () {
-        this.$parent.$parent.$parent.$parent.$parent.sortArticlebyHot()
+        this.sortbyHotf()
         this.setsorttype(0)
       },
       selectbyTime: function () {
         if (this.timeselect == -1) {
-          this.$parent.$parent.$parent.$parent.$parent.selectbyTime("all")
+          this.selectbyTimef("all")
           return
         }
-        this.$parent.$parent.$parent.$parent.$parent.selectbyTime(this.datas.timeslot[this.timeselect].st + "-" + this.datas.timeslot[this.timeselect].et)
+        this.selectbyTimef(this.datas.timeslot[this.timeselect].st + "-" + this.datas.timeslot[this.timeselect].et)
       }
     }
   }

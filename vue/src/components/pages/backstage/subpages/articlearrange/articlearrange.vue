@@ -5,7 +5,7 @@
       <option value="all">全部</option>
       <option v-for="key in this.blocks" :value="key">{{key}}</option>
     </select>
-    <st id="sorttool" :datas="sortinfo"></st>
+    <st id="sorttool" :selectby-timef="selectbyTime" :sortby-hotf="sortArticlebyHot" :sortby-timef="sortArticlebyTime" :datas="sortinfo"></st>
   </div>
   <div id="punisharticle" :style="getcolor3()" @click="toedit">发布文章</div>
   <div id="articlesbox">
@@ -281,8 +281,8 @@
 }
 #sorttool{
   position: absolute;
-  top:12px;
-  right:10px;
+  top:85px;
+  left:10px;
 }
 #punisharticle{
   width: 140px;
@@ -292,7 +292,7 @@
   border-width: thin;
   line-height: 40px;
   top:116px;
-  right:50px;
+  left:500px;
   font-family: 华光楷体_CNKI;
   font-size: 22px;
   border-radius: 5px;

@@ -320,7 +320,7 @@
 #hc2{
   position: absolute;
   top:290px;
-  right:17px;
+  left:450px;
 }
 #hc3{
   position: absolute;
@@ -330,7 +330,7 @@
 #hc4{
   position: absolute;
   top:404px;
-  right:17px;
+  left:450px;
 }
 #hc5{
   position: absolute;

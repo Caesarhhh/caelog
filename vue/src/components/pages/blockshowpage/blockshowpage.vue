@@ -6,7 +6,7 @@
       <img :src="searchimgsrc" alt="error">
     </div>
   </div>
-  <st :datas="sorttoolinfo" id="sorttool_as"></st>
+  <st :sortby-timef="sortArticlebyTime" :sortby-hotf="sortArticlebyHot" :selectby-timef="sortArticlebyTime" :datas="sorttoolinfo" id="sorttool_as"></st>
   <div id="blockbox_as" :style="getcolor1()">
     <div id="blockstitle">板块</div>
     <div id="searchselect" @click="searchresult"><div>搜索结果</div></div>

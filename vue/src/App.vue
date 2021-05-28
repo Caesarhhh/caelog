@@ -174,6 +174,7 @@ export default {
   text-align: center;
   position: relative;
   margin-top: 0px;
+
 }
 
 .userButton {
