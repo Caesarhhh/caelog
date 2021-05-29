@@ -227,7 +227,8 @@
   bottom:4%;
   font-family: 华光楷体_CNKI;
   font-size: 180%;
-  left:25%;
+  left:50%;
+  margin-left: -130px;
   cursor: pointer;
 }
 #uploadByClick{

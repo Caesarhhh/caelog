@@ -643,7 +643,7 @@
     width: 66%;
     height: 40px;
     position: absolute;
-    left: 132px;
+    left: 142px;
     top: 5px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;
@@ -655,7 +655,7 @@
   #labelinput:focus{
     border-width: 2px;
     top:4px;
-    left:131px;
+    left:141px;
   }
 
   #labelconfirm {
@@ -666,6 +666,7 @@
     border-width: thin;
     line-height: 48px;
     position: relative;
+    right:0px;
     margin-left:88%;
     top: 3px;
     font-family: 华光楷体_CNKI;
