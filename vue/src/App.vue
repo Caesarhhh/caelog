@@ -181,6 +181,13 @@ export default {
 
 }
 
+input{
+  color:black;
+}
+
+textarea{
+  color: black;
+}
 .userButton {
   cursor: pointer;
   background-color: inherit;

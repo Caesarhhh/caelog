@@ -243,6 +243,7 @@
   left: 33px;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
+  color:black;
 }
 #scrollarea{
   width:3px;

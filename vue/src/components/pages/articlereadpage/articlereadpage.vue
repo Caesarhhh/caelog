@@ -15,7 +15,6 @@
     </a-col>
     <a-col :span="6">
       <pc id="personalcard" :datas="pcpos"></pc>
-      <st id="searchtool_ar"></st>
       <div id="blockbox_ar" :style="getcolor1()">
         <lb id="blocks" :datas="blocklabels"></lb>
         <lb id="labels" :datas="labellabels"></lb>
@@ -566,8 +565,8 @@
     width:200px;
     height: 40px;
     position: absolute;
-    top:1039px;
-    left: 741px;
+    top:929px;
+    left: 2%;
   }
   #buttonbox img{
     width:20%;
