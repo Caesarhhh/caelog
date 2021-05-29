@@ -35,7 +35,8 @@
   import blocksetbox from "./blocksetbox/blocksetbox";
   var pagenumsinfo={
     sum:1,
-    pos:1
+    pos:1,
+    pagesize:12
   }
   var blocksetboxinfo=[]
   export default {
@@ -95,7 +96,7 @@
                   this.$set(this.blocksetboxinfo,i,temp)
                 }
                 this.sum=this.common.blocksinfo.length;
-                this.pagenumsinfo.sum=Math.ceil(this.sum/12)
+                this.pagenumsinfo.sum=this.sum
               }
               else{
                 alert(res.data.msg)
@@ -208,7 +209,7 @@
 }
 #nametitle{
   width:40px;
-  height: 38px;
+  height: 48px;
   position: absolute;
   top:34px;
   left:100px;
@@ -237,7 +238,7 @@
 }
 #commentstitle{
   width:33px;
-  height: 38px;
+  height: 48px;
   position: absolute;
   top:35px;
   left:370px;
@@ -288,8 +289,9 @@
 }
 #pagenums{
   position: absolute;
-  left:45px;
+  left:5%;
   bottom: 10px;
+  width: 90%;
 }
 #line{
   width:1px;

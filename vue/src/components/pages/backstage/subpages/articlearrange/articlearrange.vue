@@ -34,7 +34,8 @@
     }]
   var pginfo={
     pos:1,
-    sum:0
+    sum:0,
+    pagesize:4
   }
   export default {
     name: "articlearrange",
@@ -78,7 +79,8 @@
         let temp=[]
         this.pginfo={
           sum:0,
-          pos:1
+          pos:1,
+          pagesize: 4
         }
         for(let i=0;i<len;i++){
           if(s=="all"||s==this.acinfo[i].block){
@@ -91,7 +93,7 @@
         if(this.sorttype==0){
           this.sortArticlebyHot()
         }
-        this.pginfo.sum=Math.ceil(this.articlenum/4)
+        this.pginfo.sum=this.articlenum/4
       },
       toedit:function (){
         this.$router.push("/"+this.$route.params.userid+"/articleedit/-1");
@@ -173,7 +175,8 @@
         let temp=[]
         this.pginfo={
           sum:0,
-          pos:1
+          pos:1,
+          pagesize: 4
         }
         for(let i=0;i<len;i++){
           if(s=="all"||s==this.acinfo[i].time.substring(2,7)){
@@ -186,7 +189,7 @@
         if(this.sorttype==0){
           this.sortArticlebyHot()
         }
-        this.pginfo.sum=Math.ceil(this.articlenum/4)
+        this.pginfo.sum=this.articlenum
       },
       getblocks:function (){
         this.blocks={}
@@ -232,7 +235,7 @@
               this.articlenum++
             }
           }
-          this.pginfo.sum=Math.ceil(this.articlenum/4)
+          this.pginfo.sum=this.articlenum
         })
       },
       deleteac:function (arid){
@@ -259,6 +262,7 @@
 .box{
   width:721px;
   height:1150px;
+  position: absolute;
 }
 #topbox{
   width: 677px;
@@ -328,6 +332,7 @@
 #pagenums{
   position: absolute;
   top:1070px;
-  left:65px;
+  left:5%;
+  width:90%;
 }
 </style>

@@ -19,7 +19,8 @@
   import lettercard from "./lettercard/lettercard";
   var pagenumsinfo={
     pos:1,
-    sum:2
+    sum:2,
+    pagesize:6
   }
   export default {
     name: "letterset",
@@ -114,7 +115,7 @@
                 this.letterCardinfo.push(tempdict)
                 tempdict.time=resss.data.data[0].time_
                 this.letternum++
-                this.pagenumsinfo.sum=Math.ceil(this.letternum/6)
+                this.pagenumsinfo.sum=this.letternum
                 if(this.letternum==len){
                   for(let pi=0;pi<len;pi++){
                     for(let pj=0;pj<len-pi-1;pj++){
@@ -136,7 +137,8 @@
     mounted() {
       this.pagenumsinfo={
         pos:1,
-        sum:0
+        sum:0,
+        pagesize: 6
       }
       this.getchatinfo()
     }
@@ -215,6 +217,7 @@
 #pagenums{
   position: absolute;
   top:197px;
-  left:15px;
+  left:5%;
+  width:90%
 }
 </style>

@@ -138,7 +138,6 @@
 }
 .button{
   width:3%;
-  height: 90%;
   border-radius: 50%;
   float:left;
   margin-left: 3%;
@@ -169,7 +168,6 @@
 }
 #close img{
   width: 100%;
-  height: 100%;
 }
 #copy{
   position: absolute;

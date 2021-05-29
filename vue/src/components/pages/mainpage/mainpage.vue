@@ -31,7 +31,7 @@
               <ac class="articlecard" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+3]"
                   v-if="(pagenumsinfo.pos-1)*4+3<articlenum"></ac>
             </div>
-            <pn v-if="articlenum>3" class="pn" :style="getcolor1()" :datas.sync="pagenumsinfo"></pn>
+            <pn v-if="articlenum>3" class="pn" :datas.sync="pagenumsinfo"></pn>
           </a-col>
           <a-col :span="4">
             <div id="modibox" :style="getcolor1()">
@@ -113,7 +113,8 @@
         ifback: false,
         pagenumsinfo: {
           sum: 1,
-          pos: 1
+          pos: 1,
+          pagesize:4
         }
       }
     },
@@ -227,7 +228,8 @@
         let temp = []
         this.pagenumsinfo = {
           sum: 0,
-          pos: 1
+          pos: 1,
+          pagesize:4
         }
         for (let i = 0; i < len; i++) {
           if (s == "all" || s == this.articleCardInfo[i].time.substring(2, 7)) {
@@ -240,7 +242,7 @@
         if (this.sorttype == 0) {
           this.sortArticlebyHot()
         }
-        this.pagenumsinfo.sum = Math.ceil(this.articlenum / 4)
+        this.pagenumsinfo.sum = this.articlenum
       },
       getbls() {
         this.labelsInfo.labels = []
@@ -288,11 +290,13 @@
       },
       getarticles() {
         this.articleCardInfo = []
+        this.articleCardInfoprint=[]
         this.articlenum = 0
         this.sortinfo.timeslot = []
         this.pagenumsinfo = {
           sum: 0,
-          pos: 1
+          pos: 1,
+          pagesize:4
         }
         this.$axios.get(
           this.common.serveraddress + "/article/get?userid=" + this.common.userinfo.id).then(
@@ -320,7 +324,7 @@
                   title: res.data.data[i].title,
                   time: res.data.data[i].time_,
                   content: res.data.data[i].content,
-                  block: blocksInfo[res.data.data[i].blockid],
+                  block: blocksInfo.labels[res.data.data[i].blockid],
                   id: res.data.data[i].id,
                   goodnum: res.data.data[i].goodnum,
                   viewnum: res.data.data[i].viewnum
@@ -332,11 +336,12 @@
                     et: temp.time.substring(5, 7)
                   })
                 }
+                console.log(blocksInfo)
                 this.articleCardInfo.push(temp)
                 this.articleCardInfoprint.push(temp)
                 this.articlenum++
               }
-              this.pagenumsinfo.sum = Math.ceil(this.articlenum / 4)
+              this.pagenumsinfo.sum = this.articlenum
             }
           })
       },
@@ -378,8 +383,8 @@
 
   .pn {
     position: absolute;
-    width: 80%;
-    left: 15%;
+    width: 73%;
+    left: 10%;
     top: 1143px;
   }
 

@@ -256,7 +256,7 @@
   height: 620px;
   border-style: ridge;
   position: fixed;
-  top:50%;
+  top:55%;
   left: 50%;
   margin-top: -324px;
   margin-left: -212px;

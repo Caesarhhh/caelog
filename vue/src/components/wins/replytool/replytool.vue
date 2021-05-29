@@ -19,7 +19,7 @@
 <script>
   export default {
     name: "replytool",
-    props:["datas","commentinfo"],
+    props:["datas","commentinfo","addComment"],
     data(){
       return{
         closeimgsrc:this.common.getserveraddress+"images/close2.png",
@@ -85,7 +85,7 @@
           var temp=this.datas;
           temp.ifreply=false;
           this.$emit("update:datas",temp);
-          this.$parent.addaddedcomment(this.datas.commentid,this.datas.index)
+          this.addComment(this.datas.commentid,this.datas.index)
         })
       }
     }

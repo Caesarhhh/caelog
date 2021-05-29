@@ -1,7 +1,9 @@
 <template>
 <div class="boxac" :style="getColor4()">
   <div id="info">
-    <div id="title">{{datas.title}}</div>
+    <div id="title">
+      <GeminiScrollbar>{{datas.title}}</GeminiScrollbar>
+    </div>
     <div id="articleblock">{{datas.block}}</div>
     <div id="time">{{datas.time.substring(2,10)}}</div>
   </div>
@@ -103,9 +105,10 @@
   position: absolute;
   top:5px;
   left:3%;
+  overflow: hidden;
 }
 #title{
-  width:70%;
+  width:50%;
   height: 37px;
   float:left;
   overflow: hidden;
@@ -130,9 +133,9 @@
 #time{
   width:25%;
   height:20px;
-  position: absolute;
-  top:15px;
-  right:0%;
+  float:right;
+  margin-top:15px;
+  margin-right:0%;
   font-family: 华光楷体_CNKI;
   font-size: 20px;
   text-align: left;
@@ -161,6 +164,7 @@
 }
 #buttonbox{
   width:5%;
+  max-width: 40px;
   height: 134px;
   float:right;
   margin-top:5px;

@@ -209,7 +209,8 @@
 
 <style scoped>
 .box1{
-  width:942px;
+  width: 98%;
+  margin-left:1%;
   border-radius: 10px;
   height: auto;
   border-bottom-style: ridge;
@@ -217,11 +218,11 @@
 }
 .maincomment{
   position: relative;
-  margin-left: 5px;
+  margin-left: 1%;
   margin-top:10px;
   border-bottom-style: ridge;
   border-width: thin;
-  width:930px;
+  width:98%;
   height: auto;
 }
 #mainsrc{
@@ -238,10 +239,10 @@
   border-radius: 50%;
 }
 #maincontent{
-  width:860px;
+  width:90%;
   float:left;
   margin-top:5px;
-  margin-left:10px;
+  margin-left:5%;
   height: auto;
 }
 #maincontent div{
@@ -317,7 +318,7 @@
   margin-top:2px;
   border-bottom-style: ridge;
   border-width: thin;
-  width:880px;
+  width:80%;
   height: auto;
 }
 .addedsrc{
@@ -334,7 +335,7 @@
   border-radius: 50%;
 }
 .addedcontent{
-  width:810px;
+  width:90%;
   float:left;
   margin-top:5px;
   margin-left:20px;

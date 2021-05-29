@@ -1,20 +1,6 @@
 <template>
   <div class="articleedit">
     <div id="empty">
-      <div id="buttonbox" :style="getcolor1()">
-        <div id="mainhref" @click="topage('/mainpage')">首页</div>
-        <div id="backhref" @click="topage('/backstage')">后台</div>
-      </div>
-<!--      <div id="markdowntitle" :style="getcolor1()">markdown</div>-->
-<!--      <textarea id="markdownarea" v-model="innerhtmlinput" @keyup="mdSwitch"></textarea>-->
-<!--      <div id="showtitle" :style="getcolor1()">预览</div>-->
-<!--      <div :class="{showarea:count>-2}" :style="getcolor4()">-->
-<!--        <GeminiScrollbar>-->
-<!--          <div id="gsd">-->
-<!--            <div id="showhtml"></div>-->
-<!--          </div>-->
-<!--        </GeminiScrollbar>-->
-<!--      </div>-->
       <vueCeditor v-model="innerhtmlinput" id="vueCeditor"></vueCeditor>
       <div id="bot">
         <div id="settingbox" :style="getcolor1()">
@@ -37,7 +23,6 @@
               <input @click="cleartext(1)" id="newinputcomment" type="text" v-model="newblockcomment">
               <div id="newconfirm" :style="getcolor3()" @click="addblock">确认</div>
             </div>
-            <div id="resultblock" :style="getcolor4()">{{ blocks[selected] }}</div>
           </div>
           <div id="labelsetting">
             <div id="labeltitle" :style="getcolor4()">标签定义</div>
@@ -348,7 +333,6 @@
     color: #2c3e50;
     position: relative;
     margin-top: 0px;
-    width: 1024px;
   }
 
   .clearfix:after {
@@ -367,41 +351,6 @@
     position: relative;
     margin-top: 0px;
     margin-left: 0px;
-  }
-
-  #buttonbox {
-    width: 720px;
-    height: 60px;
-    position: absolute;
-    top: 13px;
-    left: 152px;
-    border-radius: 10px;
-  }
-
-  #mainhref {
-    width: 70px;
-    height: 45px;
-    position: absolute;
-    top: 6px;
-    border-right-style: groove;
-    line-height: 45px;
-    font-family: 华光楷体_CNKI;
-    font-size: 24px;
-    left: 15px;
-    cursor: pointer;
-  }
-
-  #backhref {
-    width: 70px;
-    height: 45px;
-    position: absolute;
-    top: 6px;
-    border-right-style: groove;
-    line-height: 45px;
-    font-family: 华光楷体_CNKI;
-    font-size: 24px;
-    left: 100px;
-    cursor: pointer;
   }
 
   #markdowntitle {
@@ -433,11 +382,11 @@
   }
 
   #vueCeditor{
-    width:1400px;
+    width:90%;
     height: 850px;
     position: absolute;
-    left:-190px;
-    top:50px;
+    left:5%;
+    top:20px;
   }
 
   #markdownarea {
@@ -475,43 +424,43 @@
   }
 
   #bot {
-    width: 1000px;
+    width: 100%;
     height: auto;
     position: absolute;
-    left: 25px;
-    top: 936px;
+    left: 0;
+    top: 906px;
   }
 
   #settingbox {
-    width: 974px;
+    width: 92%;
     height: auto;
     position: relative;
     border-style: solid;
     border-radius: 10px;
     border-color: transparent;
     border-width: thin;
-    left: 0px;
+    left: 4%;
     top: 0px;
   }
 
   #titlesetting{
-    width: 946px;
+    width: 96%;
     height: 64px;
     position: absolute;
-    left: 14px;
+    left: 2%;
     top: 8px;
     border-bottom-style: solid;
     border-width: thin;
   }
 
   #blockbox {
-    width: 946px;
+    width: 96%;
     height: 103px;
     border-bottom-style: solid;
     border-radius: 0px;
     border-width: thin;
     position: absolute;
-    left: 14px;
+    left: 2%;
     top: 78px;
   }
 
@@ -529,7 +478,7 @@
   }
 
   #titleinput {
-    width: 680px;
+    width: 78%;
     height: 40px;
     position: absolute;
     left: 142px;
@@ -560,11 +509,11 @@
   }
 
   #blockselect {
-    width: 505px;
+    width: 78%;
     height: 30px;
     position: absolute;
     top: 14px;
-    left: 171px;
+    left: 142px;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
     border-radius: 10px;
@@ -576,23 +525,11 @@
     border-width: 2px;
   }
   #createblockarea {
-    width: 518px;
+    width: 80%;
     height: 39px;
     position: absolute;
-    left: 164px;
+    left: 142px;
     top: 51px;
-  }
-
-  #resultblock {
-    width: 120px;
-    height: 60px;
-    border-radius: 10px;
-    line-height: 60px;
-    font-family: 华光楷体_CNKI;
-    font-size: 24px;
-    position: absolute;
-    top: 32px;
-    right: 70px;
   }
 
   #createtitle {
@@ -628,11 +565,11 @@
     border-radius: 50%;
   }
   #newinputcomment{
-    width: 220px;
+    width: 35%;
     height: 30px;
     position: absolute;
     top: 2px;
-    left: 221px;
+    right: 20%;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
     z-index: 12;
@@ -644,10 +581,10 @@
   #newinputcomment:focus{
     border-width: 2px;
     top:1px;
-    left:220px;
+    right: 20%;
   }
   #newinput {
-    width: 90px;
+    width: 20%;
     height: 30px;
     position: absolute;
     top: 2px;
@@ -675,18 +612,18 @@
     line-height: 32px;
     position: absolute;
     top: 4px;
-    right: 2px;
+    right: 22px;
     font-family: 华光楷体_CNKI;
     font-size: 18px;
   }
 
   #labelsetting {
-    width: 946px;
+    width: 96%;
     height: 56px;
     position: relative;
     margin-top: 198px;
     margin-bottom:10px;
-    margin-left: 14px;
+    margin-left: 2%;
   }
 
   #labeltitle {
@@ -703,7 +640,7 @@
   }
 
   #labelinput {
-    width: 719px;
+    width: 66%;
     height: 40px;
     position: absolute;
     left: 132px;
@@ -728,8 +665,8 @@
     cursor: pointer;
     border-width: thin;
     line-height: 48px;
-    position: absolute;
-    right: 3px;
+    position: relative;
+    margin-left:88%;
     top: 3px;
     font-family: 华光楷体_CNKI;
     font-size: 20px;
@@ -761,8 +698,8 @@
     font-family: 华光楷体_CNKI;
     font-size: 35px;
     position: relative;
-    margin-top: 80px;
-    margin-left: 420px;
+    margin-top: 20px;
+    margin-left: 45%;
     margin-bottom: 50px;
   }
 </style>

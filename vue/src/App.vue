@@ -9,6 +9,7 @@
         <a-popover :title="adminName" class="popBox" style="background-color: white;border-style: none">
           <template slot="content">
             <div v-if="iflogin" class="userButton" @click="toBackStage">前往后台</div>
+            <div v-if="iflogin" class="userButton" @click="toMainPage">前往首页</div>
             <div v-if="iflogin" class="userButton" @click="logout">退出登录</div>
             <div v-if="!iflogin" class="userButton" @click="login">登录</div>
             <div v-if="!iflogin" class="userButton" @click="register">注册</div>
@@ -93,6 +94,9 @@ export default {
     },
     toBackStage(){
       this.$router.push("/"+this.common.loginuserinfo.id+"/backstage")
+    },
+    toMainPage(){
+      this.$router.push("/"+this.common.loginuserinfo.id+"/mainpage")
     },
     toDocPage: function () {
       window.open("https://github.com/Caesarhhh/caelog");

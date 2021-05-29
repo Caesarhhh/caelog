@@ -1,41 +1,43 @@
 <template>
 <div class="box2">
-  <div id="pagehrefbox" :style="getcolor1()">
-    <div class="pagebutton" :style="getcolor1()" @click="topage('/mainpage')">首页</div>
-    <div class="pagebutton" :style="getcolor1()" @click="topage('/backstage')" v-if="ifloginsame">后台</div>
-  </div>
-  <div id="readcontent" :style="getcolor4()">
-    <div id="title">{{title}}</div>
-    <div id="showarea">
-      <GeminiScrollbar>
-        <div id="gsd">
-          <div id="content" v-html="content"></div>
+  <a-row>
+    <a-col :span="18">
+      <div id="readcontent" :style="getcolor4()">
+        <div id="title">{{title}}</div>
+        <div id="showarea">
+          <GeminiScrollbar>
+            <div id="gsd">
+              <div id="content" v-html="content"></div>
+            </div>
+          </GeminiScrollbar>
         </div>
-      </GeminiScrollbar>
+      </div>
+    </a-col>
+    <a-col :span="6">
+      <pc id="personalcard" :datas="pcpos"></pc>
+      <st id="searchtool_ar"></st>
+      <div id="blockbox_ar" :style="getcolor1()">
+        <lb id="blocks" :datas="blocklabels"></lb>
+        <lb id="labels" :datas="labellabels"></lb>
+      </div>
+      <div id="buttonbox">
+        <img :src="this.good==-1?nogoodimgsrc:goodimgsrc" alt="error" @click="toglegood">
+        <img :src="transmitimgsrc" @click="share()" alt="error">
+      </div>
+    </a-col>
+    <div id="commentarea" :style="getcolor1()">
+      <div id="editcomment">
+        <div id="editImgsrc"><img :src="headimgsrc" alt="未登录"></div>
+        <input id="editinput" v-model="inputtext"></input>
+        <div id="editbutton" :style="getcolor3()" @click="addcard">发表</div>
+      </div>
+      <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3<commentnum"></cc>
+      <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3+1]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3+1<commentnum"></cc>
+      <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3+2]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3+2<commentnum"></cc>
+      <pn id="pagenums" :datas.sync="pagenumsinfo"></pn>
+      <rtl :add-comment="addaddedcomment" id="replytool" :commentinfo.sync="commentCardinfo" :datas="replyinfo" v-if="replyinfo.ifreply"></rtl>
     </div>
-  </div>
-  <pc id="personalcard" :datas="pcpos"></pc>
-  <st id="searchtool_ar"></st>
-  <div id="blockbox_ar" :style="getcolor1()">
-    <lb id="blocks" :datas="blocklabels"></lb>
-    <lb id="labels" :datas="labellabels"></lb>
-  </div>
-  <div id="buttonbox">
-    <img :src="this.good==-1?nogoodimgsrc:goodimgsrc" alt="error" @click="toglegood">
-    <img :src="transmitimgsrc" @click="share()" alt="error">
-  </div>
-  <div id="commentarea" :style="getcolor1()">
-    <div id="editcomment">
-      <div id="editImgsrc"><img :src="headimgsrc" alt="未登录"></div>
-      <input id="editinput" v-model="inputtext"></input>
-      <div id="editbutton" :style="getcolor3()" @click="addcard">发表</div>
-    </div>
-    <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3<commentnum"></cc>
-    <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3+1]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3+1<commentnum"></cc>
-    <cc class="commentCard clearfix" :datas.sync="commentCardinfo[(pagenumsinfo.pos-1)*3+2]" :replyinfo.sync="replyinfo" :allcomments="commentCardinfo" v-if="(pagenumsinfo.pos-1)*3+2<commentnum"></cc>
-    <pn id="pagenums" :datas.sync="pagenumsinfo"></pn>
-    <rtl id="replytool" :commentinfo.sync="commentCardinfo" :datas="replyinfo" v-if="replyinfo.ifreply"></rtl>
-  </div>
+  </a-row>
 </div>
 </template>
 
@@ -82,7 +84,7 @@
         headimgsrc:"",
         commentCardinfo:commentCardinfo,
         commentCardinfo_:[],
-        pagenumsinfo:{sum:1,pos:1},
+        pagenumsinfo:{sum:1,pos:1,pagesize:3},
         commentnum:0,
         commentnum_:0,
         replyinfo:{
@@ -236,7 +238,7 @@
                   this.commentnum++;
                   this.commentCardinfo.unshift(temp)
                   this.pagenumsinfo.pos=1
-                  this.pagenumsinfo.sum=Math.ceil(this.commentnum/3)
+                  this.pagenumsinfo.sum=this.commentnum
                 }
             )
           }
@@ -258,12 +260,7 @@
         if(temp){
           this.commentCardinfo.splice(pos,1);
           this.commentnum-=1;
-          if(this.commentnum%3==0){
-            this.pagenumsinfo.sum-=1;
-          }
-          if(this.pagenumsinfo.sum<this.pagenumsinfo.pos){
-            this.pagenumsinfo.pos-=1;
-          }
+          this.pagenumsinfo.sum-=1;
         }
       },
       deletecomment:function (indexx,pos){
@@ -461,8 +458,8 @@
               this.commentnum_++
               if(i==res.data.data.length-1){
                 this.commentnum=this.commentnum_
+                this.pagenumsinfo.sum=this.commentnum
               }
-              this.pagenumsinfo.sum=Math.ceil(this.commentnum/3)
             }
           })
       },
@@ -536,27 +533,6 @@
     color: #2c3e50;
     position: relative;
     margin-top: 0px;
-    width:1024px;
-  }
-  #pagehrefbox{
-    width:720px;
-    height:60px;
-    position: absolute;
-    top:26px;
-    left:8px;
-    border-radius: 10px;
-  }
-  .pagebutton{
-    width: 70px;
-    height: 45px;
-    border-right-style: groove;
-    float: left;
-    margin-top: 6px;
-    margin-left: 15px;
-    line-height: 45px;
-    font-family: 华光楷体_CNKI;
-    font-size: 25px;
-    cursor: pointer;
   }
   #personalcard{
     position: absolute;
@@ -570,9 +546,9 @@
   }
   #blockbox_ar{
     position: absolute;
-    top:398px;
-    left:734px;
-    width: 280px;
+    top:320px;
+    left:13%;
+    width: 78%;
     height: 600px;
     border-radius: 15px;
   }
@@ -601,29 +577,29 @@
     margin-left: 50px;
   }
   #title{
-    width:682px;
+    width:80%;
     height: 61px;
     position: absolute;
     top:0px;
-    left:0px;
+    left:1%;
     font-family: 华光楷体_CNKI;
     font-size: 50px;
     line-height: 61px;
     text-align: left;
   }
   #showarea{
-    width: 720px;
+    width: 100%;
     height: 860px;
     position: absolute;
     left:0px;
     top:87px;
   }
   #readcontent{
-    width: 720px;
+    width: 100%;
     height: 958px;
     position: absolute;
-    left:8px;
-    top:98px;
+    left:2%;
+    top:10px;
     border-radius: 10px;
   }
   #gsd{
@@ -638,15 +614,15 @@
     text-align: left;
   }
   #commentarea{
-    width: 976px;
+    width: 94%;
     height: auto;
     position: absolute;
-    left:21px;
-    top:1112px;
+    left:3%;
+    top:980px;
     border-radius: 20px;
   }
   #editcomment{
-    width: 942px;
+    width: 96%;
     height: 55px;
     border-bottom-style:groove;
     border-width: thin;
@@ -668,7 +644,7 @@
     border-radius: 50%;
   }
   #editinput{
-    width:798px;
+    width:79%;
     height:42px;
     border-style: solid;
     border-width: thin;
@@ -692,7 +668,7 @@
     top:8px;
     border-radius: 6px;
     line-height: 42px;
-    right: 3px;
+    right: 2%;
     font-size: 20px;
     cursor: pointer;
     font-family: 华光楷体_CNKI;
@@ -715,7 +691,7 @@
   #pagenums{
     float: left;
     margin-top:6px;
-    margin-left:180px;
+    margin-left:40%;
   }
   #replytool{
     position: fixed;

@@ -19,6 +19,10 @@ const routers = [
     path: '/:userid/backstage', name: 'backstage', component: backstage,
     children: [
       {
+        path: "/:userid/backstage",
+        component: personalCenter
+      },
+      {
         path: "/:userid/backstage/personalCentor",
         component: personalCenter
       },

@@ -4,7 +4,7 @@
          v-if="hrefwininfo.ifwin"></hsw>
     <div :class="{box:datas.pos=='left',box_:datas.pos=='right'}" :style="getcolor1()">
       <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
-      <div id="pic">
+      <div id="pic" @click="toMainPage">
         <img v-bind:src="this.common.userinfo.backimgsrc" alt="error">
       </div>
       <div id="name">
@@ -57,7 +57,8 @@
         name: "Caesar",
         chatinfo: chatinfo,
         hrefwininfo: hrefwininfo,
-        ifsame: false
+        ifsame: false,
+        userid:0
       }
     },
     components: {
@@ -77,11 +78,15 @@
       getcolor4() {
         return {backgroundColor: this.$store.state.color4}
       },
+      toMainPage(){
+        this.$router.push("/"+this.userid+"/mainpage")
+      },
       getintro() {
         this.$axios({
           url: this.common.serveraddress + "/user/get?userid=" + this.$route.params.userid,
           method: "get"
         }).then(res => {
+          this.userid=res.data.data.id
           var mdValue = res.data.data.introduction;
           var converter = new showdown.Converter();
           var html = converter.makeHtml(mdValue);
@@ -174,6 +179,10 @@
     position: absolute;
     top: 7px;
     left: 34%;
+  }
+
+  #pic :hover{
+    cursor: pointer;
   }
 
   #pic img {

@@ -28,7 +28,8 @@
   var hrefcardinfo=[]
   var pagenumsinfo={
     pos:1,
-    sum:1
+    sum:1,
+    pagesize:6
   }
   export default {
     name: "socialhrefset",
@@ -89,7 +90,7 @@
                   )
                 }
                 this.hrefnum=this.common.hrefinfo.length;
-                this.pagenumsinfo.sum=Math.ceil(this.hrefnum/6)
+                this.pagenumsinfo.sum=this.hrefnum
               }
               else{
                 alert(res.data.msg)
@@ -197,6 +198,7 @@
 .box{
   width:721px;
   height:650px;
+  position: absolute;
 }
 #titlebox{
   width:673px;
@@ -320,7 +322,7 @@
 #hc2{
   position: absolute;
   top:290px;
-  left:450px;
+  right:17px
 }
 #hc3{
   position: absolute;
@@ -330,7 +332,7 @@
 #hc4{
   position: absolute;
   top:404px;
-  left:450px;
+  right:17px
 }
 #hc5{
   position: absolute;
@@ -345,6 +347,7 @@
 #pagenums{
   position: absolute;
   top:585px;
-  left:65px;
+  left:5%;
+  width:90%;
 }
 </style>
