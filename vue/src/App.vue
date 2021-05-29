@@ -188,6 +188,10 @@ input{
 textarea{
   color: black;
 }
+
+select{
+  color: black;
+}
 .userButton {
   cursor: pointer;
   background-color: inherit;
