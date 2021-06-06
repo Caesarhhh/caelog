@@ -12,7 +12,7 @@
     [
       "prismjs",
       {
-        "languages": ["html", "css", "javascript","matlab", "php", "dart", "bash", "nginx", "sql","java"],
+        "languages": ["html", "css", "javascript","matlab", "php", "dart", "bash", "nginx", "sql","java","python","c","cpp","go","latex"],
         "theme": "okaidia",
         "css": true
       }
