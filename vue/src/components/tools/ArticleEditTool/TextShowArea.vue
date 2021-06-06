@@ -37,11 +37,18 @@
       }
     },
     mounted() {
-      const languages = ['html', 'css', 'js', 'php', 'dart', 'bash', 'nginx', 'sql'];
+      let that=this
+      const languages = ['html', 'css', 'js', 'php', 'dart', 'bash', 'nginx', 'sql','python'];
       content = document.querySelector('#showContent');
       codeNodes = content.getElementsByTagName('code');
       this.observer = new MutationObserver(() => {
         Prism.highlightAll()
+        that.$nextTick(function (){
+          if(!that.mathjax.isMathjaxConfig){
+            that.mathjax.initMathjaxConfig()
+          }
+          that.mathjax.MathQueue("showContent")
+        })
       });
 
       this.observer.observe(content, {

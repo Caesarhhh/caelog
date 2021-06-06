@@ -12,7 +12,9 @@ import VueClipboard from 'vue-clipboard2';
 import 'prismjs/themes/prism-okaidia.css';
 import 'ant-design-vue/dist/antd.css';
 import { Button,FormModel,Pagination,DatePicker,Input,Icon,Form,Select,Checkbox,Row,Col,PageHeader,Popover,Menu,Tag,Table,Divider } from 'ant-design-vue';
-import Prism from "prismjs"
+import Prism from "prismjs";
+import MathJaxConfig from "./MathJaxConfig";
+Vue.prototype.mathjax=MathJaxConfig
 Prism.highlightAll()
 Vue.config.productionTip = false
 Vue.component(Button.name,Button)

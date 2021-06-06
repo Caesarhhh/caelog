@@ -242,6 +242,9 @@
         if (this.sorttype == 0) {
           this.sortArticlebyHot()
         }
+        else{
+          this.sortArticlebyTime()
+        }
         this.pagenumsinfo.sum = this.articlenum
       },
       getbls() {

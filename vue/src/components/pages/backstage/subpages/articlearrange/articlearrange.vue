@@ -1,7 +1,7 @@
 <template>
 <div class="box" :style="getcolor1()">
   <div id="topbox" :style="getcolor4()">
-    <select @change="selectbyBlock" v-model="blockselect">
+    <select @change="selectbyBlock_Time" v-model="blockselect">
       <option value="all">全部</option>
       <option v-for="key in this.blocks" :value="key">{{key}}</option>
     </select>
@@ -44,6 +44,7 @@
         sortinfo:sortinfo,
         blocks: {},
         blockselect:{id:0,name:"C++"},
+        timeselect:"all",
         acinfo:acinfo,
         acinfoprint:acinfo,
         pginfo:pginfo,
@@ -72,28 +73,6 @@
       },
       getcolor4(){
         return {backgroundColor: this.$store.state.color4}
-      },
-      selectbyBlock:async function (){
-        let s=this.blockselect
-        let len=this.acinfo.length
-        let temp=[]
-        this.pginfo={
-          sum:0,
-          pos:1,
-          pagesize: 4
-        }
-        for(let i=0;i<len;i++){
-          if(s=="all"||s==this.acinfo[i].block){
-            temp.push(this.acinfo[i])
-          }
-        }
-        this.articlenum=temp.length
-        this.acinfoprint=[]
-        this.acinfoprint=temp
-        if(this.sorttype==0){
-          this.sortArticlebyHot()
-        }
-        this.pginfo.sum=this.articlenum/4
       },
       toedit:function (){
         this.$router.push("/"+this.$route.params.userid+"/articleedit/-1");
@@ -170,7 +149,8 @@
         }
         this.sorttype=0
       },
-      selectbyTime:async function (s){
+      selectbyBlock_Time:async function (){
+        let s=this.blockselect
         let len=this.acinfo.length
         let temp=[]
         this.pginfo={
@@ -179,7 +159,7 @@
           pagesize: 4
         }
         for(let i=0;i<len;i++){
-          if(s=="all"||s==this.acinfo[i].time.substring(2,7)){
+          if((this.blockselect=="all"||s==this.acinfo[i].block)&&(this.timeselect=="all"||this.timeselect==this.acinfo[i].time.substring(2,7))){
             temp.push(this.acinfo[i])
           }
         }
@@ -189,7 +169,14 @@
         if(this.sorttype==0){
           this.sortArticlebyHot()
         }
+        else{
+          this.sortArticlebyTime()
+        }
         this.pginfo.sum=this.articlenum
+      },
+      selectbyTime:async function (s){
+        this.timeselect=s
+        this.selectbyBlock_Time()
       },
       getblocks:function (){
         this.blocks={}
@@ -236,6 +223,7 @@
             }
           }
           this.pginfo.sum=this.articlenum
+          this.sortArticlebyTime()
         })
       },
       deleteac:function (arid){

@@ -8,7 +8,7 @@
             <img :src="searchimgsrc" alt="error">
           </div>
         </div>
-        <st :sortby-timef="sortArticlebyTime" :sortby-hotf="sortArticlebyHot" :selectby-timef="sortArticlebyTime"
+        <st :sortby-timef="sortArticlebyTime" :sortby-hotf="sortArticlebyHot" :selectby-timef="selectbyTime"
             :datas="sorttoolinfo" id="sorttool_as"></st>
         <ac id="bac1" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4]" v-if="(pagenumsinfo.pos-1)*4<articlenum"></ac>
         <ac id="bac2" :datas="articleCardInfoprint[(pagenumsinfo.pos-1)*4+1]"
@@ -170,6 +170,9 @@
         if (this.sorttype == 0) {
           this.sortArticlebyHot()
         }
+        else{
+          this.sortArticlebyTime()
+        }
       },
       showto: function (s) {
         if (s == this.$route.params.data) {
@@ -232,6 +235,7 @@
                     this.articlenum++
                   }
                   this.pagenumsinfo.sum = this.articlenum
+                  this.sortArticlebyTime()
                 })
             } else if (this.$route.params.type == "label") {
               this.$axios.get(
@@ -259,6 +263,7 @@
                     this.articlenum++
                   }
                   this.pagenumsinfo.sum = this.articlenum
+                  this.sortArticlebyTime()
                 })
             } else if (this.$route.params.type == "block") {
               this.$axios.get(
@@ -287,6 +292,7 @@
                     this.articlenum++
                   }
                   this.pagenumsinfo.sum = this.articlenum
+                  this.sortArticlebyTime()
                 })
             }
           })
