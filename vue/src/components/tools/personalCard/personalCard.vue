@@ -1,7 +1,5 @@
 <template>
   <div class="empty_pc">
-    <hsw :style="getcolor3()" :class="{hrefwin:datas.pos=='left',hrefwin_:datas.pos=='right'}" :datas.sync="hrefwininfo"
-         v-if="hrefwininfo.ifwin"></hsw>
     <div :class="{box:datas.pos=='left',box_:datas.pos=='right'}" :style="getcolor1()">
       <cw :datas.sync="chatinfo" v-if="chatinfo.ifwin"></cw>
       <div id="pic" @click="toMainPage">
@@ -17,6 +15,8 @@
         </GeminiScrollbar>
       </div>
       <div id="buttonbox">
+        <hsw :style="getcolor3()" :class="{hrefwin:datas.pos=='left',hrefwin_:datas.pos=='right'}" :datas.sync="hrefwininfo"
+             v-if="hrefwininfo.ifwin"></hsw>
         <GeminiScrollbar>
           <div v-for="(item,index) in hrefdatas" class="hrefbox" @click="openhrefwin(index)">
             <img :src="item.hrefimgsrc" alt="error">
@@ -266,7 +266,7 @@
 
   .hrefwin_ {
     position: absolute;
-    bottom: -277px;
+    bottom: 4px;
     right: 2px;
     z-index: 999;
   }
