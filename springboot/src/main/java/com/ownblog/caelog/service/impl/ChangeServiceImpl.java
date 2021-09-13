@@ -18,6 +18,7 @@ public class ChangeServiceImpl implements ChangeService {
     @Override
     public Result addChange(int userid, String content, String time_) {
         SqlSession sqlSession= BatisUtils.getSqlSession();
+        int a;
         ChangeDao changeDao=sqlSession.getMapper(ChangeDao.class);
         HashMap hashMap=new HashMap();
         hashMap.put("userid",userid);
